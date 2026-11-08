@@ -1,0 +1,43 @@
+{
+ "id": "chat07",
+ "setting": "chat",
+ "arm": "base",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "Three weeks is plenty if you front-load the stuff with waiting periods. Here's a rough order:\n\n## This week (long-lead items)\n1. **Lock down where you'll live.** Housing is the thing everything else depends on. If you haven't signed a lease, prioritize this. Consider a short-term sublet or month-to-month place if you can't find something permanent from afar.\n2. **Give notice on your current place** (check your lease for the required notice period, often 30-60 days) and your job if applicable.\n3. **Book movers or a truck/pod now.** Good slots fill up, especially at month-end and in summer. Get 2-3 quotes. If you're moving light, compare against just shipping boxes and selling furniture.\n4. **Set a budget.** Include deposits, first month's rent, movers, and travel. This tells you how much to sell versus ship.\n\n## Week 2 (admin and logistics)\n5. **Start purging.** Sell, donate, or toss anything you wouldn't pay to move. This shrinks the cost and the packing work.\n6. **Change your address** with USPS (can be scheduled for a future date), banks, credit cards, employer, insurance, and subscriptions.\n7. **Transfer or set up utilities** at the new place (electric, internet, etc.). Internet installs can take 1-2 weeks, so schedule early.\n8. **Handle medical stuff.** Refill prescriptions, get records, find new doctors/dentist if needed, and check whether your insurance works in the new city.\n9. **Renters insurance** for the new place, since many leases require it.\n\n## Week 3 (packing and wrap-up)\n10. **Pack**, starting with the stuff you use least. Keep an \"essentials\" bag for the first few days (chargers, toiletries, meds, documents, a change of clothes, bedding).\n11. **Confirm everything** with movers, landlord, and utilities.\n12. **Clean and document** your old place (photos) to protect your deposit.\n13. **Do a final walkthrough** and return keys.\n\n## After you arrive (within ~30 days)\n- Update your driver's license and vehicle registration (deadlines vary by state/country)\n- Update voter registration\n- Find a grocery store, pharmacy, and gym, and explore the neighborhood\n\n## Biggest traps\n- Waiting too long on housing and movers\n- Forgetting to schedule internet\n- Not keeping important documents (passport, lease, ID) with you instead of in the moving truck\n\nIf you tell me where you're moving from/to, whether you're renting or buying, and how much stuff you have, I can make this into a more specific checklist with dates.",
+ "cost_usd": 0.012156199999999999,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 773,
+  "cache_read_input_tokens": 602,
+  "output_tokens": 900,
+  "output_tokens_details": {
+   "thinking_tokens": 40
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 773,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 900,
+    "cache_read_input_tokens": 602,
+    "cache_creation_input_tokens": 773,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 773
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

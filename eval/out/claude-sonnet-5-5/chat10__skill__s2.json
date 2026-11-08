@@ -1,0 +1,43 @@
+{
+ "id": "chat10",
+ "setting": "chat",
+ "arm": "skill",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "It's not insane. Plenty of people with full-time jobs have happy dogs. It works when you plan for the gaps, and it's hard when you assume things will sort themselves out.\n\n**The big one: how long is the dog alone?**\n- Most adult dogs can handle 4 to 6 hours alone. 8 to 9 hours plus a commute is a stretch for many of them.\n- Puppies can't do it at all. A young puppy needs a bathroom break every few hours, so someone has to be home or you need a midday walker or sitter. Many couples with full-time jobs get an adult dog (2+ years) for this reason.\n- Check whether either of you can work from home some days, and whether your schedules overlap or are staggered. A staggered schedule can cut the alone time a lot.\n\n**Things people often don't think about**\n- **Separation anxiety.** Some dogs panic when left alone, and you won't know until you try. A rescue that has already lived in a foster home can tell you how the dog does alone.\n- **Energy level.** A high-energy breed with a nine-hour gap leads to chewed furniture. A calm adult greyhound or an older mixed breed may suit you better than a border collie.\n- **Cost.** Expect food, vet visits, grooming, training classes and a walker or daycare on busy days. The real risk is a surprise vet bill of $2,000 or more, so look at pet insurance or set aside an emergency fund.\n- **Backup care.** Who takes the dog when you travel, when one of you is sick, or when you both have a late night at work? Line up a sitter, a friend, or a trusted boarding place before you need one.\n- **Housing.** If you rent, check the pet policy, breed or size limits, and pet deposits.\n- **Your own time.** Even a low-maintenance dog needs about 1 to 2 hours of walks, play and training each day, including mornings and evenings when you're tired. Be honest about whether you'd still do it in the rain at 6 a.m.\n- **Flexibility.** Spontaneous trips, long nights out and last-minute plans get harder. That's fine if you expect it.\n- **Length of commitment.** A dog lives 10 to 15 years, so think about where you'll be in your lives over that time (moving, kids, job changes).\n- **Agreement between the two of you.** Decide up front who does the morning walk, who handles vet visits, and what happens if one of you ends up doing most of it.\n\n**A good way to test it first**\nFoster a dog for a few weeks, or dog-sit for a friend. You'll learn quickly how your schedule, home and energy hold up.\n\nIf you tell me your work schedules (remote, hybrid or in the office, and commute times), your housing, and what kind of dog you're picturing, I can help you judge whether it fits and what age or type of dog to look at.",
+ "cost_usd": 0.0174739,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1335,
+  "cache_read_input_tokens": 5999,
+  "output_tokens": 1153,
+  "output_tokens_details": {
+   "thinking_tokens": 236
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1335,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1153,
+    "cache_read_input_tokens": 5999,
+    "cache_creation_input_tokens": 1335,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1335
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

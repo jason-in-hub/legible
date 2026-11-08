@@ -1,0 +1,43 @@
+{
+ "id": "code02",
+ "setting": "code",
+ "arm": "skill",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "There are two separate causes, and both come from offset pagination.\n\n**1. Inserts shift the offsets.** The query sorts newest first, so a new row lands at position 0 and pushes every other row down one place. Suppose a client has fetched page 0 (rows 0-49) and a row is inserted before it asks for page 1. Page 1 now starts at what used to be row 49, so the client sees that row twice. Deletes cause the opposite problem: rows move up, and the client skips whatever slid into the page it already read.\n\n**2. The sort order isn't deterministic.** `created_at` isn't unique, and rows with equal timestamps can come back in any order. The order can differ between two queries, even with no inserts. That alone produces both skips and duplicates.\n\n**What to change:** switch to keyset (cursor) pagination, with `id` as a tiebreaker. The client sends back the position of the last row it saw, and the query starts after that row instead of counting rows from the top.\n\n```python\n@app.get('/items')\ndef items(cursor: str | None = None, size: int = 50):\n    size = min(size, 100)\n    if cursor:\n        created_at, last_id = decode_cursor(cursor)\n        rows = db.query(\n            'SELECT * FROM items '\n            'WHERE (created_at, id) < (%s, %s) '\n            'ORDER BY created_at DESC, id DESC LIMIT %s',\n            created_at, last_id, size + 1)\n    else:\n        rows = db.query(\n            'SELECT * FROM items ORDER BY created_at DESC, id DESC LIMIT %s',\n            size + 1)\n\n    has_more = len(rows) > size   # we fetched one extra row to check\n    rows = rows[:size]\n    next_cursor = encode_cursor(rows[-1]) if has_more else None\n    return {'items': rows, 'next_cursor': next_cursor}\n```\n\nDetails to get right:\n\n- **Index:** add `CREATE INDEX ON items (created_at DESC, id DESC)`. The query then seeks straight to the cursor position and stays fast on deep pages, whereas `OFFSET` has to scan and discard all the earlier rows.\n- **Cursor format:** encode `created_at` and `id` as an opaque string (for example base64 of JSON). Keep full timestamp precision, including microseconds. If the cursor rounds the timestamp, rows near the boundary can be skipped or repeated.\n- **Row-value comparison:** `(created_at, id) < (%s, %s)` works in Postgres, MySQL and SQLite 3.15+. On a database without it, write `created_at < %s OR (created_at = %s AND id < %s)`.\n- **New rows during paging:** a client that is paging down never sees rows inserted after it started, because they sort above its cursor. It sees each existing row exactly once. To pick up new rows, the client restarts from the first page.\n\n**Trade-off:** clients can no longer jump to an arbitrary page number. If you need that, the minimum fix is to add `id DESC` as a tiebreaker to the `ORDER BY`. That removes cause 2, but inserts and deletes during paging will still cause cause 1.",
+ "cost_usd": 0.023133900000000002,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1420,
+  "cache_read_input_tokens": 5999,
+  "output_tokens": 1685,
+  "output_tokens_details": {
+   "thinking_tokens": 641
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1420,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1685,
+    "cache_read_input_tokens": 5999,
+    "cache_creation_input_tokens": 1420,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1420
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

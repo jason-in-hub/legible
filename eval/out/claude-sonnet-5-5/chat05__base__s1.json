@@ -1,0 +1,43 @@
+{
+ "id": "chat05",
+ "setting": "chat",
+ "arm": "base",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "The knock came three times, evenly spaced, like someone who had practiced.\n\nEdmund set down his tea. The nearest town was forty miles of open water away. The supply boat wasn't due for another two weeks, and it never knocked. It just left crates on the dock and sounded its horn twice.\n\nHe crossed the lamp room and went down the spiral stairs, counting the steps out of habit. Two hundred and twelve. At the bottom, he stood with his hand on the iron latch and said, because he had forgotten what else one says, \"Hello?\"\n\n\"Hello,\" said a voice. It was a woman's, calm and a little hoarse. \"I'm sorry to turn up like this. My boat went down about a mile out. I swam the rest.\"\n\nHe opened the door. She was soaked and shivering, a small gray-haired woman in an oilskin coat. In her arms, wrapped in what looked like a sailcloth jacket, she held something heavy and square.\n\n\"I need to get this to the top of your tower,\" she said. \"Before tonight.\"\n\nEdmund looked at the bundle, then at her. \"Who are you?\"\n\n\"Someone who used to keep this light, a long time ago.\" She smiled faintly. \"Before you. Before the man before you. And I'm afraid, Mr. Hale, that the lamp you've been tending isn't the one it's supposed to be.\"\n\nBehind her, out on the water, the fog was rolling in, much too early for the hour.\n\n---\n\nYour turn! Where does it go from here? I'm curious whether you'll want to dig into what's in the bundle, what's wrong with the lamp, or what's in that fog.",
+ "cost_usd": 0.011052,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1397,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 546,
+  "output_tokens_details": {
+   "thinking_tokens": 30
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1397,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 546,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1397,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1397
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

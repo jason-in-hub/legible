@@ -1,0 +1,43 @@
+{
+ "id": "code02",
+ "setting": "code",
+ "arm": "base",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "## What's going on\n\nOFFSET pagination is positional: \"page 3\" means \"skip the first 150 rows of whatever the table looks like *right now*.\" With `ORDER BY created_at DESC`, new rows land at the front of the list, so everything shifts down.\n\n- **Duplicates:** The client fetches page 0 (rows 1–50). Then 5 new rows are inserted. Page 1 now starts at what is the old row 46, so rows 46–50 appear again.\n- **Skips:** The same thing happens in reverse if rows are deleted, or if rows are re-ordered. Items shift up past the offset boundary and are never seen.\n\nThere's a second, separate problem: `created_at` is probably not unique. If several rows share a timestamp, `ORDER BY created_at` has no deterministic tie-break, so the database may return those rows in a different order between queries. That causes skips and duplicates even with no concurrent writes. OFFSET also gets slower the deeper you page, since the DB still has to scan and discard all the skipped rows.\n\n## What to change: keyset (cursor) pagination\n\nInstead of \"skip N rows,\" say \"give me rows strictly after this one.\" Use a unique, total ordering of `(created_at, id)` and have the client pass back the last row it saw.\n\n```python\nimport base64, json\n\n@app.get('/items')\ndef items(cursor: str | None = None, size: int = 50):\n    size = min(max(size, 1), 200)  # cap it\n\n    if cursor:\n        created_at, last_id = json.loads(base64.urlsafe_b64decode(cursor))\n        rows = db.query(\n            '''SELECT * FROM items\n               WHERE (created_at, id) < (%s, %s)\n               ORDER BY created_at DESC, id DESC\n               LIMIT %s''',\n            created_at, last_id, size + 1)\n    else:\n        rows = db.query(\n            '''SELECT * FROM items\n               ORDER BY created_at DESC, id DESC\n               LIMIT %s''',\n            size + 1)\n\n    has_more = len(rows) > size\n    rows = rows[:size]\n\n    next_cursor = None\n    if has_more:\n        last = rows[-1]\n        next_cursor = base64.urlsafe_b64encode(\n            json.dumps([last['created_at'].isoformat(), last['id']]).encode()\n        ).decode()\n\n    return {'items': rows, 'next_cursor': next_cursor}\n```\n\nKey points:\n\n1. **Tie-break on a unique column** (`id`) in both the `ORDER BY` and the `WHERE`. Without it, rows sharing a timestamp can be lost at page boundaries.\n2. **Row-value comparison** `(created_at, id) < (%s, %s)` works in Postgres and MySQL 8+. On databases that lack it, expand it to `created_at < %s OR (created_at = %s AND id < %s)`.\n3. **Index it:** `CREATE INDEX ON items (created_at DESC, id DESC);` This makes every page an index seek, with constant cost regardless of depth.\n4. **Fetch `size + 1`** to know whether there's another page without a separate `COUNT`.\n5. **Opaque cursor:** Clients treat it as a token, so you can change its internals later.\n\n## Behavior after the change\n\n- New inserts at the top don't affect a client mid-scan, since it's anchored to a specific row, not a position. Those new rows simply won't appear until the client starts over from the first page. That's usually what you want.\n- Deletes don't cause skips either, even if the anchor row itself is deleted, because the comparison is on values, not on row existence.\n- Tradeoff: you lose \"jump to page N\" and cheap total-page counts. If the UI needs those, keep a separate `COUNT` endpoint (or an approximate count) and use cursors for traversal.\n\n## If you can't change the API contract right away\n\nA stopgap is to keep `page`/`size` but add `id` as a tie-break (`ORDER BY created_at DESC, id DESC`), which fixes the non-determinism issue. It won't fix shifting from concurrent inserts, so you'll still need to move to cursors for that.",
+ "cost_usd": 0.019544,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1460,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 1370,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1460,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1370,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1460,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1460
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

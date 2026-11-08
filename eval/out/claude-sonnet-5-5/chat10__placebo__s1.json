@@ -1,0 +1,43 @@
+{
+ "id": "chat10",
+ "setting": "chat",
+ "arm": "placebo",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "It's not insane. Plenty of two-income households have happy dogs. It does take planning, and the first few months are the hardest part.\n\n**The biggest issue: the daily gap**\n\n- An adult dog can usually be alone for 4 to 6 hours. A full workday plus commute is often 9 to 10 hours, so you'll likely need a midday break from a dog walker, a neighbor, a daycare, or a work-from-home day.\n- Puppies are much harder. They need to go out every 2 to 4 hours at first, and they need training, feeding, and socializing. Two full-time workers with a puppy usually means taking time off or splitting shifts for the first weeks.\n- An adult dog (2+ years) from a shelter or rescue is often a better fit. Their energy, temperament, and house training are already known.\n\n**What people often don't think about**\n\n- **Cost:** Expect roughly $1,000 to $3,000 a year for food, vet care, supplies, and grooming. Add a dog walker or daycare ($20 to $30 per walk, $30 to $60 per day) and it climbs fast. One emergency vet visit can run $1,000 to $5,000, so consider pet insurance or an emergency fund.\n- **Breed and energy:** A high-energy breed like a border collie or husky in a small apartment with long absences is a recipe for destroyed furniture and an unhappy dog. Match the dog to your real life, not your ideal life.\n- **Separation anxiety:** Some dogs struggle with being alone. It's more common in rescues, and it can be stressful and expensive to fix.\n- **Travel:** Every trip now needs a sitter, a boarding spot, or a dog-friendly plan. Spontaneous weekends away get harder.\n- **Housing:** Check your lease, pet rent, deposits, and breed or weight restrictions. Also think about stairs, yard access, and noise if you share walls.\n- **Daily time:** Even with a walker, a dog needs about 1 to 2 hours of your attention a day: walks, feeding, play, training, and cleanup. That includes cold, rainy mornings and late nights.\n- **Long commitment:** A dog can live 10 to 15 years. Think about how that fits with possible moves, a baby, or job changes.\n- **Who does what:** Decide up front who handles walks, vet appointments, and feeding. Unspoken assumptions here cause a lot of friction.\n- **Life disruption:** Expect some chewed items, accidents, and interrupted sleep, especially early on.\n\n**Questions to ask each other**\n\n1. Who is home when, and could either of you work from home some days?\n2. What's our realistic monthly budget for the dog, including a walker?\n3. What energy level and size fit our home and routines?\n4. Who covers the dog when one of us is sick or traveling?\n5. Are we both equally excited, or is one person doing this mostly for the other?\n\n**Ways to test the idea first**\n\n- Foster a dog for a few weeks. Many shelters will let you, and it shows you what your days would actually look like.\n- Dog-sit for a friend over a long weekend.\n- Ask a local rescue about adult dogs described as \"fine alone for a workday.\"\n\nIf you tell me where you live (apartment or house), your schedules, and what kind of dog you're picturing, I can help you work out a more specific plan and budget.",
+ "cost_usd": 0.017416,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1408,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 1178,
+  "output_tokens_details": {
+   "thinking_tokens": 84
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1408,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1178,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1408,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1408
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

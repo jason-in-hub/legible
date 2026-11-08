@@ -1,0 +1,43 @@
+{
+ "id": "chat06",
+ "setting": "chat",
+ "arm": "skill",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "Sunlight looks white, but it's a mix of all colors. When it passes through the atmosphere, air molecules scatter it in all directions. They scatter short wavelengths (blue) far more strongly than long wavelengths (red). This is called Rayleigh scattering.\n\n**During the day**, sunlight takes a fairly short path through the air. Blue light gets scattered all over the sky, so wherever you look, some of that scattered blue reaches your eyes. That's why the sky looks blue.\n\n**At sunset**, the sun is low on the horizon, so its light has to cross much more atmosphere to reach you. Along that long path, most of the blue gets scattered out of the direct beam, and it ends up going toward other people or off into space. What's left is mostly the longer wavelengths: orange and red. Those colors light up the sky near the sun and any clouds nearby.\n\nYou might wonder why the sky isn't violet, since violet scatters even more than blue. The sun puts out less violet than blue, the upper atmosphere absorbs some of it, and our eyes are less sensitive to it. Blue wins out.\n\nDust, smoke and pollution can make sunsets more vivid, because extra particles scatter even more of the blue away. That's why sunsets after wildfires or volcanic eruptions can be spectacular.",
+ "cost_usd": 0.0080323,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 778,
+  "cache_read_input_tokens": 6563,
+  "output_tokens": 426,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 778,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 426,
+    "cache_read_input_tokens": 6563,
+    "cache_creation_input_tokens": 778,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 778
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

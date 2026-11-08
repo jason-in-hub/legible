@@ -1,0 +1,43 @@
+{
+ "id": "chat06",
+ "setting": "chat",
+ "arm": "base",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "It comes down to **Rayleigh scattering** and how much air the sunlight has to travel through.\n\n**Why the sky is blue during the day**\n\nSunlight looks white but contains all colors. As it passes through the atmosphere, it hits gas molecules (mostly nitrogen and oxygen) that are much smaller than the wavelength of light. These molecules scatter short wavelengths (blue and violet) far more strongly than long wavelengths (red and orange). The scattering strength scales roughly as 1/λ⁴, so blue light is scattered around 5-6 times more than red.\n\nThat scattered blue light bounces around in all directions, so when you look at any part of the sky, you're seeing blue light that's been redirected toward your eyes. (Violet scatters even more, but the sun emits less of it, the upper atmosphere absorbs some, and our eyes are less sensitive to it, so we perceive blue.)\n\n**Why sunsets are red/orange**\n\nAt sunset, the sun is low on the horizon, so its light travels through much more atmosphere to reach you, a path many times longer than at midday. Along that long path, most of the blue and green light gets scattered out of the direct beam, away from your line of sight. What's left to reach your eyes is the longer-wavelength light: orange and red.\n\nSo the sunset colors are essentially what remains after the blue has been filtered out along the way. The same blue light that's missing from your view is being scattered toward people farther along, where it's daytime.\n\n**Extras that make sunsets more vivid**\n\n- Dust, smoke, and aerosols add more scattering and can intensify reds and oranges. This is why wildfire smoke or volcanic eruptions can produce dramatic sunsets.\n- Clouds catch the reddish light and reflect it, giving you those glowing pink and orange undersides.\n\n**Short version:** the sky is blue because air scatters blue light in all directions. At sunset, the light has to pass through so much air that the blue is scattered away, leaving mostly red and orange.",
+ "cost_usd": 0.0097224,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 777,
+  "cache_read_input_tokens": 604,
+  "output_tokens": 655,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 777,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 655,
+    "cache_read_input_tokens": 604,
+    "cache_creation_input_tokens": 777,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 777
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

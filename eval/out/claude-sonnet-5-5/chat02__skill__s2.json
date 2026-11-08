@@ -1,0 +1,43 @@
+{
+ "id": "chat02",
+ "setting": "chat",
+ "arm": "skill",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "Mostly it's something people say. Owners also spend a lot of money that never comes back, so renting isn't uniquely \"thrown away.\"\n\n**What owners pay and don't get back**\n- Mortgage interest\n- Property taxes and insurance\n- Maintenance and repairs, often around 1% of the home's value per year\n- Closing costs and agent fees, often 6-10% of the price when you buy and later sell\n\nOnly the part of each payment that reduces your loan balance (plus any price gain) builds wealth. Rent buys you housing with no repair bills, and you can leave when the lease ends.\n\n**A rule of thumb to test your situation**\nMultiply the home's price by 5%, then divide by 12. That estimates the monthly cost of owning that you won't get back (roughly 1% maintenance, 1% property tax, 3% for interest and the return you give up on your down payment). If comparable rent is lower than that number, renting is probably cheaper.\n\nExample: for a $400,000 home, 5% is $20,000 a year, or about $1,670 a month. If a similar place rents for $1,500, renting likely wins on cost.\n\n**Whether buying makes sense for you**\n- **How long you'll stay.** Because of the transaction costs, buying usually needs about five years or more to pay off.\n- **Cash.** You'd want the down payment, closing costs and an emergency fund, without draining all your savings.\n- **Stability.** Job and life plans matter, since selling quickly can mean taking a loss.\n- **Your local market.** Price-to-rent ratios and mortgage rates vary a lot by city, and I can't see current figures for yours. Check them before deciding.\n\n**With your lease ending soon**\nYou don't have to decide between buying and renting this month. You can renew for a year, ask for a shorter term or month-to-month, and keep saving while you watch the market.\n\nIf you send me the home price you're considering, the rent for a comparable place, the mortgage rate you'd get, and your down payment, I can run a rough rent-versus-buy comparison.",
+ "cost_usd": 0.0174319,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1337,
+  "cache_read_input_tokens": 5999,
+  "output_tokens": 1148,
+  "output_tokens_details": {
+   "thinking_tokens": 487
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1337,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1148,
+    "cache_read_input_tokens": 5999,
+    "cache_creation_input_tokens": 1337,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1337
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

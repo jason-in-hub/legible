@@ -1,0 +1,43 @@
+{
+ "id": "code01",
+ "setting": "code",
+ "arm": "skill",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "This is Python's mutable default argument gotcha.\n\nPython creates the default value `[]` once, when the `def` statement runs, not each time you call the function. Every call that omits `tags` gets that same list object. The first call appends `'a'` to it. The second call appends `'b'` to the same list, which already holds `'a'`, so you see `['a', 'b']`.\n\nYou can confirm it by checking the stored default:\n\n```python\nprint(add_tag.__defaults__)  # (['a', 'b'],)\n```\n\n## The fix\n\nUse `None` as the default and create a new list inside the function:\n\n```python\ndef add_tag(item, tags=None):\n    if tags is None:\n        tags = []\n    tags.append(item)\n    return tags\n\nprint(add_tag('a'))  # ['a']\nprint(add_tag('b'))  # ['b']\n```\n\nNow each call without `tags` gets its own fresh list. Use `is None` rather than `if not tags`, so that an empty list the caller passes in is still used and appended to, not replaced.\n\n## When it applies\n\nThe same thing happens with any mutable default: lists, dicts, sets, or objects you create in the signature. Immutable defaults like numbers, strings, `None` and tuples are safe, because nothing can change them in place.\n\nIf you don't want the function to modify the caller's list, copy it first:\n\n```python\ndef add_tag(item, tags=None):\n    return [*(tags or []), item]\n```\n\nThis version never mutates anything, so there's no shared state to worry about.",
+ "cost_usd": 0.011399900000000001,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1394,
+  "cache_read_input_tokens": 5999,
+  "output_tokens": 522,
+  "output_tokens_details": {
+   "thinking_tokens": 41
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1394,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 522,
+    "cache_read_input_tokens": 5999,
+    "cache_creation_input_tokens": 1394,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1394
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

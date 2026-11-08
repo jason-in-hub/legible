@@ -1,0 +1,43 @@
+{
+ "id": "chat07",
+ "setting": "chat",
+ "arm": "placebo",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "Three weeks is enough time. Here's the order I'd tackle things in.\n\n## This week: lock in the big stuff\n1. **Housing.** If you don't have a place yet, this is the top priority. Everything else depends on your new address. If you do have a place, confirm your move-in date and read your lease.\n2. **Your move date and how you'll move.** Decide between hiring movers, renting a truck, using a container service, or shipping a few boxes and bringing the rest. Book now, because good dates fill up fast, especially at the end of the month.\n3. **Your budget.** Add up the deposit, first month's rent, moving costs, and utility setup fees so none of them surprise you.\n4. **Notice to your current landlord.** Check how much notice your lease requires. Missing that window can cost you an extra month of rent.\n\n## Next week: start the paperwork and shrink the load\n5. **Declutter.** Sell, donate, or toss anything you wouldn't be sad to lose. Every item you skip is something you don't pay to move.\n6. **Start collecting boxes.** Pack the things you rarely use first, like books, off-season clothes, and decor.\n7. **Set up utilities at the new place.** That means electricity, internet, and gas or water if they're not included. Internet installs can take a week or more to schedule, so call early.\n8. **Tell your employer or school** if anything about your schedule, location, or paperwork is changing.\n\n## The last week: finish up\n9. **Change your address.** Use the USPS online form to forward your mail (if you're in the US). Then update your bank, credit cards, subscriptions, and your employer.\n10. **Cancel or transfer services** at your old place, like utilities and internet.\n11. **Pack an essentials bag** with clothes, toiletries, chargers, medications, important documents, and a few basics. Keep it with you, not on the truck.\n12. **Do a final clean and take photos** of your old place so you can show its condition when you leave. This helps you get your deposit back.\n\n## After you arrive\n- Update your driver's license and car registration. Deadlines vary by state, often 30 to 90 days.\n- Update your voter registration.\n- Find a new doctor, dentist, and pharmacy if you need them.\n- Explore your neighborhood. Locate the grocery store, the pharmacy, and the best coffee shop.\n\nIf you tell me where you're moving from and to, whether you have housing yet, and how much stuff you have, I can make this more specific. I can also turn it into a day-by-day checklist if that would help.",
+ "cost_usd": 0.014638,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1411,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 899,
+  "output_tokens_details": {
+   "thinking_tokens": 76
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1411,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 899,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1411,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1411
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "id": "chat10",
+ "setting": "chat",
+ "arm": "base",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "It's not insane. Plenty of full-time-working couples have happy dogs. It works when you plan for it, and it gets hard when you assume it'll sort itself out.\n\n**The big one: the workday gap**\n- Adult dogs can generally handle about 4-6 hours alone, and 8+ every day is a stretch. Ask yourselves who's home when. Hybrid or staggered schedules help a lot.\n- Realistic options are a midday dog walker ($20-35/walk), doggy daycare a few days a week, a neighbor or friend, or coming home at lunch.\n- Puppies are much harder. They need to go out every 2-4 hours and need training, socialization, and supervision. With two full-time jobs, I'd seriously consider an adult dog (2+ years) instead. Their personality is known and they usually have a longer bladder.\n\n**What people tend to underestimate**\n- **Cost:** Often $1,500-3,000+ a year for food, vet, preventive meds, grooming, and walkers or daycare, before emergencies. A single ER visit can run $2,000-5,000, so pet insurance or an emergency fund matters.\n- **Travel:** Every trip now needs a boarder, sitter, or dog-friendly plan. Spontaneous weekends away get harder.\n- **Energy level:** Breed or mix matters more than size. A border collie or husky in an apartment with no one home is a recipe for a destroyed couch. A greyhound or an older lab mix might be a better fit.\n- **Training time:** Even easy dogs need daily effort for months. Plan on 30-60 minutes of real attention morning and evening, not just letting them out.\n- **Separation anxiety:** Common, especially in rescues, and it can be miserable for both of you. It's worth asking about when you meet dogs.\n- **Lifespan:** 10-15 years. Think about job changes, moves, kids, and whether you'd both still want this.\n- **Housing:** Check your lease, pet deposits or rent, and breed or weight restrictions.\n- **Division of labor:** Decide up front who does the 6am walk, the vet appointments, and the 2am vomit cleanup. If one person is secretly planning to be \"the fun one,\" that's a problem.\n- **Your life will shift:** Fewer after-work happy hours, earlier mornings, and walks in the rain.\n\n**Questions to ask each other**\n1. If the dog is sick or needs extra care, whose schedule flexes?\n2. What's our budget, including a bad year?\n3. Who covers when one of us travels for work?\n4. What do we want from a dog: a hiking buddy, a couch companion, or a running partner?\n5. Are we okay with some hair, drool, chewed shoes, and accidents?\n\n**A good way to test it**\nFoster a dog for a few weeks, or dog-sit for friends. You'll find out quickly how your schedules and tolerance hold up. Many shelters and rescues also do foster-to-adopt.\n\nIf you tell me your living situation (apartment or house, yard), your work schedules (remote, hybrid, or in-office), and what kind of dog life you're picturing, I can help narrow down breeds, ages, and whether to go puppy or adult.",
+ "cost_usd": 0.016432000000000002,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1377,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 1092,
+  "output_tokens_details": {
+   "thinking_tokens": 40
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1377,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1092,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1377,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1377
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

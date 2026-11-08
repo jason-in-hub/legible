@@ -1,0 +1,43 @@
+{
+ "id": "chat01",
+ "setting": "chat",
+ "arm": "skill",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "Not stupid at all. Forty is a fine age to start. Adults usually learn faster than kids in the first few months, because you can practice on purpose, understand why something isn't working, and stick with a plan. What you give up is mostly time, since you probably have less of it, so short and regular practice matters more than anything else.\n\n**Getting started**\n\n1. **Pick a guitar you'll want to pick up.** An acoustic is the simplest (no amp, no cables). An electric is easier on the fingers and a better choice if you want rock or blues. Either is fine. A decent beginner guitar costs about $150-300. Buy from a shop if you can, or ask them to do a \"setup\", because a guitar with the strings too high off the fretboard hurts and makes people quit.\n2. **Get a tuner.** A free phone app works. An out-of-tune guitar sounds bad no matter how well you play.\n3. **Choose a learning source.** Any of these works:\n   - JustinGuitar (free, on YouTube and his website). His beginner course is the most common recommendation for adults.\n   - An app like Fender Play or Yousician if you like structure.\n   - A teacher, if you want feedback on your technique. Even five or six lessons early on can save you from bad habits.\n4. **Learn a few open chords first.** Start with E minor, A minor, D, G, C and E. Then try switching between two of them slowly. With those, you can play hundreds of songs.\n5. **Practice 10-15 minutes a day.** This beats one long session on the weekend. Your fingertips will hurt for the first two or three weeks, then toughen up.\n\n**What to expect**\n\n- The first month is the awkward part. Chords will buzz and switching will be slow. That's normal and it does get better.\n- After about three months of steady practice, most people can play a few simple songs.\n- Pick songs you actually love, even if they're simple versions. That's what keeps people going after the novelty fades.\n\nWhat kind of music do you want to play? That will help decide between acoustic and electric, and which songs to learn first.",
+ "cost_usd": 0.036682,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 7332,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 735,
+  "output_tokens_details": {
+   "thinking_tokens": 74
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 7332,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 735,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 7332,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 7332
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

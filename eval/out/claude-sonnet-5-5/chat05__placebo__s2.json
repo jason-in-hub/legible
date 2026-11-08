@@ -1,0 +1,43 @@
+{
+ "id": "chat05",
+ "setting": "chat",
+ "arm": "placebo",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "Marren set down her tea and listened. The wind had been loud all night, so maybe she had imagined it.\n\nThen it came again: three slow knocks, evenly spaced, like someone who had practiced.\n\nShe hadn't heard a knock in three years. The supply boat never knocked. It just left crates on the dock and sounded its horn twice. Nobody else knew the island was still staffed. The lighthouse had been automated on paper for a decade, and she had stayed on anyway because no one had come to tell her to leave.\n\nShe crossed the room and put her hand on the bolt. \"Who is it?\" Her voice came out rough from disuse.\n\n\"I'm sorry to bother you,\" said a voice on the other side. It was calm and a little out of breath. \"I think I'm lost. I came by boat, but I don't remember where I started.\"\n\nMarren frowned. The sea was flat and gray this morning, and she had seen no boat from the gallery at dawn. She had also checked the dock an hour ago, and it was empty.\n\nShe opened the door a few inches. A thin old man stood on the step, soaked to the skin, holding a brass lantern. It was lit, even though it was full daylight. The lantern was an exact copy of the one hanging above her own bed.\n\n\"That's mine,\" she said.\n\n\"I know,\" said the man. \"I've been carrying it for you for a very long time.\"\n\nYour turn. What does Marren do next, and what's the lantern's secret?",
+ "cost_usd": 0.008267,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 777,
+  "cache_read_input_tokens": 650,
+  "output_tokens": 509,
+  "output_tokens_details": {
+   "thinking_tokens": 53
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 777,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 509,
+    "cache_read_input_tokens": 650,
+    "cache_creation_input_tokens": 777,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 777
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

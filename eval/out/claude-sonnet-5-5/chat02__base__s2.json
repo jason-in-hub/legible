@@ -1,0 +1,43 @@
+{
+ "id": "chat02",
+ "setting": "chat",
+ "arm": "base",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "It's mostly something people say. Renting isn't automatically throwing money away, and buying isn't automatically building wealth. Whether it makes sense right now depends on your local numbers.\n\n**Why \"throwing money away\" is misleading**\n- Rent pays for housing, the same way a homeowner's costs do.\n- Owners also pay money they never get back: mortgage interest (most of your payment in the early years), property taxes, insurance, maintenance and repairs, HOA fees, and closing and selling costs (often 6-10% round trip).\n- The down payment has an opportunity cost. That cash could be invested instead.\n\nOnly the principal portion of a mortgage payment and any appreciation build equity.\n\n**A quick test: the 5% rule**\nUnrecoverable costs of owning run roughly 5% of the home's value per year:\n- ~1% property taxes\n- ~1% maintenance\n- ~3% cost of capital (mortgage interest and/or forgone investment returns)\n\nMultiply the home price by 5% and divide by 12. If you can rent a comparable place for less than that monthly figure, renting is likely the better financial deal. For a $400k home, the break-even is about $1,667/month. Adjust the percentages for your area, since taxes and rates vary a lot.\n\nAnother rough check is the price-to-rent ratio (home price ÷ annual rent for a comparable place). Above ~20 tends to favor renting, and below ~15 tends to favor buying.\n\n**What tips it toward buying**\n- You'll stay put 5-7+ years, enough to absorb the transaction costs.\n- Your area has a low price-to-rent ratio.\n- You have a solid down payment and an emergency fund left over afterward.\n- Your income and job are stable.\n- You value control over your space and a fixed payment.\n\n**What tips it toward renting**\n- You might move or change jobs within a few years.\n- Prices are high relative to rents where you live.\n- Buying would drain your savings.\n- You'd invest the difference instead, since renting plus investing can match or beat owning over time.\n\nI can't see current mortgage rates or your local market, so I can't give a verdict. If you share the typical home price, comparable rent, your down payment, your expected mortgage rate, and how long you'd stay, I can run a rent-vs-buy comparison for you.",
+ "cost_usd": 0.016936,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1378,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 1142,
+  "output_tokens_details": {
+   "thinking_tokens": 392
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1378,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1142,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1378,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1378
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

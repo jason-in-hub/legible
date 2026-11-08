@@ -1,0 +1,43 @@
+{
+ "id": "chat10",
+ "setting": "chat",
+ "arm": "skill",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "It isn't insane. Plenty of people with full-time jobs have happy dogs. What matters is whether the dog gets a workable day, and that depends on a few things you can plan for.\n\n**The biggest issue: the dog alone for 8+ hours**\n- Adult dogs can usually handle 4 to 6 hours alone. A full workday plus commute is longer than that, so you need a midday break. Options are a dog walker, daycare, a neighbor, or one of you working from home some days.\n- Puppies are much harder. They need to go out every 2 to 4 hours, need constant training, and can't be left alone long. Many people in your situation do better with an adult dog (2+ years) whose personality is already clear.\n- If you're gone a lot, budget for a walker or daycare from day one. That's often $20 to $30 per visit, which adds up to several hundred dollars a month.\n\n**Things people often don't think about**\n- **Energy level.** Breed and age matter more than looks. A border collie or husky left alone all day tends to become destructive. A calmer adult dog, or a lower-energy breed or mix, fits a busy household better.\n- **Travel and vacations.** You'll need boarding, a sitter, or a friend every time you leave. Weekend trips and last-minute plans get harder.\n- **Money.** Beyond food, expect vet visits, vaccines, flea and tick prevention, grooming, training classes, and a surprise bill or two. Emergency care can run into the thousands, so consider pet insurance or a savings cushion.\n- **Sick days and bad weeks.** If one of you is traveling and the other is slammed at work, who handles the dog? Agree on a backup plan before you need one.\n- **Housing.** Check your lease for pet rules, deposits, and breed or weight limits. Also think about whether you have a yard or a safe place to walk nearby.\n- **Time, even on good days.** Walks, feeding, training, and play typically add up to 1 to 2 hours a day, every day, in the rain and when you're tired.\n- **The first few months.** Expect disrupted sleep, accidents, chewed things, and some anxiety when you leave. It usually settles, but it's real.\n- **The long commitment.** Dogs often live 10 to 15 years. Think about where you might be living and working in that time.\n- **Who does what.** Decide up front who handles walks, vet appointments, and training. Dog duties can quietly become one person's job.\n\n**Ways to test it first**\n- Foster a dog for a few weeks, or dog-sit for a friend. You'll learn quickly how your schedule holds up.\n- Ask a shelter or rescue about dogs that already do well alone during the day. Staff and foster families often know a dog's habits well.\n\n**A quick gut check:** if you can afford a midday walker, both of you want to do the daily work, and you're open to an adult dog, you're probably in good shape. If the plan depends on the dog being fine alone for 9 or 10 hours, that's the part to rethink.\n\nA few things would help me give more specific advice: how long you're each away on a typical day, whether you rent or own, whether you're leaning toward a puppy or an adult, and how active you are outside work.",
+ "cost_usd": 0.0188659,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1338,
+  "cache_read_input_tokens": 5999,
+  "output_tokens": 1291,
+  "output_tokens_details": {
+   "thinking_tokens": 251
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1338,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1291,
+    "cache_read_input_tokens": 5999,
+    "cache_creation_input_tokens": 1338,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1338
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

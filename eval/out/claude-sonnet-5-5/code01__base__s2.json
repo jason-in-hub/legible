@@ -1,0 +1,43 @@
+{
+ "id": "code01",
+ "setting": "code",
+ "arm": "base",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "This is Python's **mutable default argument** gotcha.\n\n## What's happening\n\nDefault argument values are evaluated **once**, when the `def` statement runs, not each time the function is called. So `tags=[]` creates a single list object that's stored on the function itself and shared across every call that doesn't pass its own `tags`.\n\n```python\ndef add_tag(item, tags=[]):\n    tags.append(item)\n    return tags\n\nadd_tag('a')   # appends to the shared list -> ['a']\nadd_tag('b')   # same list, now -> ['a', 'b']\n```\n\nYou can see it directly:\n\n```python\nprint(add_tag.__defaults__)  # (['a', 'b'],)\n```\n\nBecause lists are mutable, `append` modifies that one stored object in place, so the changes persist between calls.\n\n## The fix\n\nUse `None` as a sentinel and create a fresh list inside the function:\n\n```python\ndef add_tag(item, tags=None):\n    if tags is None:\n        tags = []\n    tags.append(item)\n    return tags\n\nprint(add_tag('a'))  # ['a']\nprint(add_tag('b'))  # ['b']\n```\n\nNow a new list is created on every call where one isn't provided.\n\n## Alternatives\n\nIf you don't want to mutate the caller's list when they do pass one in, make a copy:\n\n```python\ndef add_tag(item, tags=None):\n    return [*(tags or []), item]\n```\n\nThis returns a new list each time and never modifies the input.\n\n## Rule of thumb\n\nNever use a mutable object (`[]`, `{}`, `set()`, or a custom class instance) as a default argument value. Use `None` and build the object inside the function. Immutable defaults like numbers, strings, tuples, and `None` are safe.\n\n(This behavior is occasionally useful on purpose, for example as a simple cache or memo, but it's usually a bug when it's accidental.)",
+ "cost_usd": 0.01181,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1439,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 605,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1439,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 605,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1439,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1439
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

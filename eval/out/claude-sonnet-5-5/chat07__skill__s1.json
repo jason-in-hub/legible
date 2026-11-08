@@ -1,0 +1,43 @@
+{
+ "id": "chat07",
+ "setting": "chat",
+ "arm": "skill",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "Start with housing, because almost everything else needs an address. Here's the order I'd use for three weeks.\n\n**This week (days 1-7)**\n1. **Lock down where you'll live.** If you don't have a place yet, book a short-term stay (a month-to-month sublet or an Airbnb) so you aren't rushed into a bad lease. If you have a place, confirm your move-in date and ask when you get keys.\n2. **Give notice on your current place.** Check your lease for the notice period. This is the deadline most likely to cost you money if you miss it.\n3. **Decide how your stuff gets there.** Options are movers, a rental truck, shipping boxes, or selling most things and starting fresh. Book now, since movers and trucks fill up fast near the end of the month.\n4. **Set a rough budget.** Include the deposit, first month's rent, transport, and a cushion for the first few weeks.\n\n**Next week (days 8-14)**\n5. **Start the declutter.** Sell, donate, or toss anything you wouldn't pay to move. Less stuff means a cheaper and easier move.\n6. **Set up utilities and internet at the new place.** Internet installs can take a week or more to schedule, so don't leave it late. Schedule shutoff at the old place for your last day.\n7. **Sort out work or school.** Tell them your new address and confirm any start dates or paperwork.\n8. **Healthcare.** Refill prescriptions, ask your doctors for records, and look up providers in the new city. Check whether your insurance covers you there.\n\n**Final week (days 15-21)**\n9. **Pack in order of what you use least.** Leave daily items for last, and pack a separate \"first night\" bag with chargers, toiletries, a change of clothes, and important documents.\n10. **Change your address.** Set up USPS mail forwarding, then update your bank, cards, subscriptions, and employer. Do the driver's license and car registration after you arrive, since states have different deadlines.\n11. **Clean the old place and take photos** to protect your deposit.\n\n**After you arrive**\n- Update your license, registration, and voter registration.\n- Find the nearest grocery store, pharmacy, and urgent care.\n- Don't unpack everything at once. Do the bed, the kitchen basics, and the bathroom first.\n\nIf you tell me where you're moving, whether you're renting, and how much stuff you have, I can turn this into a tighter checklist with real dates.",
+ "cost_usd": 0.0159659,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1338,
+  "cache_read_input_tokens": 5999,
+  "output_tokens": 1001,
+  "output_tokens_details": {
+   "thinking_tokens": 206
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1338,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1001,
+    "cache_read_input_tokens": 5999,
+    "cache_creation_input_tokens": 1338,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1338
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

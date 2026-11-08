@@ -1,0 +1,43 @@
+{
+ "id": "code02",
+ "setting": "code",
+ "arm": "placebo",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "**What's going on**\n\nOFFSET paging counts rows from the top of the current result set each time. Your list is sorted newest first, so a new insert goes at the top and shifts every other row down by one position.\n\n- **Duplicates:** A client fetches page 0 (rows 1–50). A new row is inserted. Everything moves down one slot, so the old row 50 is now row 51. The client fetches page 1 (rows 51–100) and sees that old row 50 again.\n- **Skips:** Deletes cause the opposite problem. If a row on an already-fetched page is deleted, everything shifts up, and the row that moved from position 51 to 50 is never seen.\n\nThere is a second bug: `created_at` is not unique. If two rows share the same timestamp, the database can return them in any order, and that order may differ between queries. That causes duplicates and skips even with no inserts at all.\n\n**What to change**\n\nSwitch to keyset (cursor) pagination. Instead of \"skip N rows,\" the client says \"give me rows after this one.\"\n\n1. Use a unique, stable sort key. Add the primary key as a tiebreaker: `ORDER BY created_at DESC, id DESC`.\n2. Return a cursor with each page, made from the last row's `(created_at, id)`.\n3. Filter by the cursor instead of using OFFSET.\n\n```python\nimport base64, json\n\n@app.get('/items')\ndef items(cursor: str | None = None, size: int = 50):\n    size = min(size, 200)  # cap page size\n\n    if cursor:\n        created_at, id_ = json.loads(base64.urlsafe_b64decode(cursor))\n        rows = db.query(\n            '''SELECT * FROM items\n               WHERE (created_at, id) < (%s, %s)\n               ORDER BY created_at DESC, id DESC\n               LIMIT %s''',\n            created_at, id_, size + 1)\n    else:\n        rows = db.query(\n            '''SELECT * FROM items\n               ORDER BY created_at DESC, id DESC\n               LIMIT %s''',\n            size + 1)\n\n    has_more = len(rows) > size\n    rows = rows[:size]\n\n    next_cursor = None\n    if has_more:\n        last = rows[-1]\n        next_cursor = base64.urlsafe_b64encode(\n            json.dumps([last['created_at'].isoformat(), last['id']]).encode()\n        ).decode()\n\n    return {'items': rows, 'next_cursor': next_cursor}\n```\n\nNotes on the code:\n\n- Fetching `size + 1` rows is a cheap way to know whether another page exists.\n- The row comparison `(created_at, id) < (%s, %s)` works in PostgreSQL and MySQL. If your database doesn't support it, write it out: `created_at < %s OR (created_at = %s AND id < %s)`.\n- Add an index to keep this fast: `CREATE INDEX ON items (created_at DESC, id DESC);`\n- The cursor is opaque to clients. They just pass back `next_cursor`. Consider validating it and returning a 400 on bad input.\n\n**What this fixes**\n\n- New inserts go above the cursor, so they never affect pages the client has not reached yet. No duplicates.\n- Deletes don't shift the position, because the cursor points to a value, not a row count. No skips.\n- It is also faster on deep pages. OFFSET makes the database walk past all the skipped rows, while the keyset filter jumps straight to the right place in the index.\n\n**Trade-offs**\n\n- Clients can no longer jump to an arbitrary page number. They can only go forward (or backward, if you add a reverse cursor).\n- New rows added after the client started won't appear in that paging session. That is usually what you want. The client sees them by restarting from the first page.\n- If you must keep `page` and `size` for existing clients, keep the old behavior on a deprecated path and move new clients to the cursor version.",
+ "cost_usd": 0.018728,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1491,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 1276,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1491,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1276,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1491,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1491
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

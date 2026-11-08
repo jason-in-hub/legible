@@ -1,0 +1,43 @@
+{
+ "id": "chat08",
+ "setting": "chat",
+ "arm": "base",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "Not a crime, but it depends on the movie.\n\n**The case for you:** It's your time and your attention. Plenty of people watch lectures, podcasts, and YouTube at 1.5x without anyone calling it a moral failing. If slow pacing makes you check your phone or zone out, 1.5x may mean you engage more than you would at 1x. Also, a lot of modern dialogue-heavy stuff (talky dramas, sitcoms, most streaming \"content\") loses very little when sped up.\n\n**The case for your partner:** In films where pacing is part of the craft, speed changes what the movie is. Silence, long takes, and deliberate rhythm in something like *Tarkovsky*, *Jeanne Dielman*, *Blade Runner 2049*, or even a tense Hitchcock scene are doing real work. Sound design and music also get distorted (pitch correction helps, but timing of score and cuts is still altered), and actors' delivery and comedic timing suffer. Action and horror are especially vulnerable, since suspense *is* timing.\n\n**My actual take:** Watching at 1.5x isn't wrong, but it's a different, lossy experience. If your goal is \"get the plot and enjoy the ride,\" fine. If your goal is \"experience what the filmmaker made,\" you're not quite doing that. Both are legitimate ways to consume media, just not the same thing.\n\n**A practical compromise:**\n- Watch anything you're excited about at 1x, especially with your partner.\n- Use 1.25x for stuff that drags but you still want to see.\n- Save 1.5x for things you'd otherwise abandon.\n- If you're constantly craving faster, that may be a signal the movie isn't working for you, and it's okay to just stop watching it.\n\nAnd if you're watching *together*, the speed is a shared decision. Dragging someone through their least favorite way to watch is a bigger crime than the speed itself.",
+ "cost_usd": 0.011768,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1391,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 620,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1391,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 620,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1391,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1391
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

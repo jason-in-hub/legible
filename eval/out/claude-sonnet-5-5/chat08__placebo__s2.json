@@ -1,0 +1,43 @@
+{
+ "id": "chat08",
+ "setting": "chat",
+ "arm": "placebo",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "It's not wrong. It's your time and your couch, and watching at 1.5x beats not finishing the movie at all.\n\nBut your partner has a point, and it depends on the kind of movie.\n\n**Where 1.5x works fine:** dialogue-heavy thrillers, talky comedies, bloated blockbusters, and anything with a lot of exposition. Speeding these up often tightens them.\n\n**Where it hurts:** films that use pacing as part of the art. Silence, long shots, and slow builds are how those films create tension or mood. Speed them up and you keep the plot but lose the feeling. Actors' timing and the music suffer too, and the music can sound odd at that speed.\n\n**My verdict:** \"crime against cinema\" is overdramatic, but a slow film sped up is a different experience from the one the director made. If you're also watching with your partner, the simplest fix is to use normal speed when you watch together. Use 1.5x when you watch alone or for movies you're only mildly curious about.\n\nOne more thought: if slow pacing feels unbearable now, that's worth noticing, but it's not a moral failing. Plenty of people feel the same after years of short-form video. If you want to rebuild the patience, try one slow film at normal speed with your phone in another room. You may enjoy it more than you expect, or you may confirm it's not for you, and either answer is fine.",
+ "cost_usd": 0.0078545,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 774,
+  "cache_read_input_tokens": 645,
+  "output_tokens": 469,
+  "output_tokens_details": {
+   "thinking_tokens": 31
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 774,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 469,
+    "cache_read_input_tokens": 645,
+    "cache_creation_input_tokens": 774,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 774
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

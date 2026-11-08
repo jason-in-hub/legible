@@ -1,0 +1,43 @@
+{
+ "id": "chat02",
+ "setting": "chat",
+ "arm": "placebo",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "It's mostly something people say. The \"throwing money away\" line is only half true.\n\n**Why it's misleading:** Rent pays for a place to live, just as some of an owner's costs do. Owners also spend money they never get back:\n- Mortgage interest\n- Property taxes\n- Insurance\n- Maintenance and repairs, often around 1% of the home's value per year\n- Closing costs, and agent fees when they sell\n\nOnly the part of the mortgage payment that pays down principal builds equity. In the early years of a mortgage, that part is small.\n\n**Why it's not totally wrong:** Owners do build equity, and home prices often rise over time. Rent buys you neither. Owners also get a fixed payment on a fixed-rate loan, while rent can keep rising.\n\n**A quick test (the \"5% rule\"):** Multiply a home's price by 5% and divide by 12. That roughly estimates the monthly cost of owning that you never get back (property tax, maintenance, and the return you give up on your down payment).\n\nFor a $400,000 home, that's about $1,667 a month. If you can rent a comparable place for less than that, renting is probably cheaper in pure money terms. If rent is higher, buying likely comes out ahead.\n\n**What tips the answer:**\n- **How long you'll stay.** Under about five years, buying costs usually outweigh the gains.\n- **Local price-to-rent ratio.** Buying tends to win where homes cost less than about 15 times annual rent. Renting tends to win above about 20.\n- **Mortgage rate.** Higher rates make owning more expensive.\n- **Your down payment and savings.** Money tied up in a house can't earn returns elsewhere.\n- **Your job and life stability.** Needing to move suddenly is a real risk for buyers.\n\nOverall, in many expensive markets with higher mortgage rates, renting has been cheaper month to month. In cheaper markets, or if you plan to stay a long time, buying can still be the better move.\n\nIf you tell me the home price you're considering, your current rent, the mortgage rate you'd get, your down payment, and how long you expect to stay, I can run a rough comparison for your situation.",
+ "cost_usd": 0.017186,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1408,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 1155,
+  "output_tokens_details": {
+   "thinking_tokens": 455
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1408,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1155,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1408,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1408
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

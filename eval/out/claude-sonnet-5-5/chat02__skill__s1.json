@@ -1,0 +1,43 @@
+{
+ "id": "chat02",
+ "setting": "chat",
+ "arm": "skill",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "It's mostly something people say. Rent pays for a place to live, the same way an owner's interest, property tax, insurance and repairs pay for one. Neither is \"thrown away.\" The real question is which option costs less after you subtract what you get back.\n\n**What owners pay and never recover**\n- Mortgage interest (only the principal part builds equity)\n- Property tax and insurance\n- Maintenance, often around 1% of the home's value per year\n- Closing costs of roughly 2-5% when buying, and agent fees and closing costs of roughly 5-6% when selling\n\nBecause of those buying and selling costs, owning usually only beats renting if you stay several years. Five to seven is a common rule of thumb, and it can be longer when prices are high compared to rents.\n\n**A quick test (the \"5% rule\")**\nMultiply the home's price by 5% and divide by 12. That's a rough monthly cost of owning that you don't get back. It's about 1% for property tax, 1% for maintenance, and 3% for mortgage interest plus the return you give up on your down payment. If your rent is lower than that figure, renting is probably cheaper. If it's higher, buying may come out ahead.\n\nExample: a $400,000 home gives $400,000 × 0.05 ÷ 12 ≈ $1,667 a month. If comparable rent is $1,500, renting wins on cost. If it's $2,200, buying probably does.\n\n**What tips it toward buying**\n- You expect to stay 7+ years\n- You have a down payment and an emergency fund left over afterward\n- Local rents are high compared to home prices\n- You value control over the place, such as renovating or having stable payments\n\n**What tips it toward renting**\n- You might move in the next few years\n- Buying would drain your savings\n- Prices in your area are high compared to rents\n- You'd rather not handle repairs\n\nI don't have live mortgage rates or your local market, so I can't say which way it goes for you today. If you tell me the rough home price you'd buy, your rent, your down payment and how long you expect to stay, I can run the numbers with you.",
+ "cost_usd": 0.0163539,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1335,
+  "cache_read_input_tokens": 5999,
+  "output_tokens": 1041,
+  "output_tokens_details": {
+   "thinking_tokens": 373
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1335,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1041,
+    "cache_read_input_tokens": 5999,
+    "cache_creation_input_tokens": 1335,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1335
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

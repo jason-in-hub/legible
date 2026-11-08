@@ -1,0 +1,43 @@
+{
+ "id": "chat04",
+ "setting": "chat",
+ "arm": "placebo",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "Yes, of course. And no, you're not being dramatic. Six years in one job is a natural point to start asking these questions. Thirty-two is also not too late. Plenty of people change fields in their 30s and 40s, and the skills you've built in six years usually carry over more than people expect.\n\nBoredom can mean different things, so a few questions might help us figure out which kind you have:\n\n1. **What exactly feels boring?** Is it the day-to-day tasks, the lack of new challenges, the people, or the industry itself?\n2. **Would a different job in your same field fix it?** Sometimes the problem is the role or the company, not the whole career.\n3. **Is there a field you're drawn to, or are you mostly trying to get away from where you are?** Both are valid, but they lead to different next steps.\n4. **What are your practical constraints?** Think about income, savings, dependents, or anything else that limits how much risk you can take on.\n\nStart wherever you like. What do you do now, and what does a typical week look like?",
+ "cost_usd": 0.00951,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1429,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 379,
+  "output_tokens_details": {
+   "thinking_tokens": 58
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1429,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 379,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1429,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1429
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

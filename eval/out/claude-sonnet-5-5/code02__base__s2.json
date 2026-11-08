@@ -1,0 +1,43 @@
+{
+ "id": "code02",
+ "setting": "code",
+ "arm": "base",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "## What's going on\n\nOFFSET pagination is positional: \"skip the first N rows of whatever the table looks like *right now*.\" The ordering is `created_at DESC`, so new rows land at the front of the list and shift everything down.\n\n- **Duplicates:** Client fetches page 0 (rows 1–50). Then 5 new rows are inserted at the top. Page 1 (`OFFSET 50`) now starts at what used to be row 46, so rows 46–50 appear again.\n- **Skips:** Deletes (or rows moving out of the range) shift things the other way. If rows in page 0 are deleted, the old rows 51–55 slide into the already-fetched range and the client never sees them.\n\nThere's a second, subtler bug: `created_at` is probably not unique. With ties, `ORDER BY created_at DESC` has no deterministic order, so the database may return tied rows in different orders between queries. That causes skips/duplicates even with no concurrent writes. (Also, large OFFSETs get slower because the DB still scans and discards all skipped rows.)\n\n## Fix: keyset (cursor) pagination with a unique tiebreaker\n\nAnchor each page to the last row the client saw, not to a row count.\n\n```python\nimport base64, json\n\n@app.get('/items')\ndef items(cursor: str | None = None, size: int = 50):\n    size = min(max(size, 1), 200)\n\n    if cursor:\n        ts, last_id = json.loads(base64.urlsafe_b64decode(cursor))\n        rows = db.query(\n            '''SELECT * FROM items\n               WHERE (created_at, id) < (%s, %s)\n               ORDER BY created_at DESC, id DESC\n               LIMIT %s''',\n            ts, last_id, size + 1)\n    else:\n        rows = db.query(\n            '''SELECT * FROM items\n               ORDER BY created_at DESC, id DESC\n               LIMIT %s''',\n            size + 1)\n\n    has_more = len(rows) > size\n    rows = rows[:size]\n\n    next_cursor = None\n    if has_more:\n        last = rows[-1]\n        next_cursor = base64.urlsafe_b64encode(\n            json.dumps([last['created_at'].isoformat(), last['id']]).encode()\n        ).decode()\n\n    return {'items': rows, 'next_cursor': next_cursor}\n```\n\nSupporting index:\n\n```sql\nCREATE INDEX items_created_at_id_idx ON items (created_at DESC, id DESC);\n```\n\n### Why this works\n- `(created_at, id)` is a unique, total ordering, so there are no ties.\n- `WHERE (created_at, id) < (last_ts, last_id)` means \"everything after the last row I saw,\" so inserts at the top don't shift the client's position, and deletes don't cause skips.\n- Fetching `size + 1` tells you whether there's another page without a separate `COUNT`.\n- With the index, each page is an index seek, so cost stays constant regardless of depth.\n\n### Notes\n- **Row-value comparison** `(a, b) < (x, y)` works in Postgres and MySQL 8+. If your DB lacks it, expand to `created_at < %s OR (created_at = %s AND id < %s)`.\n- **Timestamp precision:** make sure the cursor round-trips `created_at` without losing precision (microseconds), or you'll get duplicates/skips at the boundary.\n- **Opaque cursor:** keep it base64 so clients don't depend on its structure; you can change it later. Consider signing it if tampering matters.\n- **Trade-off:** you lose \"jump to page N.\" If the UI needs that, keep OFFSET for those views and accept the inconsistency, or use cursors for infinite scroll/sync clients.\n- **Newly inserted rows** appear only when the client restarts from the first page, which is the normal, expected behavior for a feed. If a client needs to catch up on new items, add a separate `?since=` query going the other direction.\n- **Backdated `created_at`:** if rows can be inserted with a `created_at` older than what the client already passed, keyset pagination will still miss them. If that's possible, paginate on a monotonic column such as an auto-increment `id` or an `updated_seq` instead.",
+ "cost_usd": 0.019792,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1462,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 1394,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1462,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1394,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1462,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1462
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

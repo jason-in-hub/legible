@@ -1,0 +1,43 @@
+{
+ "id": "chat07",
+ "setting": "chat",
+ "arm": "base",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "Three weeks is enough if you front-load the things with lead times. Rough order:\n\n**Week 1: lock in the big, slow stuff**\n1. **Housing**: This is the thing everything else depends on. If you don't have a place yet, start now (listings, tours or video tours, applications). If you do, read the lease and confirm your move-in date.\n2. **Moving method**: Decide between a moving company, a rental truck or pod, or shipping a few boxes and selling the rest. Book now, since good dates fill up, especially at month-end.\n3. **Budget check**: Tally up deposits, first month's rent, movers, and travel, so nothing surprises you.\n4. **Declutter**: Sell, donate, or toss whatever you don't want to pay to move. This also makes packing much easier.\n\n**Week 2: set up logistics**\n5. **Utilities and internet**: Schedule electric, gas, and internet to start on move-in day. Internet installs can take a week or more to book.\n6. **Renter's insurance**: It's cheap and often required by the lease.\n7. **Notify your current place**: Give notice to your landlord if you haven't, and ask about the deposit return process.\n8. **Start packing**: Do the stuff you won't need first (off-season clothes, books, decor).\n9. **Medical stuff**: Get refills, ask for records if needed, and look up new doctors, dentists, and pharmacies in the new city.\n\n**Week 3: wrap up and transition**\n10. **Change your address**: Do USPS mail forwarding, then update banks, credit cards, employer, subscriptions, and insurance. Do your driver's license and voter registration within a few weeks of arriving (deadlines vary by state or country).\n11. **Pack essentials separately**: Put chargers, toiletries, medications, documents, and a change of clothes or two in a bag that travels with you.\n12. **Clean and do a walkthrough**: Take photos of your old place to protect your deposit.\n13. **Confirm everything**: Check in with movers, utilities, and your new landlord a few days before.\n\n**After you arrive**\n- Photograph the new place's condition on day one.\n- Update your license, vehicle registration, and any local requirements.\n- Explore the neighborhood: find a grocery store, pharmacy, and transit routes.\n\nIf you tell me where you're moving from and to, whether you're renting or buying, and whether you have a car or a job lined up, I can tailor this into a more specific checklist with deadlines. Where are you at on housing?",
+ "cost_usd": 0.014226000000000003,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1378,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 871,
+  "output_tokens_details": {
+   "thinking_tokens": 51
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1378,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 871,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1378,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1378
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

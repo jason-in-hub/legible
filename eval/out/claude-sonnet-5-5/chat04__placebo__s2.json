@@ -1,0 +1,43 @@
+{
+ "id": "chat04",
+ "setting": "chat",
+ "arm": "placebo",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "Yes, happy to talk it through. And no, 32 isn't too late to switch fields. Plenty of people change careers in their 30s, and six years is long enough that feeling restless is normal, not dramatic.\n\nThe real question is what exactly is making you bored. Those causes point to different fixes:\n\n- **The work itself.** You've mastered it and nothing is new.\n- **Your situation.** The company, your boss, your team, or a lack of growth.\n- **The field.** The subject matter no longer interests you.\n\nIf it's the first two, a new role or employer might solve it without starting over. If it's the third, a bigger change makes more sense.\n\nA few questions to start:\n\n1. What do you do now, and what part of it have you stopped enjoying?\n2. Is there a field or kind of work you're drawn to, or is it more \"anything but this\"?\n3. What constraints do you have, such as savings, a mortgage, dependents, or a partner's income? These shape how big a leap is realistic.\n\nAnswer whichever of these you like, in any order. If you're not sure, just tell me what a typical week looks like and we can start there.",
+ "cost_usd": 0.010206,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1433,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 447,
+  "output_tokens_details": {
+   "thinking_tokens": 94
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1433,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 447,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1433,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1433
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

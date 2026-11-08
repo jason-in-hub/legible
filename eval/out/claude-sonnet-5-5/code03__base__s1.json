@@ -1,0 +1,43 @@
+{
+ "id": "code03",
+ "setting": "code",
+ "arm": "base",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "`forEach` doesn't know about promises. It calls your callback for each element and ignores the return value. Since the callback is `async`, each call returns a promise immediately (at its first `await`), and `forEach` discards those promises and moves on.\n\nThe sequence is:\n\n1. `forEach` calls the callback for each file. Each callback runs synchronously until `await processFile(f)`, then pauses and returns a pending promise.\n2. `forEach` finishes, because it never waits on those promises.\n3. `console.log('done')` runs.\n4. Later, as the event loop proceeds, the `processFile` calls resolve and the callbacks resume.\n\n`processAll` itself is `async`, but nothing in it awaits the work, so its returned promise resolves right away too.\n\n## Fixes\n\n**Parallel**: collect the promises and wait for all of them:\n\n```js\nasync function processAll(files) {\n  await Promise.all(files.map((f) => processFile(f)));\n  console.log('done');\n}\n```\n\n**Sequential**: use `for...of`, where `await` pauses the enclosing function:\n\n```js\nasync function processAll(files) {\n  for (const f of files) {\n    await processFile(f);\n  }\n  console.log('done');\n}\n```\n\nChoose parallel if the files are independent and you can handle the load. Choose sequential if order matters or you need to limit concurrency (for example, many files hitting disk or an API at once). If you want parallel with error tolerance, use `Promise.allSettled` instead of `Promise.all`.\n\nOne more consequence of the original code: since the promises are discarded, a rejection in `processFile` becomes an unhandled promise rejection, and the caller of `processAll` can't catch it with `try/catch`.",
+ "cost_usd": 0.01114,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1394,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 556,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1394,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 556,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1394,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1394
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "id": "chat04",
+ "setting": "chat",
+ "arm": "skill",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "Yes, happy to. And 32 isn't too late. Plenty of people change fields in their 30s, and being bored after six years is a normal reason to start thinking about it, not a sign you're being dramatic.\n\nBoredom can point to a few different things, and which one it is changes what you should do:\n\n- **The work itself is stale.** You've mastered it and nothing new is left to learn.\n- **Your role or company is the problem.** The field might be fine, but you're stuck in a spot with no growth, a weak team, or a bad manager.\n- **You want something different from work.** That could be more meaning, more money, more autonomy, or a different pace.\n\nA few questions to get us started:\n\n1. What do you do now, and what was it like in your first year or two? Was it ever interesting?\n2. When you imagine switching fields, are you moving toward something specific, or mostly away from what you have?\n3. What would a good workday look like for you?\n4. What are the constraints? Money, family, savings, how much risk you can take?\n\nYou don't need to answer all of them. Start wherever feels easiest.",
+ "cost_usd": 0.0083543,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 778,
+  "cache_read_input_tokens": 6583,
+  "output_tokens": 458,
+  "output_tokens_details": {
+   "thinking_tokens": 118
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 778,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 458,
+    "cache_read_input_tokens": 6583,
+    "cache_creation_input_tokens": 778,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 778
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

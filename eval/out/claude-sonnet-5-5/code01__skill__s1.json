@@ -1,0 +1,43 @@
+{
+ "id": "code01",
+ "setting": "code",
+ "arm": "skill",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "This is Python's mutable default argument gotcha.\n\n## What's wrong\n\nPython creates the default value `[]` once, when the `def` line runs, not each time you call the function. Every call that omits `tags` gets that same list object. So the first call appends `'a'` to it, and the second call appends `'b'` to the same list:\n\n```\nadd_tag('a')  -> ['a']\nadd_tag('b')  -> ['a', 'b']   # same list as before\n```\n\nYou can see this by inspecting the function:\n\n```python\nprint(add_tag.__defaults__)  # (['a', 'b'],)\n```\n\n## The fix\n\nUse `None` as the default and create a new list inside the function:\n\n```python\ndef add_tag(item, tags=None):\n    if tags is None:\n        tags = []\n    tags.append(item)\n    return tags\n\nprint(add_tag('a'))  # ['a']\nprint(add_tag('b'))  # ['b']\n```\n\nThe `if` body runs on every call, so each call without `tags` gets a fresh list.\n\nUse `is None` rather than `if not tags`. If a caller passes their own empty list, `not tags` would be true and you'd silently replace it with a different list, so their list would never get the new item.\n\n## When this applies\n\nThe same problem occurs with any mutable default: `{}`, `set()`, or a custom object. Immutable defaults such as numbers, strings, `None` and tuples are safe, because nothing can modify them in place.\n\nIf you do want state shared across calls, such as a cache, the mutable default works, but a module-level variable or a class makes that intent clearer to readers.",
+ "cost_usd": 0.0122139,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1395,
+  "cache_read_input_tokens": 5999,
+  "output_tokens": 603,
+  "output_tokens_details": {
+   "thinking_tokens": 96
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1395,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 603,
+    "cache_read_input_tokens": 5999,
+    "cache_creation_input_tokens": 1395,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1395
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

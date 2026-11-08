@@ -1,0 +1,43 @@
+{
+ "id": "chat05",
+ "setting": "chat",
+ "arm": "skill",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "Tobias counted the knocks before he let himself believe them. There were three, evenly spaced, the way someone knocks when they were taught manners.\n\nIn three years he hadn't heard a single one. The supply boat never came to the door. It left crates on the dock and sounded its horn twice, and he carried them up after it had gone. That was the arrangement.\n\nHe put down his tea and crossed the kitchen. The wind had been dead calm all night, which was odd too. Through the small window he could see only a sleeve of yellow oilcloth, dark with rain.\n\n\"Hello?\" His voice came out rough. He hadn't used it much.\n\n\"Mr. Alder?\" It was a woman, and she sounded calm. \"I'm sorry to come so early. I walked out from the mainland. The tide is lower than I've ever seen it.\"\n\nTobias frowned. The tide here never dropped that far. There was no path to the mainland, only four miles of open water.\n\n\"I have a letter for you,\" she said. \"I was told to hand it over in person.\"\n\n\"Who's it from?\"\n\nThere was a pause. Then she slid an envelope under the door. His name was on the front, in handwriting he knew well, because it was his own.\n\nYour turn. What's in the letter?",
+ "cost_usd": 0.012979700000000002,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 777,
+  "cache_read_input_tokens": 6577,
+  "output_tokens": 921,
+  "output_tokens_details": {
+   "thinking_tokens": 531
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 777,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 921,
+    "cache_read_input_tokens": 6577,
+    "cache_creation_input_tokens": 777,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 777
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

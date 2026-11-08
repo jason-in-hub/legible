@@ -1,0 +1,43 @@
+{
+ "id": "chat06",
+ "setting": "chat",
+ "arm": "placebo",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "The short answer: the sky is blue by day because air scatters blue light much more than red light, and at sunset the sunlight has to travel through so much air that most of the blue gets scattered away before it reaches you.\n\n**Why it's blue during the day**\n\nSunlight looks white, but it's a mix of all colors. When it hits gas molecules in the atmosphere, it gets bounced around in all directions. This is called Rayleigh scattering. Short wavelengths (blue and violet) scatter far more strongly than long wavelengths (red and orange). So when you look at any part of the sky away from the sun, you're seeing blue light that has been redirected toward your eyes.\n\nYou might wonder why the sky isn't violet, since violet scatters even more than blue. The sun puts out less violet light, some of it is absorbed high in the atmosphere, and our eyes are less sensitive to it. Blue wins out.\n\n**Why it's red or orange at sunset**\n\nAt sunset, the sun is low on the horizon. Its light has to cross a much longer stretch of atmosphere to reach you than it does at noon, when the sun is overhead.\n\nAlong that long path, most of the blue light gets scattered out of the direct beam. It goes off in other directions, and you never see it from where you're standing. The light that makes it through is mostly the longer wavelengths: orange and red. That's the color you see near the sun and along the horizon.\n\n**A few extras**\n\n- The blue light that was scattered away isn't gone. It's lighting up the daytime sky for people farther west.\n- Dust, smoke, and pollution can make sunsets more vivid, because extra particles scatter more of the remaining blue and let the reds stand out.\n- Sunrises work the same way, though they're often a bit less intense because the air is usually cleaner and calmer in the morning.\n\nSo it's the same process both times. The only thing that changes is how much air the light has to pass through.",
+ "cost_usd": 0.011806,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1413,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 615,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1413,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 615,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1413,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1413
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

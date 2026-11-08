@@ -1,0 +1,43 @@
+{
+ "id": "chat08",
+ "setting": "chat",
+ "arm": "placebo",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "It's not wrong. It's your time and your living room, and plenty of people watch this way. But your partner has a point in a few cases.\n\n**Where 1.5x works fine:** dialogue-heavy dramas, talky comedies, long TV series, and anything you'd otherwise abandon halfway. Finishing a movie at 1.5x beats not finishing it.\n\n**Where it costs you:** films that build mood through silence and pacing, like a slow horror film, a Tarkovsky picture, or a quiet drama. The pauses are part of what the director made. Speeding them up can flatten the tension and the emotion. Comedy timing and music also suffer, and voices can start to sound unnatural.\n\n**My take:** the \"crime against cinema\" line is overdramatic, but the criticism isn't empty. If a movie feels too slow at normal speed, that might be a sign it isn't for you, and that's fine too.\n\n**A compromise for the two of you:** watch at normal speed when you're watching together, and use 1.25x or 1.5x for things you watch alone. You could also let your partner pick a few films that deserve full speed, and see if the pacing grows on you. If it still doesn't, you've lost nothing.",
+ "cost_usd": 0.010046,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1418,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 437,
+  "output_tokens_details": {
+   "thinking_tokens": 48
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1418,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 437,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1418,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1418
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

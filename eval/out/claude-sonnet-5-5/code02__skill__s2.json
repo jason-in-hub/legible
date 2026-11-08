@@ -1,0 +1,43 @@
+{
+ "id": "code02",
+ "setting": "code",
+ "arm": "skill",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "## What's happening\n\n`OFFSET` pages by position, not by record. Each request asks for \"rows 50 to 99 of the list as it looks right now,\" and the list changes between requests.\n\n- **Duplicates:** Your list is newest-first. If 3 rows are inserted after the client fetches page 0, every old row moves down 3 places. The last 3 rows of page 0 are now the first 3 of page 1, so the client sees them twice.\n- **Skips:** Deletes do the reverse. Rows move up, and the ones that slip into the already-fetched range are never seen.\n- **Ties in `created_at`:** `ORDER BY created_at` alone doesn't give a fixed order when timestamps are equal. The database can return tied rows in a different order on each query, which causes skips and duplicates even with no inserts.\n\n`OFFSET` is also slow on deep pages, because the database reads and discards every earlier row.\n\n## What to change\n\nSwitch to keyset (cursor) pagination. The client sends back the last row it saw, and the query continues from that row rather than from a position. Add `id` as a tiebreaker so the order is unique.\n\n```python\nimport base64, json\n\n@app.get('/items')\ndef items(cursor: str | None = None, size: int = 50):\n    size = min(size, 100)\n    if cursor:\n        ts, last_id = json.loads(base64.urlsafe_b64decode(cursor))\n        rows = db.query(\n            'SELECT * FROM items WHERE (created_at, id) < (%s, %s) '\n            'ORDER BY created_at DESC, id DESC LIMIT %s',\n            ts, last_id, size + 1)\n    else:\n        rows = db.query(\n            'SELECT * FROM items ORDER BY created_at DESC, id DESC LIMIT %s',\n            size + 1)\n\n    has_more = len(rows) > size\n    rows = rows[:size]\n    next_cursor = None\n    if has_more:\n        last = rows[-1]\n        payload = [last['created_at'].isoformat(), last['id']]\n        next_cursor = base64.urlsafe_b64encode(json.dumps(payload).encode()).decode()\n    return {'items': rows, 'next_cursor': next_cursor}\n```\n\nAdd a matching index so each page is a short index scan:\n\n```sql\nCREATE INDEX items_created_id_idx ON items (created_at DESC, id DESC);\n```\n\nNotes:\n\n- Fetching `size + 1` rows tells you whether another page exists without a separate `COUNT`.\n- The cursor is opaque to clients. They pass back `next_cursor` unchanged, and you can change its contents later.\n- Rows inserted during paging land above the cursor, so a client in the middle of a walk won't see them or get duplicates. They appear when the client starts a new walk.\n- The row-value comparison `(a, b) < (x, y)` works in Postgres and MySQL. In databases without it, expand it to `created_at < x OR (created_at = x AND id < y)`.\n- If a row can commit with a `created_at` earlier than rows already visible (long transactions, clock skew), it can still be missed. If that matters, order by a monotonic column such as an auto-increment `id` instead of `created_at`.\n- Keyset pagination can't jump to \"page 7.\" If you need that, keep `OFFSET` only for UIs that can tolerate the drift.",
+ "cost_usd": 0.0239085,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 775,
+  "cache_read_input_tokens": 6645,
+  "output_tokens": 2014,
+  "output_tokens_details": {
+   "thinking_tokens": 905
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 775,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 2014,
+    "cache_read_input_tokens": 6645,
+    "cache_creation_input_tokens": 775,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 775
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

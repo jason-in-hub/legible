@@ -1,0 +1,43 @@
+{
+ "id": "code01",
+ "setting": "code",
+ "arm": "placebo",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "## What's wrong\n\nPython creates a default argument value **once**, when the `def` statement runs. It does not create a new one each time you call the function. So `tags=[]` makes a single list, and every call that doesn't pass `tags` shares it.\n\nHere is what happens in your example:\n\n1. `add_tag('a')` appends `'a'` to the shared list and returns it. You see `['a']`.\n2. `add_tag('b')` appends `'b'` to the same list, which still holds `'a'`. You see `['a', 'b']`.\n\nThe function also returns the shared list itself, not a copy. Anything you do to a returned list will change the default for future calls.\n\n## The fix\n\nUse `None` as the default, and create a new list inside the function:\n\n```python\ndef add_tag(item, tags=None):\n    if tags is None:\n        tags = []\n    tags.append(item)\n    return tags\n\nprint(add_tag('a'))  # ['a']\nprint(add_tag('b'))  # ['b']\n```\n\nNow each call without `tags` gets a fresh list.\n\n## Good to know\n\n- This affects any **mutable** default: lists, dicts, sets, and most custom objects. Immutable defaults like numbers, strings, `None`, and tuples are safe.\n- Check for `is None` instead of `if not tags`. Otherwise, a list the caller passes in that happens to be empty would be silently replaced with a new one, and the caller's list would not be updated.\n- If you want to avoid changing the caller's list, copy it instead: `tags = [] if tags is None else list(tags)`.",
+ "cost_usd": 0.01159,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1469,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 571,
+  "output_tokens_details": {
+   "thinking_tokens": 69
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1469,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 571,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1469,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1469
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

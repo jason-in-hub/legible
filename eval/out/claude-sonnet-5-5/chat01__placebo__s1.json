@@ -1,0 +1,43 @@
+{
+ "id": "chat01",
+ "setting": "chat",
+ "arm": "placebo",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "It's not a stupid idea. Go for it. Plenty of people start at 40, 50, or later, and adults often do well because they practice on purpose and stick with things they care about. You won't become a prodigy, but you can play songs you love within a few months.\n\n**What to expect**\n- The first month or two is the hardest. Your fingertips will hurt, chords will buzz, and switching between them will feel clumsy. Everyone goes through this.\n- Short, regular practice beats long, rare sessions. 15 to 20 minutes a day works better than two hours on Sunday.\n- Most people can play a few simple songs after 2 to 3 months of steady practice.\n\n**Where to start**\n1. **Pick a guitar.** An acoustic is simple and needs no extras. An electric is easier on the fingers and fun if you like rock or blues, but you'll need an amp. Either is fine. Choose the one that matches the music you want to play.\n2. **Get it set up.** A cheap guitar with high strings is painful to play. Many music shops will adjust it for a small fee, and it makes a big difference. Buy a clip-on tuner too, or use a free tuner app.\n3. **Choose one learning source.** Good options are:\n   - **Justin Guitar** (free, on YouTube and his website). His beginner course is widely recommended.\n   - **Fender Play** or **Yousician** (paid apps with structured lessons).\n   - **A local teacher**, if you like feedback from a real person. Even a handful of lessons early on can help you avoid bad habits.\n4. **Learn a few basic chords first.** Start with Em, Am, E, A, D, and G. With those you can play a surprising number of songs.\n5. **Learn songs you actually like.** This is what keeps you going once the novelty wears off.\n\n**Tips for sticking with it**\n- Keep the guitar on a stand or somewhere visible, not in a case in a closet.\n- Stop when your fingers really hurt. They toughen up in a few weeks.\n- Don't compare yourself to people on YouTube who have played for 20 years.\n\nWhat kind of music do you want to play? That would help me suggest whether to start with acoustic or electric, and which songs to learn first.",
+ "cost_usd": 0.013114,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1405,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 749,
+  "output_tokens_details": {
+   "thinking_tokens": 32
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1405,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 749,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1405,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1405
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "id": "chat07",
+ "setting": "chat",
+ "arm": "placebo",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "Three weeks is enough time if you do things in the right order. Here's a rough sequence.\n\n## This week: lock in the big stuff\n1. **Housing.** Everything else depends on your new address. If you don't have a place yet, this is the top priority. If you do, make sure the lease is signed and you know your move-in date.\n2. **Moving method.** Decide if you're hiring movers, renting a truck, shipping boxes, or driving your stuff yourself. Movers and trucks get booked up, so reserve one now.\n3. **Time off and travel.** Request days off work and book any flights or hotels you'll need.\n\n## Weeks 1-2: shrink and prepare\n4. **Declutter.** Sell, donate, or toss what you don't want to move. Less stuff means a cheaper and easier move.\n5. **Start packing.** Begin with things you rarely use, like off-season clothes, books, and decor. Leave daily essentials for last.\n6. **Set up utilities at the new place.** Arrange internet, electricity, and anything else that applies. Internet installs can take a week or more, so don't wait.\n7. **Cancel or transfer services at the old place.** This includes utilities, internet, and gym memberships. Time the shut-off for just after you leave.\n8. **Collect important documents.** Gather medical records, prescriptions, and anything else that's hard to replace. Keep them with you, not in the moving truck.\n\n## Final week: handle the admin\n9. **Change your address.** Do it with the post office (USPS if you're in the US), your bank, your employer, insurance, and subscriptions. Your driver's license and vehicle registration usually have a deadline after you arrive, so check your new state's rules.\n10. **Pack a \"first night\" bag.** Include toiletries, chargers, a change of clothes, sheets, towels, and basic tools.\n11. **Clean and do a final walkthrough** of the old place. Take photos to protect your deposit.\n\n## After you arrive\n- Update your license, registration, and voter registration.\n- Find a new doctor, dentist, and any other providers you need.\n- Explore the neighborhood and find the nearest grocery store and pharmacy.\n\nIf you tell me a few things, I can turn this into a more specific checklist:\n- Which city you're moving to, and from where\n- Whether you already have housing\n- How much stuff you have (a few suitcases, or a full apartment)\n- Whether you're renting or buying, and whether a job is involved",
+ "cost_usd": 0.0119334,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 779,
+  "cache_read_input_tokens": 634,
+  "output_tokens": 875,
+  "output_tokens_details": {
+   "thinking_tokens": 74
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 779,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 875,
+    "cache_read_input_tokens": 634,
+    "cache_creation_input_tokens": 779,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 779
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "id": "chat10",
+ "setting": "chat",
+ "arm": "placebo",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "It's not insane. Lots of two-income households have dogs. It just takes a real plan, and the plan matters more than the schedule itself.\n\n**The big question: who's with the dog during the workday?**\n\nA dog can't be alone for 8-9 hours a day without consequences. Most adult dogs can manage about 4-6 hours between potty breaks. Your options:\n- A midday dog walker or a neighbor who can stop by\n- Doggy daycare a few days a week\n- Working from home some days\n- Staggered schedules, if either of you has flexibility\n\nIf you have none of these, that's the main thing to solve before getting a dog.\n\n**Things people often don't think about**\n\n- **Puppy vs. adult dog.** Puppies are much harder with full-time jobs. They need to go out every few hours, need training, and chew everything. A young adult or adult dog from a shelter or rescue is often a much better fit. Many are already house-trained.\n- **The first few weeks.** Plan to take time off, or stagger days off, when the dog arrives. The early routine sets the pattern.\n- **Cost.** Expect roughly $1,000-$3,000 a year or more for food, vet care, grooming, and supplies, plus childcare-style costs for walkers or daycare. A single emergency vet visit can cost $1,000-$5,000, so pet insurance or a savings cushion is worth considering.\n- **Travel.** Every trip now means boarding, a sitter, or bringing the dog. Spontaneous weekends away get harder.\n- **Housing.** If you rent, check pet policies, deposits, and breed or size limits. Even if your lease allows a dog, it may charge monthly pet rent.\n- **Lifespan.** This is a 10-15 year commitment. Think about whether your life might change in that time, such as moving, kids, or new jobs.\n- **Energy and breed.** A high-energy dog like a border collie or husky will struggle in your situation. Many lower-energy breeds and mixes do better. Don't pick on looks alone.\n- **Separation anxiety.** Some dogs handle being alone well, and some don't. Shelters and rescues can often tell you how a particular dog does.\n- **Agreement between you two.** Decide up front who handles morning walks, evening walks, vet appointments, and feeding. Resentment over unequal dog duties is common.\n- **Daily time.** Even with daytime help, a dog needs roughly 1-2 hours of your attention each day, covering walks, play, and training. That's a lot after a full workday.\n\n**A good way to test it**\n\nTry fostering a dog for a few weeks, or dog-sit for a friend. You'll learn quickly how your schedule and home handle it.\n\nIf you tell me more about your situation, I can get more specific. Useful details include your housing, how many hours you're each away, your activity level, and whether you're leaning toward a puppy or an adult dog.",
+ "cost_usd": 0.015556,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1403,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 994,
+  "output_tokens_details": {
+   "thinking_tokens": 51
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1403,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 994,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1403,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1403
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

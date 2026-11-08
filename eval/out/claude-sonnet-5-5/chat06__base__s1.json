@@ -1,0 +1,43 @@
+{
+ "id": "chat06",
+ "setting": "chat",
+ "arm": "base",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "It comes down to **Rayleigh scattering** and how much air the sunlight has to travel through.\n\n**Why the sky is blue during the day**\n\nSunlight looks white but contains all colors. When it hits air molecules (mostly nitrogen and oxygen), those molecules scatter short wavelengths (blue/violet) much more strongly than long wavelengths (red/orange). The scattering strength goes roughly as 1/wavelength⁴, so blue light is scattered about 4-5 times more than red.\n\nThat scattered blue light bounces all around the atmosphere and reaches your eyes from every direction, so the whole sky looks blue. (Violet scatters even more, but the sun emits less of it, the upper atmosphere absorbs some, and our eyes are less sensitive to it, so we see blue.)\n\n**Why sunsets are red/orange**\n\nAt sunset, the sun is low on the horizon, so its light passes through far more atmosphere to reach you, many times more than at midday. Along that long path, most of the blue and green light gets scattered out of the direct beam, off in other directions. What's left to reach your eyes is the longer-wavelength light: orange and red.\n\nSo the colors you see at sunset are what remains after the blue has been filtered out along the way.\n\n**Bonus details**\n\n- The blue that was scattered out of your sunset line of sight isn't gone. It's lighting up the sky for people farther west, where it's still daytime.\n- Dust, smoke, and pollution can make sunsets more vivid, since larger particles scatter light differently and add to the filtering. This is why wildfire smoke or volcanic eruptions can produce especially dramatic red skies.\n- The same effect explains why the sun looks yellowish even at midday: a bit of its blue is being scattered away.",
+ "cost_usd": 0.01131,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1379,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 579,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1379,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 579,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1379,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1379
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}
