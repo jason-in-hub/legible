@@ -1,0 +1,43 @@
+{
+ "id": "chat01",
+ "setting": "chat",
+ "arm": "skill",
+ "sample": 1,
+ "model": "claude-opus-5-5",
+ "text": "Not stupid at all. Go for it.\n\nLots of people start at 40, 50, even 70, and get good enough to enjoy playing. Kids learn faster in some ways, but you have advantages they don't. You can practise with intent, you know what music you like, and you're choosing this rather than being made to do it. What decides whether you stick with it is regular practice, not age.\n\n**Where to start**\n\n1. **Get a playable guitar.** It doesn't need to be expensive, but it does need to be set up properly. If the strings sit too high above the neck, pressing them down hurts and beginners quit. Budget roughly $150–300. Ask the shop to check the setup, or pay a local tech about $50 to do it.\n   - **Acoustic:** you just pick it up and play, but the strings are harder on your fingers at first.\n   - **Electric:** the strings are easier to press, but you also need a small amp or headphone amp.\n   - Choose the one that matches the music you want to play. That's what will keep you motivated.\n\n2. **Pick one learning path.** Good free or cheap options:\n   - **Justin Guitar** (website and app). It's a structured beginner course and very popular for good reason.\n   - **Fender Play** or similar apps, if you like guided lessons.\n   - **A teacher**, even for just a few sessions early on. They can catch bad habits before they set in.\n\n   Stick with one. Jumping between random YouTube videos is the most common way people stall.\n\n3. **Learn the first few chords.** Most beginners start with E minor, A minor, D, G, C and E. With those you can play hundreds of songs.\n\n4. **Practise little and often.** 15–20 minutes a day beats two hours on Sunday. Leave the guitar on a stand where you can see it, not in its case, so picking it up is easy.\n\n**What to expect**\n\n- Your fingertips will hurt for the first 2–3 weeks. That's normal, and it passes as calluses build.\n- Changing chords will feel slow and clumsy for a while. Everyone goes through that.\n- After about 2–3 months of steady practice, you'll likely be able to play some simple songs all the way through. That's usually when it starts to feel worth it.\n\nChoose one song you really love early on and work toward it. That goal will carry you through the frustrating weeks better than exercises will.\n\nIf you want, tell me what kind of music you're into and I'll suggest a guitar type and a few beginner songs to aim for.",
+ "cost_usd": 0.07527600000000001,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 7321,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 835,
+  "output_tokens_details": {
+   "thinking_tokens": 44
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 7321,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 835,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 7321,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 7321
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

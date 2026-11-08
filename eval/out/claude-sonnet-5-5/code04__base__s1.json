@@ -1,0 +1,43 @@
+{
+ "id": "code04",
+ "setting": "code",
+ "arm": "base",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "## What's happening\n\n`df[df['score'] > 80]` uses a boolean mask, which makes pandas build a **new object**. Depending on internals, that result may be a copy or may share memory with `df`, and pandas can't always tell which. When you then do `high['grade'] = 'A'`, pandas doesn't know whether you mean:\n\n1. \"Modify only `high`\" (the usual intent), or\n2. \"Modify the original `df` through `high`\" (a chained assignment).\n\n`SettingWithCopyWarning` is pandas saying \"I can't tell, and this may not do what you expect.\"\n\nThe \"sometimes the column doesn't change\" symptom comes from the same ambiguity. Chained assignments like `df[mask]['grade'] = 'A'` write to a temporary copy that is immediately discarded, so `df` is never updated. Whether a write propagates depends on whether pandas happened to return a view or a copy, which varies with dtypes, index type, and how the slice was made. That's why it appears non-deterministic.\n\nIn your snippet, `high` is a copy in practice (boolean indexing always copies), so the assignment modifies `high` only. But pandas flags it because `high` still carries a hidden reference to `df`. If you expected `df` to get a `grade` column, it won't.\n\n## The right way\n\nIt depends on what you want.\n\n**1. You want a separate, independent DataFrame** (make the copy explicit):\n\n```python\nhigh = df[df['score'] > 80].copy()\nhigh['grade'] = 'A'\n```\n\n`.copy()` severs the link to `df`, removes the warning, and makes the intent clear.\n\n**2. You want to update the original `df`** (use a single `.loc` call):\n\n```python\ndf.loc[df['score'] > 80, 'grade'] = 'A'\n```\n\nThis is one indexing operation, so pandas knows it's writing into `df`. Rows that don't match get `NaN` in the new column. You can fill them in with a default:\n\n```python\ndf['grade'] = 'B'                      # default\ndf.loc[df['score'] > 80, 'grade'] = 'A'\n```\n\nOr, for multiple tiers, use `np.select` or `pd.cut`:\n\n```python\nimport numpy as np\ndf['grade'] = np.select(\n    [df['score'] > 90, df['score'] > 80],\n    ['A+', 'A'],\n    default='B',\n)\n```\n\n## Copy-on-Write (pandas 3.0+)\n\nIn pandas 3.0, Copy-on-Write is the default. Under it, `df[mask]` always behaves as an independent copy, `SettingWithCopyWarning` is gone, and chained assignment simply never updates the original (newer versions emit a `ChainedAssignmentError` warning in those cases). So `high['grade'] = 'A'` will cleanly modify only `high`, but `df.loc[...]` is still how you update `df`. On pandas 2.x you can opt in early with:\n\n```python\npd.options.mode.copy_on_write = True\n```\n\n## Rule of thumb\n\n- Want a new frame → `.copy()` after filtering.\n- Want to modify the original → one `.loc[rows, col] = value`.\n- Avoid chaining two `[]` operations (`df[a][b] = ...`) when assigning.",
+ "cost_usd": 0.016286,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1413,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 1063,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1413,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1063,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1413,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1413
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

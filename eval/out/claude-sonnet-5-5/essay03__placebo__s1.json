@@ -1,0 +1,43 @@
+{
+ "id": "essay03",
+ "setting": "essay",
+ "arm": "placebo",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "# Learning From Home: A Benefit for Some, Not for All\n\nDistance learning lets students attend classes from home through a computer and an internet connection. Supporters say it saves time and gives students freedom. Critics say it weakens focus and social growth. I believe distance learning can benefit many students, but only when it is offered as an option and not forced on everyone.\n\nThe strongest argument for learning from home is flexibility. Students who attend class online save the time they would spend commuting. For some, that is an hour or more each day, which they can use to sleep, study, or exercise. Online learning also helps students who cannot easily attend a school building. A student with a chronic illness, a disability, or a long trip to the nearest school can keep up with lessons instead of falling behind. Students who are bullied at school may also feel safer and learn better at home.\n\nLearning from home can also suit different learning styles. In a crowded classroom, a shy student may never raise a hand. Online, that same student may type a question in a chat or review a recorded lesson as many times as needed. Students who work quickly can move ahead, and those who need more time can pause and repeat. This kind of control is hard to offer in a room of thirty students.\n\nHowever, distance learning has real costs. The first is self-discipline. At home, a bed, a phone, and a video game are only steps away. Without a teacher in the room, many students lose focus or skip assignments. Younger children especially need adults to guide them, and this can place a heavy burden on working parents.\n\nThe second cost is social. School is not only a place to learn math and history. It is where students make friends, practice working in groups, and learn to resolve conflict. A video call cannot fully replace a lunch table, a sports team, or a hallway conversation. Students who spend most of their time alone at home may struggle with loneliness and may find it harder to build social skills.\n\nA third problem is fairness. Online learning requires a reliable internet connection, a working device, and a quiet place to study. Many families lack one or more of these. If schools move online without fixing these gaps, the students who already face the most challenges will fall further behind.\n\nGiven these strengths and weaknesses, the best approach is choice. Schools should offer distance learning to students who are likely to succeed with it, such as older, self-motivated students or those with health or safety needs. They should also provide devices, internet access, and regular check-ins with teachers. Younger students and those who struggle to stay on task should have the option of in-person classes, where they get direct support.\n\nIn conclusion, learning from home is neither a cure for education's problems nor a threat to it. It gives real benefits in time, comfort, and flexibility, but it can harm students who need structure and social contact. Students would benefit most when schools treat distance learning as one tool among several and match each student with the setting where he or she can learn best.",
+ "cost_usd": 0.01449,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1404,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 887,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1404,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 887,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1404,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1404
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

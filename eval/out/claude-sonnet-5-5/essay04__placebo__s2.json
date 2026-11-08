@@ -1,0 +1,43 @@
+{
+ "id": "essay04",
+ "setting": "essay",
+ "arm": "placebo",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "# Student-Designed Summer Projects Are the Better Choice\n\nSummer is the one stretch of the year when students are free from bells, grades, and daily assignments. A summer project should take advantage of that freedom. For that reason, I believe student-designed projects are better than teacher-designed ones. When students choose their own work, they care more, learn skills that classrooms rarely teach, and are more likely to finish.\n\nThe strongest argument is motivation. A teacher-designed project often feels like homework that followed students out of the school year. Students complete it because they must, and many do the minimum. A project a student chose is different. A student who loves baking, coding, or birdwatching will spend extra hours on it without being asked. That effort matters over a long summer, when no teacher is nearby to remind anyone of a deadline. Interest keeps the work going when pressure cannot.\n\nStudent-designed projects also teach skills that teacher-designed ones skip. When a teacher writes the assignment, the hardest parts are already done. The topic is picked, the steps are listed, and the goal is clear. A student who designs a project must do all of that alone. They have to decide what is worth doing, break a big goal into smaller tasks, and plan their time. They must also adjust when something goes wrong. These are the abilities that college and jobs demand, and a worksheet cannot teach them.\n\nFinishing a project that is truly yours also builds confidence. A student who plans and completes something original can say, \"I made this.\" That pride is harder to earn from an assignment someone else wrote. It can change how students see themselves, from people who follow instructions to people who can start and complete real work.\n\nCritics raise fair concerns. Some students may choose projects that are too easy, too vague, or too big to finish. Others may not know where to begin, and students from homes with fewer resources could be left behind. These risks are real, but they can be managed without handing control back to teachers. The school can require a short proposal, so a teacher can approve the idea and suggest changes before summer starts. It can offer a list of example projects for students who need a spark. It can also provide supplies, library access, or a mentor to students who lack them. A few check-ins during the summer would keep everyone on track. In this model, teachers act as guides instead of designers.\n\nTeacher-designed projects do have one advantage: they are consistent and easy to grade. But convenience for the school should not outweigh what is best for the student. Easy grading is a weak reason to give up engagement and independence.\n\nIn the end, the purpose of a summer project is to keep students learning and growing when school is out. Students learn most when they care about what they are doing, and they care most when the choice is theirs. With a simple proposal process and some support along the way, student-designed projects can give every student a meaningful summer. Our school should adopt them.",
+ "cost_usd": 0.012014500000000001,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 777,
+  "cache_read_input_tokens": 625,
+  "output_tokens": 884,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 777,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 884,
+    "cache_read_input_tokens": 625,
+    "cache_creation_input_tokens": 777,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 777
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

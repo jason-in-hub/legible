@@ -1,0 +1,43 @@
+{
+ "id": "essay04",
+ "setting": "essay",
+ "arm": "base",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "# Student-Designed Summer Projects: The Better Choice\n\nEvery June, schools hand students a summer assignment and, in effect, a message about what learning is. Teacher-designed projects say that learning is something delivered: the expert decides what matters, and the student completes it. Student-designed projects say that learning is something you do: you identify a question, commit to answering it, and own the result. Teacher-designed projects offer clarity and consistency, but student-designed projects, supported by structure, are the better choice for summer, because summer is the one time of year when motivation, not instruction, determines whether any learning happens.\n\n**Summer removes the teacher's greatest advantage.**\nIn the school year, a teacher-designed assignment works because it is surrounded by support: class time, deadlines, feedback, and peers. Over summer, all of that disappears. A teacher-designed project becomes a task that a student must complete alone, with no one to ask and little reason to start before late August. Many students respond predictably by procrastinating, rushing, or getting help they shouldn't. A project a student chose, however, carries its own motivation. Someone who has decided to build a birdhouse, write a short story, or analyze local bus routes will work on it because they want to see it finished. When no one is watching, interest is the only reliable engine.\n\n**Choice builds the skills schools claim to value.**\nSchools routinely say they want self-directed, creative, resilient graduates. Those traits are not built by following instructions. Designing a project requires a student to narrow a vague interest into a workable question, estimate how long things will take, find resources, and adjust when the plan fails. These are the exact skills that college and careers demand, and they are rarely practiced when the teacher has already made every decision. A student who spends July realizing that their original plan was too ambitious, and rescoping it, has learned something no worksheet could teach.\n\n**Ownership improves quality and retention.**\nResearch on motivation, including self-determination theory, consistently finds that autonomy increases engagement and persistence. Students who choose their topic invest more effort, retain more, and are more likely to continue learning after the assignment ends. A teacher-designed project often ends the moment it is submitted. A student-designed one can grow into a portfolio piece, a club, a science fair entry, or a lasting hobby.\n\n**The strongest objections have real answers.**\nCritics raise three concerns. First, students may choose projects that are too easy. This is a design problem, not a fatal flaw: requiring a written proposal approved by a teacher, with clear criteria for scope and rigor, solves it. Second, equity: students with more resources or parental support may design more impressive projects. This is a serious worry, and it is why the school should provide a list of example ideas, access to library or school materials, and a check-in or two over the summer. Ignoring it would be a mistake, but teacher-designed projects are hardly equitable either, since they also reward those with home support, tutors, and quiet places to work. Third, teachers worry about grading consistency. A shared rubric focused on process, reflection, and effort, rather than a single expected product, can address this fairly.\n\n**A practical model.**\nThe best policy is not total freedom but guided autonomy. Students submit a short proposal in spring covering their question, plan, and timeline. Teachers approve or refine it, offering feedback much as a mentor would. Students complete the work independently, with an optional mid-summer check-in, then present or reflect on it in the fall. This keeps the accountability of a teacher-designed project while preserving the motivation of a student-designed one.\n\n**Conclusion.**\nA summer project is a test of whether a student can learn without being told to. Teacher-designed assignments ask for compliance; student-designed projects ask for initiative. Since initiative is the quality students will need most after they leave school, and since summer is when it is hardest to fake, our school should let students design their own projects, with teacher guidance to ensure that freedom leads to real work.",
+ "cost_usd": 0.0158653,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 778,
+  "cache_read_input_tokens": 593,
+  "output_tokens": 1269,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 778,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1269,
+    "cache_read_input_tokens": 593,
+    "cache_creation_input_tokens": 778,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 778
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "id": "chat05",
+ "setting": "chat",
+ "arm": "placebo",
+ "sample": 1,
+ "model": "claude-opus-5-5",
+ "text": "Marten didn't move at first. He thought it was the wind. In three years he had heard the wind do many things: whistle, moan, and once something that sounded exactly like his mother calling his name.\n\nBut wind doesn't knock three times, pause, and knock three times again.\n\nHe set down his coffee and opened the door. A girl stood on the step, maybe ten years old. She wore a yellow raincoat several sizes too big, and she was completely dry. It had been raining since midnight.\n\n\"You're late,\" she said.\n\n\"I'm sorry?\"\n\n\"The light. It went out last night at 2:14. For eleven seconds.\" She held up a pocket watch as proof. \"Something got through.\"\n\nMarten opened his mouth to say that was impossible. Then he stopped, because he *had* woken in the night. He remembered the strange darkness on the ceiling and the feeling of a held breath. He had told himself he dreamed it.\n\n\"Who are you?\" he asked.\n\nThe girl looked past him, up the spiral stairs toward the lamp room. \"The last keeper's daughter,\" she said. \"Didn't they tell you why he left?\"\n\nThey hadn't. The agency had only said the post was vacant and that the pay was good. They also said he should never, under any circumstances, let the light go dark.\n\nFar out on the water, something that was not a ship began to move toward shore.\n\n---\n\nYour turn! Who is this girl really? What came through in those eleven seconds?",
+ "cost_usd": 0.020952,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1418,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 480,
+  "output_tokens_details": {
+   "thinking_tokens": 28
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1418,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 480,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1418,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1418
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

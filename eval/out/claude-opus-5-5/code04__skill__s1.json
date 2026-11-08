@@ -1,0 +1,43 @@
+{
+ "id": "code04",
+ "setting": "code",
+ "arm": "skill",
+ "sample": 1,
+ "model": "claude-opus-5-5",
+ "text": "## What's happening\n\n`df[df['score'] > 80]` creates a new DataFrame, `high`. Sometimes pandas gives you a copy of the data and sometimes a view onto `df`, and you can't easily tell which. When you then assign to `high['grade']`, pandas can't tell whether you meant to change `high` alone or the original `df`. It warns you because the result might not be what you expect.\n\nIn practice, boolean filtering almost always gives you a copy. So the assignment changes `high` but not `df`. That's why the column often seems not to change: you're probably looking at `df`, and only `high` got the new value.\n\n## The right way, depending on what you want\n\n**If you want to change `df`**, do the filter and the assignment in a single `.loc` call:\n\n```python\ndf.loc[df['score'] > 80, 'grade'] = 'A'\n```\n\nThis writes straight into `df`. Rows that don't match get `NaN` in `grade` if the column is new. You can set them first if you want a default:\n\n```python\ndf['grade'] = 'B'\ndf.loc[df['score'] > 80, 'grade'] = 'A'\n```\n\n**If you want a separate DataFrame** and don't care about `df`, make the copy explicit:\n\n```python\nhigh = df[df['score'] > 80].copy()\nhigh['grade'] = 'A'\n```\n\nThe `.copy()` tells pandas that `high` is independent, so the warning goes away and `df` stays untouched.\n\n## A note on newer pandas\n\npandas 2.x has an optional mode called Copy-on-Write (`pd.options.mode.copy_on_write = True`), and pandas 3.0 turns it on by default. Under Copy-on-Write, any object you get from indexing behaves like a copy. Your original code then never changes `df` and never warns. So the `.loc` form above is the one to use when you mean to change `df`. It works the same in every version.",
+ "cost_usd": 0.030791800000000005,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1363,
+  "cache_read_input_tokens": 5999,
+  "output_tokens": 934,
+  "output_tokens_details": {
+   "thinking_tokens": 324
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1363,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 934,
+    "cache_read_input_tokens": 5999,
+    "cache_creation_input_tokens": 1363,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1363
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

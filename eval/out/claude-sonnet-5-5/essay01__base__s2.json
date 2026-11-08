@@ -1,0 +1,43 @@
+{
+ "id": "essay01",
+ "setting": "essay",
+ "arm": "base",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "Dear Principal,\n\nI am writing to urge you to adopt a phone ban that covers the whole school day, lunch included, rather than limiting the restriction to class time. I believe the full-day policy will do more for our students' learning, wellbeing, and sense of community.\n\n**A class-only ban leaves the biggest problems untouched.** When phones are allowed at lunch and between classes, they do not stay neatly in the background. Students who spend lunch scrolling often arrive at the next class distracted, still thinking about a group chat, a video, or a conflict that began online. Teachers then spend the first minutes of every period getting attention back, and enforcing a class-only rule means constant policing at the door: who has a phone out, who is hiding one, who is checking it \"just for a second.\" A clear, all-day rule is simpler to explain and far easier to enforce consistently.\n\n**Lunch is when students most need a break from screens.** Lunch and breaks are among the few times in a school day when students can talk face to face, play, and unwind. If most of them are looking at screens, we lose much of that. Students who are shy or new are often the ones left out when everyone else is absorbed in a device. Removing phones gives those students a real opening to join a conversation or a game.\n\n**Social media conflict and cyberbullying often play out during unstructured time.** Filming, posting, and group-chat drama do not wait for the bell. Lunch is when much of it happens, and when staff have the least visibility into it. An all-day ban reduces opportunities for students to be recorded without consent, excluded online, or drawn into disputes that then spill into the hallways.\n\n**Schools that have tried it report encouraging results.** Many schools and districts that have moved to full-day restrictions report calmer cafeterias, more conversation, fewer discipline issues related to devices, and better focus in class. Results vary, and a ban is not a cure-all, but the pattern is promising enough to justify trying it here.\n\n**I also want to acknowledge the concerns.** Parents may worry about reaching their children in an emergency, and some students rely on phones for medical or accessibility needs. These concerns are real, and they can be handled through a few practical steps:\n\n- Keep the front office phone available for urgent family contact, and publicize that clearly.\n- Provide exemptions for documented medical or accessibility needs.\n- Use a consistent storage method, such as lockers or pouches, so the rule is easy to follow.\n- Communicate the policy early to families, with a clear rationale.\n- Review the results after one semester and adjust based on feedback from students, teachers, and parents.\n\nA policy that applies only in class asks students to switch their attention on and off all day, and it asks teachers to enforce a line that is hard to hold. A whole-day ban is clearer, fairer, and more likely to change the culture of our school for the better. I respectfully ask that you adopt it, and I would be glad to help gather student and parent input or support the rollout in any way that would be useful.\n\nThank you for your time and your consideration.\n\nSincerely,\n[Your name]",
+ "cost_usd": 0.012994599999999999,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 775,
+  "cache_read_input_tokens": 606,
+  "output_tokens": 983,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 775,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 983,
+    "cache_read_input_tokens": 606,
+    "cache_creation_input_tokens": 775,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 775
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

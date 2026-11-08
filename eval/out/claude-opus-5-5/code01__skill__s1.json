@@ -1,0 +1,43 @@
+{
+ "id": "code01",
+ "setting": "code",
+ "arm": "skill",
+ "sample": 1,
+ "model": "claude-opus-5-5",
+ "text": "This is Python's **mutable default argument** problem.\n\n## What's going wrong\n\nPython evaluates a default value **once, when it defines the function**, not each time you call it. So `tags=[]` creates a single list, and every call that leaves out `tags` gets that same list back.\n\nHere is what happens step by step:\n\n1. `def add_tag(...)` runs. Python creates one empty list and stores it as the default for `tags`.\n2. `add_tag('a')` appends `'a'` to that list, so it now holds `['a']`.\n3. `add_tag('b')` gets **the same list**, which still holds `'a'`, and appends `'b'`. You get `['a', 'b']`.\n\nYou can see the shared list directly:\n\n```python\nprint(add_tag.__defaults__)  # (['a', 'b'],) after the two calls\n```\n\n## The fix\n\nUse `None` as the default and create a new list inside the function:\n\n```python\ndef add_tag(item, tags=None):\n    if tags is None:\n        tags = []\n    tags.append(item)\n    return tags\n\nprint(add_tag('a'))  # ['a']\nprint(add_tag('b'))  # ['b']\n```\n\nNow each call that leaves out `tags` gets its own fresh list. Passing a list in still works as you'd expect:\n\n```python\nmy_tags = ['x']\nadd_tag('y', my_tags)  # ['x', 'y']\n```\n\n## The general rule\n\nNever use a mutable object as a default argument. That includes lists, dicts, sets and instances of your own classes. Use `None` and create the object inside the function. Immutable defaults such as numbers, strings, tuples and `None` are safe, because you can't change them in place.\n\nLinters catch this mistake too. Pylint reports it as `W0102 dangerous-default-value`, and Ruff and flake8-bugbear report it as `B006`.",
+ "cost_usd": 0.0246598,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1389,
+  "cache_read_input_tokens": 5999,
+  "output_tokens": 617,
+  "output_tokens_details": {
+   "thinking_tokens": 20
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1389,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 617,
+    "cache_read_input_tokens": 5999,
+    "cache_creation_input_tokens": 1389,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1389
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

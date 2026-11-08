@@ -1,0 +1,43 @@
+{
+ "id": "essay03",
+ "setting": "essay",
+ "arm": "placebo",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "# Learning From Home: A Benefit for Some, Not for All\n\nDistance learning lets students attend classes from home, and many schools now offer it. Supporters say it is flexible and comfortable. Critics say students miss out on social contact and structure. I believe distance learning can benefit students, but only when it is used as an option and not as a replacement for the classroom. For most students, the best choice depends on their age, their habits, and their home life.\n\nThe strongest argument for learning from home is flexibility. Students who attend class from home save the time they would spend commuting. For some, that is an hour or more each day. They can use that time to sleep, study, or help their families. Students who are ill, who have disabilities, or who live far from a school can also keep up with their lessons instead of falling behind. A student in a rural area, for example, may gain access to courses that the local school cannot offer.\n\nHome learning can also suit different learning styles. Some students feel anxious in crowded classrooms or are distracted by noise. At home, they can work in a quiet space and move at a comfortable pace. Recorded lessons let them pause and replay difficult material. In a traditional class, the lesson moves on whether or not a student has understood it.\n\nHowever, learning from home has serious drawbacks. The first is that it demands self-discipline. Without a teacher in the room, it is easy to check a phone, play a game, or drift away from the lesson. Adults often struggle to stay focused when working alone, so it is unrealistic to expect every young student to do it well. Students who fall behind may also find it harder to ask for help, because a teacher cannot easily see that they are confused.\n\nThe second drawback is social. School is where students learn to cooperate, resolve disagreements, and make friends. Group projects, sports, clubs, and casual conversation in the hallway all build skills that a video call cannot fully replace. Students who spend most of their time alone at home may feel isolated, and this can harm both their mood and their motivation.\n\nThe third drawback is inequality. Distance learning requires a reliable computer, a fast internet connection, and a quiet place to work. Not every family has these. A student who shares a small home with several siblings, or whose connection often fails, will be at a disadvantage. Instead of leveling the field, distance learning can widen the gap between students from richer and poorer families.\n\nGiven these points, the best approach is a balanced one. Older students, such as those in high school or college, tend to be more independent, so they can gain the most from learning at home, especially in a mix of online and in-person classes. Younger children need close guidance and social contact, so they are better served in a classroom. Schools should also give families the equipment and support they need, so that distance learning is a real choice and not a hardship.\n\nIn conclusion, attending classes from home can help students who need flexibility, access, or a calmer setting. Yet it cannot give every student the structure, support, and friendships that a school provides. Schools should offer distance learning as one option among several and let students and families choose what fits them best.",
+ "cost_usd": 0.012640700000000001,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 776,
+  "cache_read_input_tokens": 627,
+  "output_tokens": 947,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 776,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 947,
+    "cache_read_input_tokens": 627,
+    "cache_creation_input_tokens": 776,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 776
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

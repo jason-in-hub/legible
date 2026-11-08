@@ -1,0 +1,43 @@
+{
+ "id": "essay02",
+ "setting": "essay",
+ "arm": "base",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "# Should Community Service Be Required for Graduation?\n\nCommunity service requirements are meant to produce citizens who care about their communities. I believe that goal is worthwhile, and that requiring service is a defensible way to pursue it, provided schools design the requirement thoughtfully. Done well, a requirement widens students' horizons, reaches those who would never volunteer on their own, and benefits the communities that receive the help. Done poorly, it becomes a box-checking chore. The remedy for poor design is better design, not abandoning the idea.\n\nThe strongest argument for a requirement is that it gives access to experiences students would otherwise miss. Voluntary service tends to attract students who are already inclined to help, who have transportation, flexible schedules, and families that model volunteering. A requirement reaches the rest. A student who has never set foot in a food bank or a nursing home may discover through a mandatory placement that the work is meaningful, or that a particular cause matters to them. Schools already require subjects such as math, history, and physical education because they believe every student benefits from exposure, even if not everyone would choose it. Civic engagement belongs on that list, since democracies depend on people willing to contribute beyond their own self-interest.\n\nResearch also suggests that required service can have lasting effects. Studies of service-learning programs have found that students who participate are more likely to volunteer and vote as adults, and that the benefits include stronger communication skills, a sense of responsibility, and improved attitudes toward people different from themselves. Importantly, some of this research indicates that students who begin service reluctantly often come to value it, especially when the work is meaningful and they have some say in it. The initial push matters because many people never take the first step on their own.\n\nCommunities benefit, too. Tutoring programs, shelters, park cleanups, and senior centers often depend on volunteers, and thousands of students contributing even a modest number of hours can meaningfully extend what these organizations can do. The students gain a practical understanding of local needs that no textbook provides.\n\nThe most serious objection is that mandatory volunteering is a contradiction: if service is compelled, it is no longer volunteering, and forced participation may breed resentment that undermines the very values schools hope to teach. Psychologists describe an \"overjustification effect,\" in which external pressure can reduce intrinsic motivation. This concern deserves to be taken seriously. A student who spends fifty hours wiping tables while watching the clock may learn only that service is a bureaucratic hurdle. There are also fairness concerns: students who work part-time jobs, care for siblings, or lack transportation may struggle to find hours, so the requirement can fall hardest on those with the least spare time.\n\nThese objections, however, are arguments about implementation, not about the principle. Schools can reduce resentment by offering a wide choice of placements so students can pursue causes they care about, and by including reflection, such as journals or discussions, so that hours become learning rather than mere labor. They can address equity by allowing service during school time, partnering with local organizations to arrange placements, and counting family caregiving or similar responsibilities. Setting a reasonable number of hours, rather than an onerous one, also keeps the requirement from crowding out academics and jobs. Choice within a requirement preserves much of the autonomy that makes service meaningful.\n\nIn the end, schools exist not only to transmit information but to prepare young people to take part in society. A community service requirement, thoughtfully built, does that by pushing students beyond their routines, connecting them to people and problems they might never otherwise encounter, and giving their communities real help. The risk of resentment is real, but it is outweighed by the value of ensuring that every graduate has practiced contributing to something larger than themselves. Schools should require community service, and then work hard to make it worth requiring.",
+ "cost_usd": 0.017592,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1362,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 1214,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1362,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1214,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1362,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1362
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

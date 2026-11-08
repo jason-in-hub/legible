@@ -1,0 +1,43 @@
+{
+ "id": "code03",
+ "setting": "code",
+ "arm": "skill",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "`forEach` ignores the return value of its callback. Your callback is `async`, so each call returns a promise, and `forEach` throws that promise away. It starts every callback, and each one runs until its first `await`. Then control returns to `processAll`, which moves on to `console.log('done')` while the file processing is still pending.\n\n`await` only pauses the function it appears in. The `await` inside the callback pauses that callback, not `processAll`.\n\n**Wait for all files in parallel:**\n\n```js\nasync function processAll(files) {\n  await Promise.all(files.map((f) => processFile(f)));\n  console.log('done');\n}\n```\n\n`map` returns the array of promises, and `Promise.all` resolves once every one of them has finished. It rejects as soon as one fails.\n\n**Process files one at a time, in order:**\n\n```js\nasync function processAll(files) {\n  for (const f of files) {\n    await processFile(f);\n  }\n  console.log('done');\n}\n```\n\nHere the `await` sits directly in `processAll`, so the loop really does pause between files.\n\nPick the parallel version if the files are independent and you can afford running them all at once. Pick the sequential one if order matters or you need to limit load.",
+ "cost_usd": 0.0076040000000000005,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 778,
+  "cache_read_input_tokens": 6580,
+  "output_tokens": 383,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 778,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 383,
+    "cache_read_input_tokens": 6580,
+    "cache_creation_input_tokens": 778,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 778
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

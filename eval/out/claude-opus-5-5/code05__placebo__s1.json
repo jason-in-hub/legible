@@ -1,0 +1,43 @@
+{
+ "id": "code05",
+ "setting": "code",
+ "arm": "placebo",
+ "sample": 1,
+ "model": "claude-opus-5-5",
+ "text": "## Why it happens\n\nThis is a **lost update** race. The read and the write are two separate steps, and another worker can run between them:\n\n| Time | Worker A | Worker B | `count` in DB |\n|------|----------|----------|---------------|\n| 1 | reads 10 | | 10 |\n| 2 | | reads 10 | 10 |\n| 3 | writes 11 | | 11 |\n| 4 | | writes 11 | 11 |\n\nTwo events were processed, but the counter went up by only one. Worker B's write overwrote Worker A's, because B computed its value from stale data.\n\nWrapping the code in a transaction does not fix this on its own. Under the default isolation level in most databases (READ COMMITTED), both reads still see 10.\n\n## Options to fix it\n\n### 1. Do the increment in the database (best for this case)\n\n```python\ndb.execute('UPDATE stats SET count = count + 1 WHERE id = 1')\n```\n\nThe database reads and writes the row in one atomic step and locks the row while doing it. Concurrent updates queue up instead of overwriting each other. This is the simplest and fastest fix. If you need the new value, most databases can return it:\n\n```python\nrow = db.fetch_one('UPDATE stats SET count = count + 1 WHERE id = 1 RETURNING count')  # PostgreSQL, SQLite 3.35+\n```\n\n### 2. Lock the row when you read it (pessimistic locking)\n\nUse this when the new value depends on logic that has to run in Python.\n\n```python\nwith db.transaction():\n    row = db.fetch_one('SELECT count FROM stats WHERE id = 1 FOR UPDATE')\n    db.execute('UPDATE stats SET count = %s WHERE id = 1', row.count + 1)\n```\n\n`FOR UPDATE` makes the second worker wait until the first commits. Then it reads the updated value. The read and the write must be in the same transaction, or the lock is released too early. The cost is that workers block each other while the lock is held.\n\n### 3. Check that the value has not changed (optimistic locking)\n\n```python\nwhile True:\n    row = db.fetch_one('SELECT count FROM stats WHERE id = 1')\n    updated = db.execute(\n        'UPDATE stats SET count = %s WHERE id = 1 AND count = %s',\n        row.count + 1, row.count,\n    )\n    if updated.rowcount == 1:\n        break  # nobody changed it in between; otherwise retry\n```\n\nNothing blocks, but a worker retries when it loses the race. This works well when conflicts are rare. Under heavy contention, many retries waste work. Many schemas use a separate `version` column for the check instead of the value itself.\n\n### 4. Use SERIALIZABLE isolation\n\nRun the original read-then-write in a transaction at the SERIALIZABLE level (or REPEATABLE READ in PostgreSQL). The database detects the conflict and aborts one transaction with a serialization error. You must catch that error and retry. This works, but it is heavier than options 1–3 for a simple counter.\n\n### 5. Avoid the shared hot row\n\nIf many workers increment one row very often, that row becomes a bottleneck even with option 1. Two alternatives:\n\n- **Append-only events:** insert one row per event and compute the total with `COUNT(*)` or a periodic rollup.\n- **Sharded counters:** give each worker (or N slots) its own row, and add `SUM(count)` across them when reading.\n\n### 6. External atomic counter\n\nIf a store like Redis is already in your stack, `INCR` is atomic. Only choose this if the counter does not need to stay in the same transaction as your other database writes.\n\n## Recommendation\n\nUse **option 1** (`SET count = count + 1`). It is a one-line change and fully removes the race. Use option 2 or 3 only if the new value needs application logic. Consider option 5 if the single row becomes a throughput problem.",
+ "cost_usd": 0.038756,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1461,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 1353,
+  "output_tokens_details": {
+   "thinking_tokens": 72
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1461,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1353,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1461,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1461
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

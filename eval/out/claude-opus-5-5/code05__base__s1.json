@@ -1,0 +1,43 @@
+{
+ "id": "code05",
+ "setting": "code",
+ "arm": "base",
+ "sample": 1,
+ "model": "claude-opus-5-5",
+ "text": "## Why it happens: a lost update\n\nThe read and the write are two separate statements, so another worker can run in between:\n\n| Time | Worker A | Worker B | `count` in DB |\n|---|---|---|---|\n| t1 | `SELECT` → 10 | | 10 |\n| t2 | | `SELECT` → 10 | 10 |\n| t3 | `UPDATE ... = 11` | | 11 |\n| t4 | | `UPDATE ... = 11` | 11 |\n\nTwo events were processed, but the counter only went up by one. B's write overwrote A's because B computed its value from stale data. This is a classic read-modify-write race. Wrapping both statements in a transaction usually doesn't fix it: under the default isolation level (READ COMMITTED in Postgres; MySQL InnoDB's REPEATABLE READ behaves the same way for plain SELECTs), both workers can still read 10.\n\n## Fixes\n\n**1. Atomic update in the database (best for a simple counter)**\n```python\ndb.execute('UPDATE stats SET count = count + 1 WHERE id = 1')\n```\nThe database reads and writes the row under a row lock in a single statement, so concurrent increments serialize correctly. There is no round trip and no race. If you need the new value back:\n```sql\nUPDATE stats SET count = count + 1 WHERE id = 1 RETURNING count;  -- Postgres/SQLite 3.35+\n```\n\n**2. Pessimistic locking: `SELECT ... FOR UPDATE`**\nUse this when the new value depends on application logic you can't express in SQL:\n```python\nwith db.transaction():\n    row = db.fetch_one('SELECT count FROM stats WHERE id = 1 FOR UPDATE')\n    db.execute('UPDATE stats SET count = %s WHERE id = 1', row.count + 1)\n```\nB blocks on its `SELECT` until A commits, then reads 11. It's correct, but it serializes the workers on that row. Keep the transaction short.\n\n**3. Optimistic concurrency (compare-and-set / version column)**\n```python\nwhile True:\n    row = db.fetch_one('SELECT count, version FROM stats WHERE id = 1')\n    n = db.execute(\n        'UPDATE stats SET count = %s, version = version + 1 '\n        'WHERE id = 1 AND version = %s',\n        row.count + 1, row.version)\n    if n == 1:   # rows affected\n        break    # else someone else won; retry\n```\nThis takes no locks, and losers retry. It works well when contention is low. Under heavy contention it can spin, so add a retry limit or backoff.\n\n**4. Stricter isolation (`SERIALIZABLE`, or `REPEATABLE READ` in Postgres)**\nThe database detects the conflict and aborts one transaction with a serialization error. You **must** catch that error and retry the whole transaction, or you'll lose events in a different way.\n\n**5. Avoid the hot row entirely (for high throughput)**\nIf many workers increment at high rates, a single row becomes a contention bottleneck even with option 1:\n- **Append-only events table:** insert one row per event and compute `COUNT(*)` (or periodically roll it up).\n- **Sharded counters:** have each worker update `stats_shard[worker_id]` and read the total with `SUM(count)`.\n- **External atomic counter:** Redis `INCR`, flushed to the DB periodically if needed.\n\n## Recommendation\n\nUse **option 1**. It's a one-line change, it's correct under any isolation level, and it's the fastest. Reach for `FOR UPDATE` or optimistic locking only when the update logic is too complex for a single SQL statement. Consider sharding or event rows only if contention on that one row actually shows up as a bottleneck.\n\nAlso check whether your DB library is in autocommit mode. If it isn't, make sure the update is committed. And if events can be redelivered, a correct counter can still overcount, which is a separate idempotency problem.",
+ "cost_usd": 0.038148,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1435,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 1333,
+  "output_tokens_details": {
+   "thinking_tokens": 14
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1435,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1333,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1435,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1435
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

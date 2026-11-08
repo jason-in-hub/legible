@@ -1,0 +1,43 @@
+{
+ "id": "code04",
+ "setting": "code",
+ "arm": "base",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "## What's happening\n\n`df[df['score'] > 80]` uses a boolean mask, which returns a new object. Pandas can't cheaply tell whether that result is an independent copy or a view into `df`'s memory, so it marks `high` as \"possibly a copy\" and keeps a reference back to `df` (`high._is_copy`).\n\nWhen you then do `high['grade'] = 'A'`, pandas warns: *\"A value is trying to be set on a copy of a slice from a DataFrame.\"* It's saying it's unsure whether your assignment should propagate back to `df`, and you probably didn't mean to be ambiguous about that.\n\nIn practice, boolean-mask indexing always produces a copy, so `df` is not modified. The warning is about ambiguity, not about a real view.\n\n## Why it sometimes doesn't change\n\nThe \"sometimes\" comes from chained assignment, where one expression does a get followed by a set:\n\n```python\ndf[df['score'] > 80]['grade'] = 'A'   # sets on a temporary copy, df unchanged\n```\n\nThe set lands on a temporary that is thrown away. Whether a chained pattern writes through to the original depends on internal details (whether the intermediate was a view or copy, dtype, single vs. mixed-dtype blocks), so the behavior is inconsistent. That's why it works on some frames and silently does nothing on others.\n\nYour two-line version is less dangerous: `high['grade'] = 'A'` does modify `high`. But if you expected `df` to change, it won't. And if `high` is later used in ways that depend on the `_is_copy` flag, you get the warning.\n\nPandas 3.0 makes this go away with Copy-on-Write: every derived object behaves as a copy, chained assignment never updates the parent, and `SettingWithCopyWarning` is removed. On 2.x you can opt in with `pd.options.mode.copy_on_write = True`.\n\n## The right way\n\nDecide what you actually want.\n\n**1. You want to modify `df` itself** (add a grade column to the original):\n\n```python\ndf.loc[df['score'] > 80, 'grade'] = 'A'\n```\n\nA single `.loc` call with row mask and column label does the get and set in one operation on `df`. Rows that don't match get `NaN`. To fill them in:\n\n```python\ndf['grade'] = 'B'                      # default\ndf.loc[df['score'] > 80, 'grade'] = 'A'\n```\n\nor in one expression:\n\n```python\nimport numpy as np\ndf['grade'] = np.where(df['score'] > 80, 'A', 'B')\n```\n\nFor multiple tiers, use `np.select` or `pd.cut`.\n\n**2. You want a separate subset with its own column**:\n\n```python\nhigh = df[df['score'] > 80].copy()\nhigh['grade'] = 'A'\n```\n\n`.copy()` makes it explicit that `high` is independent, so there's no ambiguity and no warning. Changes to `high` never touch `df`.\n\n**3. You want to build it without a mutation step**:\n\n```python\nhigh = df[df['score'] > 80].assign(grade='A')\n```\n\n`assign` returns a new frame, so it's safe and chains cleanly.\n\n## Rule of thumb\n\n- Never write `df[...][...] = value` or `df.loc[...][...] = value` (two indexing steps, then a set).\n- To modify the original, use a single `df.loc[rows, col] = value`.\n- To work on a subset independently, call `.copy()` (or `.assign()`) right after filtering.",
+ "cost_usd": 0.017054,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1415,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 1139,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1415,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1139,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1415,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1415
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

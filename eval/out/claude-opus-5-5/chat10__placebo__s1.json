@@ -1,0 +1,43 @@
+{
+ "id": "chat10",
+ "setting": "chat",
+ "arm": "placebo",
+ "sample": 1,
+ "model": "claude-opus-5-5",
+ "text": "It's not insane. Plenty of dual-income households raise happy dogs. But it only works if you plan for the hours you're both gone. Here's what people most often overlook.\n\n## The full-time work question\n\n**The real issue is how many hours the dog is alone.** Most adult dogs can manage about 4–6 hours alone. A full workday plus commute is often 9–10 hours. That gap needs a plan, such as:\n\n- One of you comes home at lunch, or you stagger your schedules.\n- A dog walker comes midday. This often costs $15–30 per walk, which adds up to several hundred dollars a month.\n- Doggy daycare a few days a week.\n- One or both of you work from home some days.\n\n**Puppies are much harder than adult dogs.** A young puppy needs to go out every 2–3 hours and can't be left alone for a full day. Unless one of you can take a few weeks off or work from home, consider an **adult dog (2+ years)**. Shelters and rescues have many of them. They're often already house-trained, and their energy level and temperament are already known.\n\n## Things people don't think about\n\n**Money beyond the basics**\n- Vet emergencies can cost $1,000–$5,000+ with no warning. Look into pet insurance or build a dedicated savings fund.\n- Boarding or a pet sitter every time you travel.\n- Training classes, grooming (some breeds need it every 6–8 weeks), and replacing chewed things.\n\n**Your lifestyle changes**\n- Spontaneous after-work drinks or weekend trips now need planning.\n- Mornings start earlier. The dog needs a walk before you leave.\n- Bad weather doesn't cancel walks.\n\n**Housing**\n- If you rent, check that your lease allows dogs. Also check for breed or size limits and extra deposits or fees. This can also limit where you move next.\n\n**Time horizon**\n- Dogs live 10–15 years. Think about where you'll be in that time: kids, moves, job changes, a possible breakup.\n\n**Who does what**\n- Agree ahead of time on who handles mornings, evenings, vet visits, and training. Uneven care is a common source of resentment.\n- Agree on house rules, like whether the dog is allowed on the couch or the bed. A dog gets confused when two people enforce different rules.\n\n**The first few weeks are the hardest**\n- Expect accidents, some crying or barking, and a period of adjustment. Many people take a few days off when the dog first arrives.\n- A dog that's anxious about being left alone can struggle with long days. Practice short absences early.\n\n## Picking the right dog for your life\n\nEnergy level matters more than size. A small terrier can need more exercise than a big, lazy greyhound. Lower-energy dogs usually fit a work schedule better. Good rescues will match you with a dog based on your routine. Tell them honestly how many hours you're away.\n\n**Fostering is a great test run.** You care for a rescue dog temporarily, the rescue covers costs, and you learn what daily life with a dog is really like.\n\n## Questions to ask each other\n\n1. On a normal workday, who covers the middle of the day?\n2. How much can we spend each month, and how much for an emergency?\n3. What happens with the dog when we travel?\n4. Are we both truly excited about this, or is one of us more on board?\n\nIf you want, tell me your work schedules, your housing situation, and how active you are. I can help you figure out what kind of dog and setup would fit best.",
+ "cost_usd": 0.034304,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1402,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 1154,
+  "output_tokens_details": {
+   "thinking_tokens": 35
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1402,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1154,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1402,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1402
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

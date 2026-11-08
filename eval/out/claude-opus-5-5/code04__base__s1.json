@@ -1,0 +1,43 @@
+{
+ "id": "code04",
+ "setting": "code",
+ "arm": "base",
+ "sample": 1,
+ "model": "claude-opus-5-5",
+ "text": "## What's happening\n\n`df[df['score'] > 80]` uses a boolean mask, so pandas builds a **new DataFrame** from the matching rows. Depending on internal memory layout, that result may be a copy or may share data with `df`, and pandas doesn't promise which.\n\nSo when you write `high['grade'] = 'A'`, pandas can't tell what you meant:\n\n- **Modify only `high`?** Then the warning is a false alarm.\n- **Modify `df`?** Then it fails silently, because you're writing to a copy, not to `df`.\n\nThat's the `SettingWithCopyWarning`. The \"sometimes it doesn't change\" behavior comes from the copy-vs-view ambiguity. Even when `high` gets the column, `df` never does.\n\n## The right way: pick your intent\n\n**1. You want to update the original `df`.** Do it in one `.loc` call on `df`:\n\n```python\ndf.loc[df['score'] > 80, 'grade'] = 'A'\n```\n\nRows that don't match get `NaN` in `grade` (if the column is new). For a full grade column, a vectorized approach is cleaner:\n\n```python\nimport numpy as np\ndf['grade'] = np.where(df['score'] > 80, 'A', 'B')\n\n# or several tiers:\ndf['grade'] = np.select(\n    [df['score'] > 80, df['score'] > 70, df['score'] > 60],\n    ['A', 'B', 'C'],\n    default='F',\n)\n```\n\n**2. You want a separate subset DataFrame.** Make the copy explicit:\n\n```python\nhigh = df[df['score'] > 80].copy()\nhigh['grade'] = 'A'   # no warning; df untouched\n```\n\nOr without a temporary:\n\n```python\nhigh = df[df['score'] > 80].assign(grade='A')\n```\n\n## Version note: Copy-on-Write\n\n- **pandas 2.x**: you can opt in with `pd.options.mode.copy_on_write = True`. Every derived DataFrame then behaves like a copy, so the ambiguity is gone.\n- **pandas 3.0+**: Copy-on-Write is the default. `SettingWithCopyWarning` no longer exists, and `high['grade'] = 'A'` **never** modifies `df`.\n\nUnder CoW, chained assignment such as `df[df['score'] > 80]['grade'] = 'A'` also never works. Always use `df.loc[mask, col] = value` when you want to change the original.\n\n**Rule of thumb:** to change `df`, use one `.loc` call on `df`. To work on a subset, call `.copy()` explicitly.",
+ "cost_usd": 0.029756000000000005,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1406,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 925,
+  "output_tokens_details": {
+   "thinking_tokens": 73
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1406,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 925,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1406,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1406
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

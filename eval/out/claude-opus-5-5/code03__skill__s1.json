@@ -1,0 +1,43 @@
+{
+ "id": "code03",
+ "setting": "code",
+ "arm": "skill",
+ "sample": 1,
+ "model": "claude-opus-5-5",
+ "text": "`forEach` doesn't wait for promises. It calls your async callback once per file. Each call runs until its first `await`, then returns a promise. `forEach` throws that promise away and moves on to the next file. Once it has started every call, `forEach` returns, and `console.log('done')` runs straight away. The `processFile` calls are still pending at that point, so they finish later.\n\nThe `await` inside the callback only pauses that one callback. It doesn't pause `processAll`.\n\n**Fix 1: process the files one at a time, in order**\n\n```js\nasync function processAll(files) {\n  for (const f of files) {\n    await processFile(f);\n  }\n  console.log('done');\n}\n```\n\n**Fix 2: process them all at once and wait for every one**\n\n```js\nasync function processAll(files) {\n  await Promise.all(files.map((f) => processFile(f)));\n  console.log('done');\n}\n```\n\nUse the `for...of` loop if the order matters or if `processFile` shouldn't run many times at once, for example when it hits a rate-limited API. Use `Promise.all` if the files are independent and you want the work to finish faster. With `Promise.all`, if any file fails, the `await` rejects as soon as that first failure happens. If you'd rather wait for every file and see each result, use `Promise.allSettled`.",
+ "cost_usd": 0.0208118,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1348,
+  "cache_read_input_tokens": 5999,
+  "output_tokens": 441,
+  "output_tokens_details": {
+   "thinking_tokens": 20
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1348,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 441,
+    "cache_read_input_tokens": 5999,
+    "cache_creation_input_tokens": 1348,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1348
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

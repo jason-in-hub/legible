@@ -1,0 +1,43 @@
+{
+ "id": "code03",
+ "setting": "code",
+ "arm": "base",
+ "sample": 1,
+ "model": "claude-opus-5-5",
+ "text": "`forEach` doesn't know anything about promises. It calls your callback for each file and ignores whatever the callback returns.\n\nAn `async` function returns a promise the moment it hits its first `await`. So for each file:\n\n1. `forEach` calls your async callback.\n2. The callback starts `processFile(f)`, hits `await`, and immediately returns a pending promise.\n3. `forEach` discards that promise and moves on to the next file.\n\nOnce every callback has been *started*, `forEach` returns synchronously, and `console.log('done')` runs. The actual file processing finishes later, after `done` is printed. The `await` inside the callback only pauses that callback, not `processAll`.\n\nThis also means errors thrown by `processFile` become unhandled rejections, because nobody is holding those promises.\n\n## Fixes\n\n**Run in parallel and wait for all:**\n\n```js\nasync function processAll(files) {\n  await Promise.all(files.map((f) => processFile(f)));\n  console.log('done');\n}\n```\n\n`map` collects the promises, and `Promise.all` waits for every one of them. If any fails, the error propagates to the caller.\n\n**Run one at a time (sequentially):**\n\n```js\nasync function processAll(files) {\n  for (const f of files) {\n    await processFile(f);\n  }\n  console.log('done');\n}\n```\n\n`for...of` runs inside `processAll` itself, so the `await` actually pauses the outer function.\n\n**Run in parallel without failing fast:**\n\n```js\nconst results = await Promise.allSettled(files.map(processFile));\n```\n\nThis waits for everything to finish, even if some files fail, and gives you each result.\n\n## Which to use\n\n- Use `Promise.all` when the files are independent and you want speed.\n- Use `for...of` when order matters, when each step depends on the previous one, or when you want to avoid opening too many files or connections at once.\n- If you have many files and need parallelism with a limit, use a concurrency limiter such as `p-limit`.\n\nThe same issue applies to `filter`, `reduce`, and `some` with async callbacks. None of them await the promises returned by their callbacks.",
+ "cost_usd": 0.025036000000000003,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1386,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 697,
+  "output_tokens_details": {
+   "thinking_tokens": 16
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1386,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 697,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1386,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1386
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "id": "essay01",
+ "setting": "essay",
+ "arm": "skill",
+ "sample": 1,
+ "model": "claude-opus-5-5",
+ "text": "Dear Principal [Name],\n\nI'm writing about the proposal to ban phones for the whole school day, including lunch. I agree that phones shouldn't be out during class. I'm asking you to keep that rule and leave lunch alone.\n\nFirst, the rule we already have deals with the real problem. Phones hurt learning when students check them during a lesson, a test, or group work. A class-only ban stops that. At lunch, nobody is trying to teach, so a phone isn't pulling anyone away from learning. Banning phones there doesn't protect any class time. It just adds a rule.\n\nSecond, lunch is often the only time students can deal with things outside school. Some of us need to text a parent about a ride, reply to a coach, or confirm a shift at work. Others check in with a younger brother or sister. If phones are banned all day, students will either miss those messages or line up at the office phone. Neither helps anyone.\n\nThird, a rule that's hard to enforce weakens the rules around it. Teachers can see a phone in a classroom of thirty. In a cafeteria of three hundred, they can't. If students see the lunch rule ignored every day, they'll start treating the class rule as optional too. A smaller rule that is actually enforced is worth more than a bigger one that isn't.\n\nI understand the worry behind the proposal. Some students spend lunch staring at their screens instead of talking to each other. But I don't think a ban is the best fix. The school could instead make lunch more appealing without phones: open the library or gym, run clubs, or set aside some tables as phone-free for students who want that. That way, students who put their phones away are choosing to, and they're more likely to keep doing it.\n\nFinally, we're close to the age when no one will tell us when to use our phones. Lunch is a low-risk place to practice making that choice ourselves. A school that bans phones in class but trusts us at lunch is teaching focus and responsibility at the same time.\n\nPlease keep the current class-only policy. Thank you for reading this and for thinking carefully about what's best for students.\n\nSincerely,\n[Your name]\n[Grade / homeroom]",
+ "cost_usd": 0.0268558,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1336,
+  "cache_read_input_tokens": 5999,
+  "output_tokens": 748,
+  "output_tokens_details": {
+   "thinking_tokens": 72
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1336,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 748,
+    "cache_read_input_tokens": 5999,
+    "cache_creation_input_tokens": 1336,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1336
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

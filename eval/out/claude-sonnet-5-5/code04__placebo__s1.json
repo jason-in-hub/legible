@@ -1,0 +1,43 @@
+{
+ "id": "code04",
+ "setting": "code",
+ "arm": "placebo",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "## What's happening\n\n`df[df['score'] > 80]` builds a new DataFrame from `df`. Depending on the operation, pandas may give you a copy or a view of the original data, and it can't always tell which. So `high` is flagged as \"derived from another DataFrame.\"\n\nWhen you then write `high['grade'] = 'A'`, pandas warns that you may be modifying a temporary object rather than the data you care about. That's the `SettingWithCopyWarning`.\n\nThe \"sometimes it doesn't change\" part comes from the same ambiguity:\n\n- If you expect `df` to get the new column, it never will here. `high` is a separate object, so the assignment only affects `high`.\n- Chained forms like `df[df['score'] > 80]['grade'] = 'A'` are worse. The assignment lands on a temporary copy that is thrown away, so nothing changes anywhere.\n\n(In pandas 3.0 and later, Copy-on-Write is the default. The warning is gone, and `high` is always an independent copy, so `df` is never changed by writing to it.)\n\n## The right way to write it\n\nPick based on what you want.\n\n**1. You want to update `df` itself.** Use a single `.loc` call with the condition and the column together:\n\n```python\ndf.loc[df['score'] > 80, 'grade'] = 'A'\n```\n\nIf `grade` is a new column, rows that don't match will be `NaN`. To fill every row in one step:\n\n```python\nimport numpy as np\ndf['grade'] = np.where(df['score'] > 80, 'A', 'other')\n```\n\n**2. You want a separate subset to work on.** Make the copy explicit:\n\n```python\nhigh = df[df['score'] > 80].copy()\nhigh['grade'] = 'A'\n```\n\n`.copy()` tells pandas that `high` is its own DataFrame, so the warning goes away and the behavior is unambiguous. `df` stays unchanged.\n\n## Rule of thumb\n\nNever assign into the result of a filter. Either do the filter and assignment in one `.loc[mask, col] = value` on the original, or call `.copy()` right after filtering.",
+ "cost_usd": 0.016886,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1443,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 1111,
+  "output_tokens_details": {
+   "thinking_tokens": 431
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1443,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1111,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1443,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1443
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

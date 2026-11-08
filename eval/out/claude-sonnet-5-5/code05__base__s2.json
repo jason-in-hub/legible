@@ -1,0 +1,43 @@
+{
+ "id": "code05",
+ "setting": "code",
+ "arm": "base",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "## Why it happens\n\nThis is a classic **lost update** race (read-modify-write). The read and the write are separate statements, so the two workers can interleave:\n\n| Step | Worker A | Worker B | DB `count` |\n|---|---|---|---|\n| 1 | reads 10 | | 10 |\n| 2 | | reads 10 | 10 |\n| 3 | writes 11 | | 11 |\n| 4 | | writes 11 | 11 |\n\nTwo events were processed, but the counter only went up by one. Each worker computed `count + 1` from a stale value in application memory, and the second write overwrote the first. Wrapping it in a transaction doesn't fix this by itself under the default isolation levels (READ COMMITTED in Postgres, REPEATABLE READ in MySQL/InnoDB still permits this pattern for plain `SELECT` followed by `UPDATE`).\n\n## Options to fix it\n\n**1. Atomic increment in SQL (best for a counter)**\n\n```python\ndb.execute('UPDATE stats SET count = count + 1 WHERE id = 1')\n```\n\nThe database evaluates `count + 1` against the current row value while holding the row lock, so concurrent updates serialize and none are lost. It's one round trip, with no explicit transaction needed. If you need the new value back: `UPDATE ... RETURNING count` (Postgres/SQLite) .\n\n**2. Pessimistic locking: `SELECT ... FOR UPDATE`**\n\n```python\nwith db.transaction():\n    row = db.fetch_one('SELECT count FROM stats WHERE id = 1 FOR UPDATE')\n    db.execute('UPDATE stats SET count = %s WHERE id = 1', row.count + 1)\n```\n\nThe second worker blocks on the `SELECT` until the first commits, then reads the fresh value. Use this when the new value depends on application logic that can't be expressed in a single SQL statement. The downside is that locks are held across round trips, so keep the transaction short.\n\n**3. Optimistic concurrency (compare-and-set)**\n\n```python\nwhile True:\n    row = db.fetch_one('SELECT count FROM stats WHERE id = 1')\n    n = db.execute(\n        'UPDATE stats SET count = %s WHERE id = 1 AND count = %s',\n        row.count + 1, row.count)\n    if n == 1:   # rows affected\n        break\n```\n\nIf another worker changed the value in between, the `WHERE count = old` matches zero rows and you retry. This works well under low contention, but it wastes work and can livelock under heavy contention. A version column serves the same purpose for more complex rows.\n\n**4. Higher isolation level (SERIALIZABLE, or REPEATABLE READ in Postgres)**\n\nThe database detects the conflict and aborts one transaction with a serialization error, and you must catch it and retry. It's correct but heavier than needed here.\n\n**5. Reduce contention on the hot row (if throughput becomes an issue)**\n\n- **Sharded counters**: keep N rows and increment a random one (`WHERE id = random(1..N)`), then `SUM(count)` on read.\n- **Append-only events table**: insert one row per event and compute `COUNT(*)` or aggregate periodically.\n- **Redis `INCR`** (or similar) for a fast atomic counter, flushed to the DB periodically, if you can tolerate some loss on a crash.\n\n## Recommendation\n\nUse option 1. It's a one-line change, it's correct under every isolation level, and a single-row counter is exactly what atomic updates are for. Reach for option 5 only if profiling shows this one row has become a bottleneck, since every increment serializes on its row lock.\n\nOne caution: the fix has to be in *every* code path that writes this counter. If any other place still does read-then-write, it can clobber the atomic increments.",
+ "cost_usd": 0.018328,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1436,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 1258,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1436,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1258,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1436,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1436
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

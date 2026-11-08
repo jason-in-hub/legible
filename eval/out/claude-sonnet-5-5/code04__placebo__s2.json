@@ -1,0 +1,43 @@
+{
+ "id": "code04",
+ "setting": "code",
+ "arm": "placebo",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "## What's happening\n\n`df[df['score'] > 80]` creates a new DataFrame, but pandas remembers that it was cut from `df`. When you then write `high['grade'] = 'A'`, pandas can't tell what you intended:\n\n- Did you want to change only `high`?\n- Did you want the change to show up in `df` too?\n\nIt raises `SettingWithCopyWarning` to say it is unsure. The warning is a heads-up, not an error.\n\n## Why the column sometimes doesn't change\n\nIt depends on what you expected to change:\n\n- **Your code as written:** `high` usually does get the new column, because you assigned to it directly. But `df` never changes, since `high` is a separate copy. If you were checking `df` for the `grade` column, it won't be there.\n- **Chained assignment:** If you write `df[df['score'] > 80]['grade'] = 'A'`, the assignment lands on a temporary copy that is thrown away immediately. Nothing changes, and `df` stays as it was.\n\nWhether pandas hands back a copy or a view of the original data is an internal detail, so results like this can be inconsistent.\n\n## The right way\n\nPick based on what you want.\n\n**1. You want to update `df` itself.** Use `.loc` with the row filter and column name in one step:\n\n```python\ndf.loc[df['score'] > 80, 'grade'] = 'A'\n```\n\nIf `grade` is a new column, rows that don't match get `NaN`. To fill every row, use `numpy`:\n\n```python\nimport numpy as np\ndf['grade'] = np.where(df['score'] > 80, 'A', 'other')\n```\n\n**2. You want a separate subset with its own column.** Make the copy explicit:\n\n```python\nhigh = df[df['score'] > 80].copy()\nhigh['grade'] = 'A'\n```\n\nOr do it in one line without modifying anything in place:\n\n```python\nhigh = df[df['score'] > 80].assign(grade='A')\n```\n\nWith `.copy()` or `.assign()`, pandas knows `high` is independent, so the warning goes away. `df` is not affected.\n\n## A note on pandas versions\n\nIn pandas 3.0 and later, Copy-on-Write is the default. Every subset behaves as an independent copy, and this warning no longer appears. Your original code would then always change only `high`, never `df`. The patterns above work in all versions, so they are safe to use either way.",
+ "cost_usd": 0.015162699999999998,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 773,
+  "cache_read_input_tokens": 667,
+  "output_tokens": 1200,
+  "output_tokens_details": {
+   "thinking_tokens": 433
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 773,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1200,
+    "cache_read_input_tokens": 667,
+    "cache_creation_input_tokens": 773,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 773
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

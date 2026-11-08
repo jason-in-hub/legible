@@ -1,0 +1,43 @@
+{
+ "id": "essay03",
+ "setting": "essay",
+ "arm": "skill",
+ "sample": 1,
+ "model": "claude-opus-5-5",
+ "text": "# Why Most Students Learn Better in the Classroom\n\nDuring the pandemic, millions of students learned from their kitchen tables. Many schools have kept distance learning as an option, and some families now ask why their children should go back to a building at all. Online classes help a small group of students, but most students learn more, and grow more, when they attend school in person.\n\n## What distance learning gets right\n\nLearning from home has real advantages. A student with a long-term illness or a disability can keep up with classes without the strain of travel. A student who lives far from school can spend the time they would have spent on a bus studying or sleeping. Some students who are bullied or who have severe anxiety find that a screen gives them enough distance to take part. Recorded lessons also let students pause, rewind and review a hard explanation, which a live classroom does not allow.\n\nFor these students, distance learning can be the difference between staying in school and dropping out. Schools should keep it available for them.\n\n## Why it falls short for most students\n\nThe best evidence comes from the years when schools closed. Across many countries, test scores fell during remote learning, especially in math, and the drop was largest for students from low-income families. Many of those students did not have a quiet room, a reliable internet connection or an adult at home who could help. Distance learning assumes that every home is a good place to study, and many homes are not.\n\nLearning also depends on attention, and attention is hard to hold through a screen. In a classroom, a teacher can see that a student is confused and stop to explain. Online, the student can turn off the camera, open another tab and drift away, and the teacher may never know. Most teenagers do not yet have the self-discipline to sit alone for six hours and stay focused. Adults struggle with this too.\n\nThe biggest cost, though, is social. School is where young people learn to work in a group, to disagree politely, to make friends and to repair a friendship after an argument. They learn these skills by practising them face to face, many times a day. A chat window or a video call is a poor substitute. During remote learning, rates of loneliness and depression among teenagers rose sharply, and many students said that what they missed most was simply being around other people.\n\nAttending school also gives students things that are hard to replace at home: science labs, art rooms, sports, music, clubs and a free lunch for students who need one. A school counselor can notice when a student seems withdrawn. A coach can push a student to work harder. These moments rarely happen over a video link.\n\n## Answering the other side\n\nSupporters of distance learning argue that it prepares students for the modern workplace, where many adults now work remotely. That is partly true, and students should learn to use online tools. But most remote workers first learned how to collaborate, manage their time and communicate in person, at school and in their early jobs. They can work well from home because they already have those skills. Children are still building them.\n\nOthers say that students can learn at their own pace online. Self-paced learning works well for highly motivated students. For a student who is already behind, though, \"your own pace\" often means falling further behind, with no one nearby to notice.\n\n## Conclusion\n\nDistance learning should remain an option for students who are sick, isolated or unsafe at school, and recorded lessons can support everyone. But for most students, the classroom offers what a screen cannot: a teacher who sees when they are lost, classmates who challenge them, and daily practice in getting along with other people. Schools should treat learning from home as an exception that helps some students, not as a replacement for school.",
+ "cost_usd": 0.03590380000000001,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1322,
+  "cache_read_input_tokens": 5999,
+  "output_tokens": 1206,
+  "output_tokens_details": {
+   "thinking_tokens": 127
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1322,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1206,
+    "cache_read_input_tokens": 5999,
+    "cache_creation_input_tokens": 1322,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1322
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

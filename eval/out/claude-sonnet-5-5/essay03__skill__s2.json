@@ -1,0 +1,43 @@
+{
+ "id": "essay03",
+ "setting": "essay",
+ "arm": "skill",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "# Learning From Home: A Benefit for Some, Not for All\n\nDistance learning lets students attend class from their bedrooms or kitchen tables. Supporters say it gives students freedom and comfort. Critics say it leaves them isolated and distracted. I think students can benefit from attending classes at home, but only when they have the right support. For most students, a mix of home and in-person learning works better than either one alone.\n\nThe strongest argument for learning at home is flexibility. Students who live far from school can skip a long commute and use that time to sleep, study or rest. Students with health conditions, disabilities or anxiety can learn in a place where they feel safe and comfortable. Athletes, young performers and students who care for family members can fit school around their other duties. For these students, distance learning may be the difference between finishing school and falling behind.\n\nLearning at home can also suit different learning styles. In a crowded classroom, a student who needs more time with a topic may feel pressure to keep up with everyone else. Online courses often let students pause a lecture, replay it and work at their own speed. Quiet students who rarely speak in class may find it easier to ask questions in a chat or a discussion forum. Some students also avoid bullying and social pressure when they are not in the building every day.\n\nHowever, the benefits depend on conditions that many students do not have. Learning at home requires a reliable internet connection, a working computer and a quiet place to study. Students without these things fall behind quickly, and distance learning can widen the gap between richer and poorer families. It also demands strong self-discipline. At school, a teacher notices when a student is lost or distracted. At home, a student can open another tab, check a phone or fall asleep, and no one will know until grades drop. Younger children in particular need an adult nearby to keep them on task, which is a burden for working parents.\n\nSchool is also about more than lessons. Students learn to work in groups, resolve disagreements and make friends. They join teams, clubs and bands. They meet teachers who notice their talents and mentor them. A video call cannot fully replace these experiences, and students who spend years learning alone may find it harder to build social skills. Hands-on subjects such as science labs, art and physical education are harder to teach through a screen as well.\n\nGiven these strengths and weaknesses, the best answer is a flexible one. Schools should offer distance learning as an option for students who will do well with it, and they should provide laptops, internet access and regular check-ins with teachers. Students who are younger, who struggle with motivation or who lack a good study space should spend most of their time in the classroom. Many students might do best with a blend, such as three days at school and two at home, which keeps the social benefits of school while allowing some freedom.\n\nIn the end, learning from home is a tool, not a cure. It helps students whose circumstances make school hard to attend, and it lets many others work at their own pace. But it fails students who lack resources, structure or social contact. Schools should therefore offer it carefully, match it to the student, and keep in-person learning at the center of education.",
+ "cost_usd": 0.0154959,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1328,
+  "cache_read_input_tokens": 5999,
+  "output_tokens": 958,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1328,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 958,
+    "cache_read_input_tokens": 5999,
+    "cache_creation_input_tokens": 1328,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1328
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "id": "chat10",
+ "setting": "chat",
+ "arm": "skill",
+ "sample": 1,
+ "model": "claude-opus-5-5",
+ "text": "Not insane at all. Lots of people with full-time jobs have happy, well-adjusted dogs. It does take planning, and it shapes which dog you get. Here are the things first-time owners most often underestimate.\n\n## The work-schedule question\n\nThe real issue is how many hours the dog spends alone. Most adult dogs can handle 4–6 hours alone. A full 9–10 hour day (work plus commute) is too long for most dogs without a break in the middle. Your options:\n\n- **A dog walker** for a midday walk. This is the most common fix. Budget roughly $20–35 per walk, so about $400–700 a month on weekdays.\n- **Doggy daycare** a few days a week, especially for high-energy dogs.\n- **Hybrid or remote days.** Even one or two home days a week makes a big difference.\n- **Staggered schedules.** If one of you leaves early and the other leaves late, the alone stretch gets shorter.\n\n## Puppy vs. adult dog\n\nThis is probably the biggest decision for working owners.\n\n- **Puppies** need to go out every 2–3 hours at first, need training and socialization, and chew everything. Doing this with two full-time jobs is hard unless one of you can take a few weeks off or work from home.\n- **Adult dogs (2+ years)**, especially from a rescue that fosters in homes, are often already house-trained. The foster can tell you whether the dog is calm when left alone. This is usually the easier path for a first dog with busy owners.\n\n## Things people don't think about\n\n- **Separation anxiety.** Some dogs bark, howl, or destroy things when left alone. It's hard to fix, so ask about it directly before you adopt.\n- **Cost beyond food.** Vet visits, vaccines, flea and tick prevention, and pet insurance or an emergency fund add up. One surprise vet bill can be $1,000–5,000. Plan on roughly $1,500–3,000 a year before walkers or daycare.\n- **Travel.** Every trip now needs boarding, a pet sitter, or a dog-friendly plan.\n- **Housing.** If you rent, check your lease for pet fees, breed bans, and weight limits. These also affect where you can move later.\n- **Energy level.** Match the dog to your actual life, not your ideal weekend. A border collie or husky needs far more than a walk around the block.\n- **Time commitment.** A dog lives 10–15 years. Think about kids, moves, and job changes over that span.\n- **Who does what.** Decide now who handles the morning walk, the evening walk, feeding, and vet visits. \"We'll figure it out\" usually becomes one person doing most of it.\n- **The first few weeks.** If you can take a few days off when the dog arrives, it helps a lot with settling in.\n\n## Good questions to ask yourselves\n\n1. On a normal weekday, how many hours would the dog be alone?\n2. What's our monthly budget for a walker or daycare?\n3. Do we want a puppy, or are we open to an adult dog?\n4. What happens when we travel?\n5. Are we both actually excited, or is one of us going along with it?\n\nIf you tell me your rough schedules, your living situation, and how active you are, I can suggest what kind of dog (age, size, energy level) would fit best.",
+ "cost_usd": 0.0340678,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1330,
+  "cache_read_input_tokens": 5999,
+  "output_tokens": 1111,
+  "output_tokens_details": {
+   "thinking_tokens": 45
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1330,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1111,
+    "cache_read_input_tokens": 5999,
+    "cache_creation_input_tokens": 1330,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1330
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

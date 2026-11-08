@@ -1,0 +1,43 @@
+{
+ "id": "essay02",
+ "setting": "essay",
+ "arm": "placebo",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "# Should Schools Require Community Service?\n\nSchools should require community service for graduation. Done well, it teaches students things a classroom cannot, and it benefits the communities that host them. The main objections, that forced service is not real service and that it burdens some students, are real problems. But they can be solved by designing the requirement carefully, and they are not good reasons to drop it.\n\nThe strongest argument for the requirement is that it teaches through experience. A student can read about hunger, aging, or environmental damage in a textbook. Serving meals at a food bank or visiting residents at a nursing home makes those issues concrete. Students meet people whose lives differ from their own, and they see how local problems get solved. These lessons build empathy and responsibility, which grades alone do not measure.\n\nA requirement also reaches students who would never volunteer on their own. Many teenagers do not seek out service because they are busy, shy, or unsure where to start. Others have never been asked. A school requirement removes those barriers. Some of these students find a cause they care about and keep volunteering long after they graduate. Research on school-based service programs has often found that students who serve in high school are more likely to volunteer as adults, though the size of that effect varies between studies.\n\nCommunities benefit too. Schools, libraries, shelters, and parks often depend on volunteers to do work they cannot afford to pay for. Thousands of students giving a few dozen hours each add up to a real contribution.\n\nThe most common objection is that required service is a contradiction. Volunteering, critics say, means giving freely, so compelling it defeats the purpose. There is some truth here. A student who resents the work may learn little from it. But schools already require many things that students do not choose, such as math, writing, and physical education, because the school believes they are valuable. Students often come to appreciate them later. Service can work the same way. Many students who start out only to earn hours end up finding the work meaningful.\n\nA second objection is fairness. Some students work jobs, care for siblings, or lack transportation, so finding service hours is harder for them. This is a valid concern, and it shapes how the requirement should be written. Schools can count service done on campus or during school hours, partner with local organizations to offer placements, and allow family-care duties or similar responsibilities to count. They can also set a modest number of hours, so that the requirement is reachable for everyone. A poorly designed policy would be unfair, but that is an argument for fixing the policy.\n\nFinally, schools should avoid turning service into a box-checking exercise. Students should reflect on what they did, through a short essay or discussion, so the experience leads to learning. Teachers and counselors should help students match their interests to placements, such as animals, tutoring, or environmental cleanup, so the work feels purposeful.\n\nIn short, a community service requirement gives students real-world learning, introduces them to habits of civic life, and helps the people around them. The risks of resentment and unequal access are real, but thoughtful design can reduce them. Schools should keep the requirement and make it work well.",
+ "cost_usd": 0.015144000000000001,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1395,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 956,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1395,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 956,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1395,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1395
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

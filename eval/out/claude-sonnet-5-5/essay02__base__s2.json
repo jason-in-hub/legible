@@ -1,0 +1,43 @@
+{
+ "id": "essay02",
+ "setting": "essay",
+ "arm": "base",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "# Should Community Service Be Required for Graduation?\n\nCommunity service requirements put a noble idea into a rigid form. Few people dispute that young people benefit from helping others. The real question is whether a mandate is the best way to produce that benefit. I argue that it is, provided schools design the requirement thoughtfully. Required service exposes students to experiences they would not otherwise seek, builds skills that classrooms cannot teach, and strengthens the communities that host them.\n\nThe strongest argument for a requirement is access. Voluntary service tends to attract students who are already inclined to volunteer, who have free time, transportation, and families that value it. Students who work after school, care for siblings, or lack a ride are often left out, even when they would gladly participate. A graduation requirement changes the baseline. When the school builds service into the calendar, offers placements, and provides support, it opens doors that were previously open only to some. Many students discover causes they care about only because they were pushed through the door the first time.\n\nRequired service also teaches things a textbook cannot. Serving meals at a shelter, tutoring younger children, or cleaning a river bank teaches responsibility, teamwork, and empathy through direct experience. Students see problems in their own towns that they may have only read about, and they learn that they can do something about them. Research on service-learning programs has generally found gains in civic engagement and a sense of social responsibility, and some studies suggest that people who volunteer as teenagers are more likely to continue as adults. Schools exist to prepare young people for adult life, and participation in a community is a part of that life.\n\nThe most common objection is that compelled service is not truly service. Forced volunteering, critics say, breeds resentment and turns generosity into a box to check. This concern deserves respect, but it is overstated. Schools already require many things that students do not initially choose, such as reading novels, taking physical education, and learning to write research papers, and we do not conclude that the lessons are worthless because they were assigned. Motivation also often follows action. Many students who begin service to earn hours end up staying because they find the work meaningful. A requirement can be the start of intrinsic motivation instead of its enemy.\n\nStill, the objection points toward real design flaws that schools must avoid. A requirement that simply demands a number of hours, signed off by any adult, invites hour-padding and cynicism. A good program has several features. It offers a wide choice of placements so students can follow their interests. It includes reflection, such as a short essay or discussion, so that students think about what they saw and learned. It accommodates students with jobs, family duties, or disabilities, perhaps by counting care for relatives or allowing flexible scheduling. And it is supported with staff time and community partnerships, so that the burden of finding a placement does not fall unfairly on families with the fewest resources. A badly run requirement can be an inequitable hurdle; a well-run one can be an equalizer.\n\nCost and fairness are legitimate concerns as well. Schools need coordinators, and nonprofits need capacity to supervise students. Some organizations report that a flood of short-term, reluctant volunteers creates more work than benefit. These problems argue for modest, well-structured requirements and strong partnerships with organizations that want student help, not for abandoning the idea. A requirement of a reasonable size, perhaps a few dozen hours over four years, is achievable without overwhelming students or the groups that host them.\n\nIn the end, the case for requiring community service rests on what schools are for. They are meant to develop capable, thoughtful citizens as well as test-takers. A graduation requirement signals that contributing to one's community is part of being educated, and it ensures that every student, not only the already-privileged or already-motivated, gets the chance to learn that lesson firsthand. With flexible options, meaningful reflection, and adequate support, required community service is a worthwhile investment in both students and the communities they will inherit.",
+ "cost_usd": 0.017926,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1363,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 1247,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1363,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1247,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1363,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1363
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

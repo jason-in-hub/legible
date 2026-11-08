@@ -1,0 +1,43 @@
+{
+ "id": "code02",
+ "setting": "code",
+ "arm": "base",
+ "sample": 1,
+ "model": "claude-opus-5-5",
+ "text": "The problem has two causes. The second one causes errors even when nothing is being inserted.\n\n## 1. OFFSET counts positions, not records\n\n`OFFSET 50` means \"skip the first 50 rows *as the table looks right now*.\" Because you sort by `created_at DESC`, every new row goes in at position 0 and pushes everything else down.\n\n**Duplicates (insert between requests):**\n```\nRequest page 0 → rows A..AX (positions 0–49)\n5 new rows inserted at the top\nRequest page 1 → OFFSET 50 now starts at what used to be position 45\n              → last 5 rows of page 0 are returned again\n```\n\n**Skips** happen when rows are deleted (or anything moves rows toward the front). The positions shift the other way, and rows slide past the boundary into a page the client has already fetched. The same thing happens if a row's sort key changes.\n\n## 2. `created_at` is not unique\n\nIf several rows share a timestamp (bulk inserts, coarse clock resolution), `ORDER BY created_at` does not define their order. Postgres and MySQL can return tied rows in a different order on each query, especially as the plan or data changes. Tied rows that straddle a page boundary can then be duplicated or skipped even on a static table.\n\n## Fix: keyset (cursor) pagination with a unique tiebreaker\n\nDon't ask for \"page N\". Ask for \"the rows after the last one I saw.\" Pass the last row's `(created_at, id)` back as a cursor:\n\n```python\nimport base64, json\nfrom datetime import datetime\nfrom fastapi import HTTPException\n\ndef encode_cursor(row):\n    raw = json.dumps({\"c\": row[\"created_at\"].isoformat(), \"i\": row[\"id\"]})\n    return base64.urlsafe_b64encode(raw.encode()).decode()\n\ndef decode_cursor(cursor: str):\n    try:\n        d = json.loads(base64.urlsafe_b64decode(cursor.encode()))\n        return datetime.fromisoformat(d[\"c\"]), d[\"i\"]\n    except Exception:\n        raise HTTPException(400, \"invalid cursor\")\n\n@app.get('/items')\ndef items(cursor: str | None = None, size: int = 50):\n    size = max(1, min(size, 200))  # cap page size\n\n    if cursor is None:\n        rows = db.query(\n            'SELECT * FROM items ORDER BY created_at DESC, id DESC LIMIT %s',\n            size + 1,\n        )\n    else:\n        created_at, id_ = decode_cursor(cursor)\n        rows = db.query(\n            '''SELECT * FROM items\n               WHERE (created_at, id) < (%s, %s)\n               ORDER BY created_at DESC, id DESC\n               LIMIT %s''',\n            created_at, id_, size + 1,\n        )\n\n    has_more = len(rows) > size\n    rows = rows[:size]\n    return {\n        \"items\": rows,\n        \"next_cursor\": encode_cursor(rows[-1]) if has_more and rows else None,\n    }\n```\n\nAnd add an index that matches the sort:\n```sql\nCREATE INDEX items_created_at_id_idx ON items (created_at DESC, id DESC);\n```\n\n### Why this works\n- **Inserts:** new rows have a newer `created_at`, so they sort *before* the cursor and never shift later pages. A client that is paging won't see them, which is usually what you want; it can re-fetch from the top to pick them up.\n- **Deletes:** a deleted row is simply absent, and nothing else moves, so nothing gets skipped.\n- **Ties:** `id` makes the ordering total and deterministic.\n- **Performance:** a `WHERE` range seek on the index is O(page size). Large `OFFSET`s get slower the deeper you go because the DB still scans and discards the skipped rows.\n\n### Notes\n- **Row-value comparison** `(a, b) < (x, y)` works in Postgres, MySQL 8+, and SQLite 3.15+. On engines without it, write `created_at < %s OR (created_at = %s AND id < %s)`, though some planners use the index less well with that form.\n- **Timestamp precision:** make sure the cursor round-trips `created_at` at full precision (microseconds, and timezone if the column has one). Otherwise the comparison drifts. Some teams put only `id` in the cursor and look up `created_at` server-side to avoid this.\n- **Mutable sort keys:** if `created_at` can be updated, rows can still move. Sort on something immutable.\n- **Trade-off:** you lose \"jump to page 37\". If you need that, keep offset for that UI and accept the drift, or snapshot the result set (e.g., cache the ID list per query, or use a `REPEATABLE READ` snapshot). For feeds, sync, and exports, keyset pagination is the right choice.\n- **API compatibility:** this changes the contract (`page` becomes `cursor`). You could keep `page` working for a deprecation period and log who still uses it.",
+ "cost_usd": 0.045647999999999994,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1455,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 1700,
+  "output_tokens_details": {
+   "thinking_tokens": 56
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1455,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1700,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1455,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1455
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

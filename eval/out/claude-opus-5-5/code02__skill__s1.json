@@ -1,0 +1,43 @@
+{
+ "id": "code02",
+ "setting": "code",
+ "arm": "skill",
+ "sample": 1,
+ "model": "claude-opus-5-5",
+ "text": "## What's going on\n\n`LIMIT/OFFSET` paginates by position, and positions change when the table changes.\n\n**Duplicates from inserts.** You sort newest first, so each new row goes in at position 0 and pushes every existing row down by one. Suppose a client has read page 0 (rows 0–49). Then 3 new rows arrive. Page 1 is now `OFFSET 50`, and its first 3 rows are the last 3 rows the client already saw on page 0.\n\n**Skips from deletes.** A deleted row shifts every later row *up* by one. The row that moves from position 50 to position 49 falls on a page the client has already read, so the client never sees it.\n\n**Skips and duplicates from ties.** `ORDER BY created_at` alone doesn't fix the order when two rows share a timestamp, for example rows from a bulk insert. The database can return tied rows in a different order on each query. A tie that straddles a page boundary can then show up on both pages or on neither, even when nothing is being written.\n\nLarge offsets are also slow. The database still reads and discards every skipped row, so page 1000 costs about 1000 pages of work.\n\n## What to change\n\nUse **keyset (cursor) pagination**. The client asks for \"the next 50 rows after the last one I saw\" instead of \"rows 50–99\". Add `id` as a tiebreaker so the order is total:\n\n```python\nfrom base64 import urlsafe_b64encode, urlsafe_b64decode\nimport json\n\ndef encode_cursor(created_at, id_):\n    return urlsafe_b64encode(json.dumps([created_at.isoformat(), id_]).encode()).decode()\n\ndef decode_cursor(cursor):\n    created_at, id_ = json.loads(urlsafe_b64decode(cursor))\n    return created_at, id_\n\n@app.get('/items')\ndef items(cursor: str | None = None, size: int = 50):\n    size = min(size, 200)  # cap page size\n    if cursor is None:\n        rows = db.query(\n            'SELECT * FROM items ORDER BY created_at DESC, id DESC LIMIT %s',\n            size,\n        )\n    else:\n        created_at, id_ = decode_cursor(cursor)\n        rows = db.query(\n            '''SELECT * FROM items\n               WHERE (created_at, id) < (%s, %s)\n               ORDER BY created_at DESC, id DESC\n               LIMIT %s''',\n            created_at, id_, size,\n        )\n    next_cursor = encode_cursor(rows[-1]['created_at'], rows[-1]['id']) if len(rows) == size else None\n    return {'items': rows, 'next_cursor': next_cursor}\n```\n\nAnd add an index that matches the sort:\n\n```sql\nCREATE INDEX items_created_at_id_desc ON items (created_at DESC, id DESC);\n```\n\n### Why this works\n\n- The `WHERE` clause anchors each page to a specific row, not a position. New rows sort before the cursor, so they don't affect later pages. Deleted rows just aren't returned. Nothing gets shifted.\n- `(created_at, id)` is unique, so tied timestamps have one fixed order.\n- With the index, every page costs about the same, however deep the client goes.\n\n### Notes\n\n- **Row-value comparison.** `(a, b) < (x, y)` works in PostgreSQL, MySQL 8+ and SQLite 3.15+. If your database doesn't support it, write it out: `created_at < %s OR (created_at = %s AND id < %s)`.\n- **Opaque cursor.** Base64 keeps clients from building cursors by hand, which lets you change the format later. Sign it (e.g. HMAC) if you don't want clients to tamper with it.\n- **Breaking change.** This changes the API contract: clients can no longer jump to page N. If some clients need that, keep the old `page` parameter for them and make the cursor the default for anything that walks the full list.\n- **New rows during a scan.** Rows inserted after a client starts paging appear *before* its first page, so that scan won't include them. That's usually what you want. To pick them up, the client can poll for rows newer than the first item it saw, using the same comparison in the other direction.\n- **Timestamp precision.** If `created_at` is truncated somewhere (in JSON, in the ORM), the decoded cursor may not equal the stored value. Serialize it at full precision, or base the cursor on `id` alone if `id` is monotonic, such as a sequence or a UUIDv7.",
+ "cost_usd": 0.044275800000000004,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1416,
+  "cache_read_input_tokens": 5999,
+  "output_tokens": 1587,
+  "output_tokens_details": {
+   "thinking_tokens": 108
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1416,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1587,
+    "cache_read_input_tokens": 5999,
+    "cache_creation_input_tokens": 1416,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1416
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

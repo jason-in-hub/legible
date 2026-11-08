@@ -1,0 +1,43 @@
+{
+ "id": "essay04",
+ "setting": "essay",
+ "arm": "skill",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "# Let Students Design Their Summer Projects\n\nSummer projects should be student-designed, with teachers setting the limits. Teacher-designed projects are easier to grade, but they teach less. A project is supposed to build skills that a worksheet can't. Choosing a question, planning the work and finishing it without a teacher nearby are those skills, and a teacher-designed project takes all three away from the student.\n\nThe first reason is motivation. Summer is the one stretch of the year when nobody checks in on students daily. A student working on an assigned topic has little reason to push through when the work gets dull, and the project tends to get done in the last week of August. A student who picked the topic has a reason to keep going. Someone who loves baking, birdwatching or building computers will spend hours on a project about that subject without being told to. Research on self-determination supports this: people stick with tasks longer when they have some say in them.\n\nThe second reason is that planning is itself a skill. In a teacher-designed project, the teacher decides the question, the steps and the schedule. The student only carries out instructions. That is good practice for following directions, but school already gives students plenty of that. Few assignments ask students to decide what is worth studying, break a large goal into steps and notice when a plan isn't working. Students will need to do these things in college and at work, and summer is a good time to practice because mistakes cost little. A student who plans too much and finishes half of it learns more from that than from a perfectly scoped assignment.\n\nThe third reason is that teachers can't know what each student cares about. A single assigned project fits some students and bores the rest. Student-designed projects let a shy writer, a future engineer and an athlete each work on something that suits them. They also give teachers a better picture of their students at the start of the next school year.\n\nThe strongest objection is that many students will choose badly. Some will pick something too easy, some will pick something too big, and some will do nothing. Students with less support at home may struggle most, because they have fewer adults to help them plan. These risks are real, but the answer is structure, not teacher control. The school can ask for the following:\n\n- A one-page proposal in June that names the question, the goal and a rough schedule.\n- A short teacher conference to approve or adjust each proposal.\n- Two brief check-ins over the summer, by email or video.\n- A final presentation in the fall, so every student knows the work will be seen.\n\nTeachers can also offer a short list of sample projects for students who don't know where to start. Under this setup, the student still makes the choices, and the teacher's job is to catch problems early.\n\nThe other objection is fairness in grading. Teacher-designed projects let everyone be measured against the same standard. But a shared standard is easy to get without a shared topic. A rubric can score the quality of the question, the evidence of effort, the clarity of the final product and what the student learned. Those criteria apply equally to a robot, a short story and a study of local water quality.\n\nTeacher-designed projects are simpler to run and to grade, and for a school short on staff time that counts for something. But a summer project is meant to give students practice at working on their own, and a student can't practice that on a plan someone else made. Schools should hand students the design work, keep teachers as guides and let students find out what they can do when the choices are theirs.",
+ "cost_usd": 0.0173539,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1330,
+  "cache_read_input_tokens": 5999,
+  "output_tokens": 1143,
+  "output_tokens_details": {
+   "thinking_tokens": 117
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1330,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1143,
+    "cache_read_input_tokens": 5999,
+    "cache_creation_input_tokens": 1330,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1330
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

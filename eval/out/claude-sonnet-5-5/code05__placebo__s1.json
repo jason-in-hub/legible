@@ -1,0 +1,43 @@
+{
+ "id": "code05",
+ "setting": "code",
+ "arm": "placebo",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "## Why it loses counts\n\nThe code reads the value, adds 1 in Python, then writes the result back. Those are two separate statements, so another worker can slip in between them. This is a lost update.\n\nHere is a timeline with the counter at 10:\n\n| Step | Worker A | Worker B |\n|---|---|---|\n| 1 | reads 10 | |\n| 2 | | reads 10 |\n| 3 | writes 11 | |\n| 4 | | writes 11 |\n\nTwo events were processed, but the counter only went up by one. The more workers you have, and the more often they run, the more counts you lose.\n\n## Options to fix it\n\n**1. Do the increment in SQL (best for a simple counter)**\n\n```python\ndb.execute('UPDATE stats SET count = count + 1 WHERE id = 1')\n```\n\nThe database reads and writes the value in one atomic statement. It takes a row lock for the duration, so concurrent updates queue up and none are lost. This is the simplest and fastest fix, and it needs no transaction logic in your code.\n\n**2. Lock the row with `SELECT ... FOR UPDATE`**\n\n```python\nwith db.transaction():\n    row = db.fetch_one('SELECT count FROM stats WHERE id = 1 FOR UPDATE')\n    db.execute('UPDATE stats SET count = %s WHERE id = 1', row.count + 1)\n```\n\nThe second worker blocks on the SELECT until the first commits, so it always sees the latest value. Use this when you need to read the value and run Python logic before writing. It holds the lock longer than option 1.\n\n**3. Optimistic locking with a version column**\n\n```python\nupdated = db.execute(\n    'UPDATE stats SET count = %s, version = version + 1 '\n    'WHERE id = 1 AND version = %s',\n    row.count + 1, row.version)\nif updated == 0:\n    # someone else changed it; re-read and retry\n```\n\nNo lock is held while you work. If another worker changed the row first, your update matches zero rows and you retry. This suits cases with low contention and longer work between the read and the write.\n\n**4. Raise the isolation level to SERIALIZABLE (or REPEATABLE READ on some databases)**\n\nThe database detects the conflict and aborts one transaction, and your code must catch the error and retry. This works, but it is heavier than the options above. Note that plain `READ COMMITTED`, the default in many databases, does not prevent this bug.\n\n**5. Reduce contention on a hot row (only if needed)**\n\nIf a single counter row becomes a bottleneck, you can:\n- Insert one row per event and run `COUNT(*)` or a periodic rollup.\n- Shard the counter across several rows (for example, 16 slots), pick one at random per increment, and sum them when reading.\n- Batch increments in memory or in Redis (`INCR`) and flush to the database periodically.\n\n## Recommendation\n\nUse option 1. It is one line, it is atomic, and it is correct under any number of workers. Only reach for the other options if you need to compute the new value in Python or if that single row becomes a throughput bottleneck.",
+ "cost_usd": 0.015958,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1471,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 1007,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1471,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1007,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1471,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1471
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

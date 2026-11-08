@@ -1,0 +1,43 @@
+{
+ "id": "chat05",
+ "setting": "chat",
+ "arm": "base",
+ "sample": 1,
+ "model": "claude-opus-5-5",
+ "text": "Marta didn't answer it at first.\n\nShe stood at the bottom of the spiral stairs with a mug of coffee going cold in her hand, listening. Three years of wind had taught her every sound the lighthouse could make: the groan of the iron railing, the slap of loose shutters, the gulls that sometimes hit the glass in fog. A knock was not one of them.\n\nIt came again. Three raps, patient and evenly spaced.\n\nThe supply boat wasn't due for eleven days, and it never knocked anyway. Old Pell just left the crates on the dock and blew his horn twice. And the tide was in. The causeway to the mainland had been underwater since before dawn.\n\nShe set the mug down and opened the door.\n\nA girl stood on the step, maybe ten years old, in a yellow raincoat several sizes too big. She was completely dry. Behind her the sea heaved gray and furious against the rocks, and spray hung in the air like smoke, but not a single drop had touched her.\n\n\"You're the keeper,\" the girl said. It wasn't a question.\n\n\"I am,\" Marta said slowly. \"How did you get out here?\"\n\nThe girl ignored that. She held out her hand. In her palm sat a brass key, green with age, its bow shaped like a tiny lighthouse.\n\n\"The light's been going out,\" she said. \"Every night, for nine seconds, just after three in the morning. You haven't noticed, because you're asleep. But we've noticed. Something comes through when it's dark.\"\n\nMarta felt the hair rise on her arms. She *had* been sleeping through the three o'clock check lately. She'd told herself it didn't matter.\n\n\"Who's *we*?\" she asked.\n\nThe girl looked past her, up the stairs toward the lamp room, and her voice dropped to a whisper.\n\n\"There's a door at the top of your lighthouse that you've never opened. This is the key. And whatever you do, don't open it before three.\"\n\nThen she turned and walked down the steps toward the water.\n\n---\n\nYour turn! Does Marta follow her, look for the door, or wait until three?",
+ "cost_usd": 0.024616,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1386,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 676,
+  "output_tokens_details": {
+   "thinking_tokens": 18
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1386,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 676,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1386,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1386
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

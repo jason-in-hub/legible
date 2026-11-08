@@ -1,0 +1,43 @@
+{
+ "id": "essay03",
+ "setting": "essay",
+ "arm": "skill",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "# Learning From Home: A Benefit for Some, a Burden for Others\n\nDistance learning lets students attend classes from home, and many schools now offer it. I argue that, on balance, most students would not benefit from attending classes from home full time. The format works well for a small group of students and as a occasional option for others. As a default, though, it takes away things that school does best.\n\nThe strongest case for home learning is flexibility. A student who lives far from school can skip a long commute and use that time to sleep or study. A student with a health condition can keep learning during treatment instead of falling behind. A student who is bullied or overwhelmed by a crowded building may find a calmer place to focus. For these students, learning from home is not a convenience. It is what makes school possible, and for them the benefits are real.\n\nStill, most students need more than lessons delivered through a screen. School gives them daily contact with teachers who can see confusion on a face and adjust right away. Online, a student can turn off a camera, stay silent, and drift without anyone noticing. Teachers lose many of the small cues they use to tell who is struggling. Research on remote schooling during the pandemic found that many students lost ground in reading and math, and that younger students and those from lower-income families lost the most.\n\nHome itself is also an uneven place to learn. Some students have a quiet room, a reliable computer and a parent who can help. Others share a small space with siblings, rely on a phone or a slow connection, or have no adult around during the day. When school moves into the home, these differences in circumstances become differences in results. A school building gives every student the same desk, the same internet and the same adults, which makes it fairer.\n\nSocial growth is another concern. Students learn to work in groups, handle disagreements, and make friends by spending hours together. Video calls cover only a small part of this. A student who rarely sees classmates in person has fewer chances to practice these skills, and the loss is hardest for shy students, who may feel relieved to stay home and then become more isolated. Sports, clubs, and hallway conversations also vanish, and these are often what make students feel they belong.\n\nSupporters of home learning reply that students can build independence and time-management skills, and that is true for those who are already motivated. But self-discipline is something many teenagers are still developing. Without a set schedule and a teacher in the room, procrastination is easy, and a few missed assignments can grow into a large gap.\n\nThe best approach is to treat distance learning as an option for specific needs rather than a replacement for school. Students with long commutes, medical needs or safety concerns should have access to it, ideally with regular check-ins and chances to meet peers in person. For everyone else, a mix of mostly in-person classes with an occasional remote day can offer flexibility without losing the structure, support and community that a school provides.\n\nIn short, learning from home helps the students who need it most, but it should not become the standard. Most students do better when they are in a classroom with their teachers and classmates.",
+ "cost_usd": 0.015219900000000001,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1334,
+  "cache_read_input_tokens": 5999,
+  "output_tokens": 928,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1334,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 928,
+    "cache_read_input_tokens": 5999,
+    "cache_creation_input_tokens": 1334,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1334
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

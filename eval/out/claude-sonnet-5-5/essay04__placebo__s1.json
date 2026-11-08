@@ -1,0 +1,43 @@
+{
+ "id": "essay04",
+ "setting": "essay",
+ "arm": "placebo",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "# Student-Designed Summer Projects Are the Better Choice\n\nSummer is the one stretch of the year when students are free from bells, grades, and daily assignments. A school that asks them to do a project during that time must decide who plans it. I believe students should design their own summer projects, with teachers acting as guides. This approach produces more motivation, deeper learning, and skills that teacher-designed work rarely builds.\n\nThe strongest argument for student design is motivation. During the school year, students have little choice about what they study. Summer has no teacher in the room and no daily deadline, so a project succeeds only if the student cares about it. A student who picked her own topic has a reason to keep going when the work gets hard. A student handed a assignment she did not choose is likely to do the minimum, or to put it off until the last week of August. Interest is the fuel for independent work, and choice is how you create interest.\n\nStudent design also teaches skills that classroom assignments often skip. A teacher-designed project already has a clear question, a list of steps, and a rubric. The student only has to follow directions. When students design their own projects, they must decide what to explore, break a large goal into smaller tasks, set a schedule, and adjust when something fails. These are the skills that college and most jobs demand. Following instructions is important, but it is something students practice all year. Planning their own work is a skill they rarely get to use.\n\nStudents also learn more from work that connects to their own lives. A student who loves baseball might analyze batting statistics. Another who is worried about a local creek might test its water quality. A teacher cannot know every student's interests, and a single assignment for hundreds of students will fit only a few of them well. Student-designed projects let each person work at the right level of difficulty on a topic that matters to them. A strong student can aim high, and a student who struggles can start with something manageable and build confidence.\n\nThe best objection to this idea is that students may choose poorly. Some will pick projects that are too easy, too vague, or too big to finish. Others may have no idea where to start. These are real risks, but they can be solved without taking away student ownership. The school can require a short proposal in the spring, which a teacher reviews and approves. Teachers can suggest changes, point out problems, and offer a list of example ideas for students who feel stuck. Students could also check in with a mentor once or twice during the summer. In this model, teachers still protect quality, but the student makes the central decisions.\n\nAnother concern is fairness. Students with more money, travel, or family support may design more impressive projects than those without such advantages. This is a serious issue, and a school should address it directly. It can judge projects on effort, reflection, and growth rather than on how polished or expensive they look. It can also offer low-cost options, such as library research, community interviews, or writing and art projects that need few supplies. Teacher-designed projects do not remove this inequality either, since a family's resources affect homework in any form.\n\nIn the end, the question is what a summer project is for. If the goal is to make sure students complete a task, a teacher-designed assignment will do. If the goal is to help students become curious, independent learners, then they need the chance to lead. A school that trusts its students to design their own projects, and supports them with careful guidance, will get better work and prepare them better for life after graduation.",
+ "cost_usd": 0.01591,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1399,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 1031,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1399,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1031,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1399,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1399
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

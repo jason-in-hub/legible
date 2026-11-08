@@ -1,0 +1,43 @@
+{
+ "id": "essay01",
+ "setting": "essay",
+ "arm": "placebo",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "Dear Principal,\n\nI am writing to urge you to adopt a phone ban that covers the whole school day, including lunch, rather than a ban that applies only during class.\n\nA class-only ban leaves a gap. Students spend the morning waiting for the lunch bell, and many spend that time thinking about their phones. When lunch arrives, they check messages, scroll social media, and often get pulled into online conflicts. Those conflicts do not stay online. They follow students back into the afternoon classes, where teachers must deal with the fallout. A full-day ban closes that gap.\n\nLunch is also one of the few times students can talk face to face without a lesson to follow. If most of them are looking at screens, they miss practice at conversation, at making friends, and at including the student sitting alone. A cafeteria without phones tends to be louder and livelier, and that is a good sign. Students who feel shy or left out have a better chance of joining in when everyone is looking up.\n\nA full-day rule is also easier to enforce. Under a class-only ban, staff must track which period it is, who is in which room, and whether a phone seen in the hallway is allowed. Students test those boundaries. A single rule, that phones stay away from arrival to dismissal, is simple to explain and simple to apply. Teachers spend less time on arguments and more time teaching.\n\nI understand the concerns. Some parents want to reach their children during the day. The school can address this by keeping the front office phone available for urgent messages and by promising to deliver them quickly. Some students rely on phones for medical needs. A clear exception process for those cases would protect them. These steps answer the main objections without weakening the policy.\n\nOther schools that have moved to full-day bans have reported better attention in class, fewer disciplinary problems, and more social interaction at lunch. I believe our students would gain the same benefits.\n\nI ask that you adopt the full-day ban, with clear exceptions for medical needs and a reliable way for families to reach students. Thank you for considering this request.\n\nRespectfully,\n\nJason Mak",
+ "cost_usd": 0.012188,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1416,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 652,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1416,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 652,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1416,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1416
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "id": "essay02",
+ "setting": "essay",
+ "arm": "skill",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "# Schools Should Require Community Service\n\nMost teenagers never volunteer, and the usual reason is that no one has asked them. A school requirement does the asking. I think schools should require community service, as long as they design the requirement with care.\n\nThe strongest reason is access. Students who volunteer on their own tend to have free time, a ride, and parents who know where help is needed. Other students are just as willing but never hear about an opening or can't get to one. When the school requires service and helps students find placements, every student gets the same chance to take part, not only the ones whose families already know how.\n\nA requirement also teaches things a classroom can't. A student who spends a semester at a food bank or a nursing home sees what a lesson on poverty or aging was describing. Students also practice habits that grades rarely measure: showing up on time, working alongside adults, and finishing a job when no one is checking closely. Those habits matter after graduation.\n\nThe most common objection is that forced service isn't real service. If students volunteer only to collect hours, the argument goes, the requirement teaches them to fake generosity. This worry deserves a serious answer, but I don't think it holds up. People often begin an activity for a weak reason, such as a rule or a friend's invitation, and keep going because they find it worthwhile. The reason someone starts doesn't settle what they get out of it. Schools also require many things students wouldn't choose, like math or writing, and no one concludes that those subjects are pointless. The risk of box-checking is real, though, and it is a reason to build the requirement well, not a reason to drop it.\n\nA second objection is fairness. Some students work after school or look after younger siblings, and for them thirty or forty more hours is a real burden. A good policy accounts for this. The hours can be spread across four years. Schools can offer service during the school day or on weekends. Caring for a family member can count toward the total. A school that ignores these students' circumstances has written a bad policy, but that is a flaw in the policy, not in the idea.\n\nSo what does a good requirement look like? It asks for a modest number of hours. It lets students choose among several placements, so the work connects to something they care about. It has the school, not the student, do most of the work of finding those placements. And it ends with a short written or spoken reflection, so students think about what they saw and don't just hand in a signed sheet.\n\nCommunity service won't make every student generous, and a badly run program will waste time. But a well-run requirement gives every student a first experience of helping that many would otherwise never have, and some of them will keep doing it. That is reason enough to require it.",
+ "cost_usd": 0.0222619,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1322,
+  "cache_read_input_tokens": 5999,
+  "output_tokens": 1637,
+  "output_tokens_details": {
+   "thinking_tokens": 831
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1322,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1637,
+    "cache_read_input_tokens": 5999,
+    "cache_creation_input_tokens": 1322,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1322
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "id": "essay01",
+ "setting": "essay",
+ "arm": "base",
+ "sample": 1,
+ "model": "claude-opus-5-5",
+ "text": "Dear Principal [Last Name],\n\nI am writing about the proposal to ban phones for the entire school day, including lunch, rather than only during class. Although many of my classmates oppose the change, I believe the all-day policy is the right choice, and I hope you will adopt it.\n\n**First, it would make lunch more social.** Lunch is one of the few times in the day when we can talk freely with friends. Too often, though, I see tables where everyone is looking down at a screen. Students who are new, shy, or sitting alone have a harder time joining a conversation when everyone around them is on their phone. Without phones, lunch would go back to being a time to connect with the people actually sitting next to us.\n\n**Second, it would help us focus in class.** A class-only ban sounds reasonable, but in practice the lunch break pulls our attention back to our phones. A notification seen at noon, a group chat argument, or a post that went up during lunch follows students into fifth period. A full-day break gives our minds a real rest from the constant pull of notifications, so we come back to class ready to learn instead of thinking about what is waiting on our screens.\n\n**Third, it would reduce drama and cyberbullying at school.** Many conflicts start or grow online: a photo taken in the cafeteria without permission, a hurtful comment in a group chat, a video recorded during an argument. Lunch is when much of this happens, because it is the least supervised part of the day. Taking phones out of lunch would make school a safer place where students do not have to worry about being filmed or talked about online while they are still in the building.\n\n**Fourth, one clear rule is easier to follow and enforce.** Under the current policy, teachers have to keep reminding students to put their phones away when class starts, and students constantly test the limits during transitions. A simple rule, \"phones stay away from the first bell to the last,\" is easier for everyone to understand. It also takes pressure off teachers, who could spend that time teaching instead of policing.\n\nI understand the concerns. Parents worry about reaching their children in an emergency, and students worry about losing their free time. However, the front office can always contact a student, and families can call the school if something urgent happens. Phones could also be allowed in specific situations with permission, such as for students who need them for medical reasons. As for free time, lunch would still be free; it would simply be spent with people instead of screens.\n\nMany schools that have adopted all-day phone bans report calmer hallways, more conversation at lunch, and better focus in class. I believe our school could see the same benefits. If it would help, I would be glad to help gather student input or explain the policy to other students so the change goes smoothly.\n\nThank you for considering my opinion and for taking the time to think carefully about what is best for our school.\n\nSincerely,\n\n[Your Name]\n[Grade / Homeroom]",
+ "cost_usd": 0.030796000000000004,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1376,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 989,
+  "output_tokens_details": {
+   "thinking_tokens": 97
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1376,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 989,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1376,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1376
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

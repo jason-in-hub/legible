@@ -1,0 +1,43 @@
+{
+ "id": "code05",
+ "setting": "code",
+ "arm": "placebo",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "## Why it loses counts\n\nThis is a classic read-modify-write race. The code reads the value, adds one in Python, then writes the result back. Nothing stops another worker from doing the same thing in between.\n\nHere is one bad interleaving:\n\n| Step | Worker A | Worker B | `count` in DB |\n|---|---|---|---|\n| 1 | reads 10 | | 10 |\n| 2 | | reads 10 | 10 |\n| 3 | writes 11 | | 11 |\n| 4 | | writes 11 | 11 |\n\nTwo events were processed, but the counter went up by only one. Worker B's write was based on a value that was already stale, so it overwrote Worker A's update.\n\n## Options to fix it\n\n**1. Do the increment in the database (best for a simple counter)**\n\n```python\ndb.execute('UPDATE stats SET count = count + 1 WHERE id = 1')\n```\n\nThe read and write happen in one statement. The database locks the row while it runs, so concurrent updates queue up and each one sees the previous result. This is the simplest fix and usually the fastest. It works under the default isolation level in PostgreSQL, MySQL/InnoDB, and most others.\n\n**2. Lock the row when you read it**\n\n```python\nwith db.transaction():\n    row = db.fetch_one('SELECT count FROM stats WHERE id = 1 FOR UPDATE')\n    db.execute('UPDATE stats SET count = %s WHERE id = 1', row.count + 1)\n```\n\n`FOR UPDATE` makes the second worker wait until the first commits. Use this when you must read the value and run logic on it before writing. It is more code than option 1 and holds the lock longer.\n\n**3. Optimistic locking (compare-and-set)**\n\n```python\nwhile True:\n    row = db.fetch_one('SELECT count FROM stats WHERE id = 1')\n    updated = db.execute(\n        'UPDATE stats SET count = %s WHERE id = 1 AND count = %s',\n        row.count + 1, row.count)\n    if updated == 1:\n        break\n```\n\nThe update only applies if the value is unchanged since you read it. If another worker got there first, zero rows match and you retry. This avoids holding locks, but it wastes work under heavy contention.\n\n**4. Raise the isolation level**\n\nWith `SERIALIZABLE` (or `REPEATABLE READ` in PostgreSQL), the database detects the conflict and aborts one transaction. You must catch that error and retry. This protects code you can't easily rewrite, but it is the heaviest option and needs retry handling.\n\n## Things to watch for\n\n- **A hot row can become a bottleneck.** If many workers hit this one row, they all serialize on it. If throughput matters, keep several counter rows (for example, one per worker) and add them up when you read. Or count in Redis with `INCR` and flush to the database in batches.\n- **Wrap it in a transaction with the event's other work** if the count must stay consistent with what was processed. Otherwise a crash can leave the two out of sync.\n- **Don't use a Python lock.** A `threading.Lock` or similar only works inside one process. Your workers are separate, so it won't help.\n\nFor a plain counter, use option 1. It is a one-line change and fixes the problem.",
+ "cost_usd": 0.013809400000000001,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 774,
+  "cache_read_input_tokens": 694,
+  "output_tokens": 1064,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 774,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1064,
+    "cache_read_input_tokens": 694,
+    "cache_creation_input_tokens": 774,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 774
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

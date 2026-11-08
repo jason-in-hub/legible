@@ -1,0 +1,43 @@
+{
+ "id": "essay02",
+ "setting": "essay",
+ "arm": "placebo",
+ "sample": 1,
+ "model": "claude-opus-5-5",
+ "text": "# Why Schools Should Require Community Service\n\nMany high schools now ask students to complete a set number of service hours before they graduate. Some people see this rule as a burden. Others see it as a valuable part of education. I believe schools should require community service. A well-designed requirement teaches skills that classrooms cannot, connects young people to their communities, and gives every student a chance to discover the value of helping others.\n\n## Service Teaches Real-World Skills\n\nSchool teaches students how to solve equations and analyze novels. It does less to teach them how to work with strangers, manage their time, or handle unexpected problems. Community service fills that gap. A student who tutors younger children learns patience and clear communication. A student who helps run a food drive learns planning and teamwork. These skills matter in every job and in adult life.\n\nService also gives students experience they can point to later. College applications and job interviews often ask about leadership and responsibility. A student who has organized a park cleanup or volunteered at a hospital has real stories to tell. For students who do not have family connections or paid internships, a service requirement can open doors that might otherwise stay closed.\n\n## Service Builds Stronger Communities\n\nCommunities depend on people who are willing to give their time. Food banks, shelters, libraries, and youth programs often run on volunteer help. When thousands of students each give even twenty or forty hours, the total impact is large. Local organizations gain workers, and the people they serve gain support.\n\nService also helps students understand their own neighborhoods. Many teenagers spend most of their time at school, at home, and with friends. Volunteering puts them in contact with people of different ages, backgrounds, and circumstances. A student who serves meals at a shelter may see poverty in a new way. A student who visits a nursing home may come to respect older people more. These experiences build empathy, and empathy makes communities stronger.\n\n## A Requirement Reaches Students Who Would Not Volunteer Otherwise\n\nSome people argue that service should stay voluntary. They say that students who want to help will do so on their own. But this argument overlooks an important fact: many students never try volunteering simply because no one asks them to. They may not know where to start, or they may assume it is not for them.\n\nA requirement solves this problem. It gives every student a first experience. Research on volunteering has found that people who serve when they are young are more likely to keep volunteering as adults. Schools already require subjects like math and science because they are good for students, even when students would not choose them. Service deserves the same treatment. The requirement is not the end goal. It is a starting point that can lead to a lifelong habit.\n\n## Answering the Main Objections\n\nCritics raise fair concerns, and they deserve a response.\n\nThe first concern is that forced service is not true service. If students only volunteer to meet a rule, the argument goes, they will not care about the work. This can happen. But motivation often follows action. Many students who start volunteering reluctantly end up enjoying it. They meet people, see results, and feel proud of what they did. A requirement can create genuine interest where none existed before.\n\nThe second concern is time. Students already juggle homework, sports, jobs, and family duties. Adding service hours may feel unfair, especially for students who work to support their families. This concern is real, but it can be addressed through good design. Schools can keep the number of hours reasonable. They can spread the requirement across four years. They can offer service options during the school day or count family caregiving and other meaningful work. A flexible requirement respects students' lives while still asking them to contribute.\n\nThe third concern is that some service is meaningless. Students may log hours doing busywork that helps no one. Schools can prevent this by approving placements in advance and asking students to reflect on what they learned. A short written reflection turns a task into a learning experience.\n\n## Conclusion\n\nCommunity service should be a graduation requirement. It teaches practical skills, strengthens local communities, and gives every student, not just the already motivated, a chance to experience the reward of helping others. The concerns about forced participation and limited time are serious, but thoughtful program design can answer them. Schools exist to prepare young people for adult life. Part of adult life is being a good neighbor and an active citizen. A service requirement helps students practice that role before they leave school, and many will carry the lesson with them for the rest of their lives.",
+ "cost_usd": 0.039332,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1388,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 1411,
+  "output_tokens_details": {
+   "thinking_tokens": 48
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1388,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1411,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1388,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1388
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

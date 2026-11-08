@@ -1,0 +1,43 @@
+{
+ "id": "chat07",
+ "setting": "chat",
+ "arm": "placebo",
+ "sample": 1,
+ "model": "claude-opus-5-5",
+ "text": "Three weeks is tight but doable. The trick is to do things in order of how long they take to lock in. Here's a rough order of operations.\n\n## Week 1: Lock down the big, slow stuff\n\n**1. Housing (do this first, it blocks everything else)**\n- Decide your budget and which neighborhoods you'd consider.\n- Start applying now. Approvals, deposits, and lease signing can take a week or more.\n- If you can't find a long-term place in time, book a short-term rental or sublet for the first month. Then you can apartment hunt in person.\n\n**2. Decide how you're moving your stuff**\n- Get 2–3 quotes from movers, or reserve a rental truck or a portable container (like PODS or U-Box).\n- These book up fast, especially at the end of the month. Reserve this week.\n- If you have little stuff, consider shipping boxes or just selling furniture and rebuying.\n\n**3. Give notice at your current place**\n- Check your lease for the notice period and move-out rules.\n- Ask how to get your deposit back.\n\n**4. Job and money**\n- If your employer is involved, confirm your start date and any relocation help.\n- Make a rough moving budget: deposit, first month's rent, movers, travel, and a buffer.\n\n## Week 2: Set up the logistics\n\n**5. Schedule utilities at the new place**\n- Electricity, gas, water, and internet. Internet often needs an install appointment, so book it early.\n- Schedule shutoff at your old place for the day after you leave.\n\n**6. Change your address**\n- File a mail forwarding request with the postal service.\n- Update your bank, employer, insurance, phone carrier, and subscriptions.\n\n**7. Declutter and start packing**\n- Get rid of anything you don't want to pay to move. Sell, donate, or toss it.\n- Pack things you won't need soon: books, off-season clothes, decor.\n\n**8. Records**\n- If you have pets, get their vet records.\n- If you take prescriptions, refill them and ask about transferring them.\n\n## Week 3: Final stretch\n\n**9. Pack the rest**\n- Keep an \"open first\" box: toiletries, chargers, sheets, a towel, basic tools, a few days of clothes, and important documents.\n- Carry your valuables and documents yourself.\n\n**10. Confirm everything**\n- Call the movers or truck rental, the new landlord, and the utility companies a few days before.\n\n**11. Clean and do a walkthrough**\n- Take photos of your old place when it's empty. This helps you get your deposit back.\n\n## After you arrive (first month)\n- Take photos of the new place's condition before you unpack.\n- Update your driver's license and car registration. Many places require this within 30–60 days.\n- Register to vote at your new address.\n- Find a doctor, a pharmacy, and a grocery store.\n\n## If you only do three things today\n1. Start searching for housing, or book a temporary place.\n2. Reserve movers or a truck.\n3. Check your current lease's notice period.\n\nIf you tell me which city you're moving to, whether you have a job lined up, and how much stuff you're moving, I can help you narrow this down further.",
+ "cost_usd": 0.032288,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1405,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 1052,
+  "output_tokens_details": {
+   "thinking_tokens": 32
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1405,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1052,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1405,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1405
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

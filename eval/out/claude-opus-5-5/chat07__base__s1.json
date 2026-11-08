@@ -1,0 +1,43 @@
+{
+ "id": "chat07",
+ "setting": "chat",
+ "arm": "base",
+ "sample": 1,
+ "model": "claude-opus-5-5",
+ "text": "Three weeks is tight but doable. Here's roughly the order, sorted by what has the longest lead time or blocks everything else.\n\n## Week 1: Lock down the big stuff\n1. **Housing.** Everything else depends on your address. If you can't find a permanent place in time, book a furnished sublet or month-to-month (Furnished Finder, Facebook groups, local subreddits) so you aren't apartment hunting under pressure. Be careful with listings where you can't see the place or the \"landlord\" wants a deposit before a viewing. Those are common scams.\n2. **Give notice on your current place** if you rent. Check your lease for the notice period; it's often 30 days.\n3. **Decide how your stuff is getting there.**\n   - Movers: book now, since good ones fill up.\n   - Rental truck (U-Haul, Penske): also book now.\n   - Shipping container (PODS, U-Pack): good middle option.\n   - Selling or donating most of it and buying new: sometimes cheapest for long distances.\n4. **Start decluttering.** Every box you don't pack is money and time saved.\n\n## Week 2: Logistics and paperwork\n5. **Utilities.** Schedule shutoff at your old place and setup at the new one (electric, gas, water if applicable, internet). Internet installs can take 1–2 weeks, so do this early.\n6. **Change your address.** Use USPS mail forwarding (usps.com, about $1 online), plus your bank, employer/payroll, insurance, subscriptions, and anywhere you shop online.\n7. **Get records** if needed: medical, dental, prescriptions (transfer them to a pharmacy in the new city), and school or pet vet records.\n8. **Start packing** the stuff you won't need, like off-season clothes, books, and decor.\n\n## Week 3: Final stretch\n9. **Pack everything else.** Leave out a \"first night\" bag with chargers, toiletries, meds, a change of clothes, important documents, toilet paper, and bedding.\n10. **Clean the old place** and take photos or video for your deposit.\n11. **Confirm everything**: movers or truck, utility dates, key pickup.\n\n## After you arrive (first month or so)\n- Update your driver's license and car registration. Most states give you 30–60 days.\n- Register to vote.\n- Update renter's or car insurance for the new address.\n- Find a doctor, dentist, and pharmacy.\n- Walk around and find your grocery store, gym, and so on.\n\n**Tip:** Make one running checklist (notes app, Google Doc, whatever) and dump everything into it so it's not living in your head.\n\nIs this a move for a job, school, or something else, and are you renting or buying? I can tailor this if you share more, like whether it's cross-country, whether you have a car or pets, and so on.",
+ "cost_usd": 0.029848,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1370,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 944,
+  "output_tokens_details": {
+   "thinking_tokens": 24
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1370,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 944,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1370,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1370
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

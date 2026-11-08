@@ -1,0 +1,43 @@
+{
+ "id": "essay05",
+ "setting": "essay",
+ "arm": "base",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "# The Wisdom of Many Voices\n\nWhen facing an important decision, such as choosing a career, buying a home, or deciding on a medical treatment, the instinct to ask someone for advice is a good one. But the instinct to ask several people is better. Seeking multiple opinions does not mean a person is indecisive or lacks confidence. It is a practical strategy that leads to better, more thoughtful choices.\n\nThe first benefit is that no single person sees the whole picture. Every advisor has a limited perspective shaped by their own experiences, expertise, and blind spots. A friend who has worked in finance for twenty years will notice the monetary risks of a career change, while a mentor in a creative field may emphasize fulfillment and growth. Neither is wrong, but each is incomplete. When someone gathers several viewpoints, they assemble a fuller map of the terrain, including considerations they would never have thought to ask about.\n\nSecond, multiple opinions help reveal bias. Advisors are human, and their advice is often colored by personal interests, emotions, or past experiences. A parent may urge safety because they worry about their child. A salesperson may recommend the more expensive product. A friend who once had a bad experience with a certain city may discourage a move there for reasons that have little to do with the asker's situation. When only one person weighs in, it is hard to tell where good judgment ends and bias begins. When several people are consulted, patterns emerge. If most advisors raise the same concern, it is probably worth taking seriously. If one voice stands out in contradiction to the rest, the person can examine whether that opinion reflects a unique insight or a personal quirk.\n\nThird, hearing differing opinions strengthens a person's own reasoning. Disagreement forces the decision-maker to think critically instead of passively accepting what they are told. They must ask why one person recommends one path while another recommends the opposite. Working through those differences clarifies their own values and priorities. Often, the conflict between two pieces of advice reveals what truly matters to them. Someone torn between a high-paying job and a more flexible one may realize, after hearing both sides argued, that time with family matters more to them than salary. In this way, other people's opinions serve not as answers to adopt but as material for thinking.\n\nFourth, consulting multiple sources reduces the risk of serious error. In high-stakes situations, a single mistaken opinion can be costly. Doctors routinely encourage second opinions for major diagnoses because a different specialist may catch something overlooked or propose a less invasive alternative. The same logic applies elsewhere: a second mechanic may find that an expensive repair is unnecessary, and a second financial planner may spot a flaw in an investment plan. The small cost of asking again is usually far outweighed by the possible cost of acting on bad advice.\n\nFinally, seeking several opinions can give a person greater confidence in the final decision. Having considered a range of perspectives, they can move forward knowing they have done their homework. Even if the choice turns out poorly, they can take comfort in having made it thoughtfully. And when the opinions largely agree, that consensus offers reassurance that the path is sound.\n\nOf course, there are limits. Asking too many people can lead to confusion, and it is important to choose advisors who are knowledgeable and trustworthy rather than simply numerous. Ultimately, the decision belongs to the person who must live with it. Advice should inform judgment, not replace it.\n\nStill, a wise decision-maker rarely relies on a single voice. By gathering diverse perspectives, uncovering bias, sharpening their own thinking, guarding against costly errors, and building confidence, they put themselves in the best position to choose well. In decision-making, as in many things, several minds are better than one.",
+ "cost_usd": 0.017574,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1375,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 1207,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1375,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1207,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1375,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1375
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

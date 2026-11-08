@@ -1,0 +1,43 @@
+{
+ "id": "essay01",
+ "setting": "essay",
+ "arm": "base",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "Dear Principal,\n\nI am writing to urge you to adopt a phone policy that covers the whole school day, lunch included, rather than limiting the ban to class time. I believe this is the stronger choice for our students, and I would like to explain why.\n\n**A class-only ban leaves the biggest gaps open.** Lunch and passing periods are the parts of the day when students most want to check their phones. A ban that stops at the classroom door means that students spend those breaks on their screens, and then arrive in class distracted, still thinking about a group chat, a video, or a conflict that started online. Teachers end up enforcing the rule over and over, which takes time away from teaching.\n\n**Lunch is when students should be talking to each other.** For many students, lunch is the one unstructured time to build friendships, practice conversation, and decompress. When half a table is looking down at screens, that time is lost. Students who are shy or new are the most affected, since a phone makes it easy to avoid the awkward but valuable work of joining in. A full-day ban gives them a reason to look up and a room full of peers who are doing the same.\n\n**It reduces conflict and harm.** Many incidents that reach the front office, such as online arguments, secretly recorded videos, and exclusion from group chats, are fueled by phone use during the school day. Removing phones at lunch removes a major opportunity for these problems to start or escalate while students are together in the building.\n\n**It is fairer and simpler to enforce.** A rule with a carve-out for lunch invites confusion about where and when phones are allowed. A single, clear rule, such as phones stored in lockers or pouches from first bell to last, is easy for students, parents, and staff to understand, and it avoids unequal enforcement from one teacher or hallway to the next. It also removes the social pressure on any one student to be the only one without a phone.\n\n**The evidence and the experience of other schools are encouraging.** Many schools and districts that adopted full-day restrictions have reported better attention, more lively cafeterias, and fewer disciplinary referrals. While research on this topic is still developing, the early results point in a consistent direction, and I think the risk of trying is low compared with the potential benefit.\n\nI recognize the concerns. Parents want to reach their children in an emergency, and some students rely on phones for health needs or family responsibilities. These can be handled with sensible measures: a front-office line for urgent calls, clear exceptions for documented medical needs, and a communication plan so families know how the policy works. Students will also need time to adjust, so a short introduction period with clear expectations and consistent follow-through would help.\n\nA class-only ban is a good first step, but it asks students to switch their phones off and on again all day, and it leaves the social side of school largely unchanged. A full-day policy makes a clearer break. I hope you will adopt it, and I would be glad to help in any way, whether by gathering student and parent input or by helping to plan the rollout.\n\nThank you for your time and for your commitment to our school.\n\nSincerely,\n\n[Your name]",
+ "cost_usd": 0.015262000000000001,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1387,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 971,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1387,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 971,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1387,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1387
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

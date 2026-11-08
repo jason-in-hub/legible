@@ -1,0 +1,43 @@
+{
+ "id": "code04",
+ "setting": "code",
+ "arm": "skill",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "## What's happening\n\n`df[df['score'] > 80]` builds a new DataFrame from the matching rows. Pandas can't always tell whether that result is an independent copy or a view onto `df`'s memory. When you then assign `high['grade'] = 'A'`, it warns because it doesn't know whether you meant the change to reach `df` too.\n\nTwo things follow from this:\n\n- With a boolean mask like this one, you get a copy. `df` never gets a `grade` column from this code. If you expected it to, that's the \"column doesn't change\" problem.\n- The same issue is worse with chained assignment, such as `df[df['score'] > 80]['grade'] = 'A'`. The write lands on a temporary copy and is thrown away, with no effect on `df` or anything else.\n\n## The right way\n\nDecide which result you want.\n\n**You want a separate DataFrame of high scorers.** Make the copy explicit:\n\n```python\nhigh = df[df['score'] > 80].copy()\nhigh['grade'] = 'A'\n```\n\nOr in one step:\n\n```python\nhigh = df[df['score'] > 80].assign(grade='A')\n```\n\n**You want to update `df` itself.** Use a single `.loc` call with the mask and the column:\n\n```python\ndf.loc[df['score'] > 80, 'grade'] = 'A'\n```\n\nIf `grade` didn't exist before, the non-matching rows will be `NaN`. To fill them in one go:\n\n```python\ndf['grade'] = np.where(df['score'] > 80, 'A', 'other')\n```\n\n## Version note\n\nIn pandas 3.0 and later, copy-on-write is the default. The warning no longer appears, and `high` is always independent of `df`. So your original code would never change `df` there, and the `.loc` form is still the way to update it. The `.copy()` and `.loc` versions above work on all versions.",
+ "cost_usd": 0.0159054,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 773,
+  "cache_read_input_tokens": 6594,
+  "output_tokens": 1215,
+  "output_tokens_details": {
+   "thinking_tokens": 622
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 773,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1215,
+    "cache_read_input_tokens": 6594,
+    "cache_creation_input_tokens": 773,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 773
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

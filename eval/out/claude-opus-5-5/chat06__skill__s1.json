@@ -1,0 +1,43 @@
+{
+ "id": "chat06",
+ "setting": "chat",
+ "arm": "skill",
+ "sample": 1,
+ "model": "claude-opus-5-5",
+ "text": "It comes down to how air scatters sunlight, plus how much air the light has to pass through.\n\n**Why it's blue during the day**\n\nSunlight contains all the colors. When it hits the tiny gas molecules in the air (mostly nitrogen and oxygen), some of it bounces off in random directions. This is called scattering. Short wavelengths (blue and violet) scatter much more than long ones (red and orange). Blue light scatters roughly 5 to 10 times more strongly than red.\n\nSo during the day, blue light gets bounced all over the sky. Wherever you look, some of that scattered blue is coming toward you, and the whole sky looks blue.\n\n(Violet scatters even more than blue. The sky still doesn't look violet, because sunlight has less violet in it, some is absorbed high in the atmosphere, and your eyes are less sensitive to it.)\n\n**Why it turns red and orange at sunset**\n\nWhen the sun is low, its light comes in at a shallow angle. It has to travel through far more air to reach you, about 40 times as much as at noon. Along that long path, almost all the blue gets scattered away in other directions before it arrives. What's left is mostly orange and red, so the sun and the sky near it take on those colors.\n\nDust, smoke and other particles in the air can make sunsets even more vivid, which is why sunsets after wildfires or volcanic eruptions are often especially red.\n\n**In short:** the same effect causes both. At midday you see the blue light that has been scattered across the sky. At sunset you see the red and orange light that's left after the blue has been scattered out along the long path.",
+ "cost_usd": 0.022695799999999995,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1331,
+  "cache_read_input_tokens": 5999,
+  "output_tokens": 542,
+  "output_tokens_details": {
+   "thinking_tokens": 25
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1331,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 542,
+    "cache_read_input_tokens": 5999,
+    "cache_creation_input_tokens": 1331,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1331
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

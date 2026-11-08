@@ -1,0 +1,43 @@
+{
+ "id": "essay03",
+ "setting": "essay",
+ "arm": "base",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "# Learning From Home: A Qualified Benefit\n\nDistance learning has moved from emergency measure to permanent option at many schools. Whether students benefit from attending classes at home is not a yes-or-no question, but on balance, I argue that remote learning is valuable as an option and a supplement, while full-time home attendance serves only some students well. Its real benefits are flexibility, personalized pacing, and access, and its costs fall mainly on social development, engagement, and equity.\n\n**The case for learning at home**\n\nThe strongest argument for distance learning is flexibility. Students who attend class from home save the time and energy spent commuting, which can add an hour or more to a school day. That time can go toward sleep, which matters, since many teenagers are chronically sleep-deprived and research links adequate rest to better memory and mood. A student who can begin class at home, rested and fed, may well learn more than one who arrives exhausted from an early bus.\n\nHome learning also helps students whose circumstances make a traditional classroom difficult. Children with chronic illnesses, anxiety disorders, or physical disabilities can keep up with their studies rather than fall behind. Students in rural areas can reach courses their local school cannot offer, such as advanced sciences or foreign languages. Students who are bullied may find relief from an environment that has become unsafe. For these students, distance learning is not a convenience but a lifeline.\n\nFinally, digital formats can allow a more personalized pace. Recorded lessons can be paused and replayed, and students can move quickly through material they grasp while spending longer on what challenges them. In a crowded classroom, a teacher cannot always do this.\n\n**The case against**\n\nDespite these advantages, learning at home carries serious drawbacks. The first is social. School teaches more than academics; it is where children learn to cooperate, resolve conflicts, make friends, and read social cues. These skills develop through daily face-to-face contact, and a screen is a weak substitute. Prolonged isolation can also contribute to loneliness and depression, especially among adolescents.\n\nThe second problem is engagement and discipline. At home, distractions are only a click away: games, social media, and videos compete with the lesson. A teacher in a physical room can notice a confused or disengaged student and respond immediately, while online, a student can turn off a camera and disappear. Studies of remote learning during the COVID-19 pandemic generally found learning losses, particularly in math, and those losses were largest among younger and lower-achieving students, who most need structure and supervision.\n\nThe third problem is inequality. Effective home learning requires a reliable internet connection, a suitable device, a quiet place to work, and often an adult available to help. Families without these resources fall further behind. A policy that appears to offer choice can therefore widen the gap between advantaged and disadvantaged students. Schools also provide meals, counseling, and other services that some children cannot get at home.\n\n**Weighing the evidence**\n\nThe benefits and drawbacks are not distributed evenly. Self-motivated, older students with stable home environments tend to do well with remote study. Younger children, students who struggle academically, and those without good home support tend to do poorly. This suggests that the best policy is not to send everyone home or to bring everyone back, but to match the format to the student.\n\nA hybrid model offers a sensible compromise. Students could attend in person for most core instruction and collaborative work while using remote days for independent study, make-up lessons, or severe-weather closures. Schools could also keep full distance programs available for students with medical, geographic, or safety needs, backed by strong teacher contact and device and internet support.\n\n**Conclusion**\n\nAttending classes from home can benefit students, but only under the right conditions. It offers flexibility, accessibility, and personalization that traditional schooling cannot always match. Yet it cannot fully replace the social growth, structure, and equal opportunity that a school building provides. Schools should therefore treat distance learning as a well-supported option for those who need it and a supplement for others, rather than a wholesale replacement for the classroom.",
+ "cost_usd": 0.018494,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1370,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 1301,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1370,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1301,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1370,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1370
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

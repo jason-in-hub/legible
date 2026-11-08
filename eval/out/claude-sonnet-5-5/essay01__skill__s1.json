@@ -1,0 +1,43 @@
+{
+ "id": "essay01",
+ "setting": "essay",
+ "arm": "skill",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "Dear Principal,\n\nI am writing to urge you to adopt the all-day phone ban, lunch included, rather than a ban that covers class time only.\n\nA class-only rule leaves the hardest problem untouched. Most students check their phones the moment the bell rings, and many arrive at the next class still caught up in a group chat, a video or an argument that started online. Teachers then spend the first minutes of every period getting attention back. A ban that runs all day removes that carryover, because students walk into each room without a screen pulling at them.\n\nLunch is also the one time of day when students can talk to each other without a schedule. If phones are out, many will sit together but look at their screens. Students who are shy or new to the school are the ones who lose most, since a phone is an easy way to avoid the awkward work of joining a table. Without phones, students have to talk, play, or at least sit with others. Those small exchanges are how friendships form.\n\nA full-day ban would also make the rule easier to enforce. With a class-only policy, teachers must judge whether a phone is out in a permitted setting or a forbidden one, and students will argue about the line. A single rule, \"phones stay away from arrival to dismissal,\" is simple to explain, and it treats every student the same. Schools that have tried this approach often report that confusion and conflict over the rule drop quickly once everyone knows it.\n\nPhones also create problems that happen outside class. Fights are filmed and shared, private photos get taken in hallways and bathrooms, and rumors spread within minutes. Lunch and passing periods are when most of this happens, so a policy that ignores them leaves the biggest risks in place.\n\nI understand the concerns about this policy. Parents may want to reach their children during the day, and some students rely on phones for medical or family reasons. I suggest we handle these directly. Families can call the front office, which can pass urgent messages to students quickly. Students with a documented medical need can have an exception. Phones can be stored in locked pouches or lockers, so no one has to worry about losing a device.\n\nI am confident that an all-day ban is the better choice. It protects learning time, gives students a real break at lunch, and gives teachers a rule they can apply without argument. I would be glad to help gather student and parent feedback, or to speak with you about how a trial might work.\n\nThank you for considering this.\n\nSincerely,\nJason Mak",
+ "cost_usd": 0.0135059,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1343,
+  "cache_read_input_tokens": 5999,
+  "output_tokens": 753,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1343,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 753,
+    "cache_read_input_tokens": 5999,
+    "cache_creation_input_tokens": 1343,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1343
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

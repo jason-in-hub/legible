@@ -1,0 +1,43 @@
+{
+ "id": "essay05",
+ "setting": "essay",
+ "arm": "placebo",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "# Why Seeking Multiple Opinions Leads to Better Choices\n\nWhen we face a hard decision, it is natural to turn to one trusted person. That person might be a parent, a close friend, or a mentor. But relying on a single voice has limits. Talking to several people usually leads to a better choice, for four main reasons.\n\nThe first reason is that every person sees only part of the picture. Each of us has our own experiences, knowledge, and blind spots. A friend who has changed careers can tell you about the risks of leaving a stable job. An older relative may know how a similar decision turned out years later. A colleague may understand the industry in ways your family does not. No one person holds all of this knowledge, but a group of people can come close.\n\nThe second reason is that every adviser has biases. Some are easy to spot. A parent may want you to stay close to home because they will miss you. A friend may encourage a risky plan because they like adventure. Others are harder to notice. People often give advice that reflects their own past choices, as if to confirm that they chose well. When you hear only one opinion, you cannot tell how much of it is wisdom and how much is bias. When you hear several, the biases tend to point in different directions, and you can see which ideas hold up regardless.\n\nThe third reason is that disagreement is useful. If three people give you the same advice for different reasons, you can feel more confident. If they disagree, that is valuable too. It tells you the decision is truly difficult, and it shows you where the tradeoffs lie. Each person's reasoning also gives you new questions to ask yourself. You might have never considered the cost of moving, or the benefit of waiting a year, until someone raised it. Even advice you decide to reject can sharpen your thinking by forcing you to explain why you disagree.\n\nThe fourth reason is that gathering opinions helps you take ownership of the decision. With one adviser, it is tempting to simply do what they say. That can leave you feeling unsure, or ready to blame them if things go badly. With many viewpoints in front of you, you must weigh them yourself. You decide which concerns matter most and which advice fits your values. The final choice is then truly yours, and you understand why you made it.\n\nOf course, there are limits. Too many opinions can lead to confusion and delay, especially if you keep asking until someone says what you wanted to hear. It also helps to choose advisers carefully. A few people who know the subject, or who know you well, are worth more than a crowd of casual voices. In the end, advice is input, not an instruction.\n\nUsed wisely, though, multiple opinions give you a wider view, expose hidden biases, reveal the real tradeoffs, and strengthen your confidence in the choice you make. A good decision rarely comes from hearing only one side, and a little extra listening is a small price to pay for a better outcome.",
+ "cost_usd": 0.014584,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1410,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 894,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1410,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 894,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1410,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1410
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

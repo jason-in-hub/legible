@@ -1,0 +1,43 @@
+{
+ "id": "essay04",
+ "setting": "essay",
+ "arm": "base",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "# Student-Designed Summer Projects Are the Better Choice\n\nEvery June, schools send students into summer with a familiar assignment: a packet, a reading list, or a prescribed project. Every September, many teachers discover that much of it was rushed, copied, or never done. The problem is not that students are lazy. It is that summer is the one stretch of the year when a teacher cannot supervise, explain, or adjust, so the usual advantages of teacher-designed work disappear. In that setting, student-designed projects are the better approach, because they build motivation, ownership, and real-world skills that a assigned task cannot.\n\n**Motivation is the deciding factor in the summer.** During the school year, grades, deadlines, and daily contact with a teacher push students to finish work they may not care about. In July, none of that pressure exists. What remains is interest. A student who chooses to build a website for a local animal shelter, write a short story collection, or study the birds in her neighborhood will work because she wants to see the result. A student handed a generic assignment will do the minimum, or nothing. Research on self-determination theory consistently finds that autonomy is a core driver of sustained effort. Summer, with its absence of external enforcement, is where that finding matters most.\n\n**Student-designed projects teach skills that assigned work does not.** When a teacher designs a project, the hardest intellectual steps are already done: someone has picked the question, scoped the work, and defined success. The student only executes. When students design their own projects, they must do all of that themselves. They have to decide what is worth pursuing, break a large goal into steps, estimate how long things take, and adjust when something fails. These are the skills of planning and self-management that colleges and employers say they want and that schools rarely teach directly. Summer is a low-stakes place to practice them, since a failed experiment in August costs far less than a failed one in a graded course.\n\n**Choice allows for equity in a way uniform assignments cannot.** Students do not experience summer equally. Some have access to travel, museums, internet, and tutors; others work jobs, care for siblings, or have limited resources at home. A single teacher-designed assignment, such as \"visit a historical site and write a report,\" quietly assumes a common set of circumstances. A student-designed project can fit the student's actual life. A student who spends the summer working at a family restaurant can study the business's costs and customers. Flexibility lets every student do meaningful work with the resources they have.\n\n**The strongest objections can be answered with structure.** Critics argue that students may choose projects that are too easy, too vague, or poorly planned, and that teacher design guarantees rigor and alignment with curriculum. This is a real risk, but it is a design problem, not a reason to abandon student choice. A school can require a short proposal in June that a teacher approves, with criteria for scope and difficulty. It can ask for a mid-summer check-in and a final presentation in the fall. These steps keep teachers involved at the points where guidance helps most, while leaving the creative decisions to the student. Students who need more support, such as younger grades, can choose from a teacher-provided menu of options, which still preserves some agency.\n\nAnother objection is that teacher-designed projects ensure students retain academic skills over the summer. But retention comes from engagement, and a student who reads voraciously about a topic she loves will often maintain more than one who skims a required text. Projects can also be required to include writing, math, or research components, so core skills are practiced inside work the student cares about.\n\n**Conclusion.** Teacher-designed projects work best when the teacher is present to motivate, clarify, and correct. Summer removes that presence, and with it the main strength of the approach. Student-designed projects, supported by a clear proposal process and fall presentations, turn that absence into an opportunity: students practice independence, pursue real interests, and arrive in September with something they made and can explain. If the goal of summer work is learning that lasts, the school should let students lead.",
+ "cost_usd": 0.018114,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1370,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 1263,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1370,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1263,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1370,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1370
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

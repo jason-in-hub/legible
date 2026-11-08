@@ -1,0 +1,43 @@
+{
+ "id": "code02",
+ "setting": "code",
+ "arm": "placebo",
+ "sample": 1,
+ "model": "claude-opus-5-5",
+ "text": "# What's going on\n\nYour query uses **OFFSET pagination**. OFFSET means \"skip the first N rows of the result *as it looks right now*.\" Each page request runs against the current table. If the table changes between requests, row positions shift, and page boundaries no longer line up.\n\n**Duplicates come from inserts.** You sort newest first, so a new row lands at position 0 and pushes everything else down by one.\n\n```\nRequest page 0 (rows 0–49):  A1 ... A50\n-- new row X is inserted at the top --\nRequest page 1 (rows 50–99): A50 A51 ... A98   ← A50 appears again\n```\n\n**Skips come from deletes.** A delete, or anything else that removes a row from an earlier page, shifts rows *up*. One row then slides past the boundary and is never returned.\n\n**Ties in `created_at` add a third problem.** If two rows share a timestamp, the database may return them in a different order on each query. That can cause skips or duplicates even when nothing changes. Batch inserts and low-precision timestamps make ties common.\n\n# What to change: keyset (cursor) pagination\n\nDon't ask for \"page N.\" Ask for \"the next 50 rows after the last row I saw.\" Use a unique tiebreaker, such as `id`, so the sort order is total and stable.\n\n```python\nimport base64, json\nfrom datetime import datetime\nfrom fastapi import HTTPException\n\ndef encode_cursor(created_at, id_):\n    raw = json.dumps({\"c\": created_at.isoformat(), \"i\": id_})\n    return base64.urlsafe_b64encode(raw.encode()).decode()\n\ndef decode_cursor(cursor):\n    try:\n        d = json.loads(base64.urlsafe_b64decode(cursor.encode()))\n        return datetime.fromisoformat(d[\"c\"]), d[\"i\"]\n    except Exception:\n        raise HTTPException(400, \"invalid cursor\")\n\n@app.get('/items')\ndef items(cursor: str | None = None, size: int = 50):\n    size = max(1, min(size, 200))  # cap the page size\n\n    if cursor is None:\n        rows = db.query(\n            'SELECT * FROM items '\n            'ORDER BY created_at DESC, id DESC '\n            'LIMIT %s',\n            size + 1,\n        )\n    else:\n        c_at, c_id = decode_cursor(cursor)\n        rows = db.query(\n            'SELECT * FROM items '\n            'WHERE (created_at, id) < (%s, %s) '\n            'ORDER BY created_at DESC, id DESC '\n            'LIMIT %s',\n            c_at, c_id, size + 1,\n        )\n\n    has_more = len(rows) > size\n    rows = rows[:size]\n    next_cursor = encode_cursor(rows[-1]['created_at'], rows[-1]['id']) if has_more else None\n    return {\"items\": rows, \"next_cursor\": next_cursor}\n```\n\nAdd an index that matches the sort order:\n\n```sql\nCREATE INDEX items_created_at_id_idx ON items (created_at DESC, id DESC);\n```\n\n## Why this fixes it\n\n- **New rows can't cause duplicates.** A new row has a newer `created_at`, so it sorts before the cursor. The `WHERE` clause filters it out of later pages.\n- **Deletes can't cause skips.** The cursor is a value, not a position. Removing earlier rows doesn't move the boundary.\n- **`id` breaks ties.** The order is deterministic even when timestamps are equal.\n- **It's faster.** OFFSET has to read and throw away every skipped row, so deep pages get slow. A keyset query seeks straight to the right spot in the index.\n\n## Notes and caveats\n\n- **Row-value comparison.** `(created_at, id) < (%s, %s)` works in PostgreSQL, MySQL 8+, and SQLite 3.15+. On other databases, write it out in full: `created_at < %s OR (created_at = %s AND id < %s)`.\n- **Make `created_at` `NOT NULL`.** NULLs break the comparison.\n- **Late-arriving rows are still missed.** If a row is inserted with an *older* `created_at` (for example, a backfill or a client-supplied timestamp), it lands behind clients that have already paged past it. If that matters, sort by a monotonic key such as an auto-increment `id`. Even a monotonic id has a small gap: sequence values are assigned before commit, so a slow transaction can commit a lower id after a later one. If you need *every* row to be seen, have clients poll for rows newer than the newest one they've seen, or use a change feed.\n- **You lose \"jump to page 37.\"** Keyset pagination only supports next (and previous, if you reverse the comparison and the sort). Most feeds and APIs don't need random page access. If yours does, you'd need a snapshot approach, which costs much more.\n- **Keep the cursor opaque.** Base64-encoding it stops clients from building cursors by hand. It also lets you change what the cursor contains later. For a public API, consider signing the cursor.\n- **Migrate gently.** For backward compatibility, you can keep accepting `page` for a while. Mark it as deprecated and return `next_cursor` alongside it.",
+ "cost_usd": 0.048796000000000006,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1486,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 1845,
+  "output_tokens_details": {
+   "thinking_tokens": 116
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1486,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1845,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1486,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1486
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "id": "essay02",
+ "setting": "essay",
+ "arm": "skill",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "# Community Service Should Not Be a Graduation Requirement\n\nHelping others is one of the best things a school can teach. But a school that forces service as a condition of graduating weakens the very habit it wants to build. Schools should encourage community service strongly, and they should make it easy to do, but they should not require it.\n\n## The case for requiring it\n\nSupporters make a fair argument. Many students never volunteer unless someone pushes them. A requirement gets them through the door, and some find they enjoy the work. Others meet people and neighborhoods they would never have seen. Supporters also point out that schools already require things that students would skip if given the choice, such as math, writing and physical education. If we accept those, why not service?\n\nThe answer is that service differs from those subjects in what it is meant to teach. Math is a skill, and a student can learn a skill without wanting to. Service is supposed to express care for other people. Care that is ordered is hard to tell apart from compliance.\n\n## Why a requirement backfires\n\nPsychologists have long observed that people lose interest in an activity when they feel pushed into it. A student who tutors children because she wants to will keep going after the semester ends. A student who tutors because she needs 40 hours to graduate counts the hours and stops at 40. The requirement turns a gift into a chore, and the student learns to see service as a box to check.\n\nThat lesson shows up in how requirements work in practice. Students chase the easiest way to log hours. Some sign up for whatever is closest or least demanding. Some get a signature for time they barely spent. Teachers and counselors then spend their own time verifying paperwork instead of helping students find work that matters. The school ends up measuring hours, which are easy to count, instead of impact, which is not.\n\n## The fairness problem\n\nA requirement also falls unevenly on students. A teenager with a car, free afternoons and well-connected parents can find a placement in a week. A teenager who works after school, looks after younger siblings or lives far from any organization that needs volunteers has a much harder time. For this student, 40 hours of unpaid work is a real burden, and failing to finish could mean no diploma. It is wrong to withhold a diploma over something that depends so much on a family's time and resources.\n\nNonprofits bear a cost too. Organizations that depend on volunteers must supervise a stream of students who are there only to get a signature. Supervising takes staff time, and an unwilling volunteer often gives back less than he costs.\n\n## A better approach\n\nNone of this means schools should stay out of service. They can do a great deal without making it mandatory:\n\n- Build service into courses, so that students apply what they learn, for example by tutoring in a math class or running a food drive in a civics class.\n- Pair students with organizations, and provide transportation and time during the school day so that every student can take part.\n- Recognize students who serve, through honor cords, transcript notes and scholarships, so that service is valued and not demanded.\n- Give students a voice in choosing projects, because people commit to causes they helped pick.\n\nThese steps keep the benefits that supporters want, including exposure to new communities and the chance to discover a calling. They do so without penalizing students who face obstacles and without teaching that kindness is a requirement to be met.\n\n## Conclusion\n\nA school's goal should be graduates who serve because they want to, not graduates who finished their hours. Mandatory service pursues the first goal with a tool that tends to produce the second. Schools will do better by making service accessible, meaningful and respected, and then trusting students to choose it.",
+ "cost_usd": 0.0149124,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 771,
+  "cache_read_input_tokens": 6544,
+  "output_tokens": 1117,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 771,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1117,
+    "cache_read_input_tokens": 6544,
+    "cache_creation_input_tokens": 771,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 771
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

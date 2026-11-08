@@ -1,0 +1,43 @@
+{
+ "id": "code04",
+ "setting": "code",
+ "arm": "skill",
+ "sample": 1,
+ "model": "claude-sonnet-5-5",
+ "text": "## What's happening\n\n`df[df['score'] > 80]` builds a new DataFrame from the rows that match. Pandas can't always tell whether `high` is an independent copy or a view into `df`, so when you assign to `high['grade']` it warns that you may be writing to a temporary object.\n\nThe \"sometimes it doesn't change\" part comes from not knowing which object you're modifying:\n\n- **`high` is its own data.** Writing to it never changes `df`. If you expected `df['grade']` to appear, it won't.\n- **Chained forms like `df[df['score'] > 80]['grade'] = 'A'` fail silently.** The assignment goes to a temporary copy that is thrown away, so nothing changes.\n\nIn pandas 3.0 and later, Copy-on-Write is the default. The warning is gone, and `high` is always an independent copy. `df` is never modified through it.\n\n## The right way to write it\n\nWhich fix you want depends on your goal.\n\n**To add the column to `df` itself**, assign with `.loc` in a single step:\n\n```python\ndf.loc[df['score'] > 80, 'grade'] = 'A'\n```\n\nRows that don't match get `NaN`. To give them a value, set both cases at once:\n\n```python\nimport numpy as np\ndf['grade'] = np.where(df['score'] > 80, 'A', 'B')\n```\n\n**To work on the high scorers as a separate table**, make the copy explicit:\n\n```python\nhigh = df[df['score'] > 80].copy()\nhigh['grade'] = 'A'\n```\n\nor in one expression:\n\n```python\nhigh = df[df['score'] > 80].assign(grade='A')\n```\n\nBoth leave `df` untouched, and neither produces a warning.",
+ "cost_usd": 0.0168559,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1373,
+  "cache_read_input_tokens": 5999,
+  "output_tokens": 1076,
+  "output_tokens_details": {
+   "thinking_tokens": 527
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1373,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1076,
+    "cache_read_input_tokens": 5999,
+    "cache_creation_input_tokens": 1373,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1373
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

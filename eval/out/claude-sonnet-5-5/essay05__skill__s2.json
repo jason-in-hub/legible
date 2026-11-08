@@ -1,0 +1,43 @@
+{
+ "id": "essay05",
+ "setting": "essay",
+ "arm": "skill",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "# Why a Second Opinion Helps\n\nWhen we face a hard choice, the first person we ask is usually the one who comes to mind fastest: a parent, a close friend, a mentor. Their advice may be good. But one adviser gives us one view, and a decision built on a single view is only as sound as that person's knowledge, mood and biases. Asking several people tends to produce a better choice, for reasons that are easy to see once we look at what each adviser can and cannot offer.\n\nThe first reason is that every adviser knows only part of the picture. A friend who has changed careers can tell you how it felt to leave a stable job. An accountant can tell you whether you can afford the pay cut. A former colleague can tell you what the new field is really like day to day. None of them has all three kinds of knowledge. If you ask only the friend, you may leave with courage but no budget. If you ask only the accountant, you may leave with a budget but no sense of whether the work would suit you. Several people fill in each other's gaps.\n\nThe second reason is that advisers have blind spots and interests of their own. A parent who worries about your safety may steer you away from any risk. A friend who would miss you may quietly discourage a move to another city. A salesperson wants the sale. These pulls are rarely dishonest, and the adviser often doesn't notice them. When you hear from people with different relationships to you and different stakes in the outcome, their biases tend to point in different directions. You can then see which parts of the advice come from the facts and which come from the person giving it.\n\nThe third reason is that disagreement is itself useful information. If five people from different backgrounds all tell you the same thing, you can act with more confidence. If they split, that tells you the question is hard, and you can look closely at why. One adviser may weigh money more heavily, another may weigh family. Seeing that split helps you work out what you value most, which is often the real decision underneath the practical one. A single confident adviser hides this, because you never see the other side of the argument.\n\nA fourth reason is that asking around forces you to explain your problem several times. Each retelling makes you sharpen the question, drop details that don't matter and notice ones you had skipped. Often people find that their own thinking improves before anyone has answered. The questions advisers ask in return, such as \"Have you considered what happens if it fails?\", can expose assumptions you didn't know you held.\n\nNone of this means that more is always better. Asking too many people can leave you with a pile of conflicting suggestions and no way to choose among them. Advice from people who know little about the subject adds noise, not insight. And in the end the decision belongs to you, since you are the one who will live with it. The aim is not to count votes. It is to gather a small number of well-chosen views, understand why each adviser thinks as they do, and then weigh them against your own goals.\n\nUsed this way, several opinions work like several maps of the same ground. Each shows some features and leaves out others, and none is perfect. Laid side by side, they let you see the terrain more clearly than any one of them could, and you can choose your path with a better idea of where it leads.",
+ "cost_usd": 0.015633900000000003,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1335,
+  "cache_read_input_tokens": 5999,
+  "output_tokens": 969,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1335,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 969,
+    "cache_read_input_tokens": 5999,
+    "cache_creation_input_tokens": 1335,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1335
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

@@ -1,0 +1,43 @@
+{
+ "id": "essay01",
+ "setting": "essay",
+ "arm": "placebo",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "Dear Principal,\n\nI am writing to urge you to ban phones for the whole school day, including lunch, rather than only during class.\n\nA class-only ban leaves a large gap. Lunch is the one long stretch when students can talk, play, and relax with each other. If phones are allowed then, many students will spend that time looking at screens. A full-day ban would give them a real break from their devices and a reason to look up and connect.\n\nA full-day ban is also easier to enforce. Under a class-only rule, staff must keep track of when phones are allowed and when they are not. Students test the line: a phone comes out in the hallway, stays out as the bell rings, and ends up under a desk. A single rule that applies from the first bell to the last leaves no gray area, so teachers can spend less time arguing and more time teaching.\n\nLunch phones also create problems that classroom rules cannot fix. Students can film or photograph each other without consent. Arguments that start online can follow them into the cafeteria. A student who is left out of a group chat or a social post can see it happen in real time. Removing phones from lunch removes many of these moments before they start.\n\nSome families worry about reaching their children in an emergency or during the day. This concern is fair, and the policy should address it. The front office can pass urgent messages to students quickly, and parents can be told clearly how to reach the school. Students who need a phone for a medical reason should have an approved exception.\n\nOthers say students need time with their phones to unwind. But a break that leaves students more distracted, more anxious, or more isolated is not much of a break. Schools that have tried full-day bans have often reported more conversation at lunch and fewer conflicts that start on social media. I encourage you to look at those examples and, if possible, speak with the staff who run them.\n\nTo make the policy work, I suggest three steps. First, explain the rule and the reasons for it to students and parents before it starts. Second, give students a safe way to store their phones, such as lockers or pouches. Third, review the results after a semester and adjust if needed.\n\nA full-day ban asks something of students, but it also gives them something: a school day with more attention, more conversation, and less pressure to be online. I hope you will adopt it.\n\nRespectfully,\nJason Mak",
+ "cost_usd": 0.0102638,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 779,
+  "cache_read_input_tokens": 638,
+  "output_tokens": 708,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 779,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 708,
+    "cache_read_input_tokens": 638,
+    "cache_creation_input_tokens": 779,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 779
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

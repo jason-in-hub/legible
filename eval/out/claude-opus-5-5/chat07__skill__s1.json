@@ -1,0 +1,43 @@
+{
+ "id": "chat07",
+ "setting": "chat",
+ "arm": "skill",
+ "sample": 1,
+ "model": "claude-opus-5-5",
+ "text": "Three weeks is tight but doable. The trick is to do things in an order where each step unlocks the next. Here's a rough sequence:\n\n## Week 1: Lock down the big stuff\n\n1. **Figure out where you're living.** Everything else depends on your address: movers, utilities, mail. If you can't sign a long lease from afar, book a furnished short-term rental or sublet for a month. That buys you time to look in person.\n2. **Set a budget.** Add up rent, deposit, moving costs, and a cushion for the first month. It's often more than people expect.\n3. **Give notice where you are now.** Check your current lease for how much notice you owe your landlord. Many leases require 30 days, so this may already be urgent.\n4. **Decide how your stuff is getting there.** Pick one: hire movers, rent a truck, ship boxes, or sell most of it and rebuy. Movers and trucks book up, especially at the end of the month, so reserve now.\n\n## Week 2: Sort, pack, and set up services\n\n5. **Get rid of things.** Sell, donate, or toss anything you don't want to pay to move. Do this before you pack.\n6. **Start packing the stuff you don't use daily.** Books, decor, off-season clothes.\n7. **Set up utilities at the new place.** Electricity, internet, and gas if needed. Internet installs can take a week or more, so book early. If you're renting, ask the landlord which utilities you're responsible for.\n8. **Schedule shutoffs at the old place** for the day after you leave.\n9. **Forward your mail.** In the US, you can do this online through USPS.\n\n## Week 3: Wrap up and go\n\n10. **Update your address** with your bank, employer, phone carrier, insurance, and any subscriptions.\n11. **Pack a \"first night\" bag.** Include chargers, toiletries, medications, a change of clothes, sheets, a towel, and toilet paper.\n12. **Clean the old place and take photos** so you get your deposit back.\n13. **Move.**\n\n## After you arrive (can wait a few weeks)\n\n- Update your driver's license and car registration. Many US states give you 30 to 60 days.\n- Register to vote.\n- Find a doctor, pharmacy, and grocery store.\n\nIf you only do one thing today, make it #1. Once you know where you're living, the rest of this list mostly falls into place.\n\nWant help with any specific piece, like finding a place remotely or comparing movers vs. a truck?",
+ "cost_usd": 0.028699799999999998,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1334,
+  "cache_read_input_tokens": 5999,
+  "output_tokens": 841,
+  "output_tokens_details": {
+   "thinking_tokens": 38
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1334,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 841,
+    "cache_read_input_tokens": 5999,
+    "cache_creation_input_tokens": 1334,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1334
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

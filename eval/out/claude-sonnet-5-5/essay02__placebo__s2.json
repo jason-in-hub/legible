@@ -1,0 +1,43 @@
+{
+ "id": "essay02",
+ "setting": "essay",
+ "arm": "placebo",
+ "sample": 2,
+ "model": "claude-sonnet-5-5",
+ "text": "# Should Community Service Be Required for Graduation?\n\nCommunity service is a good thing. The harder question is whether schools should force it. I believe they should, as long as the requirement is designed with care. A well-run service requirement teaches students things that a classroom cannot, and it reaches students who would never volunteer on their own.\n\nThe strongest argument for a requirement is access. Students who choose to volunteer are often the ones who already have time, transportation, and parents who encourage it. Many other students never get the chance. They may not know where to begin, or they may assume service is for someone else. A graduation requirement removes that gap. It gives every student a push and a reason to try something new. Many students who start out only to meet the hours end up finding a cause they care about.\n\nService also teaches skills that tests do not measure. Working at a food bank or tutoring younger children means showing up on time, working with people of different ages and backgrounds, and finishing a task that matters to someone else. Students also see problems in their own community up close. Hunger, loneliness, and unequal opportunity become real people instead of statistics in a textbook. That kind of understanding is a core part of preparing young people for adult life.\n\nCritics raise a fair objection: forced service is not truly service. If students volunteer only to earn a credit, they may treat it as a chore and learn nothing. Some research suggests that people who feel pressured can lose interest in the activity. This risk is real, but it does not defeat the case for a requirement. Schools already require many things students would not choose, such as math, writing, and gym. We ask for them because they help students grow. Motivation also tends to change once students are involved. A student who begins out of obligation can leave with a sense of purpose.\n\nA second concern is fairness. Students who work after school, care for siblings, or live far from volunteer sites may struggle to log hours. This is a good reason to build the requirement carefully, not to drop it. Schools can set a modest number of hours, allow service during school time, partner with local organizations, and count work like caring for family members. A requirement that ignores these barriers is a bad one, but a flexible requirement can work for everyone.\n\nThe quality of the program matters most. Service works best when students have real choices, when the work has a clear purpose, and when they take time to reflect on what they learned. A student who writes or talks about the experience is far more likely to gain something lasting than one who simply gets a signature on a form. Schools that treat service as a box to check will get poor results. Schools that treat it as part of education will get much better ones.\n\nIn the end, a community service requirement asks a small thing of students and gives a lot back. It widens opportunity, builds character, and strengthens the neighborhoods that surround each school. The requirement should be reasonable, flexible, and thoughtfully run. With those conditions in place, schools should ask every graduate to give something back before they leave.",
+ "cost_usd": 0.014575999999999999,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1393,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 900,
+  "output_tokens_details": {
+   "thinking_tokens": 0
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1393,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 900,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1393,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1393
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}
