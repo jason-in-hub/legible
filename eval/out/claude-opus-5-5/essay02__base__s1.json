@@ -1,0 +1,43 @@
+{
+ "id": "essay02",
+ "setting": "essay",
+ "arm": "base",
+ "sample": 1,
+ "model": "claude-opus-5-5",
+ "text": "# Learning Beyond the Classroom: Why Community Service Should Be a Graduation Requirement\n\nEvery spring, high school seniors cross the stage with diplomas that certify they can solve equations, analyze literature, and explain the causes of World War I. Yet schools claim to prepare students not just for college or careers, but for citizenship, and a diploma says little about whether a graduate knows how to contribute to the community they live in. Requiring community service before graduation would close that gap. While critics raise fair concerns about forced volunteering and busy schedules, a well-designed service requirement teaches skills, builds empathy, and strengthens communities in ways the traditional classroom cannot.\n\n## Service Teaches What Textbooks Cannot\n\nThe strongest argument for required service is that it is itself an education. A student who spends twenty hours at a food bank learns about logistics, teamwork, and reliability: showing up on time matters when a line of families is waiting. A student who tutors younger children learns patience and how to explain an idea in more than one way. Someone who helps clean a local river sees environmental science as a real problem rather than a chapter to memorize before a test.\n\nThese experiences build \"soft skills\" that employers consistently say young workers lack: communication, responsibility, problem-solving, and working with people of different ages and backgrounds. Schools already require physical education because they believe a healthy body is part of a complete education. Civic and social competence deserves the same treatment.\n\n## Service Builds Empathy and Perspective\n\nAdolescence can be a narrow world of classes, friends, phones, and personal ambitions. Community service pulls students outside that world. Reading a statistic about food insecurity is very different from handing a bag of groceries to a family that looks a lot like your own. Visiting residents at a nursing home, helping at an animal shelter, or assisting at a community clinic exposes students to needs and lives they might otherwise never encounter.\n\nThis exposure matters. People who understand the struggles of others are more likely to vote thoughtfully, give generously, and treat neighbors with respect. In a time when many communities feel divided, schools have a responsibility to help young people see the humanity in those different from themselves. Service provides that lesson directly, through experience rather than lecture.\n\n## Service Benefits the Community\n\nRequired service is not only good for students; it is good for the places they live. Nonprofits, libraries, shelters, and parks often run on tight budgets and depend on volunteers. A school of 1,000 students, each completing 40 hours over four years, contributes 40,000 hours of labor to its community. That is a significant gift, and it creates a visible link between the school and the neighborhood that supports it.\n\nIt also changes how communities view young people. Teenagers are too often portrayed as distracted or self-absorbed. When residents see students stocking shelves, coaching youth sports, or repainting a playground, that image shifts, and students begin to see themselves as people who can make a difference.\n\n## Addressing the Objections\n\nOpponents make two main arguments. The first is that \"required volunteering\" is a contradiction: service loses its meaning when it is forced. This concern is understandable, but it misunderstands how habits form. Schools require reading even though we hope students will someday read for pleasure. Many students who would never have chosen to volunteer discover a cause they care about only after being pushed to try. Research on youth service programs has found that students who serve when young are more likely to volunteer as adults. The requirement opens the door; what students find inside often keeps them there.\n\nThe second objection is practical. Some students work after school, care for siblings, or lack transportation. A rigid requirement could punish the students who already carry the heaviest burdens. This is a real concern, but it argues for good design, not for abandoning the idea. Schools can keep the hour requirement modest, offer service opportunities during the school day or on campus, count family caregiving or work with community organizations, and provide transportation for off-site projects. Flexibility ensures the requirement builds students up rather than holding them back.\n\nA related concern is that students will simply \"check the box,\" logging hours without learning anything. Again, structure is the answer. Programs that include a brief reflection, such as a short essay, presentation, or conversation about what students experienced, turn hours into insight. The goal is not to collect signatures on a form, but to help students think about their role in the world.\n\n## Conclusion\n\nSchools exist to prepare young people for life, and life is lived in communities. A community service requirement teaches practical skills, broadens students' perspectives, and delivers real help to people and organizations that need it. The concerns about fairness and forced participation are legitimate, but they can be solved with thoughtful, flexible program design. A diploma should mean that a student has learned not only how to succeed for themselves, but how to contribute to something larger. Requiring community service is how schools can make sure it does.",
+ "cost_usd": 0.04284,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1354,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 1600,
+  "output_tokens_details": {
+   "thinking_tokens": 48
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1354,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1600,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1354,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1354
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

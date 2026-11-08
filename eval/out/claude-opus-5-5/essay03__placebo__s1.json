@@ -1,0 +1,43 @@
+{
+ "id": "essay03",
+ "setting": "essay",
+ "arm": "placebo",
+ "sample": 1,
+ "model": "claude-opus-5-5",
+ "text": "# Why Most Students Learn Best in the Classroom\n\nMany schools now offer distance learning. Students can log in from home, watch lessons on a screen, and turn in work online. This option sounds convenient, and for some students it truly helps. But for most students, attending classes from home is not the better choice. Students learn more, stay more focused, and grow more as people when they attend school in person.\n\n## Learning Needs Interaction\n\nLearning is not just hearing information. It is asking questions, getting confused, and working through problems with help. In a classroom, a teacher can see when a student looks lost. The teacher can stop, explain the idea a new way, and check again. A student can raise a hand and get an answer right away.\n\nAt home, this back-and-forth is much harder. A teacher on a video call may be looking at twenty small boxes on a screen. Many students turn their cameras off. A confused student may stay quiet rather than interrupt. Over time, small gaps in understanding grow into large ones.\n\nStudents also learn from each other. In a classroom, they discuss ideas, work in groups, and hear how classmates solve problems. These conversations happen naturally in a room. Online, they often feel forced or do not happen at all.\n\n## Home Is Full of Distractions\n\nA school building is designed for learning. Phones may be put away, the day follows a schedule, and a teacher is present to keep students on task. Most homes are not built this way. A student at home may have a television nearby, siblings making noise, or a phone buzzing beside the laptop. It is easy to open a game in another window while a lesson plays in the background.\n\nSelf-discipline is a skill that takes years to build. Many adults struggle to stay focused while working from home. It is unfair to expect most young students to manage it well every day. When schools moved online during the COVID-19 pandemic, many studies found that students fell behind, especially in math and reading. This shows how hard it is for most students to learn well from home.\n\n## School Teaches More Than Subjects\n\nSchool is not only about tests and grades. It is also where young people learn how to get along with others. At school, students make friends, solve disagreements, work on teams, and practice speaking in front of a group. They join clubs, play sports, and build relationships with adults who care about them.\n\nThese experiences are hard to copy online. Students who learn from home often feel lonely and cut off. Loneliness can hurt a student's mood and motivation, which then hurts their learning. Seeing friends and teachers in person gives students a sense of belonging. That feeling helps them want to come back each day and try their best.\n\n## Not Every Home Is Ready for Online School\n\nDistance learning also assumes that every student has a good computer, fast internet, and a quiet place to work. Many students do not. Some share one device with several siblings. Some have weak internet that cuts out during lessons. Some have no quiet room at all.\n\nWhen school moves online, these students fall further behind through no fault of their own. A school building gives every student the same desk, the same lights, and the same access to teachers. In this way, in-person school is fairer.\n\n## The Other Side\n\nSupporters of distance learning make some good points. Some students have serious health problems that make it hard to come to school. Some live very far away. Some face bullying and feel unsafe in the building. Others are highly motivated and like to learn at their own pace. For these students, learning from home can be a real benefit, and schools should offer it to them.\n\nBut these students are the exception, not the rule. The fact that distance learning helps some students does not mean it is better for most. It should be a choice for special situations, not the main way students learn.\n\n## Conclusion\n\nDistance learning is a useful tool, and it is good that schools can offer it when needed. Still, most students benefit more from being in a classroom. In person, they get direct help from teachers, fewer distractions, stronger friendships, and a fairer place to learn. School is where students build both knowledge and character, and that work is best done together, in the same room.",
+ "cost_usd": 0.038239999999999996,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1399,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 1352,
+  "output_tokens_details": {
+   "thinking_tokens": 107
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1399,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1352,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1399,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1399
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

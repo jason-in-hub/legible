@@ -1,0 +1,43 @@
+{
+ "id": "essay03",
+ "setting": "essay",
+ "arm": "base",
+ "sample": 1,
+ "model": "claude-opus-5-5",
+ "text": "# Learning Together: Why Most Students Benefit More from the Classroom Than from Home\n\nWhen schools across the world closed their doors in 2020, millions of students became participants in an unplanned experiment in distance learning. Many families discovered that attending class from the kitchen table had real conveniences: no early-morning commutes, flexible schedules, and the comfort of home. As a result, some schools now offer distance learning as a permanent option. Although learning from home can be a valuable lifeline for certain students, most students benefit more from attending school in person, because the physical classroom provides stronger academic support, essential social development, and a structure that home cannot easily replicate.\n\n## Academic Learning Depends on Engagement\n\nThe most important purpose of school is learning, and learning thrives on engagement. In a physical classroom, a teacher can read the room: a confused expression, a slumped posture, or a hesitant raised hand signals that a student needs help. On a video call, those cues are flattened into small rectangles on a screen, or hidden entirely when cameras are switched off. A student struggling with algebra in person might be pulled aside after class for a quick explanation. The same student at home might quietly fall behind without anyone noticing.\n\nEvidence from the pandemic era supports this concern. Standardized test results in many countries showed significant learning losses in reading and mathematics during periods of remote instruction, with the steepest declines among younger students and those from lower-income households. While some of this decline came from the chaos of a sudden transition, it also reflects a deeper truth: for most young people, sustained attention and active participation are easier to maintain when a teacher and classmates are physically present. Hands-on activities such as science labs, art projects, and group experiments are also difficult or impossible to reproduce through a screen.\n\n## School Is Where Students Learn to Live with Others\n\nSchool teaches more than academic subjects. It is also where young people learn to cooperate, resolve disagreements, make friends, and work alongside people different from themselves. These skills develop through countless small, unscripted interactions: chatting before class begins, negotiating roles in a group project, sitting with someone new at lunch, or joining a club or sports team. Distance learning removes most of these moments. A scheduled breakout room is a poor substitute for the spontaneous social life of a school hallway.\n\nThe consequences are not trivial. Many students who learned remotely reported increased feelings of loneliness, anxiety, and isolation. Adolescence is a period when peer relationships play a central role in identity and emotional health, and separating students from their peers for extended periods can harm their well-being. Furthermore, employers consistently rank communication and teamwork among the most valued skills in the workplace. Students who spend their school years interacting mainly through screens may enter adulthood less prepared for the collaborative demands of work and community life.\n\n## Structure and Equity Matter\n\nAttending school in person provides a clear separation between learning and the rest of life. The act of going to school, sitting in a classroom, and following a bell schedule helps students develop routine, self-discipline, and focus. At home, the line between school and leisure blurs. Video games, phones, siblings, and household chores all compete for attention, and many students lack the maturity to manage those distractions on their own.\n\nDistance learning also tends to widen existing inequalities. A student with a quiet bedroom, a reliable laptop, high-speed internet, and a parent available to help may adapt well. A student who shares a small apartment with several family members, relies on a phone for internet access, or has parents working long hours faces a far harder situation. Schools serve as equalizers: they give every student the same desks, teachers, libraries, and often meals. For many children, school is also where adults notice signs of neglect, illness, or hardship and step in to help. Moving instruction into the home removes these protections for exactly the students who need them most.\n\n## Acknowledging the Other Side\n\nNone of this means distance learning lacks value. For some students, it is genuinely the better choice. A student with a chronic illness, a serious disability, or a compromised immune system may be able to keep up with classes only from home. Students who face severe bullying might find temporary relief and safety online. Young athletes, performers, or students living in remote rural areas may also benefit from the flexibility of remote classes. In addition, distance learning allows students to access courses their local school may not offer, such as advanced languages or specialized sciences.\n\nThese cases are important, and schools should continue to offer distance learning as an option for students whose circumstances make it necessary. But exceptions should not define the rule. Designing education around the needs of a minority of students would sacrifice the academic, social, and emotional benefits that in-person learning provides to the majority.\n\n## Conclusion\n\nDistance learning is a useful tool, and its availability can open doors for students who would otherwise be shut out of education. Yet for most students, the classroom remains the best place to learn. It offers immediate support from teachers, rich opportunities for social growth, a structured environment free from domestic distractions, and a more equal footing for students of every background. Schools should keep distance learning available as an alternative for those who truly need it, but they should continue to treat in-person education as the foundation. Education, at its best, is not just the transfer of information from screen to student; it is a shared human experience, and that experience is strongest when students learn together.",
+ "cost_usd": 0.046784,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1367,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 1792,
+  "output_tokens_details": {
+   "thinking_tokens": 88
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1367,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1792,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1367,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1367
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

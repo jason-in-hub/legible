@@ -1,0 +1,43 @@
+{
+ "id": "essay05",
+ "setting": "essay",
+ "arm": "placebo",
+ "sample": 1,
+ "model": "claude-opus-5-5",
+ "text": "# Why More Than One Voice Leads to Better Choices\n\nMost people have faced a hard decision and wanted help. Some ask one trusted friend and stop there. Others ask a parent, a teacher, a coworker, and a friend before they decide. The second approach takes more time, but it often leads to a better choice. Talking to several people gives you more information, shows you your own blind spots, and helps you trust the decision you finally make.\n\n## Each Person Sees Only Part of the Picture\n\nNo single person knows everything. Each adviser speaks from their own life, and that life has limits. Imagine a student deciding whether to study engineering or art. A parent who works as an engineer may talk about steady pay and job security. An art teacher may talk about creativity and personal meaning. A recent graduate may describe what the first year of college actually felt like. None of these people is wrong. Each one is simply showing a different piece of the same puzzle.\n\nWhen you hear from only one person, you get only one piece. When you hear from several, you can start to see the whole shape of the problem. Facts that one person forgot, another person may mention. Risks that one person ignores, another may point out right away.\n\n## Different Opinions Reveal Hidden Bias\n\nEveryone has biases, including the people who care about us most. A friend may tell you to take a job in their city because they want you nearby. A relative may warn you against a risky plan because they once failed at something similar. These advisers mean well, but their own hopes and fears shape what they say.\n\nAsking several people makes these biases easier to notice. If four people tell you a plan is sound and one person strongly disagrees, you can ask why that person feels differently. Sometimes the lone voice has spotted a real problem. Other times, the disagreement comes from that person's own history and has little to do with you. Either way, comparing opinions helps you separate useful warnings from personal feelings.\n\nOur own biases matter too. People often seek advice from someone they expect will agree with them. Talking to a wider group makes it harder to hear only what we want to hear.\n\n## Disagreement Sharpens Your Thinking\n\nIt can feel frustrating when advisers disagree. Yet disagreement is often where the most useful thinking happens. When two people give you opposite advice, you are pushed to ask deeper questions. What does each person value? Which of their reasons apply to my situation? What matters most to me?\n\nWorking through these questions helps you understand the decision better than any single answer could. You stop looking for someone to tell you what to do. Instead, you begin to weigh the reasons yourself. This process turns advice into understanding.\n\n## Patterns Build Confidence\n\nSometimes several people, with different backgrounds and different interests, give you the same advice. When that happens, it means something. If a doctor, a nurse, and a pharmacist all suggest the same treatment, you can feel more sure that it is a good choice. Agreement among varied advisers is a strong signal that the advice is sound and not just one person's opinion.\n\nThis confidence matters after the decision too. Hard choices often bring doubt later. If you gathered several views before you chose, you can remind yourself that you thought carefully and listened widely. That makes it easier to stay committed when things get difficult.\n\n## A Few Cautions\n\nSeeking many opinions is not always the right move. Too much advice can be overwhelming, and some people use endless asking as a way to avoid deciding at all. Not all opinions are equal, either. A person with real experience or expertise usually deserves more weight than a stranger with a strong feeling. And in the end, the choice still belongs to the person making it. Advisers can inform a decision, but they should not replace your own judgment.\n\nThe goal, then, is not to collect as many opinions as possible. The goal is to hear from a few thoughtful people who see the problem from different angles.\n\n## Conclusion\n\nAsking more than one person for advice is a simple habit with real benefits. It fills in missing information, exposes bias in others and in ourselves, and turns disagreement into clearer thinking. When different advisers agree, it builds confidence. When they disagree, it teaches us what we truly value. A decision shaped by many voices is not guaranteed to be perfect, but it is far more likely to be wise.",
+ "cost_usd": 0.03858400000000001,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1402,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 1368,
+  "output_tokens_details": {
+   "thinking_tokens": 21
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1402,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1368,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1402,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1402
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

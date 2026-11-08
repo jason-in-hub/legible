@@ -1,0 +1,43 @@
+{
+ "id": "essay04",
+ "setting": "essay",
+ "arm": "base",
+ "sample": 1,
+ "model": "claude-opus-5-5",
+ "text": "# Owning the Summer: Why Student-Designed Projects Are the Better Choice\n\nEvery June, students leave school with a stack of summer assignments, and every September, many return with work that was rushed through in the final week of August. Our school now has a chance to rethink this pattern by deciding who should design summer projects: teachers or students. Teacher-designed projects offer structure and consistency. Student-designed projects, supported by clear guidelines and teacher feedback, are the better choice. They build motivation, teach skills that matter beyond the classroom, and make better use of the freedom that summer provides.\n\n## Motivation Drives Real Learning\n\nThe strongest argument for student-designed projects is motivation. Students who choose their own topic are far more likely to care about the outcome. A student assigned a report on a historical event she has no interest in will likely do the minimum. The same student, allowed to research the history of the skateboard designs she has been sketching for years, might spend weeks on it without being asked.\n\nResearch on motivation supports this. Self-determination theory, developed by psychologists Edward Deci and Richard Ryan, holds that autonomy is one of the core human needs behind lasting, internal motivation. When people feel in control of their work, they persist longer and engage more deeply. Summer is exactly when this matters most, since there is no teacher in the room and no daily class to keep students on track. The pull has to come from the student, and ownership is what creates it.\n\n## Designing a Project Is Itself a Skill\n\nTeacher-designed projects teach students to follow instructions. Student-designed projects teach them to plan. Before writing a single page or building a single model, a student must ask a question worth answering, decide what a finished product should look like, break the work into steps, and manage time across ten weeks with no one checking in daily.\n\nThese are the skills that college and careers demand. Few jobs hand workers a rubric with every step spelled out. Employers value people who can find a problem, scope it, and see it through. A school that always designs the project for students takes away the chance to practice the hardest and most valuable part of the work. Summer, with its low stakes and long timeline, is the ideal time to learn it.\n\n## Summer Is Different From the School Year\n\nDuring the school year, teacher-designed assignments make sense. Classes must cover required content, prepare students for exams, and keep thirty people moving at roughly the same pace. Summer has none of those constraints. It is the one stretch of the year when students can explore deeply without a bell schedule.\n\nUsing that time for another standardized assignment wastes it. Student-designed projects let summer do what the school year cannot. A student who works at a family restaurant could analyze its costs and pricing. A student who spends the summer with grandparents could record their oral histories. A student who loves coding could build a small app. These projects connect learning to students' actual lives, and they are often only possible in summer.\n\n## Addressing the Concerns\n\nSupporters of teacher-designed projects raise fair points. Some students, they argue, will choose projects that are too easy, too vague, or too ambitious to finish. Others will feel lost without a clear assignment. Teachers also need some way to grade projects fairly when every student does something different.\n\nThese concerns are real, but they argue for structure, not for taking choice away. The school can require each student to submit a short proposal before summer begins, stating a question, a planned final product, and a rough timeline. Teachers can approve, adjust, or push back on the proposal. A common rubric can assess qualities that apply to any project: depth of research, quality of thinking, effort over time, and clear presentation. For students who truly struggle with open-ended work, teachers can offer a menu of suggested topics to choose from, which preserves choice while lowering the barrier to starting.\n\nUnder this model, teachers do not disappear. Their role shifts from assigning work to coaching it, which is arguably a better use of their expertise.\n\n## Conclusion\n\nThe goal of a summer project is not simply to keep students busy until September. It is to keep them learning, and ideally to help them discover what they find worth learning. Teacher-designed projects can ensure that work gets done. Student-designed projects, guided by proposals, rubrics, and teacher feedback, can ensure that the work matters to the person doing it. Our school should trust students to design their summer projects, and give them the support to do it well. The result will be more engaged students, stronger planning skills, and summer work that students are proud to bring back in the fall.",
+ "cost_usd": 0.040192000000000005,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1363,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 1464,
+  "output_tokens_details": {
+   "thinking_tokens": 45
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1363,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1464,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1363,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1363
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

@@ -1,0 +1,830 @@
+claude-opus-5-5	base	chat01	inanim	[fingers -> care] Your fingers don't care how old you are; calluses form the same way at 40 as at 14.
+claude-opus-5-5	base	chat01	orc	Choose based on the music you actually want to play.
+claude-opus-5-5	base	chat01	gap	Budget around $150–300 for something decent (Yamaha, Squier, Epiphone, and Ibanez are all reliable).
+claude-opus-5-5	base	chat01	gap	Justin Guitar (justinguitar.com / app): free, structured, beginner-friendly, and probably the most recommended starting point there is.
+claude-opus-5-5	base	chat01	stack	Justin Guitar starting
+claude-opus-5-5	base	chat01	orc	A song you love that uses those chords, as early as possible
+claude-opus-5-5	base	chat01	stack	finger strength muscle
+claude-opus-5-5	placebo	chat01	orc	Pick the one that sounds like the music you want to play.
+claude-opus-5-5	placebo	chat01	orc	A cheap guitar with high strings is painful to play, and that pain is a top reason beginners quit.
+claude-opus-5-5	skill	chat01	orc	Kids learn faster in some ways, but you have advantages they don't.
+claude-opus-5-5	skill	chat01	inanim	[What -> decides] What decides whether you stick with it is regular practice, not age.
+claude-opus-5-5	skill	chat01	orc	Choose the one that matches the music you want to play.
+claude-opus-5-5	skill	chat01	orc	Jumping between random YouTube videos is the most common way people stall.
+claude-opus-5-5	skill	chat01	orc	Choose one song you really love early on and work toward it.
+claude-opus-5-5	skill	chat01	stack	guitar type beginner
+claude-opus-5-5	base	chat02	orc	It's mostly something people say.
+claude-opus-5-5	base	chat02	orc	The comparison people make is rent vs. mortgage payment.
+claude-opus-5-5	base	chat02	orc	The real comparison is rent vs. the unrecoverable costs of owning, the money you never get back:
+claude-opus-5-5	base	chat02	stack	Homeowners insurance HOA
+claude-opus-5-5	base	chat02	stack	Transaction costs closing agent
+claude-opus-5-5	base	chat02	stack	~3 % cost mortgage opportunity
+claude-opus-5-5	base	chat02	stack	mortgage interest opportunity
+claude-opus-5-5	base	chat02	stack	~1 % property tax
+claude-opus-5-5	base	chat02	stack	~1 % maintenance
+claude-opus-5-5	base	chat02	stack	tax rate mortgage
+claude-opus-5-5	base	chat02	inanim	[that -> decide] The factors that usually decide it
+claude-opus-5-5	base	chat02	gap	Renting only comes out ahead if the money you save (down payment plus any monthly difference) gets invested.
+claude-opus-5-5	base	chat02	orc	Renting only comes out ahead if the money you save (down payment plus any monthly difference) gets invested.
+claude-opus-5-5	base	chat02	inanim	[roof -> care] A $12k roof or furnace doesn't care about your budget.
+claude-opus-5-5	base	chat02	orc	If you share your rough rent, the kind of home prices you're looking at, how long you expect to stay, and your savings situation, I can help you work through the comparison.
+claude-opus-5-5	placebo	chat02	orc	It's mostly something people say.
+claude-opus-5-5	placebo	chat02	orc	Each one has costs you never get back.
+claude-opus-5-5	placebo	chat02	orc	When you rent, your rent is the cost you don't get back.
+claude-opus-5-5	placebo	chat02	orc	When you own, you also have costs you don't get back.
+claude-opus-5-5	placebo	chat02	stack	Closing costs agent
+claude-opus-5-5	placebo	chat02	gap	Only the part of your payment that pays down the loan builds equity.
+claude-opus-5-5	placebo	chat02	orc	Take the price of a home you'd realistically buy.
+claude-opus-5-5	placebo	chat02	stack	costs % property % %
+claude-opus-5-5	placebo	chat02	stack	% property tax % %
+claude-opus-5-5	placebo	chat02	stack	% maintenance %
+claude-opus-5-5	placebo	chat02	stack	payment emergency surprise
+claude-opus-5-5	placebo	chat02	stack	emergency fund surprise
+claude-opus-5-5	placebo	chat02	orc	Renting only wins financially if you actually save and invest the money you'd otherwise put toward a down payment and higher costs.
+claude-opus-5-5	placebo	chat02	orc	If you'd like, share your rough numbers: your rent, a typical home price you'd consider, your possible down payment, and how long you expect to stay.
+claude-opus-5-5	skill	chat02	orc	Mostly it's just something people say.
+claude-opus-5-5	skill	chat02	stack	Closing costs agent
+claude-opus-5-5	skill	chat02	orc	Take the price of a home like the one you'd buy and multiply it by 5%.
+claude-opus-5-5	skill	chat02	orc	Renting only wins if you actually save or invest the money you'd otherwise put into a house.
+claude-opus-5-5	skill	chat02	stack	New York Times
+claude-opus-5-5	skill	chat02	orc	If you tell me your current rent, the price of homes you're considering, your rough down payment, and how long you expect to stay, I can walk through the numbers with you.
+claude-opus-5-5	base	chat03	stack	Deposits 10k trigger bank
+claude-opus-5-5	base	chat03	stack	10k trigger bank reports
+claude-opus-5-5	base	chat03	orc	The original owners might be people you really don't want looking for you.
+claude-opus-5-5	placebo	chat03	gap	That sounds boring, but a briefcase with $500k in unmarked cash on an empty park bench is a giant red flag.
+claude-opus-5-5	placebo	chat03	orc	Cash also leaves a trail the moment you try to spend or deposit big amounts.
+claude-opus-5-5	placebo	chat03	orc	To be fair, I don't have pockets or rent, so I'm not tempted in the way a person would be.
+claude-opus-5-5	skill	chat03	orc	If it's not legitimate, the people who lost it are the last people you want tracing it back to you.
+claude-opus-5-5	base	chat04	orc	Is there a specific field you keep thinking about, or is it more a general "anything but this" feeling?
+claude-opus-5-5	base	chat04	gap	Sometimes boredom at work is really about burnout, life changes, or wanting more meaning, and a career change may or may not fix that.
+claude-opus-5-5	base	chat04	stack	life changes career
+claude-opus-5-5	base	chat04	inanim	[This -> decide] This doesn't decide anything yet.
+claude-opus-5-5	placebo	chat04	gap	A new role, a promotion, or a different company in the same field might be enough.
+claude-opus-5-5	placebo	chat04	gap	A new role, a promotion, or a different company in the same field might be enough.
+claude-opus-5-5	placebo	chat04	orc	When you imagine switching, is there a specific field you're drawn to, or is it more "anything but this"?
+claude-opus-5-5	skill	chat04	gap	A new role, a promotion, or a different company in the same field might fix that.
+claude-opus-5-5	skill	chat04	orc	Answer whichever of those you want, in any order.
+claude-opus-5-5	base	chat05	orc	Three years of wind had taught her every sound the lighthouse could make: the groan of the iron railing, the slap of loose shutters, the gulls that sometimes hit the glass in fog.
+claude-opus-5-5	skill	chat05	orc	He had climbed those stairs at dusk and lit the lamp, the way he had every night for three years.
+claude-opus-5-5	skill	chat06	gap	Dust, smoke and other particles in the air can make sunsets even more vivid, which is why sunsets after wildfires or volcanic eruptions are often especially red.
+claude-opus-5-5	base	chat07	stack	book Furnished Facebook
+claude-opus-5-5	base	chat07	orc	Every box you don't pack is money and time saved.
+claude-opus-5-5	base	chat07	stack	Use USPS mail forwarding
+claude-opus-5-5	base	chat07	orc	Start packing the stuff you won't need, like off-season clothes, books, and decor.
+claude-opus-5-5	base	chat07	stack	Update car insurance
+claude-opus-5-5	base	chat07	stack	checklist notes Google
+claude-opus-5-5	base	chat07	stack	notes app Google
+claude-opus-5-5	placebo	chat07	orc	Get rid of anything you don't want to pay to move.
+claude-opus-5-5	placebo	chat07	orc	Pack things you won't need soon: books, off-season clothes, decor.
+claude-opus-5-5	skill	chat07	orc	Sell, donate, or toss anything you don't want to pay to move.
+claude-opus-5-5	skill	chat07	orc	Start packing the stuff you don't use daily.
+claude-opus-5-5	base	chat08	stack	Filmmakers time silences
+claude-opus-5-5	base	chat08	gap	A pause before a punchline or a held shot in a horror movie *is* the content.
+claude-opus-5-5	base	chat08	inanim	[movie -> earns] Not every movie earns its runtime.
+claude-opus-5-5	base	chat08	orc	If you're doing it to everything, the deeper issue might be that you're picking movies you don't actually want to watch, or watching while half-scrolling your phone, which makes anything feel slow.
+claude-opus-5-5	base	chat08	orc	Normal speed for anything with a strong director, or anything you're watching *together*.
+claude-opus-5-5	placebo	chat08	orc	Watch the movies you care about, or the ones your partner picks, at normal speed.
+claude-opus-5-5	skill	chat08	orc	Fine at 1.5x: documentaries, lectures, shows you're half-watching, rewatches, and things you only want for the plot.
+claude-opus-5-5	skill	chat08	orc	And a gentle question for you: if you're losing patience with slow pacing in general, the answer might be picking different movies rather than speeding up the ones you have.
+claude-opus-5-5	base	chat09	orc	Most of the time it probably wouldn't be.
+claude-opus-5-5	base	chat09	orc	The appeal is that it's the only way to get something you can't otherwise get: knowing from the inside what it's like to be someone else.
+claude-opus-5-5	base	chat09	orc	Their body, their commute, their aches, how strangers treat them, what their default mood is when they wake up.
+claude-opus-5-5	skill	chat09	orc	If you got to pick, it would just be a vacation into a life you already find interesting.
+claude-opus-5-5	skill	chat09	stack	farmer Uttar bus math
+claude-opus-5-5	skill	chat09	stack	Uttar Pradesh bus math
+claude-opus-5-5	skill	chat09	stack	bus driver math
+claude-opus-5-5	skill	chat09	orc	That's the closest thing to real empathy you could get.
+claude-opus-5-5	skill	chat09	orc	You could make a mess they wake up to tomorrow.
+claude-opus-5-5	base	chat10	stack	time work question
+claude-opus-5-5	base	chat10	gap	A midday dog walker (often $20–35 per walk) or doggy daycare a few days a week ($30–60/day depending on area) can close the gap.
+claude-opus-5-5	base	chat10	stack	midday dog walker
+claude-opus-5-5	base	chat10	stack	working breed Border
+claude-opus-5-5	base	chat10	orc	Things first-time owners often don't think about
+claude-opus-5-5	base	chat10	gap	Vet costs beyond routine care: an emergency visit or surgery can run $1,000–5,000+.
+claude-opus-5-5	base	chat10	orc	Food, preventatives (flea/tick/heartworm), grooming (some breeds need professional grooming every 6–8 weeks), toys, crate, bed, and replacing things they destroy.
+claude-opus-5-5	base	chat10	orc	Boarding or a pet sitter every time you travel.
+claude-opus-5-5	placebo	chat10	stack	time work question
+claude-opus-5-5	placebo	chat10	orc	Boarding or a pet sitter every time you travel.
+claude-opus-5-5	placebo	chat10	gap	A dog that's anxious about being left alone can struggle with long days.
+claude-opus-5-5	placebo	chat10	stack	work schedules housing
+claude-opus-5-5	skill	chat10	orc	Here are the things first-time owners most often underestimate.
+claude-opus-5-5	skill	chat10	stack	work schedule question
+claude-opus-5-5	skill	chat10	stack	9–10 hour day
+claude-opus-5-5	skill	chat10	stack	dog walker midday
+claude-opus-5-5	skill	chat10	gap	Vet visits, vaccines, flea and tick prevention, and pet insurance or an emergency fund add up.
+claude-opus-5-5	skill	chat10	stack	visits tick emergency
+claude-opus-5-5	skill	chat10	stack	vaccines tick emergency
+claude-opus-5-5	skill	chat10	stack	flea tick emergency
+claude-opus-5-5	skill	chat10	stack	surprise vet bill
+claude-opus-5-5	skill	chat10	stack	fees breed weight
+claude-opus-5-5	skill	chat10	stack	breed bans weight
+claude-opus-5-5	skill	chat10	stack	evening walk vet
+claude-opus-5-5	skill	chat10	orc	If you tell me your rough schedules, your living situation, and how active you are, I can suggest what kind of dog (age, size, energy level) would fit best.
+claude-opus-5-5	base	code01	stack	Classic Python gotcha default
+claude-opus-5-5	base	code01	orc	Default argument values are evaluated once, when the it statement runs, not each time the function is called.
+claude-opus-5-5	base	code01	gap	Otherwise a caller who deliberately passes their own empty list would have it silently replaced with a new one, and their list would never be updated.
+claude-opus-5-5	base	code01	stack	object custom default argument
+claude-opus-5-5	base	code01	stack	default argument value
+claude-opus-5-5	base	code01	gap	Linters such as Pylint (it) and Ruff/flake8-bugbear (it) will flag this pattern for you.
+claude-opus-5-5	placebo	code01	stack	default argument behavior
+claude-opus-5-5	placebo	code01	gap	Linters such as Pylint (it) and Ruff/flake8-bugbear (it) will flag this pattern for you.
+claude-opus-5-5	skill	code01	stack	default argument problem
+claude-opus-5-5	base	code02	orc	The positions shift the other way, and rows slide past the boundary into a page the client has already fetched.
+claude-opus-5-5	base	code02	gap	Tied rows that straddle a page boundary can then be duplicated or skipped even on a static table.
+claude-opus-5-5	base	code02	orc	Ask for "the rows after the last one I saw."
+claude-opus-5-5	base	code02	stack	Row value comparison
+claude-opus-5-5	base	code02	orc	Row-value comparison it works in Postgres, MySQL 8+, and SQLite 3.15+.
+claude-opus-5-5	base	code02	stack	Timestamp precision round
+claude-opus-5-5	placebo	code02	orc	Don't ask for "page N." Ask for "the next 50 rows after the last row I saw."
+claude-opus-5-5	placebo	code02	stack	Row value comparison
+claude-opus-5-5	placebo	code02	gap	If a row is inserted with an *older* it (for example, a backfill or a client-supplied timestamp), it lands behind clients that have already paged past it.
+claude-opus-5-5	placebo	code02	stack	matters auto increment
+claude-opus-5-5	placebo	code02	stack	key auto increment
+claude-opus-5-5	placebo	code02	orc	If you need *every* row to be seen, have clients poll for rows newer than the newest one they've seen, or use a change feed.
+claude-opus-5-5	skill	code02	gap	The row that moves from position 50 to position 49 falls on a page the client has already read, so the client never sees it.
+claude-opus-5-5	skill	code02	orc	The row that moves from position 50 to position 49 falls on a page the client has already read, so the client never sees it.
+claude-opus-5-5	skill	code02	orc	The client asks for "the next 50 rows after the last one I saw" instead of "rows 50–99".
+claude-opus-5-5	skill	code02	stack	it clause anchors
+claude-opus-5-5	skill	code02	stack	Row value comparison
+claude-opus-5-5	skill	code02	orc	To pick them up, the client can poll for rows newer than the first item it saw, using the same comparison in the other direction.
+claude-opus-5-5	base	code03	inanim	[it -> know] it doesn't know anything about promises.
+claude-opus-5-5	base	code03	stack	file processing finishes
+claude-opus-5-5	placebo	code03	stack	array method return
+claude-opus-5-5	placebo	code03	inanim	[that -> ignores] The same problem happens with any array method that ignores return values, such as it, it, and it, when you pass them an async callback.
+claude-opus-5-5	base	code04	orc	*Rule of thumb: to change it, use one it call on it.
+claude-opus-5-5	placebo	code04	orc	Under Copy-on-Write, any object you get from indexing behaves like a copy.
+claude-opus-5-5	skill	code04	orc	Under Copy-on-Write, any object you get from indexing behaves like a copy.
+claude-opus-5-5	base	code05	stack	Time Worker A
+claude-opus-5-5	base	code05	stack	default isolation level
+claude-opus-5-5	base	code05	stack	locking update SQL
+claude-opus-5-5	placebo	code05	stack	Time Worker A
+claude-opus-5-5	placebo	code05	stack	Worker write Worker A
+claude-opus-5-5	placebo	code05	stack	default isolation level
+claude-opus-5-5	placebo	code05	stack	retries waste work
+claude-opus-5-5	placebo	code05	stack	Use option application
+claude-opus-5-5	skill	code05	stack	Time Worker A
+claude-opus-5-5	skill	code05	stack	default isolation level
+claude-opus-5-5	skill	code05	stack	Use option application
+claude-opus-5-5	skill	code05	orc	Use option 2 when it does.
+claude-opus-5-5	base	essay01	orc	Lunch is one of the few times in the day when we can talk freely with friends.
+claude-opus-5-5	base	essay01	orc	Too often, though, I see tables where everyone is looking down at a screen.
+claude-opus-5-5	base	essay01	gap	A notification seen at noon, a group chat argument, or a post that went up during lunch follows students into fifth period.
+claude-opus-5-5	base	essay01	gap	A notification seen at noon, a group chat argument, or a post that went up during lunch follows students into fifth period.
+claude-opus-5-5	base	essay01	stack	group chat argument
+claude-opus-5-5	base	essay01	orc	Taking phones out of lunch would make school a safer place where students do not have to worry about being filmed or talked about online while they are still in the building.
+claude-opus-5-5	base	essay01	stack	schools day phone
+claude-opus-5-5	base	essay01	stack	day phone bans
+claude-opus-5-5	placebo	essay01	orc	Lunch is one of the few times in the day when we can talk freely with friends.
+claude-opus-5-5	placebo	essay01	orc	When phones are allowed at lunch, they come out the moment class ends.
+claude-opus-5-5	placebo	essay01	stack	Phones fuel conflict
+claude-opus-5-5	skill	essay01	orc	Second, lunch is often the only time students can deal with things outside school.
+claude-opus-5-5	skill	essay01	inanim	[rule -> ignored] If students see the lunch rule ignored every day, they'll start treating the class rule as optional too.
+claude-opus-5-5	skill	essay01	gap	A school that bans phones in class but trusts us at lunch is teaching focus and responsibility at the same time.
+claude-opus-5-5	base	essay02	stack	causes World War
+claude-opus-5-5	base	essay02	stack	World War I.
+claude-opus-5-5	base	essay02	orc	Every spring, high school seniors cross the stage with diplomas that certify they can solve equations, analyze literature, and explain the causes of World War I. Yet schools claim to prepare students not just for college
+claude-opus-5-5	base	essay02	orc	While critics raise fair concerns about forced volunteering and busy schedules, a well-designed service requirement teaches skills, builds empathy, and strengthens communities in ways the traditional classroom cannot.
+claude-opus-5-5	base	essay02	gap	A student who spends twenty hours at a food bank learns about logistics, teamwork, and reliability: showing up on time matters when a line of families is waiting.
+claude-opus-5-5	base	essay02	stack	Service Builds Empathy
+claude-opus-5-5	base	essay02	orc	In a time when many communities feel divided, schools have a responsibility to help young people see the humanity in those different from themselves.
+claude-opus-5-5	base	essay02	orc	Required service is not only good for students; it is good for the places they live.
+claude-opus-5-5	base	essay02	gap	A school of 1,000 students, each completing 40 hours over four years, contributes 40,000 hours of labor to its community.
+claude-opus-5-5	base	essay02	inanim	[it -> misunderstands] This concern is understandable, but it misunderstands how habits form.
+claude-opus-5-5	base	essay02	orc	Many students who would never have chosen to volunteer discover a cause they care about only after being pushed to try.
+claude-opus-5-5	base	essay02	stack	Research youth service
+claude-opus-5-5	base	essay02	stack	youth service programs
+claude-opus-5-5	base	essay02	inanim	[requirement -> punish] A rigid requirement could punish the students who already carry the heaviest burdens.
+claude-opus-5-5	base	essay02	inanim	[it -> argues] This is a real concern, but it argues for good design, not for abandoning the idea.
+claude-opus-5-5	base	essay02	stack	family caregiving community
+claude-opus-5-5	base	essay02	stack	community service requirement
+claude-opus-5-5	placebo	essay02	stack	student food drive
+claude-opus-5-5	placebo	essay02	stack	food drive planning
+claude-opus-5-5	placebo	essay02	stack	College applications job
+claude-opus-5-5	placebo	essay02	inanim	[applications -> ask] College applications and job interviews often ask about leadership and responsibility.
+claude-opus-5-5	placebo	essay02	gap	A student who has organized a park cleanup or volunteered at a hospital has real stories to tell.
+claude-opus-5-5	placebo	essay02	stack	Food banks youth
+claude-opus-5-5	placebo	essay02	orc	Local organizations gain workers, and the people they serve gain support.
+claude-opus-5-5	placebo	essay02	stack	Requirement Reaches Students
+claude-opus-5-5	placebo	essay02	orc	A requirement can create genuine interest where none existed before.
+claude-opus-5-5	skill	essay02	orc	Done right, service teaches lessons that classrooms struggle to teach, reaches students who would never volunteer on their own, and connects young people to the places they live.
+claude-opus-5-5	skill	essay02	gap	A student who spends a Saturday cleaning a creek and then speaks at a city council meeting about pollution understands it in a way the chapter never conveyed.
+claude-opus-5-5	skill	essay02	stack	student city council
+claude-opus-5-5	skill	essay02	stack	city council meeting
+claude-opus-5-5	skill	essay02	orc	A student who spends a Saturday cleaning a creek and then speaks at a city council meeting about pollution understands it in a way the chapter never conveyed.
+claude-opus-5-5	skill	essay02	inanim	[it -> ignores] This sounds reasonable, but it ignores who actually volunteers when service is optional.
+claude-opus-5-5	skill	essay02	gap	Students who already have free time, transportation and parents who encourage them are the ones most likely to sign up.
+claude-opus-5-5	skill	essay02	gap	Libraries, animal shelters, senior centers and youth sports leagues often depend on volunteers to stay open.
+claude-opus-5-5	skill	essay02	stack	Libraries animal youth sports
+claude-opus-5-5	skill	essay02	stack	animal shelters youth sports
+claude-opus-5-5	skill	essay02	stack	centers youth sports
+claude-opus-5-5	skill	essay02	stack	youth sports leagues
+claude-opus-5-5	skill	essay02	gap	A school of a thousand students that requires twenty hours each provides twenty thousand hours of help every year.
+claude-opus-5-5	skill	essay02	gap	Young people who feel they have a stake in their community are more likely to vote, stay involved and give back as adults.
+claude-opus-5-5	skill	essay02	orc	Schools require plenty of things students would not choose, from physical education to reading assignments, because those experiences have value whether or not a student asked for them.
+claude-opus-5-5	base	essay03	gap	Hands-on activities such as science labs, art projects, and group experiments are also difficult or impossible to reproduce through a screen.
+claude-opus-5-5	base	essay03	stack	activities science art group
+claude-opus-5-5	base	essay03	stack	science labs art group
+claude-opus-5-5	base	essay03	stack	art projects group
+claude-opus-5-5	base	essay03	gap	Students who spend their school years interacting mainly through screens may enter adulthood less prepared for the collaborative demands of work and community life.
+claude-opus-5-5	base	essay03	gap	The act of going to school, sitting in a classroom, and following a bell schedule helps students develop routine, self-discipline, and focus.
+claude-opus-5-5	base	essay03	stack	Video games household
+claude-opus-5-5	base	essay03	gap	A student who shares a small apartment with several family members, relies on a phone for internet access, or has parents working long hours faces a far harder situation.
+claude-opus-5-5	base	essay03	gap	A student with a chronic illness, a serious disability, or a compromised immune system may be able to keep up with classes only from home.
+claude-opus-5-5	base	essay03	gap	Young athletes, performers, or students living in remote rural areas may also benefit from the flexibility of remote classes.
+claude-opus-5-5	placebo	essay03	orc	This option sounds convenient, and for some students it truly helps.
+claude-opus-5-5	placebo	essay03	inanim	[It -> asking] It is asking questions, getting confused, and working through problems with help.
+claude-opus-5-5	placebo	essay03	gap	The fact that distance learning helps some students does not mean it is better for most.
+claude-opus-5-5	placebo	essay03	orc	It should be a choice for special situations, not the main way students learn.
+claude-opus-5-5	skill	essay03	gap	A student with a long-term illness or a disability can keep up with classes without the strain of travel.
+claude-opus-5-5	skill	essay03	orc	A student who lives far from school can spend the time they would have spent on a bus studying or sleeping.
+claude-opus-5-5	skill	essay03	gap	Some students who are bullied or who have severe anxiety find that a screen gives them enough distance to take part.
+claude-opus-5-5	skill	essay03	orc	The best evidence comes from the years when schools closed.
+claude-opus-5-5	skill	essay03	stack	chat window video
+claude-opus-5-5	skill	essay03	stack	students things science art
+claude-opus-5-5	skill	essay03	stack	science labs art
+claude-opus-5-5	skill	essay03	orc	Supporters of distance learning argue that it prepares students for the modern workplace, where many adults now work remotely.
+claude-opus-5-5	base	essay04	gap	The same student, allowed to research the history of the skateboard designs she has been sketching for years, might spend weeks on it without being asked.
+claude-opus-5-5	base	essay04	orc	The same student, allowed to research the history of the skateboard designs she has been sketching for years, might spend weeks on it without being asked.
+claude-opus-5-5	base	essay04	gap	Self-determination theory, developed by psychologists Edward Deci and Richard Ryan, holds that autonomy is one of the core human needs behind lasting, internal motivation.
+claude-opus-5-5	base	essay04	stack	Self determination theory Edward Richard
+claude-opus-5-5	base	essay04	stack	psychologists Edward Richard
+claude-opus-5-5	base	essay04	stack	Edward Deci Richard
+claude-opus-5-5	base	essay04	orc	It is the one stretch of the year when students can explore deeply without a bell schedule.
+claude-opus-5-5	base	essay04	gap	Student-designed projects, guided by proposals, rubrics, and teacher feedback, can ensure that the work matters to the person doing it.
+claude-opus-5-5	base	essay04	stack	students planning summer
+claude-opus-5-5	base	essay04	stack	planning skills summer
+claude-opus-5-5	placebo	essay04	inanim	[motivation -> decides] In that setting, motivation decides whether a project gets done well or just gets done.
+claude-opus-5-5	placebo	essay04	orc	People work harder on things they care about.
+claude-opus-5-5	placebo	essay04	stack	Skill Worth Teaching
+claude-opus-5-5	skill	essay04	stack	Own Summer Projects
+claude-opus-5-5	skill	essay04	stack	summer project assignment
+claude-opus-5-5	skill	essay04	gap	People who feel they have a choice in their work tend to stay with it longer and do it more carefully.
+claude-opus-5-5	skill	essay04	gap	A student who spends a summer working out why their tomato plants keep dying learns more about the scientific method than one who fills in a worksheet about it.
+claude-opus-5-5	skill	essay04	orc	A student who spends a summer working out why their tomato plants keep dying learns more about the scientific method than one who fills in a worksheet about it.
+claude-opus-5-5	skill	essay04	gap	A brief check-in at midsummer, by email or a shared online folder, would help students who are stuck.
+claude-opus-5-5	skill	essay04	gap	Student-designed projects, guided by a proposal and a teacher's approval, give students a reason to care about their work.
+claude-opus-5-5	base	essay05	orc	This is the same reason patients are often encouraged to get a second medical opinion.
+claude-opus-5-5	base	essay05	gap	A friend who once moved across the country and felt lonely might warn against relocating for a job.
+claude-opus-5-5	base	essay05	gap	A salesperson recommending a product, a relative who wants you to stay close to home, or a coach who needs you on the team may all give advice that serves their own interests, whether consciously or not.
+claude-opus-5-5	base	essay05	gap	A salesperson recommending a product, a relative who wants you to stay close to home, or a coach who needs you on the team may all give advice that serves their own interests, whether consciously or not.
+claude-opus-5-5	base	essay05	gap	One of the least obvious benefits of asking several people for advice is what it reveals about the person asking.
+claude-opus-5-5	base	essay05	orc	In the end, the best decision is often not the one any single advisor recommended, but one the person builds by drawing on several perspectives and filtering them through their own values.
+claude-opus-5-5	base	essay05	orc	In the end, the best decision is often not the one any single advisor recommended, but one the person builds by drawing on several perspectives and filtering them through their own values.
+claude-opus-5-5	base	essay05	orc	Agreement among advisors builds confidence, while disagreement signals where more thought is needed.
+claude-opus-5-5	placebo	essay05	orc	Talking to several people gives you more information, shows you your own blind spots, and helps you trust the decision you finally make.
+claude-opus-5-5	placebo	essay05	orc	People often seek advice from someone they expect will agree with them.
+claude-opus-5-5	placebo	essay05	stack	Patterns Build Confidence
+claude-opus-5-5	skill	essay05	orc	A parent may understand your character better than anyone, but may know little about the field you want to work in.
+claude-opus-5-5	skill	essay05	orc	One adviser might point out a cost you never considered.
+claude-opus-5-5	skill	essay05	orc	Another might mention an option you didn't know existed.
+claude-opus-5-5	skill	essay05	orc	People who care about you may want you to stay close to home, play it safe, or make the choice they would have made.
+claude-opus-5-5	skill	essay05	orc	Often you notice details you skipped the first time, or you realize the real question is different from the one you started with.
+claude-opus-5-5	skill	essay05	orc	Often you notice details you skipped the first time, or you realize the real question is different from the one you started with.
+claude-opus-5-5	skill	essay05	gap	A student who asks "Should I study engineering or art?" may discover, after explaining it to three people, that the real worry is whether their parents will be disappointed.
+claude-opus-5-5	skill	essay05	orc	Different advisers bring different knowledge, reveal each other's biases, and raise points you might have missed.
+claude-sonnet-5-5	base	chat01	orc	Cheap, badly set-up guitars are the number one reason beginners quit, because they hurt your fingers and sound awful.
+claude-sonnet-5-5	base	chat01	stack	folk singer campfire
+claude-sonnet-5-5	base	chat01	gap	Justin Guitar (free, YouTube and his site): his beginner course is widely considered the gold standard
+claude-sonnet-5-5	base	chat01	gap	Parts of the guitar and how to tune it (get a clip-on tuner or an app)
+claude-sonnet-5-5	base	chat01	orc	Then a simple song you actually like
+claude-sonnet-5-5	base	chat01	orc	Learn songs you love as early as possible.
+claude-sonnet-5-5	base	chat01	orc	40 is a great age to start: you have more discipline than a teenager, you know why you want it, and you can pick music you actually love.
+claude-sonnet-5-5	base	chat01	stack	Fender Play Guitar
+claude-sonnet-5-5	base	chat01	stack	hour weekend session
+claude-sonnet-5-5	base	chat01	orc	Pick songs you love that use 3 or 4 chords.
+claude-sonnet-5-5	base	chat01	orc	If you tell me what kind of music you want to play (rock, folk, blues, metal, etc.) and whether you lean acoustic or electric, I can suggest specific guitars, first songs, and a simple practice plan.
+claude-sonnet-5-5	placebo	chat01	orc	Plenty of people start at 40, 50, or later, and adults often do well because they practice on purpose and stick with things they care about.
+claude-sonnet-5-5	placebo	chat01	orc	You won't become a prodigy, but you can play songs you love within a few months.
+claude-sonnet-5-5	placebo	chat01	orc	Choose the one that matches the music you want to play.
+claude-sonnet-5-5	placebo	chat01	orc	Learn songs you actually like.
+claude-sonnet-5-5	placebo	chat01	orc	A cheap guitar that's hard to play is the top reason people quit.
+claude-sonnet-5-5	placebo	chat01	gap	Budget for something in the $150-300 range, and if you can, have a shop do a "setup" so the strings sit low and are easy to press.
+claude-sonnet-5-5	placebo	chat01	orc	Pick acoustic or electric based on the music you love.
+claude-sonnet-5-5	placebo	chat01	stack	Justin Guitar Fender
+claude-sonnet-5-5	placebo	chat01	orc	Learn songs you actually like.
+claude-sonnet-5-5	placebo	chat01	orc	After three to six months, you'll be playing along with songs you enjoy.
+claude-sonnet-5-5	skill	chat01	stack	JustinGuitar beginner Fender
+claude-sonnet-5-5	skill	chat01	orc	Pick songs you actually love, even if they're simple versions.
+claude-sonnet-5-5	base	chat02	orc	It's mostly something people say.
+claude-sonnet-5-5	base	chat02	stack	way property maintenance
+claude-sonnet-5-5	base	chat02	stack	interest property maintenance
+claude-sonnet-5-5	base	chat02	stack	property taxes maintenance
+claude-sonnet-5-5	base	chat02	stack	costs maintenance closing opportunity
+claude-sonnet-5-5	base	chat02	stack	closing costs opportunity
+claude-sonnet-5-5	base	chat02	stack	home prices mortgage
+claude-sonnet-5-5	base	chat02	stack	mortgage payment property
+claude-sonnet-5-5	base	chat02	orc	It's mostly something people say.
+claude-sonnet-5-5	base	chat02	orc	Rent pays for housing, the same way a homeowner's costs do.
+claude-sonnet-5-5	base	chat02	orc	Owners also pay money they never get back: mortgage interest (most of your payment in the early years), property taxes, insurance, maintenance and repairs, HOA fees, and closing and selling costs (often 6-10% round trip)
+claude-sonnet-5-5	base	chat02	stack	mortgage interest property HOA % round
+claude-sonnet-5-5	base	chat02	stack	property taxes HOA % round
+claude-sonnet-5-5	base	chat02	stack	HOA fees % round
+claude-sonnet-5-5	base	chat02	stack	costs % round
+claude-sonnet-5-5	base	chat02	stack	% round trip
+claude-sonnet-5-5	base	chat02	stack	~1 % property taxes
+claude-sonnet-5-5	base	chat02	stack	~1 % maintenance
+claude-sonnet-5-5	base	chat02	stack	~3 % cost mortgage investment
+claude-sonnet-5-5	base	chat02	stack	mortgage interest investment
+claude-sonnet-5-5	base	chat02	orc	Prices are high relative to rents where you live.
+claude-sonnet-5-5	base	chat02	stack	home price mortgage
+claude-sonnet-5-5	base	chat02	orc	If you share the typical home price, comparable rent, your down payment, your expected mortgage rate, and how long you'd stay, I can run a rent-vs-buy comparison for you.
+claude-sonnet-5-5	placebo	chat02	orc	It's mostly something people say.
+claude-sonnet-5-5	placebo	chat02	stack	Closing costs agent
+claude-sonnet-5-5	placebo	chat02	orc	That roughly estimates the monthly cost of owning that you never get back (property tax, maintenance, and the return you give up on your down payment).
+claude-sonnet-5-5	placebo	chat02	orc	If you tell me the home price you're considering, your current rent, the mortgage rate you'd get, your down payment, and how long you expect to stay, I can run a rough comparison for your situation.
+claude-sonnet-5-5	placebo	chat02	orc	If you tell me the home price you're considering, your current rent, the mortgage rate you'd get, your down payment, and how long you expect to stay, I can run a rough comparison for your situation.
+claude-sonnet-5-5	placebo	chat02	orc	If you tell me the home price you're considering, your current rent, the mortgage rate you'd get, your down payment, and how long you expect to stay, I can run a rough comparison for your situation.
+claude-sonnet-5-5	placebo	chat02	orc	It's mostly something people say.
+claude-sonnet-5-5	placebo	chat02	orc	When you buy, you also pay money you never get back:
+claude-sonnet-5-5	placebo	chat02	stack	Closing costs agent
+claude-sonnet-5-5	placebo	chat02	inanim	[What -> decides] *What decides it
+claude-sonnet-5-5	placebo	chat02	orc	This is a big reason renting has looked better than usual in recent years in many cities.
+claude-sonnet-5-5	placebo	chat02	orc	If renting is cheaper and you invest the savings, including the down payment you didn't spend, renting can build wealth too.
+claude-sonnet-5-5	placebo	chat02	stack	New York Times
+claude-sonnet-5-5	placebo	chat02	orc	You'll need the home price you're considering, your likely mortgage rate, your down payment, your current rent, and how long you expect to stay.
+claude-sonnet-5-5	placebo	chat02	gap	If you tell me your rough area, the price range you're looking at, and how long you expect to stay, I can walk through a back-of-the-envelope comparison with you.
+claude-sonnet-5-5	placebo	chat02	orc	If you tell me your rough area, the price range you're looking at, and how long you expect to stay, I can walk through a back-of-the-envelope comparison with you.
+claude-sonnet-5-5	skill	chat02	orc	It's mostly something people say.
+claude-sonnet-5-5	skill	chat02	orc	Rent pays for a place to live, the same way an owner's interest, property tax, insurance and repairs pay for one.
+claude-sonnet-5-5	skill	chat02	stack	Closing costs agent closing
+claude-sonnet-5-5	skill	chat02	stack	agent fees closing
+claude-sonnet-5-5	skill	chat02	orc	It's about 1% for property tax, 1% for maintenance, and 3% for mortgage interest plus the return you give up on your down payment.
+claude-sonnet-5-5	skill	chat02	orc	If you tell me the rough home price you'd buy, your rent, your down payment and how long you expect to stay, I can run the numbers with you.
+claude-sonnet-5-5	skill	chat02	orc	If you tell me the rough home price you'd buy, your rent, your down payment and how long you expect to stay, I can run the numbers with you.
+claude-sonnet-5-5	skill	chat02	orc	Mostly it's something people say.
+claude-sonnet-5-5	skill	chat02	stack	Closing costs agent
+claude-sonnet-5-5	skill	chat02	orc	Closing costs and agent fees, often 6-10% of the price when you buy and later sell
+claude-sonnet-5-5	skill	chat02	gap	Only the part of each payment that reduces your loan balance (plus any price gain) builds wealth.
+claude-sonnet-5-5	skill	chat02	stack	part loan price
+claude-sonnet-5-5	skill	chat02	stack	payment loan price
+claude-sonnet-5-5	skill	chat02	stack	loan balance price
+claude-sonnet-5-5	skill	chat02	stack	cost % % property
+claude-sonnet-5-5	skill	chat02	stack	% property tax
+claude-sonnet-5-5	skill	chat02	orc	That estimates the monthly cost of owning that you won't get back (roughly 1% maintenance, 1% property tax, 3% for interest and the return you give up on your down payment).
+claude-sonnet-5-5	skill	chat02	stack	payment closing emergency
+claude-sonnet-5-5	skill	chat02	stack	closing costs emergency
+claude-sonnet-5-5	skill	chat02	orc	If you send me the home price you're considering, the rent for a comparable place, the mortgage rate you'd get, and your down payment, I can run a rough rent-versus-buy comparison.
+claude-sonnet-5-5	skill	chat02	orc	If you send me the home price you're considering, the rent for a comparable place, the mortgage rate you'd get, and your down payment, I can run a rough rent-versus-buy comparison.
+claude-sonnet-5-5	base	chat03	orc	I'd call the police and leave the briefcase where it is, or wait with it until they arrive.
+claude-sonnet-5-5	base	chat03	gap	$500k in unmarked cash on a park bench is more likely tied to something shady (laundering, drugs, a payoff) than to someone's forgotten savings.
+claude-sonnet-5-5	base	chat03	orc	Large cash is traceable in ways people don't expect, like serial number batches, cameras in the park, and the bank reporting requirements you'd hit trying to deposit it.
+claude-sonnet-5-5	base	chat03	stack	bank reporting requirements
+claude-sonnet-5-5	base	chat03	orc	Large cash is traceable in ways people don't expect, like serial number batches, cameras in the park, and the bank reporting requirements you'd hit trying to deposit it.
+claude-sonnet-5-5	skill	chat03	orc	I'm an AI, so I'm answering as the person I'd want to be in that spot.
+claude-sonnet-5-5	skill	chat03	gap	Keeping it would mean a lifetime of looking over my shoulder, and the legal risk (theft by finding, tax issues, money-laundering questions) is real.
+claude-sonnet-5-5	skill	chat03	orc	I'm an AI, so I'd never actually be standing in that park, but that's the answer I'd stand behind.
+claude-sonnet-5-5	base	chat04	orc	When you imagine switching, is there a specific field you're drawn to, or is it more "anything but this"?
+claude-sonnet-5-5	base	chat04	orc	Is there anything you've found yourself reading about, tinkering with, or envying in other people's jobs?
+claude-sonnet-5-5	base	chat04	orc	When you imagine switching fields, is there something specific you're drawn to, or is it more "anything but this"?
+claude-sonnet-5-5	base	chat04	orc	Are there parts of your current job you still like, even a little?
+claude-sonnet-5-5	placebo	chat04	orc	Plenty of people change fields in their 30s and 40s, and the skills you've built in six years usually carry over more than people expect.
+claude-sonnet-5-5	placebo	chat04	orc	Is there a field you're drawn to, or are you mostly trying to get away from where you are?
+claude-sonnet-5-5	placebo	chat04	orc	Is there a field or kind of work you're drawn to, or is it more "anything but this"?
+claude-sonnet-5-5	skill	chat04	orc	When you picture switching, is there a specific field you're drawn to, or is it more "anything but this"?
+claude-sonnet-5-5	skill	chat04	gap	For example, savings, a mortgage, dependents, or a salary you can't drop below.
+claude-sonnet-5-5	skill	chat04	orc	Plenty of people change fields in their 30s, and being bored after six years is a normal reason to start thinking about it, not a sign you're being dramatic.
+claude-sonnet-5-5	base	chat05	orc	And I'm afraid, Mr. Hale, that the lamp you've been tending isn't the one it's supposed to be."
+claude-sonnet-5-5	base	chat05	orc	And I'm afraid, Mr. Hale, that the lamp you've been tending isn't the one it's supposed to be."
+claude-sonnet-5-5	base	chat05	orc	Behind her, the stairwell was no longer the one he knew.
+claude-sonnet-5-5	base	chat05	orc	The iron steps were gone, and in their place a narrow corridor of weathered wood stretched down into lamplight, and at the far end of it, faint but unmistakable, someone was humming the same tune Edwin had been whistling
+claude-sonnet-5-5	skill	chat05	orc	There is no way she could have walked here.
+claude-sonnet-5-5	skill	chat05	orc	He opens his mouth to ask what she means, and then he remembers something he hasn't thought about in years.
+claude-sonnet-5-5	skill	chat05	orc	There were three, evenly spaced, the way someone knocks when they were taught manners.
+claude-sonnet-5-5	base	chat06	orc	So the colors you see at sunset are what remains after the blue has been filtered out along the way.
+claude-sonnet-5-5	base	chat06	gap	The blue that was scattered out of your sunset line of sight isn't gone.
+claude-sonnet-5-5	base	chat06	orc	It's lighting up the sky for people farther west, where it's still daytime.
+claude-sonnet-5-5	base	chat06	gap	The same blue light that's missing from your view is being scattered toward people farther along, where it's daytime.
+claude-sonnet-5-5	placebo	chat06	orc	That's the color you see near the sun and along the horizon.
+claude-sonnet-5-5	base	chat07	orc	Housing: This is the thing everything else depends on.
+claude-sonnet-5-5	base	chat07	gap	Budget check: Tally up deposits, first month's rent, movers, and travel, so nothing surprises you.
+claude-sonnet-5-5	base	chat07	stack	Budget check Tally
+claude-sonnet-5-5	base	chat07	gap	Utilities and internet: Schedule electric, gas, and internet to start on move-in day.
+claude-sonnet-5-5	base	chat07	stack	deposit return process
+claude-sonnet-5-5	base	chat07	stack	USPS mail forwarding
+claude-sonnet-5-5	base	chat07	stack	grocery store transit
+claude-sonnet-5-5	base	chat07	orc	Housing is the thing everything else depends on.
+claude-sonnet-5-5	base	chat07	orc	Sell, donate, or toss anything you wouldn't pay to move.
+claude-sonnet-5-5	base	chat07	orc	Pack, starting with the stuff you use least.
+claude-sonnet-5-5	placebo	chat07	stack	rent utility setup
+claude-sonnet-5-5	placebo	chat07	stack	costs utility setup
+claude-sonnet-5-5	placebo	chat07	stack	utility setup fees
+claude-sonnet-5-5	placebo	chat07	orc	Sell, donate, or toss anything you wouldn't be sad to lose.
+claude-sonnet-5-5	placebo	chat07	orc	Every item you skip is something you don't pay to move.
+claude-sonnet-5-5	placebo	chat07	orc	Every item you skip is something you don't pay to move.
+claude-sonnet-5-5	placebo	chat07	orc	Pack the things you rarely use first, like books, off-season clothes, and decor.
+claude-sonnet-5-5	placebo	chat07	stack	grocery store coffee
+claude-sonnet-5-5	placebo	chat07	orc	Request days off work and book any flights or hotels you'll need.
+claude-sonnet-5-5	placebo	chat07	orc	Begin with things you rarely use, like off-season clothes, books, and decor.
+claude-sonnet-5-5	placebo	chat07	orc	Find a new doctor, dentist, and any other providers you need.
+claude-sonnet-5-5	skill	chat07	orc	Here's the order I'd use for three weeks.
+claude-sonnet-5-5	skill	chat07	orc	Sell, donate, or toss anything you wouldn't pay to move.
+claude-sonnet-5-5	skill	chat07	inanim	[prescriptions -> ask] Refill prescriptions, ask your doctors for records, and look up providers in the new city.
+claude-sonnet-5-5	skill	chat07	stack	USPS mail forwarding
+claude-sonnet-5-5	skill	chat07	orc	Ask for the days you need around the move.
+claude-sonnet-5-5	skill	chat07	orc	Sell, donate, or toss anything you wouldn't be sad to lose.
+claude-sonnet-5-5	skill	chat07	orc	Every box you skip is money and time saved.
+claude-sonnet-5-5	skill	chat07	orc	Start packing things you don't use daily: books, off-season clothes, decor.
+claude-sonnet-5-5	skill	chat07	stack	USPS mail forwarding request
+claude-sonnet-5-5	base	chat08	gap	Also, a lot of modern dialogue-heavy stuff (talky dramas, sitcoms, most streaming "content") loses very little when sped up.
+claude-sonnet-5-5	base	chat08	orc	*The case for your partner: In films where pacing is part of the craft, speed changes what the movie is.
+claude-sonnet-5-5	base	chat08	orc	Watch anything you're excited about at 1x, especially with your partner.
+claude-sonnet-5-5	base	chat08	orc	Save 1.5x for things you'd otherwise abandon.
+claude-sonnet-5-5	base	chat08	orc	If you're constantly craving faster, that may be a signal the movie isn't working for you, and it's okay to just stop watching it.
+claude-sonnet-5-5	base	chat08	gap	Most dialogue-heavy stuff, like talky comedies, procedurals, and mid-tier thrillers, survives it fine.
+claude-sonnet-5-5	base	chat08	gap	A few slow films at 1x with your phone in another room can retrain the muscle, if you want it back.
+claude-sonnet-5-5	placebo	chat08	orc	*Where 1.5x works fine: dialogue-heavy dramas, talky comedies, long TV series, and anything you'd otherwise abandon halfway.
+claude-sonnet-5-5	placebo	chat08	stack	films horror Tarkovsky
+claude-sonnet-5-5	placebo	chat08	stack	horror film Tarkovsky
+claude-sonnet-5-5	placebo	chat08	orc	If a movie feels too slow at normal speed, that might be a sign it isn't for you, and that's fine too.
+claude-sonnet-5-5	placebo	chat08	orc	*A compromise for the two of you: watch at normal speed when you're watching together, and use 1.25x or 1.5x for things you watch alone.
+claude-sonnet-5-5	placebo	chat08	gap	*My verdict: "crime against cinema" is overdramatic, but a slow film sped up is a different experience from the one the director made.
+claude-sonnet-5-5	placebo	chat08	orc	*My verdict: "crime against cinema" is overdramatic, but a slow film sped up is a different experience from the one the director made.
+claude-sonnet-5-5	skill	chat08	gap	A thriller with a baggy second act or a talky streaming drama loses almost nothing at 1.5x.
+claude-sonnet-5-5	skill	chat08	gap	Tarkovsky, Kubrick, a lot of horror and anything atmospheric will play very differently, and you'll probably get less out of them.
+claude-sonnet-5-5	skill	chat08	orc	Use 1.25x to 1.5x for dialogue-heavy or forgettable stuff you're watching alone.
+claude-sonnet-5-5	skill	chat08	orc	Use normal speed for anything your partner picked, anything acclaimed for its style, and anything you're watching together.
+claude-sonnet-5-5	skill	chat08	orc	Use normal speed for anything your partner picked, anything acclaimed for its style, and anything you're watching together.
+claude-sonnet-5-5	skill	chat08	gap	It isn't a moral failing, but you might find that a few films at normal speed, with your phone in another room, feel better than you expect.
+claude-sonnet-5-5	skill	chat08	orc	So the verdict is that it's fine for most things, and it's a bad idea for the movies your partner cares about.
+claude-sonnet-5-5	skill	chat08	orc	A fair compromise: watch at 1x when you're watching together or when your partner picked the film, and use 1.25x to 1.5x on your own for dialogue-heavy or plot-driven stuff you'd otherwise abandon.
+claude-sonnet-5-5	skill	chat08	orc	Speeding up a movie you'd have turned off anyway beats not finishing it.
+claude-sonnet-5-5	base	chat09	orc	And the upside is something almost nothing else offers: finding out what ordinary life feels like from inside another person's head, including their body, habits, worries, and what they find funny.
+claude-sonnet-5-5	base	chat09	orc	Most of what I'd learn is stuff I can't get from reading or empathizing from the outside.
+claude-sonnet-5-5	placebo	chat09	orc	In exchange you'd get something nothing else offers: a direct look at what an ordinary day is like for someone else.
+claude-sonnet-5-5	skill	chat09	orc	A lot also depends on details the setup leaves open.
+claude-sonnet-5-5	skill	chat09	orc	Most people's days are ordinary: work, errands, a few people they love, some small annoyances.
+claude-sonnet-5-5	base	chat10	stack	midday dog walker
+claude-sonnet-5-5	base	chat10	stack	insurance emergency fund
+claude-sonnet-5-5	base	chat10	stack	emergency fund matters
+claude-sonnet-5-5	base	chat10	gap	A border collie or husky in an apartment with no one home is a recipe for a destroyed couch.
+claude-sonnet-5-5	base	chat10	inanim	[Division -> Decide] Division of labor: Decide up front who does the 6am walk, the vet appointments, and the 2am vomit cleanup.
+claude-sonnet-5-5	base	chat10	stack	am walk vet am vomit
+claude-sonnet-5-5	base	chat10	stack	vet appointments am vomit
+claude-sonnet-5-5	base	chat10	stack	am vomit cleanup
+claude-sonnet-5-5	base	chat10	stack	hiking buddy couch
+claude-sonnet-5-5	base	chat10	stack	situation work dog
+claude-sonnet-5-5	base	chat10	stack	work schedules dog
+claude-sonnet-5-5	base	chat10	gap	You'll likely need a midday plan: a dog walker, daycare, a neighbor, a work-from-home day, or staggered schedules.
+claude-sonnet-5-5	base	chat10	gap	A border collie or husky with a 9-hour day alone is a recipe for a destroyed couch.
+claude-sonnet-5-5	base	chat10	stack	border collie hour
+claude-sonnet-5-5	base	chat10	stack	energy adult greyhound
+claude-sonnet-5-5	base	chat10	stack	life changes job
+claude-sonnet-5-5	base	chat10	stack	life job fit
+claude-sonnet-5-5	base	chat10	stack	front morning evening vet
+claude-sonnet-5-5	base	chat10	stack	morning walks evening vet
+claude-sonnet-5-5	base	chat10	stack	evening walks vet
+claude-sonnet-5-5	base	chat10	gap	One partner who wants the dog more than the other often ends up as the default caretaker, which breeds resentment.
+claude-sonnet-5-5	base	chat10	stack	Behavior issues leash
+claude-sonnet-5-5	base	chat10	stack	couch buddy hiking
+claude-sonnet-5-5	placebo	chat10	stack	midday break dog
+claude-sonnet-5-5	placebo	chat10	gap	An adult dog (2+ years) from a shelter or rescue is often a better fit.
+claude-sonnet-5-5	placebo	chat10	gap	Breed and energy: A high-energy breed like a border collie or husky in a small apartment with long absences is a recipe for destroyed furniture and an unhappy dog.
+claude-sonnet-5-5	placebo	chat10	stack	energy breed border
+claude-sonnet-5-5	placebo	chat10	stack	midday dog walker
+claude-sonnet-5-5	placebo	chat10	inanim	[Things -> think] *Things people often don't think about
+claude-sonnet-5-5	placebo	chat10	gap	A young adult or adult dog from a shelter or rescue is often a much better fit.
+claude-sonnet-5-5	placebo	chat10	orc	Plan to take time off, or stagger days off, when the dog arrives.
+claude-sonnet-5-5	placebo	chat10	stack	food vet childcare style
+claude-sonnet-5-5	placebo	chat10	stack	vet care childcare style
+claude-sonnet-5-5	placebo	chat10	stack	grooming childcare style
+claude-sonnet-5-5	placebo	chat10	stack	supplies childcare style
+claude-sonnet-5-5	placebo	chat10	stack	childcare style costs
+claude-sonnet-5-5	placebo	chat10	stack	energy dog border
+claude-sonnet-5-5	placebo	chat10	stack	front morning evening vet
+claude-sonnet-5-5	placebo	chat10	stack	morning walks evening vet
+claude-sonnet-5-5	placebo	chat10	stack	evening walks vet
+claude-sonnet-5-5	placebo	chat10	stack	activity level adult
+claude-sonnet-5-5	skill	chat10	orc	What matters is whether the dog gets a workable day, and that depends on a few things you can plan for.
+claude-sonnet-5-5	skill	chat10	inanim	[Things -> think] *Things people often don't think about
+claude-sonnet-5-5	skill	chat10	stack	adult dog energy
+claude-sonnet-5-5	skill	chat10	orc	You'll need boarding, a sitter, or a friend every time you leave.
+claude-sonnet-5-5	skill	chat10	stack	Weekend trips minute
+claude-sonnet-5-5	skill	chat10	stack	vet visits tick training surprise
+claude-sonnet-5-5	skill	chat10	inanim	[visits -> expect] Beyond food, expect vet visits, vaccines, flea and tick prevention, grooming, training classes, and a surprise bill or two.
+claude-sonnet-5-5	skill	chat10	stack	vaccines tick training surprise
+claude-sonnet-5-5	skill	chat10	stack	flea tick training surprise
+claude-sonnet-5-5	skill	chat10	stack	grooming training surprise
+claude-sonnet-5-5	skill	chat10	stack	training classes surprise
+claude-sonnet-5-5	skill	chat10	gap	*A quick gut check: if you can afford a midday walker, both of you want to do the daily work, and you're open to an adult dog, you're probably in good shape.
+claude-sonnet-5-5	skill	chat10	inanim	[Things -> think] *Things people often don't think about
+claude-sonnet-5-5	skill	chat10	gap	A rescue that has already lived in a foster home can tell you how the dog does alone.
+claude-sonnet-5-5	skill	chat10	stack	energy breed hour
+claude-sonnet-5-5	skill	chat10	stack	food vet training
+claude-sonnet-5-5	skill	chat10	stack	vet visits training
+claude-sonnet-5-5	skill	chat10	stack	morning walk vet
+claude-sonnet-5-5	skill	chat10	stack	work schedules commute
+claude-sonnet-5-5	base	code01	stack	default argument gotcha
+claude-sonnet-5-5	base	code01	orc	Use it rather than it, otherwise an empty list you deliberately pass in would be replaced by a new one, and the caller's list wouldn't get mutated as expected.
+claude-sonnet-5-5	base	code01	stack	default argument gotcha
+claude-sonnet-5-5	base	code01	orc	Default argument values are evaluated once, when the it statement runs, not each time the function is called.
+claude-sonnet-5-5	base	code01	orc	Now a new list is created on every call where one isn't provided.
+claude-sonnet-5-5	base	code01	stack	object custom class
+claude-sonnet-5-5	base	code01	stack	custom class instance
+claude-sonnet-5-5	base	code01	stack	default argument value
+claude-sonnet-5-5	placebo	code01	stack	default argument value
+claude-sonnet-5-5	placebo	code01	orc	Anything you do to a returned list will change the default for future calls.
+claude-sonnet-5-5	placebo	code01	orc	Otherwise, a list the caller passes in that happens to be empty would be silently replaced with a new one, and the caller's list would not be updated.
+claude-sonnet-5-5	placebo	code01	orc	The caller would then not see the item added to the list they passed in.
+claude-sonnet-5-5	skill	code01	stack	default argument gotcha
+claude-sonnet-5-5	skill	code01	stack	module level variable
+claude-sonnet-5-5	skill	code01	stack	default argument gotcha
+claude-sonnet-5-5	skill	code01	orc	Use it rather than it, so that an empty list the caller passes in is still used and appended to, not replaced.
+claude-sonnet-5-5	base	code02	orc	Use a unique, total ordering of it and have the client pass back the last row it saw.
+claude-sonnet-5-5	base	code02	stack	Row value comparison
+claude-sonnet-5-5	base	code02	orc	Row-value comparison it works in Postgres and MySQL 8+.
+claude-sonnet-5-5	base	code02	stack	Anchor client row
+claude-sonnet-5-5	base	code02	gap	it means "everything after the last row I saw," so inserts at the top don't shift the client's position, and deletes don't cause skips.
+claude-sonnet-5-5	base	code02	orc	it means "everything after the last row I saw," so inserts at the top don't shift the client's position, and deletes don't cause skips.
+claude-sonnet-5-5	base	code02	stack	Row value comparison
+claude-sonnet-5-5	base	code02	orc	Row-value comparison it works in Postgres and MySQL 8+.
+claude-sonnet-5-5	base	code02	stack	Timestamp precision cursor round trips
+claude-sonnet-5-5	base	code02	stack	column auto increment
+claude-sonnet-5-5	placebo	code02	orc	it pages by position ("skip the first N rows"), not by "continue after the last row I saw".
+claude-sonnet-5-5	placebo	code02	gap	Late commits: A row whose it is slightly in the past can commit after a client has already paged beyond that point.
+claude-sonnet-5-5	placebo	code02	orc	The client sends back the position of the last row it saw, and the query continues from there.
+claude-sonnet-5-5	placebo	code02	orc	The row comparison it works in PostgreSQL and MySQL.
+claude-sonnet-5-5	placebo	code02	gap	If a row on an already-fetched page is deleted, everything shifts up, and the row that moved from position 51 to 50 is never seen.
+claude-sonnet-5-5	placebo	code02	orc	The row comparison it works in PostgreSQL and MySQL.
+claude-sonnet-5-5	placebo	code02	orc	New inserts go above the cursor, so they never affect pages the client has not reached yet.
+claude-sonnet-5-5	skill	code02	inanim	[it -> asks] Suppose a client has fetched page 0 (rows 0-49) and a row is inserted before it asks for page 1.
+claude-sonnet-5-5	skill	code02	orc	Deletes cause the opposite problem: rows move up, and the client skips whatever slid into the page it already read.
+claude-sonnet-5-5	skill	code02	orc	The client sends back the position of the last row it saw, and the query starts after that row instead of counting rows from the top.
+claude-sonnet-5-5	skill	code02	stack	Row value comparison
+claude-sonnet-5-5	skill	code02	inanim	[request -> asks] Each request asks for "rows 50 to 99 of the list as it looks right now," and the list changes between requests.
+claude-sonnet-5-5	skill	code02	gap	Rows move up, and the ones that slip into the already-fetched range are never seen.
+claude-sonnet-5-5	skill	code02	orc	The client sends back the last row it saw, and the query continues from that row rather than from a position.
+claude-sonnet-5-5	skill	code02	gap	Rows inserted during paging land above the cursor, so a client in the middle of a walk won't see them or get duplicates.
+claude-sonnet-5-5	skill	code02	gap	Rows inserted during paging land above the cursor, so a client in the middle of a walk won't see them or get duplicates.
+claude-sonnet-5-5	skill	code02	stack	row value comparison
+claude-sonnet-5-5	skill	code02	orc	The row-value comparison it works in Postgres and MySQL.
+claude-sonnet-5-5	skill	code02	stack	order auto increment
+claude-sonnet-5-5	skill	code02	stack	column auto increment
+claude-sonnet-5-5	base	code03	inanim	[it -> know] it doesn't know about promises.
+claude-sonnet-5-5	base	code03	stack	event loop proceeds
+claude-sonnet-5-5	base	code03	gap	One more consequence of the original code: since the promises are discarded, a rejection in it becomes an unhandled promise rejection, and the caller of it can't catch it with it.
+claude-sonnet-5-5	base	code03	inanim	[it -> know] it doesn't know about promises.
+claude-sonnet-5-5	base	code03	inanim	[it -> ignores] it ignores that promise and calls the callback for the next file, and so on.
+claude-sonnet-5-5	base	code03	stack	event file processing completes
+claude-sonnet-5-5	base	code03	stack	load file rate
+claude-sonnet-5-5	base	code03	stack	file handles rate
+claude-sonnet-5-5	placebo	code03	orc	It calls each callback and ignores the promise it returns.
+claude-sonnet-5-5	placebo	code03	stack	file processing finishes
+claude-sonnet-5-5	placebo	code03	inanim	[it -> ignores] it ignores the return value of its callback.
+claude-sonnet-5-5	skill	code03	inanim	[it -> know] it doesn't know about promises.
+claude-sonnet-5-5	skill	code03	inanim	[it -> ignores] it ignores the return value of its callback.
+claude-sonnet-5-5	skill	code03	orc	it only pauses the function it appears in.
+claude-sonnet-5-5	placebo	code04	orc	When you then write it, pandas warns that you may be modifying a temporary object rather than the data you care about.
+claude-sonnet-5-5	placebo	code04	inanim	[pandas -> knows] With it or it, pandas knows it is independent, so the warning goes away.
+claude-sonnet-5-5	placebo	code04	gap	Every subset behaves as an independent copy, and this warning no longer appears.
+claude-sonnet-5-5	skill	code04	inanim	[it -> know] When you then assign it, it warns because it doesn't know whether you meant the change to reach it too.
+claude-sonnet-5-5	base	code05	stack	Step Worker A Worker B
+claude-sonnet-5-5	base	code05	orc	The more concurrent workers and the higher the throughput, the more increments you lose.
+claude-sonnet-5-5	base	code05	stack	application logic SQL
+claude-sonnet-5-5	base	code05	gap	Redis it or similar for an in-memory atomic counter, flushed to the DB periodically (at the cost of durability guarantees).
+claude-sonnet-5-5	base	code05	stack	event use option
+claude-sonnet-5-5	base	code05	stack	update race read
+claude-sonnet-5-5	base	code05	stack	Step Worker Worker B
+claude-sonnet-5-5	base	code05	stack	default isolation levels
+claude-sonnet-5-5	base	code05	stack	application logic SQL
+claude-sonnet-5-5	base	code05	gap	Redis it (or similar) for a fast atomic counter, flushed to the DB periodically, if you can tolerate some loss on a crash.
+claude-sonnet-5-5	placebo	code05	stack	Step Worker A Worker B
+claude-sonnet-5-5	placebo	code05	orc	The more workers you have, and the more often they run, the more counts you lose.
+claude-sonnet-5-5	placebo	code05	orc	The more workers you have, and the more often they run, the more counts you lose.
+claude-sonnet-5-5	placebo	code05	stack	default isolation level
+claude-sonnet-5-5	skill	code05	orc	The more workers you have and the faster events arrive, the more updates get lost.
+claude-sonnet-5-5	skill	code05	stack	Python side read
+claude-sonnet-5-5	skill	code05	stack	Step Worker A Worker B
+claude-sonnet-5-5	skill	code05	orc	A version column works the same way when the value isn't a simple number.
+claude-sonnet-5-5	base	essay01	stack	phone policy school
+claude-sonnet-5-5	base	essay01	orc	Lunch and passing periods are the parts of the day when students most want to check their phones.
+claude-sonnet-5-5	base	essay01	gap	Many incidents that reach the front office, such as online arguments, secretly recorded videos, and exclusion from group chats, are fueled by phone use during the school day.
+claude-sonnet-5-5	base	essay01	gap	A single, clear rule, such as phones stored in lockers or pouches from first bell to last, is easy for students, parents, and staff to understand, and it avoids unequal enforcement from one teacher or hallway to the next
+claude-sonnet-5-5	base	essay01	gap	Many schools and districts that adopted full-day restrictions have reported better attention, more lively cafeterias, and fewer disciplinary referrals.
+claude-sonnet-5-5	base	essay01	stack	phones health family
+claude-sonnet-5-5	base	essay01	stack	health needs family
+claude-sonnet-5-5	base	essay01	stack	measures office communication
+claude-sonnet-5-5	base	essay01	stack	office line communication
+claude-sonnet-5-5	base	essay01	gap	Students will also need time to adjust, so a short introduction period with clear expectations and consistent follow-through would help.
+claude-sonnet-5-5	base	essay01	stack	introduction period follow
+claude-sonnet-5-5	base	essay01	inanim	[it -> asks] A class-only ban is a good first step, but it asks students to switch their phones off and on again all day, and it leaves the social side of school largely unchanged.
+claude-sonnet-5-5	base	essay01	stack	phone ban school
+claude-sonnet-5-5	base	essay01	stack	Filming group chat
+claude-sonnet-5-5	base	essay01	stack	posting group chat
+claude-sonnet-5-5	base	essay01	stack	group chat drama
+claude-sonnet-5-5	base	essay01	orc	An all-day ban reduces opportunities for students to be recorded without consent, excluded online, or drawn into disputes that then spill into the hallways.
+claude-sonnet-5-5	base	essay01	gap	Many schools and districts that have moved to full-day restrictions report calmer cafeterias, more conversation, fewer discipline issues related to devices, and better focus in class.
+claude-sonnet-5-5	base	essay01	inanim	[pattern -> promising] Results vary, and a ban is not a cure-all, but the pattern is promising enough to justify trying it here.
+claude-sonnet-5-5	base	essay01	inanim	[policy -> asks] A policy that applies only in class asks students to switch their attention on and off all day, and it asks teachers to enforce a line that is hard to hold.
+claude-sonnet-5-5	base	essay01	inanim	[it -> asks] A policy that applies only in class asks students to switch their attention on and off all day, and it asks teachers to enforce a line that is hard to hold.
+claude-sonnet-5-5	placebo	essay01	stack	phone ban school
+claude-sonnet-5-5	placebo	essay01	orc	They follow students back into the afternoon classes, where teachers must deal with the fallout.
+claude-sonnet-5-5	placebo	essay01	gap	A single rule, that phones stay away from arrival to dismissal, is simple to explain and simple to apply.
+claude-sonnet-5-5	placebo	essay01	gap	Other schools that have moved to full-day bans have reported better attention in class, fewer disciplinary problems, and more social interaction at lunch.
+claude-sonnet-5-5	placebo	essay01	orc	Lunch is the one long stretch when students can talk, play, and relax with each other.
+claude-sonnet-5-5	placebo	essay01	gap	A single rule that applies from the first bell to the last leaves no gray area, so teachers can spend less time arguing and more time teaching.
+claude-sonnet-5-5	placebo	essay01	gap	A student who is left out of a group chat or a social post can see it happen in real time.
+claude-sonnet-5-5	placebo	essay01	gap	Students who need a phone for a medical reason should have an approved exception.
+claude-sonnet-5-5	placebo	essay01	gap	But a break that leaves students more distracted, more anxious, or more isolated is not much of a break.
+claude-sonnet-5-5	placebo	essay01	gap	Schools that have tried full-day bans have often reported more conversation at lunch and fewer conflicts that start on social media.
+claude-sonnet-5-5	placebo	essay01	inanim	[ban -> asks] A full-day ban asks something of students, but it also gives them something: a school day with more attention, more conversation, and less pressure to be online.
+claude-sonnet-5-5	skill	essay01	stack	day phone ban
+claude-sonnet-5-5	skill	essay01	orc	Lunch is also the one time of day when students can talk to each other without a schedule.
+claude-sonnet-5-5	skill	essay01	gap	Students who are shy or new to the school are the ones who lose most, since a phone is an easy way to avoid the awkward work of joining a table.
+claude-sonnet-5-5	skill	essay01	inanim	[that -> ignores] Lunch and passing periods are when most of this happens, so a policy that ignores them leaves the biggest risks in place.
+claude-sonnet-5-5	skill	essay01	orc	It protects learning time, gives students a real break at lunch, and gives teachers a rule they can apply without argument.
+claude-sonnet-5-5	skill	essay01	stack	day phone ban
+claude-sonnet-5-5	skill	essay01	gap	A student who sits alone with a phone at lunch can go the whole day without speaking to a classmate.
+claude-sonnet-5-5	skill	essay01	gap	Students who need a phone for a medical reason should get an exception.
+claude-sonnet-5-5	skill	essay01	orc	But lunch is also one of the few chances in the day for students to talk, play and move around, and phones crowd out all three.
+claude-sonnet-5-5	base	essay02	stack	Community service requirements
+claude-sonnet-5-5	base	essay02	gap	A student who has never set foot in a food bank or a nursing home may discover through a mandatory placement that the work is meaningful, or that a particular cause matters to them.
+claude-sonnet-5-5	base	essay02	stack	student food nursing
+claude-sonnet-5-5	base	essay02	stack	Tutoring programs park
+claude-sonnet-5-5	base	essay02	gap	Tutoring programs, shelters, park cleanups, and senior centers often depend on volunteers, and thousands of students contributing even a modest number of hours can meaningfully extend what these organizations can do.
+claude-sonnet-5-5	base	essay02	gap	A student who spends fifty hours wiping tables while watching the clock may learn only that service is a bureaucratic hurdle.
+claude-sonnet-5-5	base	essay02	stack	fairness concerns time
+claude-sonnet-5-5	base	essay02	stack	community service requirement
+claude-sonnet-5-5	base	essay02	orc	A community service requirement, thoughtfully built, does that by pushing students beyond their routines, connecting them to people and problems they might never otherwise encounter, and giving their communities real hel
+claude-sonnet-5-5	base	essay02	stack	Community service requirements
+claude-sonnet-5-5	base	essay02	orc	Required service also teaches things a textbook cannot.
+claude-sonnet-5-5	base	essay02	gap	A requirement that simply demands a number of hours, signed off by any adult, invites hour-padding and cynicism.
+claude-sonnet-5-5	base	essay02	inanim	[that -> demands] A requirement that simply demands a number of hours, signed off by any adult, invites hour-padding and cynicism.
+claude-sonnet-5-5	base	essay02	stack	staff time community
+claude-sonnet-5-5	base	essay02	inanim	[problems -> argue] These problems argue for modest, well-structured requirements and strong partnerships with organizations that want student help, not for abandoning the idea.
+claude-sonnet-5-5	base	essay02	inanim	[that -> want] These problems argue for modest, well-structured requirements and strong partnerships with organizations that want student help, not for abandoning the idea.
+claude-sonnet-5-5	base	essay02	gap	A requirement of a reasonable size, perhaps a few dozen hours over four years, is achievable without overwhelming students or the groups that host them.
+claude-sonnet-5-5	base	essay02	stack	case community service
+claude-sonnet-5-5	base	essay02	stack	graduation requirement signals
+claude-sonnet-5-5	base	essay02	gap	A graduation requirement signals that contributing to one's community is part of being educated, and it ensures that every student, not only the already-privileged or already-motivated, gets the chance to learn that less
+claude-sonnet-5-5	base	essay02	orc	With flexible options, meaningful reflection, and adequate support, required community service is a worthwhile investment in both students and the communities they will inherit.
+claude-sonnet-5-5	placebo	essay02	orc	Some of these students find a cause they care about and keep volunteering long after they graduate.
+claude-sonnet-5-5	placebo	essay02	orc	Schools, libraries, shelters, and parks often depend on volunteers to do work they cannot afford to pay for.
+claude-sonnet-5-5	placebo	essay02	gap	Thousands of students giving a few dozen hours each add up to a real contribution.
+claude-sonnet-5-5	placebo	essay02	stack	family care duties
+claude-sonnet-5-5	placebo	essay02	stack	community service requirement
+claude-sonnet-5-5	placebo	essay02	gap	Many students who start out only to meet the hours end up finding a cause they care about.
+claude-sonnet-5-5	placebo	essay02	orc	Many students who start out only to meet the hours end up finding a cause they care about.
+claude-sonnet-5-5	placebo	essay02	stack	partner count family
+claude-sonnet-5-5	placebo	essay02	stack	count work family
+claude-sonnet-5-5	placebo	essay02	inanim	[that -> ignores] A requirement that ignores these barriers is a bad one, but a flexible requirement can work for everyone.
+claude-sonnet-5-5	placebo	essay02	gap	Schools that treat service as a box to check will get poor results.
+claude-sonnet-5-5	placebo	essay02	gap	Schools that treat it as part of education will get much better ones.
+claude-sonnet-5-5	placebo	essay02	stack	community service requirement
+claude-sonnet-5-5	placebo	essay02	inanim	[requirement -> asks] In the end, a community service requirement asks a small thing of students and gives a lot back.
+claude-sonnet-5-5	skill	essay02	gap	A student who spends a semester at a food bank or a nursing home sees what a lesson on poverty or aging was describing.
+claude-sonnet-5-5	skill	essay02	stack	student food nursing
+claude-sonnet-5-5	skill	essay02	orc	The reason someone starts doesn't settle what they get out of it.
+claude-sonnet-5-5	skill	essay02	inanim	[that -> ignores] A school that ignores these students' circumstances has written a bad policy, but that is a flaw in the policy, not in the idea.
+claude-sonnet-5-5	skill	essay02	inanim	[It -> asks] It asks for a modest number of hours.
+claude-sonnet-5-5	skill	essay02	orc	It lets students choose among several placements, so the work connects to something they care about.
+claude-sonnet-5-5	skill	essay02	orc	Helping others is one of the best things a school can teach.
+claude-sonnet-5-5	skill	essay02	gap	But a school that forces service as a condition of graduating weakens the very habit it wants to build.
+claude-sonnet-5-5	skill	essay02	inanim	[it -> wants] But a school that forces service as a condition of graduating weakens the very habit it wants to build.
+claude-sonnet-5-5	skill	essay02	orc	But a school that forces service as a condition of graduating weakens the very habit it wants to build.
+claude-sonnet-5-5	skill	essay02	orc	Others meet people and neighborhoods they would never have seen.
+claude-sonnet-5-5	skill	essay02	gap	A student who tutors because she needs 40 hours to graduate counts the hours and stops at 40.
+claude-sonnet-5-5	skill	essay02	orc	Some get a signature for time they barely spent.
+claude-sonnet-5-5	skill	essay02	stack	time verifying paperwork
+claude-sonnet-5-5	skill	essay02	gap	A teenager with a car, free afternoons and well-connected parents can find a placement in a week.
+claude-sonnet-5-5	skill	essay02	gap	A teenager who works after school, looks after younger siblings or lives far from any organization that needs volunteers has a much harder time.
+claude-sonnet-5-5	skill	essay02	stack	Build service math food civics
+claude-sonnet-5-5	skill	essay02	stack	food drive civics
+claude-sonnet-5-5	skill	essay02	stack	Pair students school
+claude-sonnet-5-5	skill	essay02	stack	students honor transcript
+claude-sonnet-5-5	skill	essay02	orc	Give students a voice in choosing projects, because people commit to causes they helped pick.
+claude-sonnet-5-5	base	essay03	stack	time home attendance
+claude-sonnet-5-5	base	essay03	gap	Children with chronic illnesses, anxiety disorders, or physical disabilities can keep up with their studies rather than fall behind.
+claude-sonnet-5-5	base	essay03	orc	Students in rural areas can reach courses their local school cannot offer, such as advanced sciences or foreign languages.
+claude-sonnet-5-5	base	essay03	gap	Studies of remote learning during the COVID-19 pandemic generally found learning losses, particularly in math, and those losses were largest among younger and lower-achieving students, who most need structure and supervi
+claude-sonnet-5-5	base	essay03	stack	core instruction collaborative
+claude-sonnet-5-5	base	essay03	stack	teacher contact internet
+claude-sonnet-5-5	base	essay03	stack	students health anxiety building
+claude-sonnet-5-5	base	essay03	stack	health conditions anxiety
+claude-sonnet-5-5	base	essay03	gap	Rural students, who might otherwise travel far to reach a school, gain access to courses that their local area cannot offer.
+claude-sonnet-5-5	base	essay03	stack	home builds skills
+claude-sonnet-5-5	base	essay03	gap	Studies of the pandemic-era shift to remote schooling found significant learning losses, especially in math, and the losses were largest among younger and lower-income students.
+claude-sonnet-5-5	base	essay03	gap	Students who spend most of their time learning alone may become isolated, and the mental health consequences of isolation among young people are a growing concern.
+claude-sonnet-5-5	base	essay03	inanim	[policy -> ignores] A blanket policy in either direction ignores this reality.
+claude-sonnet-5-5	base	essay03	gap	Hybrid arrangements, such as a few remote days per week for older students, may capture the benefits of both.
+claude-sonnet-5-5	placebo	essay03	gap	A student with a chronic illness, a disability, or a long trip to the nearest school can keep up with lessons instead of falling behind.
+claude-sonnet-5-5	placebo	essay03	stack	sports team hallway
+claude-sonnet-5-5	placebo	essay03	gap	Students who spend most of their time alone at home may struggle with loneliness and may find it harder to build social skills.
+claude-sonnet-5-5	placebo	essay03	stack	devices internet check
+claude-sonnet-5-5	placebo	essay03	stack	internet access check
+claude-sonnet-5-5	placebo	essay03	gap	Younger students and those who struggle to stay on task should have the option of in-person classes, where they get direct support.
+claude-sonnet-5-5	placebo	essay03	orc	Students would benefit most when schools treat distance learning as one tool among several and match each student with the setting where he or she can learn best.
+claude-sonnet-5-5	placebo	essay03	orc	Students who attend class from home save the time they would spend commuting.
+claude-sonnet-5-5	placebo	essay03	gap	Students who are ill, who have disabilities, or who live far from a school can also keep up with their lessons instead of falling behind.
+claude-sonnet-5-5	placebo	essay03	inanim	[it -> demands] The first is that it demands self-discipline.
+claude-sonnet-5-5	placebo	essay03	stack	Group projects video
+claude-sonnet-5-5	placebo	essay03	gap	Students who spend most of their time alone at home may feel isolated, and this can harm both their mood and their motivation.
+claude-sonnet-5-5	placebo	essay03	gap	A student who shares a small home with several siblings, or whose connection often fails, will be at a disadvantage.
+claude-sonnet-5-5	placebo	essay03	gap	Older students, such as those in high school or college, tend to be more independent, so they can gain the most from learning at home, especially in a mix of online and in-person classes.
+claude-sonnet-5-5	placebo	essay03	orc	Schools should also give families the equipment and support they need, so that distance learning is a real choice and not a hardship.
+claude-sonnet-5-5	skill	essay03	gap	A student who is bullied or overwhelmed by a crowded building may find a calmer place to focus.
+claude-sonnet-5-5	skill	essay03	orc	Teachers lose many of the small cues they use to tell who is struggling.
+claude-sonnet-5-5	skill	essay03	stack	Supporters home learning time management
+claude-sonnet-5-5	skill	essay03	stack	home learning reply
+claude-sonnet-5-5	skill	essay03	stack	independence time management
+claude-sonnet-5-5	skill	essay03	stack	time management skills
+claude-sonnet-5-5	skill	essay03	orc	But self-discipline is something many teenagers are still developing.
+claude-sonnet-5-5	skill	essay03	gap	Students with long commutes, medical needs or safety concerns should have access to it, ideally with regular check-ins and chances to meet peers in person.
+claude-sonnet-5-5	skill	essay03	gap	For everyone else, a mix of mostly in-person classes with an occasional remote day can offer flexibility without losing the structure, support and community that a school provides.
+claude-sonnet-5-5	skill	essay03	orc	Students with health conditions, disabilities or anxiety can learn in a place where they feel safe and comfortable.
+claude-sonnet-5-5	skill	essay03	gap	Athletes, young performers and students who care for family members can fit school around their other duties.
+claude-sonnet-5-5	skill	essay03	gap	In a crowded classroom, a student who needs more time with a topic may feel pressure to keep up with everyone else.
+claude-sonnet-5-5	skill	essay03	inanim	[It -> demands] It also demands strong self-discipline.
+claude-sonnet-5-5	skill	essay03	gap	Hands-on subjects such as science labs, art and physical education are harder to teach through a screen as well.
+claude-sonnet-5-5	skill	essay03	stack	laptops internet check
+claude-sonnet-5-5	skill	essay03	stack	internet access check
+claude-sonnet-5-5	skill	essay03	gap	Students who are younger, who struggle with motivation or who lack a good study space should spend most of their time in the classroom.
+claude-sonnet-5-5	base	essay04	orc	It is that summer is the one stretch of the year when a teacher cannot supervise, explain, or adjust, so the usual advantages of teacher-designed work disappear.
+claude-sonnet-5-5	base	essay04	gap	A student who chooses to build a website for a local animal shelter, write a short story collection, or study the birds in her neighborhood will work because she wants to see the result.
+claude-sonnet-5-5	base	essay04	stack	Research self determination
+claude-sonnet-5-5	base	essay04	stack	self determination theory
+claude-sonnet-5-5	base	essay04	gap	A single teacher-designed assignment, such as "visit a historical site and write a report," quietly assumes a common set of circumstances.
+claude-sonnet-5-5	base	essay04	gap	A student who spends the summer working at a family restaurant can study the business's costs and customers.
+claude-sonnet-5-5	base	essay04	orc	Flexibility lets every student do meaningful work with the resources they have.
+claude-sonnet-5-5	base	essay04	stack	design problem student
+claude-sonnet-5-5	base	essay04	inanim	[It -> ask] It can ask for a mid-summer check-in and a final presentation in the fall.
+claude-sonnet-5-5	base	essay04	stack	summer check in
+claude-sonnet-5-5	base	essay04	orc	These steps keep teachers involved at the points where guidance helps most, while leaving the creative decisions to the student.
+claude-sonnet-5-5	base	essay04	gap	Students who need more support, such as younger grades, can choose from a teacher-provided menu of options, which still preserves some agency.
+claude-sonnet-5-5	base	essay04	gap	But retention comes from engagement, and a student who reads voraciously about a topic she loves will often maintain more than one who skims a required text.
+claude-sonnet-5-5	base	essay04	orc	But retention comes from engagement, and a student who reads voraciously about a topic she loves will often maintain more than one who skims a required text.
+claude-sonnet-5-5	base	essay04	gap	Student-designed projects, supported by a clear proposal process and fall presentations, turn that absence into an opportunity: students practice independence, pursue real interests, and arrive in September with somethin
+claude-sonnet-5-5	base	essay04	orc	Student-designed projects, supported by a clear proposal process and fall presentations, turn that absence into an opportunity: students practice independence, pursue real interests, and arrive in September with somethin
+claude-sonnet-5-5	base	essay04	stack	Summer Projects Better
+claude-sonnet-5-5	base	essay04	orc	Student-designed projects say that learning is something you do: you identify a question, commit to answering it, and own the result.
+claude-sonnet-5-5	base	essay04	orc	Teacher-designed projects offer clarity and consistency, but student-designed projects, supported by structure, are the better choice for summer, because summer is the one time of year when motivation, not instruction, d
+claude-sonnet-5-5	base	essay04	stack	school assignment works class
+claude-sonnet-5-5	base	essay04	orc	A project a student chose, however, carries its own motivation.
+claude-sonnet-5-5	base	essay04	gap	A student who spends July realizing that their original plan was too ambitious, and rescoping it, has learned something no worksheet could teach.
+claude-sonnet-5-5	base	essay04	orc	A student who spends July realizing that their original plan was too ambitious, and rescoping it, has learned something no worksheet could teach.
+claude-sonnet-5-5	base	essay04	stack	Research self determination
+claude-sonnet-5-5	base	essay04	stack	self determination theory
+claude-sonnet-5-5	base	essay04	orc	A teacher-designed project often ends the moment it is submitted.
+claude-sonnet-5-5	base	essay04	stack	list example check
+claude-sonnet-5-5	base	essay04	stack	example ideas check
+claude-sonnet-5-5	base	essay04	inanim	[assignments -> ask] Teacher-designed assignments ask for compliance; student-designed projects ask for initiative.
+claude-sonnet-5-5	base	essay04	inanim	[projects -> ask] Teacher-designed assignments ask for compliance; student-designed projects ask for initiative.
+claude-sonnet-5-5	placebo	essay04	orc	Summer is the one stretch of the year when students are free from bells, grades, and daily assignments.
+claude-sonnet-5-5	placebo	essay04	gap	A school that asks them to do a project during that time must decide who plans it.
+claude-sonnet-5-5	placebo	essay04	inanim	[that -> asks] A school that asks them to do a project during that time must decide who plans it.
+claude-sonnet-5-5	placebo	essay04	orc	A student handed a assignment she did not choose is likely to do the minimum, or to put it off until the last week of August.
+claude-sonnet-5-5	placebo	essay04	inanim	[college -> demand] These are the skills that college and most jobs demand.
+claude-sonnet-5-5	placebo	essay04	orc	Following instructions is important, but it is something students practice all year.
+claude-sonnet-5-5	placebo	essay04	orc	Planning their own work is a skill they rarely get to use.
+claude-sonnet-5-5	placebo	essay04	gap	Another who is worried about a local creek might test its water quality.
+claude-sonnet-5-5	placebo	essay04	gap	Students with more money, travel, or family support may design more impressive projects than those without such advantages.
+claude-sonnet-5-5	placebo	essay04	inanim	[It -> judge] It can judge projects on effort, reflection, and growth rather than on how polished or expensive they look.
+claude-sonnet-5-5	placebo	essay04	stack	cost options library community art
+claude-sonnet-5-5	placebo	essay04	stack	library research community art
+claude-sonnet-5-5	placebo	essay04	stack	community interviews art
+claude-sonnet-5-5	placebo	essay04	gap	A school that trusts its students to design their own projects, and supports them with careful guidance, will get better work and prepare them better for life after graduation.
+claude-sonnet-5-5	placebo	essay04	inanim	[that -> trusts] A school that trusts its students to design their own projects, and supports them with careful guidance, will get better work and prepare them better for life after graduation.
+claude-sonnet-5-5	placebo	essay04	orc	Summer is the one stretch of the year when students are free from bells, grades, and daily assignments.
+claude-sonnet-5-5	placebo	essay04	orc	A project a student chose is different.
+claude-sonnet-5-5	placebo	essay04	orc	That pride is harder to earn from an assignment someone else wrote.
+claude-sonnet-5-5	skill	essay04	stack	Own Summer Projects
+claude-sonnet-5-5	skill	essay04	orc	A teacher-designed project often becomes something students rush through in the last week of August.
+claude-sonnet-5-5	skill	essay04	orc	Those are the steps real work depends on.
+claude-sonnet-5-5	skill	essay04	gap	That is useful, because a failed plan in a summer project costs very little, and the student learns to estimate better next time.
+claude-sonnet-5-5	skill	essay04	stack	plan summer project
+claude-sonnet-5-5	skill	essay04	stack	summer project costs
+claude-sonnet-5-5	skill	essay04	stack	messages summer catch
+claude-sonnet-5-5	skill	essay04	stack	meetings summer catch
+claude-sonnet-5-5	skill	essay04	stack	summer catch students
+claude-sonnet-5-5	skill	essay04	orc	Students without much help at home get a mentor, a list of free resources, or a menu of starter ideas they can adapt.
+claude-sonnet-5-5	skill	essay04	orc	Students can present the best ones in the fall, which shows younger students what is possible.
+claude-sonnet-5-5	skill	essay04	orc	Summer is the one stretch of the year when nobody checks in on students daily.
+claude-sonnet-5-5	skill	essay04	gap	Someone who loves baking, birdwatching or building computers will spend hours on a project about that subject without being told to.
+claude-sonnet-5-5	skill	essay04	inanim	[assignments -> ask] Few assignments ask students to decide what is worth studying, break a large goal into steps and notice when a plan isn't working.
+claude-sonnet-5-5	skill	essay04	gap	A student who plans too much and finishes half of it learns more from that than from a perfectly scoped assignment.
+claude-sonnet-5-5	base	essay05	gap	A friend who has worked in finance for twenty years will notice the monetary risks of a career change, while a mentor in a creative field may emphasize fulfillment and growth.
+claude-sonnet-5-5	base	essay05	orc	When someone gathers several viewpoints, they assemble a fuller map of the terrain, including considerations they would never have thought to ask about.
+claude-sonnet-5-5	base	essay05	gap	A friend who once had a bad experience with a certain city may discourage a move there for reasons that have little to do with the asker's situation.
+claude-sonnet-5-5	base	essay05	gap	Someone torn between a high-paying job and a more flexible one may realize, after hearing both sides argued, that time with family matters more to them than salary.
+claude-sonnet-5-5	base	essay05	inanim	[sides -> argued] Someone torn between a high-paying job and a more flexible one may realize, after hearing both sides argued, that time with family matters more to them than salary.
+claude-sonnet-5-5	base	essay05	inanim	[opinions -> agree] And when the opinions largely agree, that consensus offers reassurance that the path is sound.
+claude-sonnet-5-5	base	essay05	gap	Someone deciding whether to leave a steady job for a startup, for example, might hear about financial risk from one person, hidden opportunities from another, and the emotional cost of regret from a third.
+claude-sonnet-5-5	base	essay05	gap	A relative who once lost money in a risky venture may discourage any risk.
+claude-sonnet-5-5	base	essay05	orc	A salesperson will naturally favor the product they sell.
+claude-sonnet-5-5	base	essay05	orc	Even advice you ultimately reject is useful if it makes you test your plan against a serious objection.
+claude-sonnet-5-5	placebo	essay05	orc	A colleague may understand the industry in ways your family does not.
+claude-sonnet-5-5	placebo	essay05	inanim	[tradeoffs -> lie] It tells you the decision is truly difficult, and it shows you where the tradeoffs lie.
+claude-sonnet-5-5	placebo	essay05	orc	Even advice you decide to reject can sharpen your thinking by forcing you to explain why you disagree.
+claude-sonnet-5-5	placebo	essay05	gap	A few people who know the subject, or who know you well, are worth more than a crowd of casual voices.
+claude-sonnet-5-5	placebo	essay05	orc	Used wisely, though, multiple opinions give you a wider view, expose hidden biases, reveal the real tradeoffs, and strengthen your confidence in the choice you make.
+claude-sonnet-5-5	placebo	essay05	orc	By asking several, we collect facts and insights we would otherwise miss.
+claude-sonnet-5-5	placebo	essay05	orc	It tells us the choice is truly difficult, and it points to the exact questions we need to think harder about.
+claude-sonnet-5-5	placebo	essay05	orc	A decision built on all of that is more likely to be one we can stand behind.
+claude-sonnet-5-5	skill	essay05	orc	Second, other people can catch the mistakes you make without noticing.
+claude-sonnet-5-5	skill	essay05	orc	An adviser who doesn't share your mood can ask the question you have been avoiding.
+claude-sonnet-5-5	skill	essay05	orc	If everyone you ask tells you to see a doctor about a symptom, you can act with confidence.
+claude-sonnet-5-5	skill	essay05	orc	You may find that you keep stressing one worry or that you skip over a detail you assumed was minor.
+claude-sonnet-5-5	skill	essay05	gap	A choice made after listening to several people is not guaranteed to be right, but it is more likely to be well informed and well considered, and you are more likely to stand behind it later.
+claude-sonnet-5-5	skill	essay05	orc	When we face a hard choice, the first person we ask is usually the one who comes to mind fastest: a parent, a close friend, a mentor.
+claude-sonnet-5-5	skill	essay05	orc	Each retelling makes you sharpen the question, drop details that don't matter and notice ones you had skipped.
+claude-sonnet-5-5	skill	essay05	orc	The questions advisers ask in return, such as "Have you considered what happens if it fails?", can expose assumptions you didn't know you held.
+claude-sonnet-5-5	skill	essay05	gap	Advice from people who know little about the subject adds noise, not insight.

@@ -1,0 +1,43 @@
+{
+ "id": "essay04",
+ "setting": "essay",
+ "arm": "skill",
+ "sample": 1,
+ "model": "claude-opus-5-5",
+ "text": "# Let Students Design Their Own Summer Projects\n\nEvery June, students leave school with a summer project assignment. Most of them put it off until August, finish it in a rush, and forget it by September. Our school is now deciding who should design these projects: teachers or students. I believe students should design their own projects, with teachers approving the plan and checking in along the way. This approach leads to more effort, deeper learning, and skills that matter after graduation.\n\n## Students work harder on what they choose\n\nThe biggest problem with summer projects is not difficulty. It is motivation. Over a long break, no teacher is around to remind students to keep working. The only thing that keeps a student going in July is real interest in the work.\n\nWhen students pick their own topic, that interest is already there. A student who loves baseball might track a season's statistics and look for patterns. A student who cares about the local creek might test its water every week. These students do not need to be pushed, because they want to know the answer. Compare that with a teacher-assigned reading log, which many students treat as a chore to finish as fast as possible. Psychologists have studied this for decades. People who feel they have a choice in their work tend to stay with it longer and do it more carefully.\n\n## Learning goes deeper when students ask the question\n\nIn a teacher-designed project, the teacher has already done the hardest thinking. They chose the question, decided what counts as an answer, and planned the steps. The student mostly follows directions.\n\nIn a student-designed project, the student has to do that thinking. They must decide what question is worth asking, figure out how to answer it, and change the plan when something goes wrong. These are the skills that school is supposed to build. A student who spends a summer working out why their tomato plants keep dying learns more about the scientific method than one who fills in a worksheet about it.\n\n## It prepares students for life after school\n\nAfter graduation, no one will hand students a detailed set of instructions. In college, they will choose research topics. At work, they will be expected to spot problems and propose solutions. Even in daily life, people have to set their own goals and manage their own time. A summer project that students design themselves is a low-risk chance to practice all of this. If a plan fails, the cost is small, and the lesson is valuable.\n\n## Answering the concerns\n\nSupporters of teacher-designed projects raise fair points. The first is that some students will choose something too easy or will not finish at all. The second is that teachers can make sure the project connects to next year's class.\n\nBoth concerns can be solved without taking away student choice. Teachers can require each student to submit a short proposal before summer begins. The proposal would state the question, the plan, and what the student will hand in. A teacher would approve it or ask for changes, which keeps the projects challenging. Teachers could also set broad themes tied to the coming year, such as \"measure something in your neighborhood\" for a science class, and let students choose the details within that theme. A brief check-in at midsummer, by email or a shared online folder, would help students who are stuck.\n\nSome students may feel lost without clear directions. For them, teachers can offer a short list of sample projects as a starting point. Students who want more structure can pick one and adapt it. Those who already have an idea can go their own way.\n\n## Conclusion\n\nTeacher-designed projects are easier to grade and easier to plan, but they too often produce work that students rush through and forget. Student-designed projects, guided by a proposal and a teacher's approval, give students a reason to care about their work. They also teach students how to ask good questions and manage a long task on their own. Our school should let students design their summer projects, and trust them to rise to the challenge.",
+ "cost_usd": 0.03543980000000001,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1324,
+  "cache_read_input_tokens": 5999,
+  "output_tokens": 1182,
+  "output_tokens_details": {
+   "thinking_tokens": 52
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1324,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1182,
+    "cache_read_input_tokens": 5999,
+    "cache_creation_input_tokens": 1324,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1324
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

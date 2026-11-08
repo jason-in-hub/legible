@@ -1,0 +1,43 @@
+{
+ "id": "essay04",
+ "setting": "essay",
+ "arm": "placebo",
+ "sample": 1,
+ "model": "claude-opus-5-5",
+ "text": "# Let Students Design Their Summer Projects\n\nEvery June, students leave school with a summer project in hand. Our school now has to decide who should design those projects: the teachers or the students themselves. Teacher-designed projects offer clear goals and consistent standards. Even so, I believe student-designed projects are the better choice. They build motivation, teach independence, and produce deeper learning. They work best when teachers still provide a simple structure.\n\n## Motivation Matters Most in Summer\n\nSummer is different from the school year. There are no daily classes, no bells, and no teacher in the room. Students work on their own time, often with many distractions. In that setting, motivation decides whether a project gets done well or just gets done.\n\nPeople work harder on things they care about. A student who loves skateboarding might study the physics of ramps. A student who helps at a family restaurant might track costs and design a better menu. These students will spend extra hours on their projects because the topics matter to them. A teacher-assigned project on a fixed topic rarely inspires that kind of effort. Many students will rush through it in the last week of August.\n\n## Independence Is a Skill Worth Teaching\n\nSchool usually tells students what to learn, how to learn it, and when it is due. That approach has its place. However, adult life does not work that way. Jobs, college, and personal goals all require people to choose a problem, make a plan, and follow through without being told each step.\n\nA student-designed project lets students practice these skills. They must pick a question that is interesting but manageable. They must decide what resources they need. They must manage their own schedule. When a plan fails, they must adjust it. These are hard skills to learn from a worksheet. Summer is a good time to practice them, because the stakes are low and the time is flexible.\n\n## Deeper Learning Comes From Real Questions\n\nWhen students choose their own questions, they often go further than any assignment would require. They follow their curiosity. They connect ideas across subjects. A project on growing vegetables might combine biology, math, and writing in a natural way.\n\nTeacher-designed projects can be excellent, but they often have one expected answer or one expected format. Students learn to guess what the teacher wants. Student-designed projects reward a different habit: asking \"What do I want to find out?\" That habit leads to real understanding instead of memorized results.\n\n## Answering the Concerns\n\nSupporters of teacher-designed projects raise fair points. Some students may choose topics that are too easy. Others may feel lost without clear directions. Grading very different projects can also be difficult.\n\nThese problems have practical solutions. Teachers can give a short framework rather than a full assignment. For example, every project could require:\n\n- a clear question or goal,\n- a plan approved before school ends,\n- evidence of research or practice over the summer, and\n- a final product and a short reflection.\n\nTeachers can also offer a list of sample ideas for students who feel stuck. A shared rubric can focus on effort, thinking, and growth instead of a single correct answer. This keeps standards fair while leaving the choice of topic to the student.\n\n## Conclusion\n\nSummer projects should help students grow, not just keep them busy. Student-designed projects do this better. They give students a reason to care, a chance to practice independence, and room to learn deeply. Teachers still play an important role. They set expectations, approve plans, and guide students who need help. But the project itself should belong to the student. When students own their work, they are far more likely to finish it well and to remember what they learned.",
+ "cost_usd": 0.033932000000000004,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1398,
+  "cache_read_input_tokens": 0,
+  "output_tokens": 1137,
+  "output_tokens_details": {
+   "thinking_tokens": 42
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1398,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1137,
+    "cache_read_input_tokens": 0,
+    "cache_creation_input_tokens": 1398,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1398
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}

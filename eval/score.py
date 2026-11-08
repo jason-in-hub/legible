@@ -33,7 +33,7 @@ COMP_VERBS = {"know", "think", "say", "believe", "realize", "notice", "find", "f
 ANIMATE_VERBS = {"expect", "want", "ask", "promise", "swallow", "bite", "eat", "believe", "decide", "hope", "love",
                  "hate", "refuse", "insist", "forget", "remember", "misunderstand", "understand", "ignore", "care",
                  "worry", "demand", "crave", "beg", "fear", "whisper", "scream", "fight", "hunt", "chase", "forgive",
-                 "punish", "trust", "wonder", "pretend", "wish", "enjoy", "complain", "earn", "know", "think", "feel",
+                 "punish", "trust", "wonder", "pretend", "wish", "enjoy", "complain", "earn", "know", "think",
                  "lie", "hide", "judge", "notice", "realize", "grieve", "mourn", "celebrate", "sneak", "starve", "breathe",
                  "sleep", "die", "argue", "agree", "plead", "dare"}
 ANIMATE_NOUNS = {"person", "people", "user", "student", "teacher", "parent", "partner", "friend", "kid", "child",
@@ -44,7 +44,7 @@ ANIMATE_NOUNS = {"person", "people", "user", "student", "teacher", "parent", "pa
                  "everybody", "one", "viewer", "audience", "director", "filmmaker", "animal", "pet", "trainer", "vet",
                  "breed", "officer", "police", "finder", "candidate", "recruiter", "mentor", "coach", "staff", "volunteer",
                  "adviser", "advisor", "expert", "doctor", "company", "school", "government", "administrator", "peer",
-                 "classmate", "brain", "mind", "body", "eye", "ear", "heart"}
+                 "classmate", "other", "critic", "supporter", "opponent", "girl", "boy", "counselor", "graduate", "senior", "relative", "salesperson", "outlier", "rescue", "shelter", "someone", "anyone", "everyone", "brain", "mind", "body", "eye", "ear", "heart"}
 ANIMATE_PRON = {"i", "you", "he", "she", "we", "they", "who", "me", "him", "her", "us", "them", "yourself", "myself"}
 
 
@@ -127,7 +127,7 @@ def analyse(text: str) -> dict:
                 # check 1: inanimate subject, animate-only verb
                 if t.dep_ == "nsubj" and t.head.pos_ == "VERB" and t.head.lemma_.lower() in ANIMATE_VERBS and is_inanimate(t):
                     c["inanim"] += 1
-                    hits.append(("inanim", s.text))
+                    hits.append(("inanim", f"[{t.text} -> {t.head.text}] " + s.text))
     num = sum(c["bin_sum"][b] for b in BINS)
     return {"words": c["words"], "sents": c["sents"], "long_gap": c["long_gap"], "stack": c["stack"],
             "orc_red": c["orc_red"], "orc_that": c["orc_that"], "comp": c["comp"], "comp_omit": c["comp_omit"],

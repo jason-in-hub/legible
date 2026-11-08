@@ -1,0 +1,43 @@
+{
+ "id": "essay05",
+ "setting": "essay",
+ "arm": "skill",
+ "sample": 1,
+ "model": "claude-opus-5-5",
+ "text": "# Why Asking More Than One Person Leads to Better Choices\n\nWhen people face a hard decision, such as whether to take a new job, how to handle a conflict with a friend, or which college to attend, they often ask for advice. Many stop after asking one person. Talking to several people takes more time, but it usually leads to a better decision. Each person sees the problem differently, and together they give a fuller picture than any one of them can.\n\n## Every adviser has blind spots\n\nNo one knows everything. A parent may understand your character better than anyone, but may know little about the field you want to work in. A teacher may know the subject well but not know about your money worries at home. A friend your own age may understand how you feel but have no more experience than you do. Each person gives advice based on what they have lived through and what they happen to know.\n\nWhen you ask only one person, you also take on their blind spots without noticing them. When you ask several, the gaps in one person's advice are often filled by someone else. One adviser might point out a cost you never considered. Another might mention an option you didn't know existed.\n\n## Different opinions help you notice bias\n\nAdvice is rarely neutral. People who care about you may want you to stay close to home, play it safe, or make the choice they would have made. Someone else may push you toward risk because they regret not taking chances themselves. This doesn't mean their advice is bad, but it is shaped by their own hopes and fears.\n\nIf you hear only one view, it is hard to tell how much of it is about you and how much is about the person giving it. When you hear from several people, patterns appear. If four people with different backgrounds all warn you about the same problem, that warning is probably worth taking seriously. If only one person raises a concern and no one else sees it, you can ask whether it reflects your situation or that person's own experience.\n\n## Disagreement makes you think harder\n\nIt can feel frustrating when two people give you opposite advice. But disagreement is useful. It forces you to ask *why* they disagree. Maybe one person values security and the other values freedom. Maybe one is thinking about the next year and the other about the next ten years. Once you see the reasons behind each view, you can decide which reasons matter most to you.\n\nThis process also helps you understand your own values. Sometimes you only realize what you want when someone suggests the opposite and you feel yourself resist. In that sense, a range of opinions helps you consult yourself more clearly.\n\n## Explaining the problem more than once clarifies it\n\nEach time you describe your situation to a new person, you have to put it into words again. Often you notice details you skipped the first time, or you realize the real question is different from the one you started with. A student who asks \"Should I study engineering or art?\" may discover, after explaining it to three people, that the real worry is whether their parents will be disappointed. Talking to several people gives you several chances to understand your own problem.\n\n## Some limits\n\nAsking more people is not always better without limit. If you ask too many, you may get overwhelmed, or keep asking until someone tells you what you already wanted to hear. It also matters *whom* you ask. Three people who think exactly alike give you little more than one. The goal is not to count votes but to gather different, informed views. And in the end, the decision belongs to you. Advisers can help you see the choice clearly, but they will not live with the result.\n\n## Conclusion\n\nSeeking several opinions helps because no single person has the full picture. Different advisers bring different knowledge, reveal each other's biases, and raise points you might have missed. Their disagreements push you to think about what you value, and explaining your situation again and again helps you understand it better. Used with care, multiple opinions don't make the decision for you. They give you what you need to make it well.",
+ "cost_usd": 0.0356518,
+ "usage": {
+  "input_tokens": 2,
+  "cache_creation_input_tokens": 1333,
+  "cache_read_input_tokens": 5999,
+  "output_tokens": 1189,
+  "output_tokens_details": {
+   "thinking_tokens": 36
+  },
+  "server_tool_use": {
+   "web_search_requests": 0,
+   "web_fetch_requests": 0
+  },
+  "service_tier": "standard",
+  "cache_creation": {
+   "ephemeral_1h_input_tokens": 1333,
+   "ephemeral_5m_input_tokens": 0
+  },
+  "inference_geo": "global",
+  "iterations": [
+   {
+    "input_tokens": 2,
+    "output_tokens": 1189,
+    "cache_read_input_tokens": 5999,
+    "cache_creation_input_tokens": 1333,
+    "cache_creation": {
+     "ephemeral_5m_input_tokens": 0,
+     "ephemeral_1h_input_tokens": 1333
+    },
+    "type": "message"
+   }
+  ],
+  "speed": "standard",
+  "fallback_credit": null
+ }
+}
