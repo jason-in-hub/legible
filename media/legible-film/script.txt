@@ -1,0 +1,9 @@
+# The film's own lines. The two quoted model sentences are exhibits, not copy, and are left out.
+**Name:** legible
+0.2 | legible is a writing skill for Claude.
+1.8 | It fixes sentences readers must reread.
+4.0 | Conversations do not *eat*.
+6.0 | The plain version reads *once*.
+9.8 | The *verb* waits eight words.
+12.2 | Two short sentences read *once*.
+14.6 | Get legible at github.com/jason-in-hub/UnderstandingMaxxing
