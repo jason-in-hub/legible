@@ -75,7 +75,7 @@ Sepia's own research ledger records this paper as "Consulted, no rule" (commit o
 
 - The paper is English-only and ran no reader experiment. The reading-cost claims come from earlier psycholinguistics.
 - The seven checks and the "plain-translation test" are this skill's inferences. They haven't been tested as writing interventions.
-- No eval suite yet. The obvious next step is an A/B: the same prompts with and without the skill, scored with the paper's own spaCy features (dependency length, stacked nouns, reduced relatives) plus a human first-read time.
+- **The A/B eval ([`eval/`](eval/README.md)) is a mixed result.** Against no instruction, the skill wins the blind judge 32–2 with 6 ties (p ≈ 7e-8), but partly by saying less: the judge rated the baseline more complete in 28 of 40 pairs. Against a one-sentence "write clearly" instruction, it loses 7–15 with 18 ties (not significant). In single-turn use, the skill doesn't yet beat the cheap prompt. Next tests: a slim no-examples variant, revise mode, and long multi-turn sessions.
 
 ## About the animation
 

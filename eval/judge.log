@@ -30,3 +30,60 @@ claude-opus-5-5 code05 base skill
 claude-opus-5-5 code05 placebo other
 claude-opus-5-5 essay01 base skill
 claude-opus-5-5 essay01 placebo tie
+claude-opus-5-5 essay02 base skill
+claude-opus-5-5 essay02 placebo other
+claude-opus-5-5 essay03 base skill
+claude-opus-5-5 essay03 placebo other
+claude-opus-5-5 essay04 base skill
+claude-opus-5-5 essay04 placebo tie
+claude-opus-5-5 essay05 base skill
+claude-opus-5-5 essay05 placebo other
+claude-sonnet-5-5 chat01 base tie
+claude-sonnet-5-5 chat01 placebo other
+claude-sonnet-5-5 chat02 base tie
+claude-sonnet-5-5 chat02 placebo tie
+claude-sonnet-5-5 chat03 base skill
+claude-sonnet-5-5 chat03 placebo tie
+claude-sonnet-5-5 chat04 base other
+claude-sonnet-5-5 chat04 placebo tie
+claude-sonnet-5-5 chat05 base tie
+claude-sonnet-5-5 chat05 placebo other
+claude-sonnet-5-5 chat06 base skill
+claude-sonnet-5-5 chat06 placebo tie
+claude-sonnet-5-5 chat07 base skill
+claude-sonnet-5-5 chat07 placebo tie
+claude-sonnet-5-5 chat08 base skill
+claude-sonnet-5-5 chat08 placebo other
+claude-sonnet-5-5 chat09 base skill
+claude-sonnet-5-5 chat09 placebo other
+claude-sonnet-5-5 chat10 base skill
+claude-sonnet-5-5 chat10 placebo skill
+claude-sonnet-5-5 code01 base skill
+claude-sonnet-5-5 code01 placebo tie
+claude-sonnet-5-5 code02 base skill
+claude-sonnet-5-5 code02 placebo other
+claude-sonnet-5-5 code03 base skill
+claude-sonnet-5-5 code03 placebo other
+claude-sonnet-5-5 code04 base skill
+claude-sonnet-5-5 code04 placebo tie
+claude-sonnet-5-5 code05 base other
+claude-sonnet-5-5 code05 placebo other
+claude-sonnet-5-5 essay01 base skill
+claude-sonnet-5-5 essay01 placebo tie
+claude-sonnet-5-5 essay02 base skill
+claude-sonnet-5-5 essay02 placebo tie
+claude-sonnet-5-5 essay03 base skill
+claude-sonnet-5-5 essay03 placebo other
+claude-sonnet-5-5 essay04 base skill
+claude-sonnet-5-5 essay04 placebo skill
+claude-sonnet-5-5 essay05 base skill
+claude-sonnet-5-5 essay05 placebo tie
+# Blind pairwise judge (judge: claude-opus-5-5; sample 1 per prompt; order randomised)
+
+| model | skill vs | n | skill clearer | tie | other clearer | rereads/response skill | other | more complete: skill | same | other |
+|---|---|---|---|---|---|---|---|---|---|---|
+| claude-opus-5-5 | base | 20 | 17 | 3 | 0 | 0.25 | 1.10 | 2 | 4 | 14 |
+| claude-opus-5-5 | placebo | 20 | 5 | 8 | 7 | 0.65 | 0.60 | 5 | 7 | 8 |
+| claude-sonnet-5-5 | base | 20 | 15 | 3 | 2 | 0.45 | 1.20 | 1 | 5 | 14 |
+| claude-sonnet-5-5 | placebo | 20 | 2 | 10 | 8 | 0.75 | 0.35 | 8 | 7 | 5 |
+DONE
