@@ -1,0 +1,9 @@
+{
+ "id": "w14",
+ "setting": "code",
+ "arm": "placebo",
+ "model": "claude-sonnet-5-5",
+ "prompt": "Why do all my buttons alert 3?\n\n```js\nfor (var i = 0; i < 3; i++) {\n  const b = document.createElement('button');\n  b.onclick = () => alert(i);\n  document.body.append(b);\n}\n```",
+ "text": "The cause is `var`. A `var` variable belongs to the whole function (or the global scope here), not to each pass of the loop. So there is only one `i`, and all three click handlers share it.\n\nHere is what happens:\n\n1. The loop runs and creates three buttons. Each handler holds a reference to the same `i`.\n2. The loop ends when `i` reaches 3.\n3. You click a button later, and the handler reads `i`, which is now 3.\n\nThe fix is to use `let` instead of `var`. A `let` variable in a `for` loop gets a fresh copy for each pass, so each handler keeps its own value:\n\n```js\nfor (let i = 0; i < 3; i++) {\n  const b = document.createElement('button');\n  b.textContent = `Button ${i}`;\n  b.onclick = () => alert(i);\n  document.body.append(b);\n}\n```\n\nNow the buttons alert 0, 1, and 2. I also added `textContent` so the buttons show a label. Without it, they appear as empty, nearly invisible buttons.\n\nIf you can't use `let`, you can capture the value another way, such as with a function that takes `i` as an argument:\n\n```js\nfor (var i = 0; i < 3; i++) {\n  const b = document.createElement('button');\n  b.onclick = ((n) => () => alert(n))(i);\n  document.body.append(b);\n}\n```\n\nHere each call receives its own `n`, so the value is fixed at the moment the button is created.",
+ "cost_usd": 0.010452
+}

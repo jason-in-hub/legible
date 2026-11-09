@@ -1,0 +1,9 @@
+{
+ "id": "w14",
+ "setting": "code",
+ "arm": "base",
+ "model": "claude-sonnet-5-5",
+ "prompt": "Why do all my buttons alert 3?\n\n```js\nfor (var i = 0; i < 3; i++) {\n  const b = document.createElement('button');\n  b.onclick = () => alert(i);\n  document.body.append(b);\n}\n```",
+ "text": "Because `var i` is function-scoped (or global here), not block-scoped. There's only **one** `i` shared by all three click handlers. The loop finishes with `i === 3` (the value that made the condition `i < 3` false), and the handlers don't read `i` until you click, so each one sees 3.\n\n## Fix: use `let`\n\n```js\nfor (let i = 0; i < 3; i++) {\n  const b = document.createElement('button');\n  b.onclick = () => alert(i);\n  document.body.append(b);\n}\n```\n\n`let` in a `for` loop header creates a **fresh binding for each iteration**, so each arrow function closes over its own `i` (0, 1, 2).\n\n## Alternatives\n\n- **IIFE (old-school):**\n  ```js\n  for (var i = 0; i < 3; i++) {\n    (function (j) {\n      b.onclick = () => alert(j);\n    })(i);\n  }\n  ```\n- **Capture in a block-scoped const:**\n  ```js\n  for (var i = 0; i < 3; i++) {\n    const n = i;\n    b.onclick = () => alert(n);\n  }\n  ```\n- **`forEach`/`Array.from`**, where the callback parameter is its own scope per call.\n\nUsing `let`/`const` and avoiding `var` is the simplest way to sidestep this class of bug.",
+ "cost_usd": 0.009994
+}

@@ -1,0 +1,9 @@
+{
+ "id": "w11",
+ "setting": "code",
+ "arm": "placebo",
+ "model": "claude-sonnet-5-5",
+ "prompt": "Why does this return None sometimes even though I'm sure the key exists?\n\n```python\ndef find_user(users, name):\n    for u in users:\n        if u['name'] == name:\n            return u\n    return None\n\nusers = [{'name': 'Ana '}, {'name': 'Bo'}]\nprint(find_user(users, 'Ana'))\n```",
+ "text": "The key exists, but the value doesn't match. The first user's name is `'Ana '` with a trailing space, and you're searching for `'Ana'`. Python compares strings exactly, so `'Ana ' == 'Ana'` is `False`. The loop never finds a match and falls through to `return None`.\n\n**Fix 1: clean the data when you load it**\n\nThis is usually the best option, because the bad value is fixed once at the source.\n\n```python\nusers = [{'name': 'Ana '.strip()}, {'name': 'Bo'}]\n```\n\n**Fix 2: make the comparison forgiving**\n\n```python\ndef find_user(users, name):\n    target = name.strip()\n    for u in users:\n        if u['name'].strip() == target:\n            return u\n    return None\n```\n\nIf you also want to ignore case, use `.strip().casefold()` on both sides.\n\n**How to spot this kind of bug**\n\nPrint the values with `repr()`, which shows hidden whitespace:\n\n```python\nfor u in users:\n    print(repr(u['name']))\n# 'Ana '\n# 'Bo'\n```\n\nA plain `print` would show `Ana` and hide the trailing space. `repr` makes it visible. Other invisible culprits are tabs, newlines, and non-breaking spaces (`\\xa0`). Note that `.strip()` handles `\\xa0` in Python 3 strings, but look-alike Unicode characters in the middle of a name will not be fixed by it.",
+ "cost_usd": 0.010565999999999999
+}

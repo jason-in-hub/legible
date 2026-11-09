@@ -16,10 +16,10 @@ export const LFPS = 30;
 
 // ---- timeline (absolute frames, 30 fps) --------------------------------------------------------------------------
 const T = {
-  l1In: 0, l1Out: 46, l2In: 54, l2Out: 104, // the statement and the promise
-  aIn: 112, aRead: 124, aStep: 7, aBack: 172, aFix: 202, aGlide: 222, aOut: 280, // exhibit A: prediction
-  bIn: 288, bRead: 300, bStep: 6, bBack: 372, bFix: 404, bGlide: 424, bOut: 500, // exhibit B: memory
-  end: 508, total: 600,
+  l1In: 0, l1Out: 34, l2In: 38, l2Out: 74, // the statement and the promise
+  aIn: 76, aRead: 86, aStep: 5, aBack: 130, aFix: 146, aGlide: 158, aOut: 196, // exhibit A: prediction
+  bIn: 198, bRead: 208, bStep: 4, bBack: 260, bFix: 280, bGlide: 292, bOut: 336, // exhibit B: memory
+  end: 340, total: 420,
 };
 export const LTOTAL = T.total;
 

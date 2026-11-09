@@ -1,0 +1,9 @@
+{
+ "id": "w11",
+ "setting": "code",
+ "arm": "base",
+ "model": "claude-sonnet-5-5",
+ "prompt": "Why does this return None sometimes even though I'm sure the key exists?\n\n```python\ndef find_user(users, name):\n    for u in users:\n        if u['name'] == name:\n            return u\n    return None\n\nusers = [{'name': 'Ana '}, {'name': 'Bo'}]\nprint(find_user(users, 'Ana'))\n```",
+ "text": "The issue is in your data, not the function. The first entry is `'Ana '` with a **trailing space**, so `'Ana ' == 'Ana'` is `False`. No entry matches, and the loop falls through to `return None`.\n\n**Fixes**\n\n1. Normalize the comparison in the function:\n\n```python\ndef find_user(users, name):\n    name = name.strip()\n    for u in users:\n        if u['name'].strip() == name:\n            return u\n    return None\n```\n\n2. Clean the data when it's loaded, so every lookup benefits:\n\n```python\nusers = [{'name': n.strip()} for n in raw_names]\n```\n\n**Debugging tip:** when a string comparison fails unexpectedly, print the `repr()` of the values. It makes hidden whitespace visible:\n\n```python\nprint(repr(u['name']), repr(name))  # 'Ana ' 'Ana'\n```\n\nOther invisible culprits worth checking if stripping doesn't fix it:\n\n- **Case differences**: use `.casefold()` for case-insensitive matching.\n- **Non-breaking spaces (`\\xa0`)**: `.strip()` handles these in Python 3 for `str`, but they can still be confusing in output.\n- **Unicode normalization**: `'é'` can be one character or `'e'` plus a combining accent. Use `unicodedata.normalize('NFC', s)` on both sides.\n\nAlso note that if a dict were missing the `'name'` key entirely, you'd get a `KeyError`, not `None`. So getting `None` means the key exists but no value matched.",
+ "cost_usd": 0.010816
+}

@@ -1,0 +1,9 @@
+{
+ "id": "w11",
+ "setting": "code",
+ "arm": "full",
+ "model": "claude-sonnet-5-5",
+ "prompt": "Why does this return None sometimes even though I'm sure the key exists?\n\n```python\ndef find_user(users, name):\n    for u in users:\n        if u['name'] == name:\n            return u\n    return None\n\nusers = [{'name': 'Ana '}, {'name': 'Bo'}]\nprint(find_user(users, 'Ana'))\n```",
+ "text": "The key exists, but the value doesn't match. The first user's name is `'Ana '`, with a trailing space, and `'Ana ' == 'Ana'` is `False`. No user matches, so the loop ends and the function returns `None`.\n\nYou can confirm it by printing the `repr`, which shows whitespace:\n\n```python\nprint(repr(users[0]['name']))  # 'Ana '\n```\n\n**Fix 1: compare stripped values**\n\n```python\ndef find_user(users, name):\n    for u in users:\n        if u['name'].strip() == name.strip():\n            return u\n    return None\n```\n\n**Fix 2: clean the data where it enters**\n\nIf the trailing space comes from user input, a file or a database, strip it when you load the data. Then every later comparison works without extra calls:\n\n```python\nusers = [{'name': n.strip()} for n in raw_names]\n```\n\nFix 2 is usually better, because the bad data won't cause the same bug elsewhere. If you also want to ignore case, use `.strip().casefold()` on both sides.\n\nAnother cause of this symptom is a non-breaking space (`'\\xa0'`) from copied web text. `str.strip()` removes it too, but it looks identical to a normal space when printed, so `repr` is the quickest way to spot it.",
+ "cost_usd": 0.010793899999999999
+}

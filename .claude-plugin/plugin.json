@@ -1,0 +1,10 @@
+{
+  "name": "legible",
+  "version": "0.1.0",
+  "description": "Write so a reader understands each sentence on the first read. Seven sentence-level checks from Clark, Martin & Mahowald (2026), arXiv:2610.29162.",
+  "author": { "name": "jason-in-hub" },
+  "homepage": "https://github.com/jason-in-hub/legible",
+  "repository": "https://github.com/jason-in-hub/legible",
+  "license": "MIT",
+  "keywords": ["writing", "readability", "clarity", "skill"]
+}

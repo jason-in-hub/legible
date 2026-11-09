@@ -1,0 +1,9 @@
+{
+ "id": "w08",
+ "setting": "chat",
+ "arm": "full",
+ "model": "claude-sonnet-5-5",
+ "prompt": "Is it normal that I get nervous before every single presentation even after doing like fifty of them? Will it ever stop?",
+ "text": "Yes, it's normal. Fifty presentations is a lot, and plenty of people with hundreds behind them still get nervous. For most people it doesn't disappear entirely.\n\nWhat usually changes with experience is how the nerves feel and how you handle them. They tend to be milder, they fade sooner once you start talking, and they scare you less. You stop reading the jitters as a sign that something will go wrong. Many experienced speakers say a little nervousness keeps them sharp, and they'd worry if it vanished.\n\nA few things help:\n\n- **Treat the feeling as energy, not danger.** Telling yourself \"I'm excited\" works better than \"calm down,\" because the body is doing the same thing either way.\n- **Know your first minute cold.** Most of the nerves peak at the start, so a well-rehearsed opening gets you past the worst of it.\n- **Slow your exhale.** Breathing out longer than you breathe in, for a minute or two beforehand, lowers your heart rate.\n- **Practice out loud, ideally in the room or setup you'll use.** Fewer surprises means less to be nervous about.\n- **Move a little before you start.** A short walk or some stretching burns off adrenaline.\n\nIt's worth getting some support if the nervousness is intense enough that you avoid presentations, lose sleep for days beforehand, or have panic symptoms during them. Therapy for performance anxiety works well, and it's a common reason people seek it out.\n\nIf your nerves are uncomfortable but you still get through each talk, that's just what the typical experience looks like.",
+ "cost_usd": 0.0125499
+}

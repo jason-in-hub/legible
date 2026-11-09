@@ -1,0 +1,9 @@
+{
+ "id": "w03",
+ "setting": "chat",
+ "arm": "slim",
+ "model": "claude-sonnet-5-5",
+ "prompt": "honest question: is it worth learning to cook properly if i live alone and mostly eat the same five things",
+ "text": "Probably yes, but not in the way \"learning to cook properly\" usually suggests. You don't need a wide repertoire or fancy techniques. A small set of fundamentals will make your five things better, cheaper, and less boring to eat.\n\n**What's worth learning:**\n- **Seasoning and heat control.** Salting well, using acid, and knowing when a pan is hot enough make the biggest difference to any dish.\n- **A few base methods.** Roasting, sautéing, and cooking grains and beans well cover most meals.\n- **Batch cooking and storage.** Living alone, this saves the most time and money.\n- **Small variations.** Changing a sauce or a spice lets the same five meals feel like fifteen.\n\n**What probably isn't worth it:**\n- Learning dozens of recipes you'll make once.\n- Buying specialty equipment.\n- Technique for its own sake, such as knife cuts, unless you enjoy it.\n\nIf you're happy with what you eat and it's reasonably healthy, you have no real problem to fix. In that case, spend a weekend or two getting better at your five dishes and stop there. If you're bored, spending too much on takeout, or want more variety in what you eat, learning more will pay off quickly.\n\nDo you like what you're eating now, or is something about it bugging you?",
+ "cost_usd": 0.012447999999999999
+}

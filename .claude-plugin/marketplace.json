@@ -1,0 +1,12 @@
+{
+  "name": "legible",
+  "owner": { "name": "jason-in-hub" },
+  "plugins": [
+    {
+      "name": "legible",
+      "source": "./",
+      "description": "Reader-first writing skill: fixes the sentence constructions that make AI text hard to read.",
+      "version": "0.1.0"
+    }
+  ]
+}

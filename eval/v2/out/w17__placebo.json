@@ -1,0 +1,9 @@
+{
+ "id": "w17",
+ "setting": "code",
+ "arm": "placebo",
+ "model": "claude-sonnet-5-5",
+ "prompt": "git says 'detached HEAD' and my commits seem to vanish when I switch branches. What happened and how do I get them back?",
+ "text": "## What happened\n\n\"Detached HEAD\" means you are not on a branch. HEAD points straight at a specific commit instead. This usually happens when you check out a commit hash, a tag, or a remote branch like `origin/main`.\n\nCommits you make in this state belong to no branch. When you switch to a branch, nothing points to them anymore, so they look gone. They are not deleted yet. Git keeps them for a while (typically at least 30 days) until garbage collection removes them.\n\n## How to get them back\n\n**1. Find the lost commits with the reflog:**\n\n```bash\ngit reflog\n```\n\nLook for the entries from the time you were detached. You'll see lines like:\n\n```\na1b2c3d HEAD@{3}: commit: my lost work\n```\n\nNote the hash of the newest commit you made.\n\n**2. Put a branch on it:**\n\n```bash\ngit branch rescue a1b2c3d\n```\n\nOr switch to it directly:\n\n```bash\ngit switch -c rescue a1b2c3d\n```\n\nYour commits are now safe on the `rescue` branch. You can merge it, rebase it, or cherry-pick from it as you like.\n\n**If you are still in the detached state** (you haven't switched away yet), just run:\n\n```bash\ngit switch -c my-branch\n```\n\nThis creates a branch at your current position and keeps everything.\n\n## How to avoid it next time\n\n- To start work from a remote branch, use `git switch branch-name` rather than `git checkout origin/branch-name`.\n- If git warns you about a detached HEAD, create a branch before you commit.\n- Check `git status` or `git branch` before committing. It shows whether you are on a branch.\n\nIf the reflog doesn't show your commits, tell me what you ran before the problem started and I can help narrow it down.",
+ "cost_usd": 0.011236
+}

@@ -1,0 +1,9 @@
+{
+ "id": "w04",
+ "setting": "chat",
+ "arm": "placebo",
+ "model": "claude-sonnet-5-5",
+ "prompt": "Why do I feel more tired after sleeping 10 hours than after sleeping 7? I feel like that shouldn't happen.",
+ "text": "Feeling worse after 10 hours than after 7 is common, and there are several likely reasons.\n\n**Sleep inertia.** If you wake from deep sleep, you can feel groggy for 30 minutes to a few hours. Longer sleep can mean waking at a worse point in your sleep cycle.\n\n**Disrupted sleep timing.** Sleeping in shifts your body clock. Even a couple of hours can leave you feeling jet-lagged, sometimes called \"social jet lag.\"\n\n**Lower sleep quality.** Ten hours in bed doesn't always mean ten hours of good sleep. Extra time is often lighter or more fragmented, so you wake up less rested.\n\n**An underlying cause.** If you often need 10 hours and still feel tired, something may be disturbing your sleep. Common causes include:\n- Sleep apnea, where breathing briefly stops and you don't fully rest\n- Depression or anxiety\n- Low iron, thyroid problems, or vitamin D or B12 deficiency\n- Alcohol, cannabis, or certain medications\n\n**You may be catching up on a deficit.** If you were short on sleep earlier in the week, a long sleep can leave you groggy even though your body needed it.\n\n**What to try:**\n- Keep a consistent wake time, even on weekends.\n- Get bright light soon after waking.\n- Aim for the 7 to 9 hour range that works for you, rather than extra-long sleeps.\n- Avoid alcohol and late caffeine.\n\n**When to see a doctor:** If you regularly feel unrefreshed after a full night, snore loudly, wake gasping, or feel tired most of the day, it's worth getting checked. Sleep apnea and thyroid or iron problems are easy to test for and treatable.\n\nIf you'd like, tell me about your usual schedule and how you feel during the day, and I can help narrow down the likely cause.",
+ "cost_usd": 0.012022
+}

@@ -1,6 +1,6 @@
 # legible README film
 
-A 20 s, 1200×600, 30 fps silent loop, made once with [cinetic](https://github.com/Leonxlnx/cinetic) v1.5.1.
+A 14 s, 1200×600, 30 fps silent loop, made once with [cinetic](https://github.com/Leonxlnx/cinetic) v1.5.1.
 
 - `script.txt` holds the on-screen lines, checked with cinetic's `copy-check.py` (verdict: clear).
 - `Legible.tsx` is the single composition. It imports the cinetic Remotion starter's `brand/tokens`, `lib/anim`, `lib/measure` and `lib/FontGate`, so it builds only inside a cinetic scaffold.

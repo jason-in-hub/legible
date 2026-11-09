@@ -1,0 +1,9 @@
+{
+ "id": "w04",
+ "setting": "chat",
+ "arm": "full",
+ "model": "claude-sonnet-5-5",
+ "prompt": "Why do I feel more tired after sleeping 10 hours than after sleeping 7? I feel like that shouldn't happen.",
+ "text": "Feeling worse after 10 hours is common, and there are a few likely reasons.\n\n**Sleep inertia.** The grogginess you feel on waking is worse if you wake from deep sleep. A fixed alarm at 7 hours usually catches you at a convenient point in a sleep cycle. After 10 hours you wake at a less predictable point, and the grogginess can last an hour or more.\n\n**Your body clock shifts.** If you go to bed or wake much later than usual, your internal clock gets out of step with your schedule. It feels like mild jet lag. You also get light later in the morning, and morning light is one of the main signals that makes you feel alert.\n\n**Longer sleep isn't always better sleep.** If you slept 10 hours because you were catching up on lost sleep, the extra time may be lighter or more broken. Alcohol, a warm room, or untreated sleep apnea can all make long sleep less restful.\n\n**Small side effects.** You may wake dehydrated, hungry, or with a caffeine-withdrawal headache if you usually have coffee early.\n\n**Possible underlying cause.** If you feel tired after 9 or more hours of sleep most days, that can point to sleep apnea, depression, thyroid problems, or anemia. If this is a pattern and not an occasional bad morning, mention it to a doctor.\n\nTo test it yourself, keep the same wake time for a week, even on weekends, and get bright light or go outside within an hour of waking. Most people find their tiredness improves, and many find that 7 to 8 hours is enough.",
+ "cost_usd": 0.013263899999999999
+}

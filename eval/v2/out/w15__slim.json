@@ -1,0 +1,9 @@
+{
+ "id": "w15",
+ "setting": "code",
+ "arm": "slim",
+ "model": "claude-sonnet-5-5",
+ "prompt": "Explain why this Go program sometimes prints different output and how to make it deterministic.\n\n```go\nm := map[string]int{\"a\": 1, \"b\": 2, \"c\": 3}\nfor k, v := range m {\n    fmt.Println(k, v)\n}\n```",
+ "text": "## Why the output changes\n\nThe Go language deliberately does not define the order in which `range` visits map entries. The runtime also randomizes the starting point of each iteration, so two runs of the same program can print the keys in different orders. Go does this on purpose, so that programs don't come to depend on an order that was never guaranteed.\n\n## How to make it deterministic\n\nCollect the keys, sort them, then loop over the sorted keys and look up each value:\n\n```go\npackage main\n\nimport (\n    \"fmt\"\n    \"sort\"\n)\n\nfunc main() {\n    m := map[string]int{\"a\": 1, \"b\": 2, \"c\": 3}\n\n    keys := make([]string, 0, len(m))\n    for k := range m {\n        keys = append(keys, k)\n    }\n    sort.Strings(keys)\n\n    for _, k := range keys {\n        fmt.Println(k, m[k])\n    }\n}\n```\n\nThis always prints:\n\n```\na 1\nb 2\nc 3\n```\n\nOn Go 1.21 or later, you can use the standard library packages `maps` and `slices` instead:\n\n```go\nkeys := slices.Sorted(maps.Keys(m))\nfor _, k := range keys {\n    fmt.Println(k, m[k])\n}\n```\n\nIf you need a different order, such as by value, sort the keys with `sort.Slice` or `slices.SortFunc` and a custom comparison. If you need to keep insertion order, a map can't do that, so store the keys in a slice as you insert them, or use a slice of structs.",
+ "cost_usd": 0.012244
+}

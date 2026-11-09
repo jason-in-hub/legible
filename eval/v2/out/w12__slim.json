@@ -1,0 +1,9 @@
+{
+ "id": "w12",
+ "setting": "code",
+ "arm": "slim",
+ "model": "claude-sonnet-5-5",
+ "prompt": "My React component re-renders in an infinite loop. What's wrong?\n\n```jsx\nfunction List({ ids }) {\n  const [items, setItems] = useState([]);\n  useEffect(() => {\n    fetch('/api?ids=' + ids.join(',')).then(r => r.json()).then(setItems);\n  }, [{ ids }]);\n  return items.map(i => <Row key={i.id} {...i} />);\n}\n```",
+ "text": "The problem is the dependency array: `[{ ids }]`.\n\n`{ ids }` creates a new object on every render. React compares dependencies with `Object.is`, so a new object always counts as a change, even when `ids` holds the same values. The loop goes like this:\n\n1. The component renders and the effect runs.\n2. The fetch finishes and `setItems` updates state.\n3. The state change triggers a re-render, which creates a new `{ ids }` object.\n4. React sees a changed dependency and runs the effect again.\n\n**Fix:** pass `ids` directly.\n\n```jsx\nuseEffect(() => {\n  fetch('/api?ids=' + ids.join(',')).then(r => r.json()).then(setItems);\n}, [ids]);\n```\n\n**A second problem may remain.** If the parent passes a new array on each render, such as `<List ids={[1, 2, 3]} />`, then `ids` changes every time and you get the same loop. There are two ways to fix this:\n\n- Make the array stable in the parent, with `useMemo` or by defining it outside the component.\n- Depend on a string built from the array, inside `List`:\n\n```jsx\nconst key = ids.join(',');\n\nuseEffect(() => {\n  fetch('/api?ids=' + key).then(r => r.json()).then(setItems);\n}, [key]);\n```\n\nThe string version compares by value, so it only re-runs when the actual IDs change. It also makes the effect's dependency match what it uses.",
+ "cost_usd": 0.012404
+}

@@ -1,0 +1,9 @@
+{
+ "id": "w11",
+ "setting": "code",
+ "arm": "slim",
+ "model": "claude-sonnet-5-5",
+ "prompt": "Why does this return None sometimes even though I'm sure the key exists?\n\n```python\ndef find_user(users, name):\n    for u in users:\n        if u['name'] == name:\n            return u\n    return None\n\nusers = [{'name': 'Ana '}, {'name': 'Bo'}]\nprint(find_user(users, 'Ana'))\n```",
+ "text": "The key does exist, but the value doesn't match. The first user's name is `'Ana '` with a trailing space, so `'Ana ' == 'Ana'` is `False`. The loop never finds a match and the function falls through to `return None`.\n\nTo confirm, print the values with `repr`, which shows hidden whitespace:\n\n```python\nfor u in users:\n    print(repr(u['name']))\n# 'Ana '\n# 'Bo'\n```\n\nThere are two ways to fix it.\n\n**Clean the data** where it enters your program:\n\n```python\nusers = [{'name': n.strip()} for n in raw_names]\n```\n\n**Or compare more loosely** in the lookup:\n\n```python\ndef find_user(users, name):\n    target = name.strip()\n    for u in users:\n        if u['name'].strip() == target:\n            return u\n    return None\n```\n\nCleaning the data at the source is usually better, because the same stray space will cause problems elsewhere, such as in sets, dict keys, or database queries.\n\nIf the mismatch still happens after stripping, check for other differences: case (`'ana'` vs `'Ana'`), non-breaking spaces (`'\\xa0'`, which `strip()` does remove), or look-alike Unicode characters. `repr()` will show most of these.",
+ "cost_usd": 0.011614
+}

@@ -1,0 +1,9 @@
+{
+ "id": "w14",
+ "setting": "code",
+ "arm": "slim",
+ "model": "claude-sonnet-5-5",
+ "prompt": "Why do all my buttons alert 3?\n\n```js\nfor (var i = 0; i < 3; i++) {\n  const b = document.createElement('button');\n  b.onclick = () => alert(i);\n  document.body.append(b);\n}\n```",
+ "text": "`var` gives `i` function scope, so the whole loop shares one `i`. The click handlers don't run until after the loop ends, and by then `i` is 3. Each handler reads that same variable, so each one alerts 3.\n\nThe fix is to declare `i` with `let`, which creates a new `i` for each pass through the loop:\n\n```js\nfor (let i = 0; i < 3; i++) {\n  const b = document.createElement('button');\n  b.onclick = () => alert(i);\n  document.body.append(b);\n}\n```\n\nNow each handler keeps the `i` from its own iteration, so the buttons alert 0, 1 and 2.\n\nIf you have to keep `var`, copy the value into a variable that belongs to each iteration:\n\n```js\nfor (var i = 0; i < 3; i++) {\n  const n = i;\n  const b = document.createElement('button');\n  b.onclick = () => alert(n);\n  document.body.append(b);\n}\n```\n\nHere `const n` is block-scoped, so each pass gets its own `n`.",
+ "cost_usd": 0.010746
+}

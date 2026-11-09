@@ -1,0 +1,9 @@
+{
+ "id": "w14",
+ "setting": "code",
+ "arm": "full",
+ "model": "claude-sonnet-5-5",
+ "prompt": "Why do all my buttons alert 3?\n\n```js\nfor (var i = 0; i < 3; i++) {\n  const b = document.createElement('button');\n  b.onclick = () => alert(i);\n  document.body.append(b);\n}\n```",
+ "text": "`var` is scoped to the whole function (or the global scope here), not to each loop iteration. So there is only one `i`, and all three click handlers share it. The loop finishes before you click anything, and by then `i` is 3 (the value that made `i < 3` false). Each handler reads that same variable when it runs, so each alerts 3.\n\nThe fix is to use `let`, which creates a new `i` for each iteration:\n\n```js\nfor (let i = 0; i < 3; i++) {\n  const b = document.createElement('button');\n  b.onclick = () => alert(i);\n  document.body.append(b);\n}\n```\n\nNow the buttons alert 0, 1 and 2, because each arrow function captures the `i` from its own iteration.\n\nIf you can't use `let`, you can get the same effect by passing `i` into a function, so each handler gets its own copy:\n\n```js\nfor (var i = 0; i < 3; i++) {\n  const b = document.createElement('button');\n  b.onclick = ((n) => () => alert(n))(i);\n  document.body.append(b);\n}\n```",
+ "cost_usd": 0.0095019
+}
