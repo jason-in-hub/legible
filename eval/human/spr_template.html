@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reading study</title>
+<style>
+  :root { --bg:#f5f6f7; --ink:#0d0e10; --mute:#686d76; --acc:#08965a; --line:#d6d9de; }
+  @media (prefers-color-scheme: dark) { :root { --bg:#15171a; --ink:#eceef1; --mute:#9aa1ab; --acc:#4cc58a; --line:#33373d; } }
+  html,body { margin:0; background:var(--bg); color:var(--ink); font:18px/1.6 system-ui,-apple-system,"Segoe UI",sans-serif; }
+  main { max-width:720px; margin:0 auto; padding:32px 16px 64px; }
+  h1 { font-size:1.4rem; } .mute { color:var(--mute); font-size:.9rem; }
+  button { font:inherit; padding:10px 18px; border-radius:8px; border:1px solid var(--line); background:var(--ink); color:var(--bg); cursor:pointer; }
+  button.alt { background:transparent; color:var(--ink); } button:disabled { opacity:.4; cursor:default; }
+  #text { font:22px/1.9 ui-monospace,Menlo,Consolas,monospace; min-height:14em; word-break:normal; }
+  #text span { white-space:pre-wrap; } .masked { color:var(--mute); }
+  .choice { display:block; width:100%; text-align:left; margin:10px 0; }
+  .bar { height:4px; background:var(--line); border-radius:2px; margin:12px 0 24px; } .bar i { display:block; height:4px; background:var(--acc); border-radius:2px; width:0; }
+  textarea { width:100%; height:8em; font:12px ui-monospace,monospace; }
+</style>
+</head>
+<body><main id="app"></main>
+<script>
+/* ===== configuration (edit before launch) ===== */
+const CONFIG = {
+  consentText: "REPLACE WITH YOUR ETHICS-APPROVED CONSENT TEXT. This study takes about 15 minutes. You will read short paragraphs one word at a time and answer a question after each. We record your reading times and answers, and no personal information beyond your Prolific ID.",
+  submitUrl: "",            // optional: an endpoint that accepts a JSON POST (e.g. a Cloudflare Worker / Apps Script). Empty = download only.
+  completionUrl: "",        // e.g. "https://app.prolific.com/submissions/complete?cc=XXXXXXX"
+  minWordMs: 80,            // for the inclusion check only; analysis trimming lives in analyze_human.py
+};
+const STIMULI = /*STIMULI*/[];
+/* ============================================== */
+const COND = ["orig", "placebo", "skill"];
+const q = new URLSearchParams(location.search);
+const PID = q.get("PROLIFIC_PID") || q.get("pid") || "anon-" + Math.random().toString(36).slice(2, 8);
+const SEED = parseInt(q.get("lat") ?? Math.floor(Math.random() * 3), 10) % 3;   // latin-square offset (0,1,2)
+const app = document.getElementById("app");
+const log = { pid: PID, lat: SEED, started: new Date().toISOString(), ua: navigator.userAgent, trials: [] };
+const rnd = (a) => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const html = (s) => { app.innerHTML = s; window.scrollTo(0, 0); };
+const touch = matchMedia("(pointer: coarse)").matches && !matchMedia("(pointer: fine)").matches;
+
+function consent() {
+  if (touch) return html("<h1>Keyboard needed</h1><p>This study needs a computer keyboard (the space bar). Please return to Prolific and open it on a laptop or desktop.</p>");
+  html(`<h1>Reading study</h1><p>${CONFIG.consentText}</p><p><button id="go">I agree, continue</button></p>`);
+  document.getElementById("go").onclick = instructions;
+}
+function instructions() {
+  html(`<h1>How it works</h1>
+  <p>A paragraph appears as dashes. Press the <b>space bar</b> to reveal one word at a time. Each press shows the next word and hides the previous one.</p>
+  <p>Read at a natural pace, as you would read normally, and make sure you understand. After each paragraph you will answer a short question about it.</p>
+  <p>First, a short practice paragraph.</p><p><button id="go">Start practice</button></p>`);
+  document.getElementById("go").onclick = () => runTrial({ id: "practice", cond: "practice", text: "The village library opened in 1954 with about two hundred books. Volunteers carried them in by hand over a single weekend, and the first reader borrowed a book about bees.", questions: [{ q: "What was the first book about?", correct: "Bees", wrong: "Boats" }] }, 0, true, practiceDone);
+}
+function practiceDone() {
+  html(`<h1>Ready?</h1><p>The real study has ${STIMULI.length} paragraphs. You can take a short break between them.</p><p><button id="go">Begin</button></p>`);
+  document.getElementById("go").onclick = () => runAll(0);
+}
+const plan = () => rnd(STIMULI.map((s, i) => ({ id: s.id, cond: COND[(i + SEED) % 3], text: s[COND[(i + SEED) % 3]], questions: s.questions })));
+let PLAN = null;
+function runAll(i) {
+  PLAN = PLAN || plan();
+  if (i >= PLAN.length) return finish();
+  runTrial(PLAN[i], i, false, () => {
+    html(`<p>Paragraph ${i + 1} of ${PLAN.length} done.</p><p><button id="go">Next paragraph</button></p>`);
+    document.getElementById("go").onclick = () => runAll(i + 1);
+  });
+}
+function runTrial(item, idx, practice, done) {
+  const words = item.text.split(/\s+/);
+  const spans = words.map((w) => `<span class="masked">${"_".repeat(w.length)}</span> `).join("");
+  html(`<div class="bar"><i id="p"></i></div><div id="text">${spans}</div><p class="mute">Press the space bar to begin.</p>`);
+  const el = [...document.querySelectorAll("#text span")];
+  let k = -1, t0 = null; const rts = [];
+  const handler = (e) => {
+    if (e.code !== "Space") return; e.preventDefault();
+    const now = performance.now();
+    if (k >= 0) { rts.push(Math.round(now - t0)); el[k].textContent = "_".repeat(words[k].length); el[k].className = "masked"; }
+    k++;
+    if (k >= words.length) { document.removeEventListener("keydown", handler); return ask(); }
+    el[k].textContent = words[k]; el[k].className = ""; t0 = now;
+    document.getElementById("p").style.width = Math.round(100 * (k + 1) / words.length) + "%";
+  };
+  document.addEventListener("keydown", handler);
+  function ask() {
+    const answers = [];
+    (function next(j) {
+      if (j >= item.questions.length) { if (!practice) log.trials.push({ id: item.id, cond: item.cond, order: idx, words: words, rts, answers }); return done(); }
+      const Q = item.questions[j], flip = Math.random() < .5, opts = flip ? [Q.wrong, Q.correct] : [Q.correct, Q.wrong], tq = performance.now();
+      html(`<p><b>${Q.q}</b></p>` + opts.map((o, m) => `<button class="choice alt" data-m="${m}">${o}</button>`).join(""));
+      document.querySelectorAll(".choice").forEach((b) => b.onclick = () => {
+        const m = +b.dataset.m; answers.push({ q: j, correct: opts[m] === Q.correct, rt: Math.round(performance.now() - tq) }); next(j + 1);
+      });
+    })(0);
+  }
+}
+function finish() {
+  log.finished = new Date().toISOString();
+  const accs = log.trials.flatMap((t) => t.answers.map((a) => a.correct));
+  log.accuracy = accs.filter(Boolean).length / Math.max(accs.length, 1);
+  const out = JSON.stringify(log);
+  if (CONFIG.submitUrl) fetch(CONFIG.submitUrl, { method: "POST", mode: "no-cors", headers: { "Content-Type": "text/plain" }, body: out }).catch(() => {});
+  html(`<h1>Thank you</h1><p>You are done.${CONFIG.completionUrl ? ' <a href="' + CONFIG.completionUrl + '">Return to Prolific</a> to receive credit.' : ""}</p>
+  <p class="mute">If your data was not submitted automatically, please download the file and send it to the researcher.</p>
+  <p><button id="dl">Download my data</button></p>`);
+  document.getElementById("dl").onclick = () => { const a = document.createElement("a"); a.href = URL.createObjectURL(new Blob([out], { type: "application/json" })); a.download = `spr_${PID}.json`; a.click(); };
+  window.__RESULT__ = log;
+}
+consent();
+</script>
+</body>
+</html>

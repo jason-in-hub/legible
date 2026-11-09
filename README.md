@@ -4,9 +4,9 @@
 
 <p align="center"><a href="assets/legible.mp4"><img src="assets/legible.gif" alt="legible: a reading cursor steps through an AI sentence, stalls red on 'eating', jumps back to reread, then glides once through the plain rewrite" width="800"></a><br><sub>Click for the MP4.</sub></p>
 
-**legible** is a writing skill for Claude, built to make the model write sentences a person understands on the first read.
+**legible** is a writing skill for Claude, built to make the model write sentences that a person understands on the first read.
 
-> **Honest status:** in my tests, one sentence ("Write so a human reader understands every sentence on the first read. Prefer plain, clear sentences.") works as well as this skill, and the full skill does slightly worse. The [eval](eval/README.md) explains why. The paper summary and checklist below are still a useful guide for editing text by hand.
+> **Honest status:** in my tests, one short instruction works as well as this skill, and the full skill does slightly worse. The instruction is: "Write so a human reader understands every sentence on the first read. Prefer plain, clear sentences." The [eval](eval/README.md) explains why. The paper summary and checklist below are still a useful guide for editing text by hand.
 
 It is built on one paper: Clark, Martin & Mahowald (2026), [*Why is AI-generated language so hard to understand?*](https://arxiv.org/html/2610.29162v1) (arXiv:2610.29162).
 
@@ -24,7 +24,7 @@ People read one word at a time. Two things make them stop and go back:
 
 The paper found that all nine frontier and near-frontier models tested overuse these constructions compared with human text and with meaning-preserving paraphrases. It argues the cause is post-training that rewards correct, short answers, not clear ones. A length penalty alone was enough to push a small model to drop optional words almost every time.
 
-legible turns those findings into seven checks the model runs on its own draft:
+legible turns those findings into seven checks that the model runs on its own draft:
 
 1. Inanimate subject, animate verb ("chaos expects you to…")
 2. Long gap between subject and verb

@@ -1,6 +1,6 @@
 # legible A/B eval
 
-**Verdict after v2: legible does not beat a one-sentence instruction, and the full version is measurably worse than it.** Any clarity instruction helps a lot over none. The skill helps by the same amount as one sentence, and adds nothing on top. Following the rule I set before running v2, legible is now an explainer and teaching resource, not a prompt you should install to improve output.
+**Verdict after v2: legible does not beat a one-sentence instruction, and the full version is measurably worse than it.** Any clarity instruction helps a lot over none. The skill helps by the same amount as one sentence, and adds nothing on top. Following the rule that I set before running v2, legible is now an explainer and teaching resource, not a prompt you should install to improve output.
 
 The practical takeaway is the placebo sentence itself:
 
@@ -19,12 +19,12 @@ The practical takeaway is the placebo sentence itself:
 | **full** | **write** | **1** | **16** | **13** | **0.007** | 5 of 30 |
 | full | revise | 1 | 11 | 8 | 0.12 | 3 of 20 |
 
-- **Confirmed:** the pre-registered rule says neither variant earns its tokens. The only significant result is against the skill: full is worse than the placebo on write tasks.
+- **Confirmed:** the pre-registered rule says neither variant is worth its token cost. The only significant result is against the skill: full is worse than the placebo on write tasks.
 - **Confirmed:** the revise hypothesis failed. I expected a concrete checklist to beat "write clearly" when fixing existing dense text. It lost 10–2 (slim) and 8–1 (full) on the primary judge, and Haiku, the second judge, agrees on revise (slim 0–11, full 0–8 against the placebo).
 - **Confirmed:** length doesn't explain it. Among pairs within 15% of each other in word count, the skill still loses more than it wins (slim write 1–8, full write 0–7).
 - **Confirmed, exploratory (not pre-registered):** the placebo beats no instruction 25–0 on write and 12–0 on revise, so "any clarity instruction works" holds.
 - **Confirmed:** against no instruction, both skill variants win clearly (slim 23–0 write, full 21–1 write). That's v1's result again, and the placebo gets the same win.
-- **Inference:** the skill's sentences got longer in revise (mean 14.3 words for full, 14.5 for slim, against 11.2 for the placebo), so a checklist may make the model repair constructions without splitting sentences. I didn't test that directly.
+- **Inference:** the skill's revised sentences were longer. The mean was 14.3 words for full and 14.5 for slim, against 11.2 for the placebo. A checklist may make the model repair constructions without splitting sentences. I didn't test that directly.
 
 **Limits of v2:**
 - Every judge is a Claude model, and no cross-family judge or human was available.
@@ -86,7 +86,7 @@ Opus 5.5 shows the same pattern. Against base, the skill also lowers inanimate s
 - **Confirmed:** any clarity instruction helps a lot over none. The skill's win over base is real (32–2).
 - **Confirmed:** part of that win comes from saying less. The judge rated base as more complete in 28 of 40 pairs, and the skill responses are about 15% shorter. So "clearer" is partly "shorter".
 - **Confirmed:** the skill adds nothing measurable over one sentence of instruction in single-turn chat, code or essays (7–15–18, not significant, trending the wrong way).
-- **Inference:** two possible reasons. First, the one-line instruction may already capture the skill's main effect. Second, 70+ quoted bad sentences in `examples.md` may prime the very forms the skill is meant to suppress. Running a no-examples variant would separate the two.
+- **Inference:** two possible reasons. First, the one-line instruction may already capture the skill's main effect. Second, 70+ quoted bad sentences in `examples.md` may prime the very forms that the skill is meant to suppress. Running a no-examples variant would separate the two.
 
 ### Limits
 
@@ -97,6 +97,14 @@ Opus 5.5 shows the same pattern. Against base, the skill also lowers inanimate s
 ## What v1 left open
 
 v1 suggested three follow-ups: a slim skill, revise mode, and long multi-turn sessions. v2 tested the first two and both failed. Only multi-turn remains untested.
+
+## Dogfood
+
+I ran legible's own checks (`dogfood.py`) over both READMEs. Most hits were table cells and markdown artifacts, but some were real: a 19-word gap between a subject and its verb, three clauses that should have kept *that*, and the metaphor "earns its tokens". I fixed them. Long-gap hits fell from 3 to 2 and from 2 to 1, and reduced relatives from 4 to 2 and from 3 to 1.
+
+## Human pilot
+
+[`human/`](human/README.md) holds a tested self-paced-reading experiment, stimuli and analysis script, ready to launch. No human has run it yet.
 
 ## Reproduce
 
