@@ -42,11 +42,14 @@ Claude Code plugin（2.1.275 或以上）：
 
 ## Eval 結果（誠實版）
 
-我做咗 A/B：[`eval/`](eval/README.md)。
+做咗兩輪 A/B：[`eval/`](eval/README.md)。第二輪係預先登記（pre-registered）嘅。
 
-- 對比「完全冇指示」：blind judge 32–6–2 勝出（p ≈ 7e-8），但有一部分係靠講少啲。Judge 話 base 資料較齊嘅有 28/40 對。
-- 對比「一句：寫到讀者第一次讀就明」：7–18–15，唔顯著，傾向 skill 差啲。
-- 結論：單輪對話下，完整版 skill 未贏到一句 prompt。v2（slim 版、revise 模式）已經預先登記，結果見 [`eval/v2/`](eval/v2/)。
+- 對比「完全冇指示」：skill 大勝，但一句 prompt 都一樣咁勝（placebo 對 base：write 25–0，revise 12–0）。
+- 對比「一句：寫到讀者第一次讀就明」：完整版 skill 喺 write 任務 1 勝 13 負（Holm p = 0.007），即係**顯著差過一句 prompt**。精簡版同 revise 模式都冇贏到。
+- 我之前估「revise 模式 checklist 會贏」，結果被推翻。
+- 結論：legible 唔值得當 prompt 裝。實用做法係直接用呢句：*Write so a human reader understands every sentence on the first read. Prefer plain, clear sentences.* 呢個 repo 嘅價值係 paper 解讀同手動改稿參考。
+
+仲未測：長多輪對話、跨 model 家族嘅 judge、真人讀者。
 
 ## 限制
 

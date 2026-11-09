@@ -1,10 +1,11 @@
 """v2 blind pairwise judge. Each pair is judged in BOTH A/B orders; a win needs both orders to agree, else tie (pre-registered).
 Primary judge claude-opus-5-5 (4 comparisons); secondary claude-haiku-5-5 (2 primary comparisons).
 usage: python3 judge_v2.py opus|haiku"""
-import json, pathlib, re, subprocess, sys, concurrent.futures as cf
+import json, pathlib, re, subprocess, sys, time, concurrent.futures as cf
 ROOT = pathlib.Path(__file__).resolve().parent
 JUDGES = {"opus": ("claude-opus-5-5", [("slim","placebo"),("full","placebo"),("slim","base"),("full","base")]),
-          "haiku": ("claude-haiku-5-5", [("slim","placebo"),("full","placebo")])}
+          "haiku": ("claude-haiku-5-5", [("slim","placebo"),("full","placebo")]),
+          "opusx": ("claude-opus-5-5", [("placebo","base")])}  # exploratory, NOT pre-registered
 SYS = "You are a careful reading-comprehension rater. You output only JSON."
 HEAD = """A user sent this message:
 
@@ -37,10 +38,13 @@ def load():
 def call(model, msg):
     cmd = ["claude","-p",msg,"--model",model,"--system-prompt",SYS,"--tools","","--disable-slash-commands","--setting-sources","","--no-session-persistence","--output-format","json"]
     err = ""
-    for _ in range(3):
+    for k in range(5):
         r = subprocess.run(cmd, capture_output=True, text=True, timeout=400, cwd="/tmp")
-        try: return json.loads(re.search(r"\{.*\}", json.loads(r.stdout)["result"], re.S).group(0))
-        except Exception as e: err = str(e)
+        try:
+            txt = json.loads(r.stdout)["result"]
+            return json.loads(re.search(r"\{.*\}", txt, re.S).group(0))
+        except Exception as e:
+            err = f"{e} | raw: {(r.stdout or r.stderr)[:160]!r}"; time.sleep(4 * 2 ** k)
     return {"error": err}
 def one(model, d, pid, x, y):
     rx, ry = d[(pid, x)], d[(pid, y)]
@@ -66,7 +70,7 @@ if __name__ == "__main__":
     out = ROOT/f"judge_{which}.jsonl"
     done = {(j["id"], j["x"], j["y"]) for j in map(json.loads, out.read_text().splitlines())} if out.exists() else set()
     jobs = [(model, d, pid, x, y) for pid in ids for x, y in comps if (pid,x) in d and (pid,y) in d and (pid,x,y) not in done]
-    with cf.ThreadPoolExecutor(8) as ex, open(out, "a") as fh:
+    with cf.ThreadPoolExecutor(4) as ex, open(out, "a") as fh:
         for r in ex.map(lambda a: one(*a), jobs):
             fh.write(json.dumps(r, ensure_ascii=False) + "\n"); fh.flush()
             print(r["id"], r["x"], r["y"], r["xy"].get("clarity", "ERR"), r["yx"].get("clarity", "ERR"), flush=True)

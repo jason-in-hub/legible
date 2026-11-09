@@ -4,7 +4,9 @@
 
 <p align="center"><a href="assets/legible.mp4"><img src="assets/legible.gif" alt="legible: a reading cursor steps through an AI sentence, stalls red on 'eating', jumps back to reread, then glides once through the plain rewrite" width="800"></a><br><sub>Click for the MP4.</sub></p>
 
-**legible** is a writing skill for Claude. It makes the model write sentences a person understands on the first read.
+**legible** is a writing skill for Claude, built to make the model write sentences a person understands on the first read.
+
+> **Honest status:** in my tests, one sentence ("Write so a human reader understands every sentence on the first read. Prefer plain, clear sentences.") works as well as this skill, and the full skill does slightly worse. The [eval](eval/README.md) explains why. The paper summary and checklist below are still a useful guide for editing text by hand.
 
 It is built on one paper: Clark, Martin & Mahowald (2026), [*Why is AI-generated language so hard to understand?*](https://arxiv.org/html/2610.29162v1) (arXiv:2610.29162).
 
@@ -84,7 +86,7 @@ Sepia's own research ledger records this paper as "Consulted, no rule" (commit o
 
 - The paper is English-only and ran no reader experiment. The reading-cost claims come from earlier psycholinguistics.
 - The seven checks and the "plain-translation test" are this skill's inferences. They haven't been tested as writing interventions.
-- **The A/B eval ([`eval/`](eval/README.md)) is a mixed result.** Against no instruction, the skill wins the blind judge 32–2 with 6 ties (p ≈ 7e-8), but partly by saying less: the judge rated the baseline more complete in 28 of 40 pairs. Against a one-sentence "write clearly" instruction, it loses 7–15 with 18 ties (not significant). In single-turn use, the skill doesn't yet beat the cheap prompt. Next tests: a slim no-examples variant, revise mode, and long multi-turn sessions.
+- **The A/B evals ([`eval/`](eval/README.md)) say legible does not beat a one-sentence instruction.** Both skill variants beat no instruction, but so does "Write so a human reader understands every sentence on the first read. Prefer plain, clear sentences." In the pre-registered v2 test, the full skill was significantly worse than that sentence on write tasks (1 win, 13 losses, Holm p = 0.007), and a slim version and a revise mode did no better. So legible is best used as a guide to why AI text is hard to read, not as a prompt to install. Still untested: long multi-turn sessions, a cross-family judge and human readers.
 
 ## About the animation
 

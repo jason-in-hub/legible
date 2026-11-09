@@ -1,0 +1,9 @@
+{
+ "id": "r09",
+ "setting": "revise",
+ "arm": "slim",
+ "model": "claude-sonnet-5-5",
+ "prompt": "Rewrite the following so it is easier to read. Keep every fact and number.\n\nYour deck buries the lede on slide nine, where the 40% month-over-month revenue growth finally surfaces beneath three slides of market-sizing boilerplate. Investors skimming a seed pitch decide within the first 3 minutes, often under 4 for the whole deck per DocSend's averages, so the traction metric, the one number your entire fundraising argument depends on, arrives after attention has already left the room. Your opening slide headlines a mission statement; the data wants a seat at the front. Front-load it: slide two should lead with growth, then the customer acquisition cost payback period of 5 months, then the problem. The current structure is a slow-reveal mystery novel where the reader skips to the last chapter or quits. Investors will assume the hiding was deliberate. Cut the TAM preamble to one line and let traction do the talking.",
+ "text": "Your deck buries its best news on slide nine. The 40% month-over-month revenue growth only appears after three slides of generic market-sizing.\n\nInvestors skimming a seed pitch decide within the first 3 minutes. According to DocSend's averages, they often spend under 4 minutes on the whole deck. Your traction number is the one your fundraising argument depends on, and it shows up after their attention has gone.\n\nYour opening slide is a mission statement. Put the data up front instead. Slide two should lead with growth, then give the customer acquisition cost payback period of 5 months, then state the problem.\n\nRight now the deck reads like a mystery novel that saves the answer for the end. Readers skip to the last chapter or quit, and investors will assume you hid the number on purpose. Cut the TAM preamble to one line and let the traction speak.",
+ "cost_usd": 0.013406
+}
