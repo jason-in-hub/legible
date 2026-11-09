@@ -1,4 +1,4 @@
-# UnderstandingMaxxing
+# legible
 
 <p align="center"><a href="assets/legible.mp4"><img src="assets/legible.gif" alt="legible: a reading cursor steps through an AI sentence, stalls red on 'eating', jumps back to reread, then glides once through the plain rewrite" width="800"></a><br><sub>Click for the MP4.</sub></p>
 

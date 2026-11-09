@@ -6,4 +6,4 @@
 6.0 | The plain version reads *once*.
 9.8 | The *verb* waits eight words.
 12.2 | Two short sentences read *once*.
-14.6 | Get legible at github.com/jason-in-hub/UnderstandingMaxxing
+14.6 | Get legible at github.com/jason-in-hub/legible

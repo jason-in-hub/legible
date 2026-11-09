@@ -279,7 +279,7 @@ const Film: React.FC = () => {
         <Word k={n} size={L.name.size} color={C.ink} dy={s.ty} opacity={s.opacity} blur={s.blur} weight={520} />
         <Eye x={n.x} y={n.y + L.name.size * 0.5} w={n.w * line} color={C.accent} />
         <Line text="A writing skill for Claude." size={40} cy={392} color={C.ink} f={f} a={T.end + 14} z={T.total + 99} weight={460} />
-        <Line text="github.com/jason-in-hub/UnderstandingMaxxing" size={26} cy={452} color={C.mute} f={f} a={T.end + 22} z={T.total + 99} weight={440} />
+        <Line text="github.com/jason-in-hub/legible" size={26} cy={452} color={C.mute} f={f} a={T.end + 22} z={T.total + 99} weight={440} />
       </div>,
     );
   }
