@@ -27,7 +27,7 @@ The practical takeaway is the placebo sentence itself:
 - **Inference:** the skill's revised sentences were longer. The mean was 14.3 words for full and 14.5 for slim, against 11.2 for the placebo. A checklist may make the model repair constructions without splitting sentences. I didn't test that directly.
 
 **Limits of v2:**
-- Every judge is a Claude model, and no cross-family judge or human was available.
+- Every judge is a Claude model. A cross-family judge is **not run**: it needs an API key for another provider, and none was provided. `v2/judge_xfam.py` is ready for one (`python3 judge_xfam.py MODEL_ID`, after saving a key for `api.openai.com`). No human has rated anything yet; see [`human/`](human/README.md).
 - Many pairs flip with the A/B order (19 of 30 for slim write), so most verdicts are ties and only agreed wins count. Position noise is large.
 - Single writer model, single turn.
 - The revise inputs are synthetic.
