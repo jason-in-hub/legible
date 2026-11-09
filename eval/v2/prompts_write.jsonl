@@ -1,0 +1,30 @@
+{"id":"w01","setting":"chat","prompt":"i keep starting side projects and dropping them after two weeks. is that a problem or just how my brain works? how do i actually finish one"}
+{"id":"w02","setting":"chat","prompt":"My sister wants me to co-sign her apartment lease and I really don't want to but I also don't want to be the bad guy. How do I even handle this?"}
+{"id":"w03","setting":"chat","prompt":"honest question: is it worth learning to cook properly if i live alone and mostly eat the same five things"}
+{"id":"w04","setting":"chat","prompt":"Why do I feel more tired after sleeping 10 hours than after sleeping 7? I feel like that shouldn't happen."}
+{"id":"w05","setting":"chat","prompt":"we're thinking about moving to a smaller town for cheaper rent but both of us work remote and i'm scared we'll get lonely. what should we think about before deciding"}
+{"id":"w06","setting":"chat","prompt":"Can you explain what inflation actually is and why it's bad if wages go up too? I never really got it."}
+{"id":"w07","setting":"chat","prompt":"someone told me to just 'be more assertive' at work but i don't even know what that looks like day to day. examples?"}
+{"id":"w08","setting":"chat","prompt":"Is it normal that I get nervous before every single presentation even after doing like fifty of them? Will it ever stop?"}
+{"id":"w09","setting":"chat","prompt":"what's the real difference between a roth and a traditional ira? i keep reading explanations that make it sound more confusing"}
+{"id":"w10","setting":"chat","prompt":"My teenage nephew only wants to play video games. Should I be worried or is this just a phase? How do I talk to him about it?"}
+{"id":"w11","setting":"code","prompt":"Why does this return None sometimes even though I'm sure the key exists?\n\n```python\ndef find_user(users, name):\n    for u in users:\n        if u['name'] == name:\n            return u\n    return None\n\nusers = [{'name': 'Ana '}, {'name': 'Bo'}]\nprint(find_user(users, 'Ana'))\n```"}
+{"id":"w12","setting":"code","prompt":"My React component re-renders in an infinite loop. What's wrong?\n\n```jsx\nfunction List({ ids }) {\n  const [items, setItems] = useState([]);\n  useEffect(() => {\n    fetch('/api?ids=' + ids.join(',')).then(r => r.json()).then(setItems);\n  }, [{ ids }]);\n  return items.map(i => <Row key={i.id} {...i} />);\n}\n```"}
+{"id":"w13","setting":"code","prompt":"This SQL is slow on a table with 50M rows. What would you change and why?\n\n```sql\nSELECT * FROM orders WHERE LOWER(email) = 'a@b.com' ORDER BY created_at DESC LIMIT 20;\n```\nThere's an index on (email, created_at)."}
+{"id":"w14","setting":"code","prompt":"Why do all my buttons alert 3?\n\n```js\nfor (var i = 0; i < 3; i++) {\n  const b = document.createElement('button');\n  b.onclick = () => alert(i);\n  document.body.append(b);\n}\n```"}
+{"id":"w15","setting":"code","prompt":"Explain why this Go program sometimes prints different output and how to make it deterministic.\n\n```go\nm := map[string]int{\"a\": 1, \"b\": 2, \"c\": 3}\nfor k, v := range m {\n    fmt.Println(k, v)\n}\n```"}
+{"id":"w16","setting":"code","prompt":"Our cache sometimes serves stale data right after an update. Here's the code. What's the race and how do we fix it?\n\n```python\ndef update(key, val):\n    db.write(key, val)\n    cache.delete(key)\n\ndef read(key):\n    v = cache.get(key)\n    if v is None:\n        v = db.read(key)\n        cache.set(key, v)\n    return v\n```"}
+{"id":"w17","setting":"code","prompt":"git says 'detached HEAD' and my commits seem to vanish when I switch branches. What happened and how do I get them back?"}
+{"id":"w18","setting":"code","prompt":"What does `async`/`await` actually do in Python? I keep thinking it runs things in parallel but my script isn't faster."}
+{"id":"w19","setting":"code","prompt":"Why does floating point give me 0.30000000000000004 and what should I do in a billing system?"}
+{"id":"w20","setting":"code","prompt":"Explain what a database index is and when adding one makes writes slower, for someone who has only used spreadsheets."}
+{"id":"w21","setting":"essay","prompt":"Some people think students should be allowed to use calculators in all math classes. Write an essay arguing for or against this."}
+{"id":"w22","setting":"essay","prompt":"Write an essay arguing whether schools should start later in the morning."}
+{"id":"w23","setting":"essay","prompt":"Some towns want to ban cars from their downtown centers. Write an essay arguing for or against this policy."}
+{"id":"w24","setting":"essay","prompt":"Should students be required to learn a second language? Write an essay taking a position."}
+{"id":"w25","setting":"essay","prompt":"Write an essay on whether people learn more from failure or from success."}
+{"id":"w26","setting":"essay","prompt":"Some schools have replaced letter grades with written feedback only. Write an essay arguing whether this is a good idea."}
+{"id":"w27","setting":"essay","prompt":"Write an essay arguing whether working part-time while in high school helps or hurts students."}
+{"id":"w28","setting":"essay","prompt":"Is it better to have a few close friends or many casual ones? Write an essay with a clear position."}
+{"id":"w29","setting":"essay","prompt":"Some cities offer free public transportation. Write an essay arguing whether more cities should do this."}
+{"id":"w30","setting":"essay","prompt":"Write an essay arguing whether students should be allowed to retake exams until they pass."}

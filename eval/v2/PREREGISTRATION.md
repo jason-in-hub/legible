@@ -9,7 +9,7 @@ v1 (eval/README.md) found the full skill beat no instruction (32-6-2) but not a 
 - `base`: nothing added.
 - `placebo`: one sentence: "Write so a human reader understands every sentence on the first read. Prefer plain, clear sentences."
 - `full`: SKILL.md + references/examples.md (v1's skill arm).
-- `slim`: skills/legible/SKILL.slim.md (about 330 words, no bad examples).
+- `slim`: skills/legible/SKILL.slim.md (220 words, no bad examples).
 
 ## Tasks
 - **write** (30 held-out prompts, none from v1): 10 chat, 10 code explanation, 10 essay. Writer: claude-sonnet-5-5, 1 sample per cell.
